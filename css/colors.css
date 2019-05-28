@@ -46,11 +46,11 @@
 
 
 .bg-teal {
-    background-color: #00aaaa;
+    background-color: #33bbbb;
 }
 
 .text-teal {
-    color: #00aaaa;
+    color: #33bbbb;
 }
 
 
@@ -63,6 +63,12 @@
 }
 
 
+.bg-gray {
+    background-color: #444444;
+}
 
+.text-gray {
+    color: #444444;
+}
 
 
