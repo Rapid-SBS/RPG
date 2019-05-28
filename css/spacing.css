@@ -1,0 +1,82 @@
+/* ===== [ Padding Style ] ===== */
+
+.pad-10 {
+    padding: 10px;
+}
+.pad-20 {
+    padding: 20px;
+}
+.pad-40 {
+    padding: 40px;
+}
+.pad-60 {
+    padding: 60px;
+}
+.pad-80 {
+    padding: 80px;
+}
+
+.pad-t-10 {
+    padding-top: 10px;
+}
+.pad-b-10 {
+    padding-bottom: 10px;
+}
+.pad-r-10 {
+    padding-right: 10px;
+}
+.pad-l-10 {
+    padding-left: 10px;
+}
+
+.pad-t-20 {
+    padding-top: 20px;
+}
+.pad-b-20 {
+    padding-bottom: 20px;
+}
+.pad-r-20 {
+    padding-right: 20px;
+}
+.pad-l-20 {
+    padding-left: 20px;
+}
+
+.pad-t-40 {
+    padding-top: 40px;
+}
+.pad-b-40 {
+    padding-bottom: 40px;
+}
+.pad-r-40 {
+    padding-right: 40px;
+}
+.pad-l-40 {
+    padding-left: 40px;
+}
+
+.pad-t-60 {
+    padding-top: 60px;
+}
+.pad-b-60 {
+    padding-bottom: 60px;
+}
+.pad-r-60 {
+    padding-right: 60px;
+}
+.pad-l-60 {
+    padding-left: 60px;
+}
+
+.pad-t-80 {
+    padding-top: 80px;
+}
+.pad-b-80 {
+    padding-bottom: 80px;
+}
+.pad-r-80 {
+    padding-right: 80px;
+}
+.pad-l-80 {
+    padding-left: 80px;
+}

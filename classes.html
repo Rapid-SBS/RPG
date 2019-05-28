@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+  <title>RPGenerator</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/spacing.css">
+  <link rel="stylesheet" type="text/css" href="css/colors.css">
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-dark bg-primary">
+		<h1 class="text-white mx-auto"> RPGenerator </h1>
+	</nav>  
+  
+<!-- Class Selection -->  
+<div class="card-deck pad-10">
+ 
+  <!-- Warrior -->
+  <div class="card text-white bg-orange mb-2" style="max-width: 18rem;">
+    <div class="card-header text-center">
+      <h5>Warrior</h5>
+    </div>
+    <div class="card-body text-center">
+      <p class="card-text text-center">Masters of swords, shields, and axes, Warriors can deal physical damage or protect their allies with their high defense.</p>
+    </div>
+    <ul class="list-group text-center">
+      <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+        <span class="badge badge-light text-red">18</span>
+        HP
+      </li>
+      <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+        <span class="badge badge-light text-orange">3</span>
+        ATT
+      </li>
+      <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+        <span class="badge badge-light text-green">4</span>
+        DEF
+      </li>
+      <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+        <span class="badge badge-light text-purple">1</span>
+        INT
+      </li>
+      <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+        <span class="badge badge-light text-blue">2</span>
+        RES
+      </li>
+    </ul>
+  </div>
+
+  <!-- Archer -->
+  <div class="card text-white bg-green mb-2" style="max-width: 18rem;">
+      <div class="card-header text-center">
+        <h5>Archer</h5>
+      </div>
+      <div class="card-body text-center">
+        <p class="card-text text-center">Deal high damage from a distance with the Archer. Equip a crossbow to pierce defenses or a longbow for increased critical chance.</p>
+      </div>
+      <ul class="list-group text-center">
+        <li class="list-group-item align-items-center bg-green" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-red">16</span>
+          HP
+        </li>
+        <li class="list-group-item align-items-center bg-green" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-orange">4</span>
+          ATT
+        </li>
+        <li class="list-group-item align-items-center bg-green" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-green">1</span>
+          DEF
+        </li>
+        <li class="list-group-item align-items-center bg-green" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-purple">2</span>
+          INT
+        </li>
+        <li class="list-group-item align-items-center bg-green" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-blue">2</span>
+          RES
+        </li>
+      </ul>
+  </div>
+
+  <!-- Mage -->
+  <div class="card text-white bg-blue mb-2" style="max-width: 18rem;">
+      <div class="card-header text-center">
+        <h5>Mage</h5>
+      </div>
+      <div class="card-body text-center">
+        <p class="card-text text-center">Specialize in ice, fire, or lightning abilities with the Mage. Critical Hits apply debuffs instead of bonus damage.</p>
+      </div>
+      <ul class="list-group text-center">
+        <li class="list-group-item align-items-center bg-blue" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-red">14</span>
+          HP
+        </li>
+        <li class="list-group-item align-items-center bg-blue" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-orange">0</span>
+          ATT
+        </li>
+        <li class="list-group-item align-items-center bg-blue" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-green">0</span>
+          DEF
+        </li>
+        <li class="list-group-item align-items-center bg-blue" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-purple">5</span>
+          INT
+        </li>
+        <li class="list-group-item align-items-center bg-blue" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-blue">3</span>
+          RES
+        </li>
+      </ul>
+  </div>
+
+  <!-- Cleric -->
+  <div class="card text-white bg-yellow mb-2" style="max-width: 18rem;">
+      <div class="card-header text-center">
+        <h5>Cleric</h5>
+      </div>
+      <div class="card-body text-center">
+        <p class="card-text text-center">With the power to heal, enhance, or resurrect your allies with potent light magic, the Cleric is the ultimate support class.</p>
+      </div>
+      <ul class="list-group text-center">
+        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-red">15</span>
+          HP
+        </li>
+        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-orange">2</span>
+          ATT
+        </li>
+        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-green">2</span>
+          DEF
+        </li>
+        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-purple">3</span>
+          INT
+        </li>
+        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-blue">4</span>
+          RES
+        </li>
+      </ul>
+  </div>
+
+  <!-- Rogue -->
+  <div class="card text-white bg-dark mb-2" style="max-width: 18rem;">
+      <div class="card-header text-center">
+        <h5>Rogue</h5>
+      </div>
+      <div class="card-body text-center">
+        <p class="card-text text-center">As deadly thieves and assassins, Rogues can attack using daggers or throwing knives with high critical attack rate.</p>
+      </div>
+      <ul class="list-group text-center">
+        <li class="list-group-item align-items-center bg-dark" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-red">14</span>
+          HP
+        </li>
+        <li class="list-group-item align-items-center bg-dark" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-orange">3</span>
+          ATT
+        </li>
+        <li class="list-group-item align-items-center bg-dark" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-green">1</span>
+          DEF
+        </li>
+        <li class="list-group-item align-items-center bg-dark" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-purple">3</span>
+          INT
+        </li>
+        <li class="list-group-item align-items-center bg-dark" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-blue">1</span>
+          RES
+        </li>
+      </ul>
+  </div>
+
+ <!-- Monk -->
+  <div class="card text-white bg-red mb-2" style="max-width: 18rem;">
+      <div class="card-header text-center">
+        <h5>Monk</h5>
+      </div>
+      <div class="card-body text-center">
+        <p class="card-text text-center">Advocates of peace yet masters of combat, Monks have well-balanced stats and a wide selection of support abilities.</p>
+      </div>
+      <ul class="list-group text-center">
+        <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-red">17</span>
+          HP
+        </li>
+        <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-orange">3</span>
+          ATT
+        </li>
+        <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-green">3</span>
+          DEF
+        </li>
+        <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-purple">3</span>
+          INT
+        </li>
+        <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-blue">3</span>
+          RES
+        </li>
+      </ul>
+  </div>
+
+</div><!-- /card-deck -->
+<!-- /Class Selection -->
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+</body>
+
+</html>
