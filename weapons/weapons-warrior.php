@@ -6,7 +6,7 @@
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <h6>Sword Strike<h6>
+          <h6>Sword Strike</h6>
         </button>
       </div>
       <div id="collapseOne" class="collapse hidden" aria-labelledby="headingOne" data-parent="#accordion-swordshield">
@@ -45,7 +45,7 @@
   </div><!-- /.accordion -->
 
   <!-- Halberd-->
-    <div class="card wide-275 mar-20 text-white bg-orange">
+  <div class="card wide-275 mar-20 text-white bg-orange">
   <div class="accordion" id="accordion-halberd">
       <div class="card-header text-center">
         <h4>Halberd</h4>
