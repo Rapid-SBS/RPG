@@ -14,7 +14,7 @@
           <p class="card-text text-center">Get stabby. <br> Double Critical Hit Chance. <br>DMG = Weapon ATT + Player ATT.</p>
         </div>
         <ul class="list-group text-center">
-          <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
+          <li class="list-group-item align-items-center light-transparency bg-gray" style="padding: .35rem 1.25rem;">
             <span class="badge badge-light text-orange">3</span>
             Weapon ATT
           </li>
@@ -30,7 +30,7 @@
           <p class="card-text text-center">Deals damage and applies Poisoned debuff. <br>DMG = Weapon ATT + Player ATT. <br>Costs 2 Mana.<br>
         </div>
         <ul class="list-group text-center">
-          <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
+          <li class="list-group-item align-items-center light-transparency bg-gray" style="padding: .35rem 1.25rem;">
             <span class="badge badge-light text-orange">2</span>
             Weapon ATT
           </li>
@@ -61,7 +61,7 @@
           </li>
         </ul>
         <ul class="list-group text-center">
-          <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
+          <li class="list-group-item align-items-center light-transparency bg-gray" style="padding: .35rem 1.25rem;">
             <span class="badge badge-light text-green">+3</span>
             Bonus DEF
           </li>
@@ -97,7 +97,7 @@
           <h6>Shuriken Throw</h6>
        </button>
       </div>
-      <div id="collapseFive" class="collapse hidden" aria-labelledby="headingThree" data-parent="#accordion-shuriken">
+      <div id="collapseFive" class="collapse hidden" aria-labelledby="headingFive" data-parent="#accordion-shuriken">
         <div class="card-body light-transparency pad-10 text-center">
           <p class="card-text text-center">Double Critical Hit/Miss Chance. <br>DMG = Weapon ATT + Player ATT. </p>
         </div>
@@ -113,7 +113,7 @@
           <h6>Smoke Bomb <span class="badge badge-light text-teal">4</span></h6>
         </button>
       </div>
-      <div id="collapseSix" class="collapse hidden" aria-labelledby="headingFour" data-parent="#accordion-shuriken">
+      <div id="collapseSix" class="collapse hidden" aria-labelledby="headingSix" data-parent="#accordion-shuriken">
         <div class="card-body light-transparency pad-10 text-center">
           <p class="card-text text-center">Grants Hidden buff for 2 turns. <br>Costs 4 Mana.</p>
         </div>
