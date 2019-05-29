@@ -90,7 +90,7 @@
   <div class="card wide-275 mar-20 text-white bg-blue">
   <div class="accordion" id="accordion-lightning">
       <div class="card-header text-center">
-        <h4>Battleaxe</h4>
+        <h4>Lightning Stone</h4>
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">

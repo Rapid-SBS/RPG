@@ -20,7 +20,11 @@
 
 <div class="y-flex-container pad-10">
 
-<?php include 'weapons/mage.php'; ?>
+<?php include 'weapons/mage-ice.php'; ?>
+
+<?php include 'weapons/mage-fire.php'; ?>
+
+<?php include 'weapons/mage-lightning.php'; ?>
 
 </div><!-- /.y-flex-container -->
 
