@@ -10,7 +10,7 @@
         </button>
       </div><!-- /.card-header --> 
       <div id="collapseOne" class="collapse hidden" aria-labelledby="headingOne" data-parent="#accordion-bow">
-        <div class="card-body pad-10 text-center">
+        <div class="card-body light-transparency pad-10 text-center">
           <p class="card-text text-center">Fires an arrow. <br>DMG = Weapon ATT + Player ATT. </p>
         </div><!-- /.card-body pad-10 --> 
         <ul class="list-group text-center">
@@ -26,7 +26,7 @@
         </button>
       </div><!-- /.card-header --> 
       <div id="collapseTwo" class="collapse hidden" aria-labelledby="headingTwo" data-parent="#accordion-bow">
-        <div class="card-body pad-10 text-center">
+        <div class="card-body light-transparency pad-10 text-center">
           <p class="card-text text-center">Fires two arrows. <br>DMG = 2 x (Weapon ATT + Player ATT).<br>Costs 2 Mana.</p>
         </div><!-- /.card-body pad-10 --> 
         <ul class="list-group text-center">
