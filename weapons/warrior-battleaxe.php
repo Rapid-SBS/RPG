@@ -37,12 +37,6 @@
         </ul>
         <ul class="list-group text-center">
           <li class="list-group-item align-items-center light-transparency bg-orange" style="padding: .35rem 1.25rem;">
-            <span class="badge badge-light text-teal">2x</span>
-            Crit Chance
-          </li>
-        </ul>
-        <ul class="list-group text-center">
-          <li class="list-group-item align-items-center light-transparency bg-orange" style="padding: .35rem 1.25rem;">
             <span class="badge badge-light text-green">-4</span>
               Enemy DEF
           </li>
