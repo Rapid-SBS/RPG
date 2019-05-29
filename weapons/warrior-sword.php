@@ -25,6 +25,7 @@
           </li>
         </ul>
       </div>
+    </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <h6>Shield Ally <span class="badge badge-light text-teal">2</span></h6>
