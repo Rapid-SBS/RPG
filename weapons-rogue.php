@@ -20,7 +20,11 @@
 
 <div class="y-flex-container pad-10">
 
-<?php include 'weapons/rogue.php'; ?>
+<?php include 'weapons/rogue-dagger.php'; ?>
+
+<?php include 'weapons/rogue-sai.php'; ?>
+
+<?php include 'weapons/rogue-shuriken.php'; ?>
 
 </div><!-- /.y-flex-container -->
 
