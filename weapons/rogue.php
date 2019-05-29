@@ -25,7 +25,7 @@
           <h6>Poisoned Blade <span class="badge badge-light text-teal">2</span></h6>
         </button>
       </div>
-      <div id="collapseFour" class="collapse hidden" aria-labelledby="headingTwo" data-parent="#accordion-dagger">
+      <div id="collapseTwo" class="collapse hidden" aria-labelledby="headingTwo" data-parent="#accordion-dagger">
         <div class="card-body text-center">
           <p class="card-text text-center">Deals damage and applies Poisoned debuff. <br>DMG = Weapon ATT + Player ATT. <br>Costs 2 Mana.<br>
         </div>
@@ -69,7 +69,7 @@
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-          <h6>Blade Storm<span class="badge badge-light text-teal">3</span></h6>
+          <h6>Blade Storm <span class="badge badge-light text-teal">3</span></h6>
         </button>
       </div>
       <div id="collapseFour" class="collapse hidden" aria-labelledby="headingFour" data-parent="#accordion-sai">
