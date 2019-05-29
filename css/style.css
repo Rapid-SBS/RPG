@@ -11,3 +11,17 @@
     background-color: #007bff;
     border-radius: 5px;
 }
+
+.x-scroll-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+ 
+  
+}
+
+.x-scroll-item {
+    flex: 0 0 auto;
+    width: 290px;
+  }
