@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 
-  <title>RPGenerator</title>
+  <title>RPGenius</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/spacing.css">
@@ -18,20 +18,24 @@
 
 <body>
 
-  <nav class="navbar navbar-dark bg-primary">
-    <h1 class="text-white mx-auto"> RPGenerator </h1>
-  </nav>  
-  
+<nav class="navbar navbar-dark bg-primary">
+  <h1 class="text-white pad-10 mx-auto"> RPGenius </h1><br>
+</nav>  
+
+<p class="text-white bg-primary pad-b-20 text-center"> An online tool for curating a DnD-lite experience. </p>
+
+<h2 class="pad-20 text-gray text-center"> Select a class... </h2>
+
 <!-- Class Selection -->  
-<div class="pad-10 x-scroll-wrapper">
+<div class="x-scroll-wrapper pad-t-10 pad-b-10 pad-l-5 pad-r-5">
  
   <!-- Warrior -->
-  <a href="weapons-warrior.php" class="card text-decoration-none x-scroll-item hover-blue">
+  <a href="weapons-warrior.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-orange rounded">
     <div class="card-header text-center">
       <h5>Warrior</h5>
     </div>
-    <div class="card-body text-center">
+    <div class="card-body pad-10 text-center">
       <p class="card-text text-center">Masters of swords, shields, and axes, Warriors can deal physical damage or protect their allies with their high defense.</p>
     </div>
     <ul class="list-group text-center">
@@ -60,12 +64,12 @@
   </a>
 
   <!-- Archer -->
-  <a href="weapons-archer.php" class="card text-decoration-none x-scroll-item hover-blue">
+  <a href="weapons-archer.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-green rounded">
       <div class="card-header text-center">
         <h5>Archer</h5>
       </div>
-      <div class="card-body text-center">
+      <div class="card-body pad-10 text-center">
         <p class="card-text text-center">Deal damage from a distance with the Archer. Equip a crossbow to pierce defenses or a longbow for increased critical chance.</p>
       </div>
       <ul class="list-group text-center">
@@ -94,12 +98,12 @@
   </a>
 
   <!-- Mage -->
-  <a href="weapons-mage.php" class="card text-decoration-none x-scroll-item hover-blue">
+  <a href="weapons-mage.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-blue rounded">
       <div class="card-header text-center">
         <h5>Mage</h5>
       </div>
-      <div class="card-body text-center">
+      <div class="card-body pad-10 text-center">
         <p class="card-text text-center">Specialize in ice, fire, or lightning abilities with the Mage. Critical Hits apply debuffs instead of bonus damage.</p>
       </div>
       <ul class="list-group text-center">
@@ -128,12 +132,12 @@
   </a>
 
   <!-- Cleric -->
-  <a href="weapons-cleric.php" class="card text-decoration-none x-scroll-item hover-blue">
+  <a href="weapons-cleric.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-yellow rounded">
       <div class="card-header text-center">
         <h5>Cleric</h5>
       </div>
-      <div class="card-body text-center">
+      <div class="card-body pad-10 text-center">
         <p class="card-text text-center">With the power to heal, enhance, or resurrect your allies with potent light magic, the Cleric is the ultimate support class.</p>
       </div>
       <ul class="list-group text-center">
@@ -162,12 +166,12 @@
   </a>
 
   <!-- Rogue -->
-  <a href="weapons-rogue.php" class="card text-decoration-none x-scroll-item hover-blue">
+  <a href="weapons-rogue.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-gray rounded">
       <div class="card-header text-center">
         <h5>Rogue</h5>
       </div>
-      <div class="card-body text-center">
+      <div class="card-body pad-10 text-center">
         <p class="card-text text-center">As deadly thieves and assassins, Rogues can attack using daggers or throwing knives with high critical attack rate.</p>
       </div>
       <ul class="list-group text-center">
@@ -196,12 +200,12 @@
   </a>
 
   <!-- Monk -->
-  <a href="weapons-monk.php" class="card text-decoration-none x-scroll-item hover-blue">
+  <a href="weapons-monk.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-red rounded">
       <div class="card-header text-center">
         <h5>Monk</h5>
       </div>
-      <div class="card-body text-center">
+      <div class="card-body pad-10 text-center">
         <p class="card-text text-center">Advocates of peace yet masters of combat, Monks have well-balanced stats and a wide selection of support abilities.</p>
       </div>
       <ul class="list-group text-center">
