@@ -20,7 +20,7 @@
 
 <div class="y-flex-container pad-10">
 
-<?php include 'weapons/weapons-warrior.php'; ?>
+<?php include 'weapons/warrior-sword.php'; ?>
 
 </div><!-- /.y-flex-container -->
 
