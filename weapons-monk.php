@@ -20,8 +20,11 @@
 
 <div class="y-flex-container pad-10">
 
-<?php include 'weapons/monk.php'; ?>
+<?php include 'weapons/monk-bostaff.php'; ?>
 
+<?php include 'weapons/monk-fists.php'; ?>
+
+<?php include 'weapons/monk-windfu.php'; ?>
 
 </div><!-- /.y-flex-container -->
 
