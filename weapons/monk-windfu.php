@@ -27,12 +27,18 @@
       </div>
       <div id="collapseSix" class="collapse hidden" aria-labelledby="headingFour" data-parent="#accordion-windfu">
         <div class="card-body light-transparency pad-10 text-center">
-          <p class="card-text text-center">Fire cutting winds from the palm of your hand. <br> Triple Critical Hit Chance. <br>DMG = Weapon ATT + Player INT.<br>Costs 3 Mana.</p>
+          <p class="card-text text-center">Fire razor-sharp winds. <br> Triple Critical Hit Chance. <br>DMG = Weapon ATT + Player INT.<br>Costs 3 Mana.</p>
         </div>
           <ul class="list-group text-center">
           <li class="list-group-item align-items-center light-transparency bg-red" style="padding: .35rem 1.25rem;">
             <span class="badge badge-light text-red">2</span>
              Weapon ATT
+          </li>
+        </ul>
+        <ul class="list-group text-center">
+          <li class="list-group-item align-items-center light-transparency bg-green" style="padding: .35rem 1.25rem;">
+            <span class="badge badge-light text-teal">3x</span>
+            Crit Chance
           </li>
         </ul>
       </div>
