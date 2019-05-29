@@ -18,16 +18,16 @@
 
 <body>
 
-<nav class="navbar navbar-dark bg-primary">
-  <h1 class="text-white pad-10 mx-auto"> RPGenius </h1><br>
-</nav>  
+<div class="text-white text-center bg-primary">
+  <h1 class="pad-t-20 pad-b-10"> RPGenius </h1>
+  <p class="pad-b-20"> An online tool for curating a<br> DnD-lite experience. </p>
+</div>
 
-<p class="text-white bg-primary pad-b-20 text-center"> An online tool for curating a DnD-lite experience. </p>
 
-<h2 class="pad-20 text-gray text-center"> Select a class... </h2>
+<h2 class="pad-20 text-gray text-center opacity-pulse"> Select a Class... </h2>
 
 <!-- Class Selection -->  
-<div class="x-scroll-wrapper pad-t-10 pad-b-10 pad-l-5 pad-r-5">
+<div class="x-scroll-wrapper pad-t-10 pad-b-10 pad-l-5 pad-r-5 mar-r-10">
  
   <!-- Warrior -->
   <a href="weapons-warrior.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
