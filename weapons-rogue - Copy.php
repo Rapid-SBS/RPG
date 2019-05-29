@@ -18,49 +18,43 @@
 <body>
 <div class="container pad-10">
 
-  <!-- Mace & Shield -->
+  <!-- Daggers-->
   <div class="row justify-content-center">
   <div class="col-4">
-  <div class="card text-white bg-yellow mb-2" style="max-width: 18rem;">
-    <div class="accordion" id="accordion-maceshield">
+  <div class="card text-white bg-gray mb-2" style="max-width: 18rem;">
+    <div class="accordion" id="accordion-dagger">
       <div class="card-header text-center">
-        <h4>Mace & Shield</h4>
+        <h4>Dagger</h4>
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-          <h6>Bludgeon<h6>
+          <h6>Stab<h6>
        </button>
     </div>
-      <div id="collapseThree" class="collapse hidden" aria-labelledby="headingThree" data-parent="#accordion-maceshield">
+      <div id="collapseThree" class="collapse hidden" aria-labelledby="headingThree" data-parent="#accordion-dagger">
        <div class="card-body text-center">
-              <p class="card-text text-center">Grants bonus DEF during combat. <br>DMG = Weapon ATT + Player ATT. </p>
+              <p class="card-text text-center">Get stabby. <br> Double Critical Hit Chance. <br>DMG = Weapon ATT + Player ATT.</p>
             </div>
             <ul class="list-group text-center">
-              <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
-                <span class="badge badge-light text-orange">2</span>
+              <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
+                <span class="badge badge-light text-orange">3</span>
                 Weapon ATT
-              </li>
-            </ul>
-            <ul class="list-group text-center">
-              <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
-                <span class="badge badge-light text-green">+2</span>
-                Bonus DEF
               </li>
             </ul>
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-            <h6>Shield Ally <span class="badge badge-light text-teal">1</span></h6>
+            <h6>Poisoned Blade <span class="badge badge-light text-teal">2</span></h6>
         </button>
       </div>
-      <div id="collapseFour" class="collapse hidden" aria-labelledby="headingFour" data-parent="#accordion-maceshield">
+      <div id="collapseFour" class="collapse hidden" aria-labelledby="headingFour" data-parent="#accordion-dagger">
         <div class="card-body text-center">
-          <p class="card-text text-center">Use your shield to protect <br>yourself or one ally. <br>Grants +4 DEF for one turn. <br>Costs 1 Mana.</p>
+          <p class="card-text text-center">Deals damage and applies Poisoned debuff. <br>DMG = Weapon ATT + Player ATT. <br>Costs 2 Mana.<br>
           </div>
           <ul class="list-group text-center">
-            <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
-              <span class="badge badge-light text-green">+4</span>
-              Bonus DEF
+            <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
+              <span class="badge badge-light text-orange">2</span>
+              Weapon ATT
             </li>
           </ul>
       </div>
@@ -69,42 +63,48 @@
   </div><!-- /.accordion -->
   </div><!-- /.row -->
 
-  <!-- Quarterstaff -->
+  <!-- Dual Sai-->
   <div class="row justify-content-center">
   <div class="col-4">
-  <div class="card text-white bg-yellow mb-2" style="max-width: 18rem;">
-    <div class="accordion" id="accordion-fire">
+  <div class="card text-white bg-gray mb-2" style="max-width: 18rem;">
+    <div class="accordion" id="accordion-dualsai">
       <div class="card-header text-center">
-        <h4>Quarterstaff</h4>
+        <h4>Dual Sai</h4>
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-          <h6>Downward Strike<h6>
+          <h6>Riposte<h6>
        </button>
       </div>
-      <div id="collapseFive" class="collapse hidden" aria-labelledby="headingFive" data-parent="#accordion-fire">
+      <div id="collapseFive" class="collapse hidden" aria-labelledby="headingFive" data-parent="#accordion-dualsai">
       <div class="card-body text-center">
-              <p class="card-text text-center">Strike your opponent. <br>DMG = Weapon ATT + Player ATT.</p>
+              <p class="card-text text-center">Grants bonus DEF during combat. <br>DMG = Weapon ATT + Player ATT. </p>
       </div>
             <ul class="list-group text-center">
-              <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
-                <span class="badge badge-light text-orange">3</span>
+              <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
+                <span class="badge badge-light text-orange">4</span>
                 Weapon ATT
+              </li>
+            </ul>
+            <ul class="list-group text-center">
+              <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
+                <span class="badge badge-light text-green">+3</span>
+                Bonus DEF
               </li>
             </ul>
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-            <h6>Mend <span class="badge badge-light text-teal">2</span></h6>
+            <h6>Ultimate Bladeworks <span class="badge badge-light text-teal">4</span></h6>
         </button>
     </div>
-    <div id="collapseSix" class="collapse hidden" aria-labelledby="headingSix" data-parent="#accordion-fire">
+    <div id="collapseSix" class="collapse hidden" aria-labelledby="headingSix" data-parent="#accordion-dualsai">
       <div class="card-body text-center">
-        <p class="card-text text-center">Heals a single ally. <br>Critical Hits heal twice the amount. <br>HEAL = Weapon ATT + Player INT.</p>
+        <p class="card-text text-center">Attacks all enemies extremely fast.<br> Double Critical Hit Chance. <br>DMG = Weapon ATT + Player ATT<br>Costs 4 Mana.</p>
       </div>
         <ul class="list-group text-center">
-          <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
-            <span class="badge badge-light text-orange">2</span>
+          <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
+            <span class="badge badge-light text-orange">3</span>
             Weapon ATT
           </li>
         </ul>
@@ -115,49 +115,42 @@
   </div><!-- /.accordion -->
   </div><!-- /.row -->
 
-  <!-- Holy Tome -->
+  <!-- Shuriken -->
   <div class="row justify-content-center">
   <div class="col-4">
-  <div class="card text-white bg-yellow mb-2" style="max-width: 18rem;">
-    <div class="accordion" id="accordion-holytome">
+  <div class="card text-white bg-gray mb-2" style="max-width: 18rem;">
+    <div class="accordion" id="accordion-shuriken">
       <div class="card-header text-center">
-        <h4>Holy Tome</h4>
+        <h4>Shuriken</h4>
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <h6>Blessing<h6>
+          <h6>Shuriken Throw<h6>
        </button>
     </div>
-      <div id="collapseOne" class="collapse hidden" aria-labelledby="headingOne" data-parent="#accordion-holytome">
+      <div id="collapseOne" class="collapse hidden" aria-labelledby="headingOne" data-parent="#accordion-shuriken">
        <div class="card-body text-center">
-          <p class="card-text text-center">Call for a blessing on your ally. <br>Boosts an ally's DEF and RES.</p>
+          <p class="card-text text-center">Double Critical Hit/Miss Chance. <br>DMG = Weapon ATT + Player ATT. </p>
         </div>
         <ul class="list-group text-center">
-          <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
-            <span class="badge badge-light text-green">+2</span>
-            Bonus DEF
-          </li>
-        </ul>
-        <ul class="list-group text-center">
-          <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
-            <span class="badge badge-light text-blue">+2</span>
-            Bonus RES
+          <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
+            <span class="badge badge-light text-orange">4</span>
+            Weapon ATT
           </li>
         </ul>
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <h6>Mass Healing <span class="badge badge-light text-teal">4</span></h6>
+            <h6>Smoke Bomb <span class="badge badge-light text-teal">4</span></h6>
         </button>
     </div>
-      <div id="collapseTwo" class="collapse hidden" aria-labelledby="headingTwo" data-parent="#accordion-holytome">
+      <div id="collapseTwo" class="collapse hidden" aria-labelledby="headingTwo" data-parent="#accordion-shuriken">
        <div class="card-body text-center">
-          <p class="card-text text-center">Heals your entire party. <br>Critical Hits heal twice the amount. <br>HEAL = Weapon ATT. <br>Costs 5 Mana.</p>
+          <p class="card-text text-center">Grants Hidden buff for 2 turns. <br>Costs 4 Mana.</p>
         </div>
         <ul class="list-group text-center">
-          <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
-            <span class="badge badge-light text-orange">4</span>
-            Weapon ATT
+          <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
+            <strong>Hidden</strong>: You cannot be targeted.
           </li>
         </ul>
       </div>
