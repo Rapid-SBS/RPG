@@ -26,7 +26,7 @@
 <div class="card-deck pad-10">
  
   <!-- Warrior -->
-  <a href="weapons-warrior.html" class="card text-decoration-none hover-blue" style="max-width: 18rem;">
+  <a href="weapons-warrior.php" class="card text-decoration-none hover-blue" style="max-width: 18rem;">
   <div class="text-white bg-orange rounded">
     <div class="card-header text-center">
       <h5>Warrior</h5>
@@ -60,7 +60,7 @@
   </a>
 
   <!-- Archer -->
-  <a href="weapons-archer.html" class="card text-decoration-none hover-blue" style="max-width: 18rem;">
+  <a href="weapons-archer.php" class="card text-decoration-none hover-blue" style="max-width: 18rem;">
   <div class="text-white bg-green rounded">
       <div class="card-header text-center">
         <h5>Archer</h5>
@@ -94,7 +94,7 @@
   </a>
 
   <!-- Mage -->
-  <a href="weapons-mage.html" class="card text-decoration-none hover-blue" style="max-width: 18rem;">
+  <a href="weapons-mage.php" class="card text-decoration-none hover-blue" style="max-width: 18rem;">
   <div class="text-white bg-blue rounded">
       <div class="card-header text-center">
         <h5>Mage</h5>
@@ -128,7 +128,7 @@
   </a>
 
   <!-- Cleric -->
-  <a href="weapons-cleric.html" class="card text-decoration-none hover-blue" style="max-width: 18rem;">
+  <a href="weapons-cleric.php" class="card text-decoration-none hover-blue" style="max-width: 18rem;">
   <div class="text-white bg-yellow rounded">
       <div class="card-header text-center">
         <h5>Cleric</h5>
@@ -162,7 +162,7 @@
   </a>
 
   <!-- Rogue -->
-  <a href="weapons-rogue.html" class="card text-decoration-none hover-blue" style="max-width: 18rem;">
+  <a href="weapons-rogue.php" class="card text-decoration-none hover-blue" style="max-width: 18rem;">
   <div class="text-white bg-gray rounded">
       <div class="card-header text-center">
         <h5>Rogue</h5>
@@ -196,7 +196,7 @@
   </a>
 
   <!-- Monk -->
-  <a href="weapons-monk.html" class="card text-decoration-none hover-blue" style="max-width: 18rem;">
+  <a href="weapons-monk.php" class="card text-decoration-none hover-blue" style="max-width: 18rem;">
   <div class="text-white bg-red rounded">
       <div class="card-header text-center">
         <h5>Monk</h5>
