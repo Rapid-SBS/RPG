@@ -25,7 +25,7 @@
           <h6>Poisoned Blade <span class="badge badge-light text-teal">2</span></h6>
         </button>
       </div>
-      <div id="collapseFour" class="collapse hidden" aria-labelledby="headingFour" data-parent="#accordion-dagger">
+      <div id="collapseFour" class="collapse hidden" aria-labelledby="headingTwo" data-parent="#accordion-dagger">
         <div class="card-body text-center">
           <p class="card-text text-center">Deals damage and applies Poisoned debuff. <br>DMG = Weapon ATT + Player ATT. <br>Costs 2 Mana.<br>
         </div>
