@@ -19,6 +19,12 @@
             Weapon ATT
           </li>
         </ul>
+        <ul class="list-group text-center">
+          <li class="list-group-item align-items-center light-transparency bg-gray" style="padding: .35rem 1.25rem;">
+            <span class="badge badge-light text-teal">2x</span>
+            Crit Chance
+          </li>
+        </ul>
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -26,7 +32,7 @@
         </button>
       </div>
       <div id="collapseTwo" class="collapse hidden" aria-labelledby="headingTwo" data-parent="#accordion-dagger">
-        <div class="card-body text-center">
+        <div class="card-body light-transparency text-center">
           <p class="card-text text-center">Deals damage and applies Poisoned debuff. <br>DMG = Weapon ATT + Player ATT. <br>Costs 2 Mana.<br>
         </div>
         <ul class="list-group text-center">
@@ -69,7 +75,7 @@
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-          <h6>Blade Storm <span class="badge badge-light text-teal">3</span></h6>
+          <h6>Blade Storm <span class="badge badge-light text-teal">4</span></h6>
         </button>
       </div>
       <div id="collapseFour" class="collapse hidden" aria-labelledby="headingFour" data-parent="#accordion-sai">
@@ -80,6 +86,12 @@
             <li class="list-group-item align-items-center light-transparency bg-gray" style="padding: .35rem 1.25rem;">
               <span class="badge badge-light text-orange">3</span>
                 Weapon ATT
+            </li>
+          </ul>
+          <ul class="list-group text-center">
+            <li class="list-group-item align-items-center light-transparency bg-green" style="padding: .35rem 1.25rem;">
+              <span class="badge badge-light text-teal">2x</span>
+              Crit Chance
             </li>
           </ul>
       </div>
@@ -105,6 +117,18 @@
           <li class="list-group-item align-items-center light-transparency bg-gray" style="padding: .35rem 1.25rem;">
             <span class="badge badge-light text-orange">4</span>
             Weapon ATT
+          </li>
+        </ul>
+        <ul class="list-group text-center">
+          <li class="list-group-item align-items-center light-transparency bg-gray" style="padding: .35rem 1.25rem;">
+            <span class="badge badge-light text-teal">2x</span>
+            Crit Chance
+          </li>
+        </ul>
+        <ul class="list-group text-center">
+          <li class="list-group-item align-items-center light-transparency bg-gray" style="padding: .35rem 1.25rem;">
+            <span class="badge badge-light text-teal">2x</span>
+            Miss Chance
           </li>
         </ul>
       </div>
