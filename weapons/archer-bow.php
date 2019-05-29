@@ -10,11 +10,11 @@
         </button>
       </div><!-- /.card-header --> 
       <div id="collapseOne" class="collapse hidden" aria-labelledby="headingOne" data-parent="#accordion-bow">
-        <div class="card-body text-center">
+        <div class="card-body pad-10 text-center">
           <p class="card-text text-center">Fires an arrow. <br>DMG = Weapon ATT + Player ATT. </p>
-        </div><!-- /.card-body --> 
+        </div><!-- /.card-body pad-10 --> 
         <ul class="list-group text-center">
-          <li class="list-group-item align-items-center bg-green" style="padding: .35rem 1.25rem;">
+          <li class="list-group-item align-items-center light-transparency bg-green" style="padding: .35rem 1.25rem;">
             <span class="badge badge-light text-orange">2</span>
             Weapon ATT
           </li>
@@ -22,15 +22,15 @@
       </div><!-- /.collapseOne --> 
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <h6>Doubleshot <span class="badge badge-light text-teal">2</span></h6>
+          <h6>Doubleshot <span class="badge badge-light text-teal">2</span></h6>
         </button>
       </div><!-- /.card-header --> 
       <div id="collapseTwo" class="collapse hidden" aria-labelledby="headingTwo" data-parent="#accordion-bow">
-        <div class="card-body text-center">
+        <div class="card-body pad-10 text-center">
           <p class="card-text text-center">Fires two arrows. <br>DMG = 2 x (Weapon ATT + Player ATT).<br>Costs 2 Mana.</p>
-        </div><!-- /.card-body --> 
+        </div><!-- /.card-body pad-10 --> 
         <ul class="list-group text-center">
-          <li class="list-group-item align-items-center bg-green" style="padding: .35rem 1.25rem;">
+          <li class="list-group-item align-items-center light-transparency bg-green" style="padding: .35rem 1.25rem;">
             <span class="badge badge-light text-orange">2</span>
             Weapon ATT
           </li>
