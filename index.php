@@ -202,7 +202,7 @@
   <a href="weapons-monk.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-red rounded">
       <div class="card-header text-center">
-        <h5>Monk</h5><div style="background-color: #fff; height: 50px; width: 50px; background-image: url('img/icon-monk.svg');"><img src="img/icon-monk.svg" /></div>
+        <h5>Monk</h5>
       </div>
       <div class="card-body pad-10 text-center">
         <p class="card-text text-center">Advocates of peace yet masters of combat, Monks have well-balanced stats and a wide selection of support abilities.</p>
@@ -235,7 +235,11 @@
 </div><!-- /card-deck -->
 <!-- /Class Selection -->
 
-
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
+  </div>
+</footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
