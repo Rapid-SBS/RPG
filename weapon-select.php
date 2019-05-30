@@ -23,9 +23,7 @@
 
 <body>
 
-<div class="y-flex-container pad-10">
-
-<div id="weapon-select"></div>
+<div id="weapon-select" class="y-flex-container pad-10">
 
   <script>
 	var rpgClass = localStorage.getItem('rpgClass');
