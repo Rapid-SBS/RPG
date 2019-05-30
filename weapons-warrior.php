@@ -17,7 +17,7 @@
 
 <body>
 
-<div class="y-flex-container pad-10">
+
 
 <button id="hide">Hide</button>
 <button id="show">Show</button>
@@ -35,7 +35,7 @@ $(document).ready(function(){
 });
 </script>
 
-</div><!-- /.y-flex-container -->
+
 
 <footer class="footer mt-auto text-center bg-light">
   <div class="container pad-20">
