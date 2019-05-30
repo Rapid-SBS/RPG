@@ -22,7 +22,7 @@
 
 <?php include 'weapons/warrior-sword.php'; ?>
 
-<button type="button" class="btn btn-primary rpg-wpn-select-btn" style="display: none;">Select</button>
+<button id="btn-1" type="button" class="btn btn-primary rpg-wpn-select-btn" style="display: none;">Select</button>
 
 <?php include 'weapons/warrior-halberd.php'; ?>
 
@@ -31,7 +31,7 @@
 <script> 
   $(document).ready(function(){
       $('#rpg-wpn-sword').on('click', function(){
-          $('.rpg-wpn-select-btn').show();
+          $('#btn-1').show();
       });
     });
 </script>
