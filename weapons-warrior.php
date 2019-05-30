@@ -31,11 +31,11 @@
 
 <?php include 'weapons/warrior-halberd.php'; ?>
 
-	<button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-halberd" style="display: none;">Select</button>
+	<button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-halberd" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <?php include 'weapons/warrior-battleaxe.php'; ?>
 
-	<button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-battleaxe" style="display: none;">Select</button>
+	<button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-battleaxe" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <script>
 $(document).ready(function(){
