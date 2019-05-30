@@ -22,9 +22,19 @@
 
 <?php include 'weapons/warrior-sword.php'; ?>
 
+<button type="button" class="btn btn-primary">Select</button>
+
 <?php include 'weapons/warrior-halberd.php'; ?>
 
 <?php include 'weapons/warrior-battleaxe.php'; ?>
+
+<script> 
+  $(document).ready(function(){
+
+
+
+    });
+</script>
 
 </div><!-- /.y-flex-container -->
 
