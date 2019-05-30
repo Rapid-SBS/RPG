@@ -31,27 +31,27 @@
   var rpgClass = localStorage.getItem('rpgClass');
   console.log("Class: " + rpgClass);
 
-  if (rpgClass = "Warrior") {
+  if (rpgClass === "Warrior") {
 
     $("#weapon-select").html("<?php include 'weapons/weapons-warrior.php'; ?>");
     
-  } else if (rpgClass = "Archer") {
+  } else if (rpgClass === "Archer") {
 
     $("#weapon-select").html("<?php include 'weapons/weapons-archer.php'; ?>");
 
-  } else if (rpgClass = "Mage") {
+  } else if (rpgClass === "Mage") {
 
     $("#weapon-select").html("<?php include 'weapons/weapons-mage.php'; ?>");
     
-  } else if (rpgClass = "Cleric") {
+  } else if (rpgClass === "Cleric") {
 
     $("#weapon-select").html("<?php include 'weapons/weapons-cleric.php'; ?>");
     
-  } else if (rpgClass = "Rogue") {
+  } else if (rpgClass === "Rogue") {
 
     $("#weapon-select").html("<?php include 'weapons/weapons-rogue.php'; ?>");
     
-  } else if (rpgClass = "Monk") {
+  } else if (rpgClass === "Monk") {
 
     $("#weapon-select").html("<?php include 'weapons/weapons-monk.php'; ?>");
     
