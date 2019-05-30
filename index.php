@@ -34,7 +34,7 @@
 <div class="x-scroll-wrapper pad-t-10 pad-b-10 pad-l-5 pad-r-5 mar-r-10">
  
   <!-- Warrior -->
-  <a href="weapons-warrior.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
+  <a id="rpg-class-warrior" href="weapons-warrior.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-orange rounded">
     <div class="card-header text-center">
       <h5>Warrior</h5>
@@ -68,7 +68,7 @@
   </a>
 
   <!-- Archer -->
-  <a href="weapons-archer.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
+  <a id="rpg-class-archer" href="weapons-archer.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-green rounded">
       <div class="card-header text-center">
         <h5>Archer</h5>
@@ -102,7 +102,7 @@
   </a>
 
   <!-- Mage -->
-  <a href="weapons-mage.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
+  <a id="rpg-class-mage" href="weapons-mage.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-blue rounded">
       <div class="card-header text-center">
         <h5>Mage</h5>
@@ -136,7 +136,7 @@
   </a>
 
   <!-- Cleric -->
-  <a href="weapons-cleric.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
+  <a id="rpg-class-cleric" href="weapons-cleric.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-yellow rounded">
       <div class="card-header text-center">
         <h5>Cleric</h5>
@@ -170,7 +170,7 @@
   </a>
 
   <!-- Rogue -->
-  <a href="weapons-rogue.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
+  <a id="rpg-class-rogue" href="weapons-rogue.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-gray rounded">
       <div class="card-header text-center">
         <h5>Rogue</h5>
@@ -204,7 +204,7 @@
   </a>
 
   <!-- Monk -->
-  <a href="weapons-monk.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
+  <a id="rpg-class-monk" href="weapons-monk.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-red rounded">
       <div class="card-header text-center">
         <h5>Monk</h5>
@@ -240,10 +240,30 @@
 </div><!-- /Class Selection -->
 
 <script>
-var rpgClass = localStorage.getItem('rpg-class');
+var rpgClass;
 
 $(document).ready(function(){
-    console.log("Class: " + rpgClass);
+
+  $("#rpg-class-warrior").click(function(){
+    localStorage.setItem('rpgClass', 'Warrior')
+  });
+  $("#rpg-class-archer").click(function(){
+    localStorage.setItem('rpgClass', 'Archer')
+  });
+  $("#rpg-class-mage").click(function(){
+    localStorage.setItem('rpgClass', 'Mage')
+  });
+  $("#rpg-class-cleric").click(function(){
+    localStorage.setItem('rpgClass', 'Cleric')
+  });
+  $("#rpg-class-rogue").click(function(){
+    localStorage.setItem('rpgClass', 'Rogue')
+  });
+  $("#rpg-class-monk").click(function(){
+    localStorage.setItem('rpgClass', 'Monk')
+  });
+
+  console.log("Class: " + rpgClass);
 });
 </script>
 

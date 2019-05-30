@@ -56,9 +56,6 @@ $(document).ready(function(){
     $("#rpg-wpn-btn-battleaxe").slideDown(300);
   });
 
-  var rpgClass = localStorage.getItem('rpg-class');
-
-	localStorage.setItem('rpg-class', 'Warrior');
 	console.log("Class: " + rpgClass);
 
 });
