@@ -23,6 +23,7 @@
   <p class="pad-b-20"> An online tool for curating a<br> DnD-lite experience. </p>
 </div>
 
+<img src="img/icon-monk.svg" />
 
 <h2 class="pad-20 text-gray text-center opacity-pulse"> Select a Class... </h2>
 
