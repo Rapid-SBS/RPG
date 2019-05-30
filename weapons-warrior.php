@@ -43,12 +43,12 @@ $(document).ready(function(){
   	$(".rpg-wpn-select-btn").slideUp(500);
     $("#rpg-wpn-btn-sword").slideDown(500);
   });
-	$(".rpg-wpn-halberd").click(function(500){
-  	$(".rpg-wpn-select-btn").slideUp();
+	$(".rpg-wpn-halberd").click(function(){
+  	$(".rpg-wpn-select-btn").slideUp(500);
     $("#rpg-wpn-btn-halberd").slideDown(500);
   });
-	$(".rpg-wpn-battleaxe").click(function(500){
-  	$(".rpg-wpn-select-btn").slideUp();
+	$(".rpg-wpn-battleaxe").click(function(){
+  	$(".rpg-wpn-select-btn").slideUp(500);
     $("#rpg-wpn-btn-battleaxe").slideDown(500);
   });
 
