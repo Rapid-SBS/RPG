@@ -1,6 +1,6 @@
 <!-- Longbow-->
   <div class="rpg-wpn-longbow card wide-275 mar-20 text-white bg-green">
-  <div class="accordion" id="accordion-Longbow">
+  <div class="accordion" id="accordion-longbow">
       <div class="card-header text-center">
         <h4>Longbow</h4>
       </div>
@@ -9,7 +9,7 @@
           <h6>Arrow</h6>
        </button>
       </div>
-      <div id="collapseFive" class="collapse hidden" aria-labelledby="headingThree" data-parent="#accordion-Longbow">
+      <div id="collapseFive" class="collapse hidden" aria-labelledby="headingThree" data-parent="#accordion-longbow">
         <div class="card-body light-transparency pad-10 text-center">
           <p class="card-text text-center">Fires an arrow. <br>DMG = Weapon ATT + Player ATT.</p>
         </div>
@@ -25,7 +25,7 @@
           <h6>Snipe <span class="badge badge-light text-teal">2</span></h6>
         </button>
       </div>
-      <div id="collapseSix" class="collapse hidden" aria-labelledby="headingFour" data-parent="#accordion-Longbow">
+      <div id="collapseSix" class="collapse hidden" aria-labelledby="headingFour" data-parent="#accordion-longbow">
         <div class="card-body light-transparency pad-10 text-center">
           <p class="card-text text-center">Double Critical Hit/Miss Chance. <br>DMG = Weapon ATT + Player ATT.<br>Costs 2 Mana.</p>
         </div>

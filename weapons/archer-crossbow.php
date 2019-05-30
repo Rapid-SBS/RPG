@@ -37,7 +37,7 @@
           </ul>
           <ul class="list-group text-center">
             <li class="list-group-item align-items-center bg-green" style="padding: .35rem 1.25rem;">
-              <span class="badge badge-light light-transparency text-green">-4</span>
+              <span class="badge badge-light text-green">-4</span>
               Enemy DEF
             </li>
           </ul>
