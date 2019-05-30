@@ -242,7 +242,7 @@
 <script>
 $(document).ready(function(){
     console.log("Class: " + rpgClass);
-}
+});
 </script>
 
 <footer class="footer mt-auto text-center bg-light">
