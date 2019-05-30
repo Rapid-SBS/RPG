@@ -40,19 +40,19 @@
 <script>
 $(document).ready(function(){
   $(".rpg-wpn-sword").click(function(){
-  	$("#rpg-wpn-btn-battleaxe").slideUp(500);
-  	$("#rpg-wpn-btn-halberd").slideUp(500);
-    $("#rpg-wpn-btn-sword").slideDown(500);
+  	$("#rpg-wpn-btn-battleaxe").slideUp(300);
+  	$("#rpg-wpn-btn-halberd").slideUp(300);
+    $("#rpg-wpn-btn-sword").slideDown(300);
   });
 	$(".rpg-wpn-halberd").click(function(){
-  	$("#rpg-wpn-btn-battleaxe").slideUp(500);
-  	$("#rpg-wpn-btn-sword").slideUp(500);
-    $("#rpg-wpn-btn-halberd").slideDown(500);
+  	$("#rpg-wpn-btn-battleaxe").slideUp(300);
+  	$("#rpg-wpn-btn-sword").slideUp(300);
+    $("#rpg-wpn-btn-halberd").slideDown(300);
   });
 	$(".rpg-wpn-battleaxe").click(function(){
-  	$("#rpg-wpn-btn-sword").slideUp(500);
-  	$("#rpg-wpn-btn-halberd").slideUp(500);
-    $("#rpg-wpn-btn-battleaxe").slideDown(500);
+  	$("#rpg-wpn-btn-sword").slideUp(300);
+  	$("#rpg-wpn-btn-halberd").slideUp(300);
+    $("#rpg-wpn-btn-battleaxe").slideDown(300);
   });
 
 });
