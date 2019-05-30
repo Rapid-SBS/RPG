@@ -40,7 +40,7 @@
 <script>
 $(document).ready(function(){
   $(".rpg-wpn-sword").click(function(){
-  	$(".rpg-wpn-select-btn").hide();
+  	$(".rpg-wpn-select-btn").fadeOut(500);
     $("#rpg-wpn-btn-sword").fadeIn(500);
   });
 	$(".rpg-wpn-halberd").click(function(){
