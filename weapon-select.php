@@ -32,23 +32,34 @@
   console.log("Class: " + rpgClass);
 
   if (rpgClass = "Warrior") {
+
+    $("#weapon-select").html("<?php include 'weapons/weapons-warrior.php'; ?>");
     
   } else if (rpgClass = "Archer") {
 
     $("#weapon-select").html("<?php include 'weapons/weapons-archer.php'; ?>");
 
   } else if (rpgClass = "Mage") {
+
+    $("#weapon-select").html("<?php include 'weapons/weapons-mage.php'; ?>");
     
   } else if (rpgClass = "Cleric") {
+
+    $("#weapon-select").html("<?php include 'weapons/weapons-cleric.php'; ?>");
     
   } else if (rpgClass = "Rogue") {
+
+    $("#weapon-select").html("<?php include 'weapons/weapons-rogue.php'; ?>");
     
   } else if (rpgClass = "Monk") {
+
+    $("#weapon-select").html("<?php include 'weapons/weapons-monk.php'; ?>");
     
   } else {
 
+    $("#weapon-select").html("<h2>No Class Selected </h2>");
+  
   }
- 
 </script>
 
 </div><!-- /.y-flex-container -->
