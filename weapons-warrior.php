@@ -39,6 +39,8 @@
 
 <script> 
 	// --- Saves Class selection ---
+	var rpgClass = localStorage.getItem('rpg-class');
+	
 	localStorage.setItem('rpgClass', 'Warrior');
 	console.log("Class: " + rpgClass);
 
