@@ -24,6 +24,8 @@
 
 <button id="btn-1" type="button" class="btn btn-primary rpg-wpn-select-btn" style="display: none;">Select</button>
 
+<button id="rpg-wpn-sword" type="button" class="btn btn-primary rpg-wpn-select-btn">Show</button>
+
 <?php include 'weapons/warrior-halberd.php'; ?>
 
 <?php include 'weapons/warrior-battleaxe.php'; ?>
