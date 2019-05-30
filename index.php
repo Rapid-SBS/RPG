@@ -28,7 +28,7 @@
   <p class="pad-b-20"> An online tool for curating a<br> DnD-lite experience. </p>
 </div>
 
-<h2 class="pad-20 text-gray text-center opacity-pulse"> Select a Class... </h2>
+<h2 class="pad-20 text-gray text-center pulsing-text-dark"> Select a Class... </h2>
 
 <!-- Class Selection -->  
 <div class="x-scroll-wrapper pad-t-10 pad-b-10 pad-l-5 pad-r-5 mar-r-10">
