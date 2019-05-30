@@ -20,16 +20,10 @@
 
 <div class="y-flex-container pad-10">
 
-<?php include 'weapons/warrior-sword.php'; ?>
-
 <button id="hide">Hide</button>
 <button id="show">Show</button>
 
 <p style="display: none;">If you click on the "Hide" button, I will disappear.</p>
-
-<?php include 'weapons/warrior-halberd.php'; ?>
-
-<?php include 'weapons/warrior-battleaxe.php'; ?>
 
 <script>
 $(document).ready(function(){
