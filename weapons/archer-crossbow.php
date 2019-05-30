@@ -1,5 +1,5 @@
 <!-- Crossbow-->
-  <div class="card wide-275 mar-20 text-white bg-green">
+  <div class="rpg-wpn-crossbow card wide-275 mar-20 text-white bg-green">
   <div class="accordion" id="accordion-crossbow">
       <div class="card-header text-center">
         <h4>Crossbow</h4>

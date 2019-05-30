@@ -1,5 +1,5 @@
   <!-- Bow -->
-  <div class="card wide-275 mar-20 text-white bg-green">
+  <div class="rpg-wpn-bow card wide-275 mar-20 text-white bg-green">
   <div class="accordion" id="accordion-bow">
       <div class="card-header text-center">
         <h4>Bow</h4>

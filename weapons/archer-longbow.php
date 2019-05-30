@@ -1,5 +1,5 @@
 <!-- Longbow-->
-  <div class="card wide-275 mar-20 text-white bg-green">
+  <div class="rpg-wpn-longbow card wide-275 mar-20 text-white bg-green">
   <div class="accordion" id="accordion-Longbow">
       <div class="card-header text-center">
         <h4>Longbow</h4>
