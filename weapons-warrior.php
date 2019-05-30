@@ -38,12 +38,6 @@
 	<button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-battleaxe" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <script> 
-	// --- Saves Class selection ---
-	var rpgClass = localStorage.getItem('rpg-class');
-
-	localStorage.setItem('rpg-class', 'Warrior');
-	console.log("Class: " + rpgClass);
-
 $(document).ready(function(){
 	// --- Weapon Select Button script ---
   $(".rpg-wpn-sword").click(function(){
@@ -61,6 +55,12 @@ $(document).ready(function(){
   	$("#rpg-wpn-btn-halberd").slideUp(300);
     $("#rpg-wpn-btn-battleaxe").slideDown(300);
   });
+
+  var rpgClass = localStorage.getItem('rpg-class');
+
+	localStorage.setItem('rpg-class', 'Warrior');
+	console.log("Class: " + rpgClass);
+
 });
 </script>
 
