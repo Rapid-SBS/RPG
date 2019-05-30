@@ -38,14 +38,13 @@
 	<button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-battleaxe" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <script> 
-$(document).ready(function(){
-
-	// --- Saves Class selection ---
+// --- Saves Class selection ---
 		var rpgClass = localStorage.getItem('rpg-class');
 
 		localStorage.setItem('rpg-class', 'Warrior');
 		console.log("Class: " + rpgClass);
 
+$(document).ready(function(){
 	// --- Weapon Select Button script ---
   $(".rpg-wpn-sword").click(function(){
   	$("#rpg-wpn-btn-battleaxe").slideUp(300);

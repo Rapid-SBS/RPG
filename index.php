@@ -240,6 +240,8 @@
 </div><!-- /Class Selection -->
 
 <script>
+var rpgClass;
+
 $(document).ready(function(){
     console.log("Class: " + rpgClass);
 });
