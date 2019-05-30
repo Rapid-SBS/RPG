@@ -28,6 +28,8 @@
 <div id="weapon-select"></div>
 
   <script>
+  $(document).ready(function(){
+
   var rpgClass = localStorage.getItem('rpgClass');
   console.log("Class: " + rpgClass);
 
@@ -59,6 +61,7 @@
 
     $("#weapon-select").html("<h2>No Class Selected </h2>");
   
+  }
   }
 </script>
 
