@@ -236,7 +236,7 @@
 <!-- /Class Selection -->
 
 <footer class="footer mt-auto text-center bg-light">
-  <div class="container">
+  <div class="container pad-20">
     <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
 </footer>
