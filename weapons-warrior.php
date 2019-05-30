@@ -39,6 +39,9 @@
 
 <script> 
 $(document).ready(function(){
+
+var rpgClass = localStorage.getItem('rpgClass');
+
 	// --- Weapon Select Button script ---
   $(".rpg-wpn-sword").click(function(){
   	$("#rpg-wpn-btn-battleaxe").slideUp(300);

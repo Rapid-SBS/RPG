@@ -245,22 +245,22 @@ var rpgClass;
 $(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
-    localStorage.setItem('rpgClass', 'Warrior')
+    localStorage.setItem('rpgClass', 'Warrior');
   });
   $("#rpg-class-archer").click(function(){
-    localStorage.setItem('rpgClass', 'Archer')
+    localStorage.setItem('rpgClass', 'Archer');
   });
   $("#rpg-class-mage").click(function(){
-    localStorage.setItem('rpgClass', 'Mage')
+    localStorage.setItem('rpgClass', 'Mage');
   });
   $("#rpg-class-cleric").click(function(){
-    localStorage.setItem('rpgClass', 'Cleric')
+    localStorage.setItem('rpgClass', 'Cleric');
   });
   $("#rpg-class-rogue").click(function(){
-    localStorage.setItem('rpgClass', 'Rogue')
+    localStorage.setItem('rpgClass', 'Rogue');
   });
   $("#rpg-class-monk").click(function(){
-    localStorage.setItem('rpgClass', 'Monk')
+    localStorage.setItem('rpgClass', 'Monk');
   });
 
   console.log("Class: " + rpgClass);
