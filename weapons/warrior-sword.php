@@ -1,7 +1,7 @@
   <!-- Sword & Shield -->
- <div id="rpg-wpn-sword" class="card wide-275 mar-20 text-white bg-orange">
-  <div class="accordion" id="accordion-swordshield">
-      <div class="card-header text-center">
+ <div class="rpg-wpn-sword card wide-275 mar-20 text-white bg-orange">
+  <div class="rpg-wpn-sword accordion" id="accordion-swordshield">
+      <div class="rpg-wpn-sword card-header text-center">
         <h4>Sword & Shield</h4>
       </div><!-- /.card-header --> 
       <div class="card-header pad-5 text-center">

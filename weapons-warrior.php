@@ -35,8 +35,8 @@
 
 <script>
 $(document).ready(function(){
-  $("#rpg-wpn-sword").click(function(){
-    $("#rpg-wpn-select-btn").show();
+  $(".rpg-wpn-sword").click(function(){
+    $(".rpg-wpn-select-btn").show();
   });
 });
 </script>
