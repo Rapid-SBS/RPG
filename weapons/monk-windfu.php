@@ -1,5 +1,5 @@
   <!-- Wind Fu-->
-  <div class="card wide-275 mar-20 text-white bg-red">
+  <div class="rpg-wpn-windfu card wide-275 mar-20 text-white bg-red">
   <div class="accordion" id="accordion-windfu">
       <div class="card-header text-center">
         <h4>Wind Fu</h4>

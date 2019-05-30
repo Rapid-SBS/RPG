@@ -35,7 +35,7 @@
 
 <?php include 'weapons/archer-longbow.php'; ?>
 
-  <button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-crossbow" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-longbow" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <script> 
 $(document).ready(function(){

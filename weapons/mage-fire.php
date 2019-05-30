@@ -1,5 +1,5 @@
   <!-- Fire Stone -->
-  <div class="card wide-275 mar-20 text-white bg-blue">
+  <div class="rpg-wpn-fire card wide-275 mar-20 text-white bg-blue">
   <div class="accordion" id="accordion-fire">
       <div class="card-header text-center">
         <h4>Fire Stone</h4>

@@ -1,5 +1,5 @@
   <!-- Lightning Stone-->
-  <div class="card wide-275 mar-20 text-white bg-blue">
+  <div class="rpg-wpn-lightning card wide-275 mar-20 text-white bg-blue">
   <div class="accordion" id="accordion-lightning">
       <div class="card-header text-center">
         <h4>Lightning Stone</h4>

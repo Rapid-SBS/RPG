@@ -1,5 +1,5 @@
   <!-- Bo Staff -->
-  <div class="card wide-275 mar-20 text-white bg-red">
+  <div class="rpg-wpn-bostaff card wide-275 mar-20 text-white bg-red">
   <div class="accordion" id="accordion-bostaff">
       <div class="card-header text-center">
         <h4>Bo Staff</h4>

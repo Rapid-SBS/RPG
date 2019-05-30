@@ -1,5 +1,5 @@
   <!-- Ice Stone -->
- <div class="card wide-275 mar-20 text-white bg-blue">
+ <div class="rpg-wpn-ice card wide-275 mar-20 text-white bg-blue">
   <div class="accordion" id="accordion-ice">
       <div class="card-header text-center">
         <h4>Ice Stone</h4>

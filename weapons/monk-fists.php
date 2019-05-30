@@ -1,5 +1,5 @@
   <!-- Brawler's Fist-->
-  <div class="card wide-275 mar-20 text-white bg-red">
+  <div class="rpg-wpn-fists card wide-275 mar-20 text-white bg-red">
   <div class="accordion" id="accordion-fist">
       <div class="card-header text-center">
         <h4>Brawler's Fist</h4>

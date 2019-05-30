@@ -1,5 +1,5 @@
   <!-- Mace & Shield -->
- <div class="card wide-275 mar-20 text-white bg-yellow">
+ <div class="rpg-wpn-mace card wide-275 mar-20 text-white bg-yellow">
   <div class="accordion" id="accordion-mace">
       <div class="card-header text-center">
         <h4>Mace & Shield</h4>

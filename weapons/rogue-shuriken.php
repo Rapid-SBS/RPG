@@ -1,5 +1,5 @@
   <!-- Shuriken-->
-  <div class="card wide-275 mar-20 text-white bg-gray">
+  <div class="rpg-wpn-shuriken card wide-275 mar-20 text-white bg-gray">
   <div class="accordion" id="accordion-shuriken">
       <div class="card-header text-center">
         <h4>Shuriken</h4>

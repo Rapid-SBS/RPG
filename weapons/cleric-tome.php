@@ -1,5 +1,5 @@
   <!-- Holy Tome -->
-  <div class="card wide-275 mar-20 text-white bg-yellow">
+  <div class="rpg-wpn-tome card wide-275 mar-20 text-white bg-yellow">
   <div class="accordion" id="accordion-tome">
       <div class="card-header text-center">
         <h4>Holy Tome</h4>

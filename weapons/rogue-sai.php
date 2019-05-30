@@ -1,5 +1,5 @@
   <!-- Dual Sai-->
-  <div class="card wide-275 mar-20 text-white bg-gray">
+  <div class="rpg-wpn-sai card wide-275 mar-20 text-white bg-gray">
   <div class="accordion" id="accordion-sai">
       <div class="card-header text-center">
         <h4>Dual Sai</h4>

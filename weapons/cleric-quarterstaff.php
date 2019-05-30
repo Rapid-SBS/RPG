@@ -1,5 +1,5 @@
   <!-- Quarterstaff -->
-  <div class="card wide-275 mar-20 text-white bg-yellow">
+  <div class="rpg-wpn-quarterstaff card wide-275 mar-20 text-white bg-yellow">
   <div class="accordion" id="accordion-quarterstaff">
       <div class="card-header text-center">
         <h4>Quarterstaff</h4>
