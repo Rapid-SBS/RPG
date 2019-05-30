@@ -25,16 +25,30 @@
 
 <div class="y-flex-container pad-10">
 
+<div id="weapon-select"></div>
+
   <script>
   var rpgClass = localStorage.getItem('rpgClass');
-
-  if (rpgClass = "Warrior") {
-    alert("Hello World");
-  }
- 
   console.log("Class: " + rpgClass);
 
+  if (rpgClass = "Warrior") {
+    
+  } else if (rpgClass = "Archer") {
 
+    $("#weapon-select").html("<?php include 'weapons/weapons-archer.php'; ?>");
+
+  } else if (rpgClass = "Mage") {
+    
+  } else if (rpgClass = "Cleric") {
+    
+  } else if (rpgClass = "Rogue") {
+    
+  } else if (rpgClass = "Monk") {
+    
+  } else {
+
+  }
+ 
 </script>
 
 </div><!-- /.y-flex-container -->
