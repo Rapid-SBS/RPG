@@ -27,10 +27,7 @@
 
 <?php include 'weapons/warrior-sword.php'; ?>
 
-<button id="hide">Hide</button>
-<button id="show">Show</button>
-
-<p style="display: none;">If you click on the "Hide" button, I will disappear.</p>
+<button type="button" class="btn btn-primary rpg-wpn-select-btn" style="display: none;">Select</button>
 
 <?php include 'weapons/warrior-halberd.php'; ?>
 
@@ -38,11 +35,8 @@
 
 <script>
 $(document).ready(function(){
-  $("#hide").click(function(){
-    $("p").hide();
-  });
-  $("#show").click(function(){
-    $("p").show();
+  $("#rpg-wpn-sword").click(function(){
+    $("#rpg-wpn-select-btn").show();
   });
 });
 </script>
