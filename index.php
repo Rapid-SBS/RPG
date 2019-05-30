@@ -240,7 +240,7 @@
 </div><!-- /Class Selection -->
 
 <script>
-var rpgClass;
+var rpgClass = localStorage.getItem('rpg-class');
 
 $(document).ready(function(){
     console.log("Class: " + rpgClass);
