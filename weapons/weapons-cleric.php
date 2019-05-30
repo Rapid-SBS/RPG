@@ -13,8 +13,6 @@
 <script> 
 $(document).ready(function(){
 
-var rpgClass = localStorage.getItem('rpgClass');
-
   // --- Weapon Select Button script ---
   $(".rpg-wpn-mace").click(function(){
     $("#rpg-wpn-btn-tome").slideUp(300);
@@ -31,8 +29,6 @@ var rpgClass = localStorage.getItem('rpgClass');
     $("#rpg-wpn-btn-quarterstaff").slideUp(300);
     $("#rpg-wpn-btn-tome").slideDown(300);
   });
-
-  console.log("Class: " + rpgClass);
 
 });
 </script>
