@@ -27,17 +27,31 @@
 
 <?php include 'weapons/warrior-sword.php'; ?>
 
-<button type="button" class="btn btn-primary rpg-wpn-select-btn" style="display: none;">Select</button>
+	<button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-sword" style="display: none;">Select</button>
 
 <?php include 'weapons/warrior-halberd.php'; ?>
 
+	<button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-halberd" style="display: none;">Select</button>
+
 <?php include 'weapons/warrior-battleaxe.php'; ?>
+
+	<button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-battleaxe" style="display: none;">Select</button>
 
 <script>
 $(document).ready(function(){
   $(".rpg-wpn-sword").click(function(){
-    $(".rpg-wpn-select-btn").show();
+  	$(".rpg-wpn-select-btn").hide();
+    $("#rpg-wpn-btn-sword").show();
   });
+	$(".rpg-wpn-halberd").click(function(){
+  	$(".rpg-wpn-select-btn").hide();
+    $("#rpg-wpn-btn-halberd").show();
+  });
+	$(".rpg-wpn-battleaxe").click(function(){
+  	$(".rpg-wpn-select-btn").hide();
+    $("#rpg-wpn-btn-battleaxe").show();
+  });
+
 });
 </script>
 

@@ -1,5 +1,5 @@
   <!-- Halberd-->
-  <div class="card wide-275 mar-20 text-white bg-orange">
+  <div class="rpg-wpn-halberd card wide-275 mar-20 text-white bg-orange">
   <div class="accordion" id="accordion-halberd">
       <div class="card-header text-center">
         <h4>Halberd</h4>
