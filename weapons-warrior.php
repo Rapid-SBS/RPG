@@ -22,7 +22,7 @@
 
 <?php include 'weapons/warrior-sword.php'; ?>
 
-<button type="button" class="btn btn-primary">Select</button>
+<button type="button" class="btn btn-primary rpg-weapon-select hidden">Select</button>
 
 <?php include 'weapons/warrior-halberd.php'; ?>
 
