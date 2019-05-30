@@ -23,8 +23,6 @@
   <p class="pad-b-20"> An online tool for curating a<br> DnD-lite experience. </p>
 </div>
 
-<img src="img/icon-monk.svg" />
-
 <h2 class="pad-20 text-gray text-center opacity-pulse"> Select a Class... </h2>
 
 <!-- Class Selection -->  
@@ -204,7 +202,7 @@
   <a href="weapons-monk.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-red rounded">
       <div class="card-header text-center">
-        <h5>Monk</h5>
+        <h5>Monk</h5><img src="img/icon-monk.svg" />
       </div>
       <div class="card-body pad-10 text-center">
         <p class="card-text text-center">Advocates of peace yet masters of combat, Monks have well-balanced stats and a wide selection of support abilities.</p>
