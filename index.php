@@ -235,7 +235,7 @@
 </div><!-- /card-deck -->
 <!-- /Class Selection -->
 
-<footer class="footer mt-auto py-3">
+<footer class="footer mt-auto text-center bg-light">
   <div class="container">
     <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
