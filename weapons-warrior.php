@@ -27,7 +27,7 @@
 
 <?php include 'weapons/warrior-sword.php'; ?>
 
-	<button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-sword" style="display: none;"><p class="pulsing-text-white">Select</p></button>
+	<button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-sword" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <?php include 'weapons/warrior-halberd.php'; ?>
 
