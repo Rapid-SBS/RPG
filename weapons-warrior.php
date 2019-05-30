@@ -23,7 +23,7 @@
 <button id="hide">Hide</button>
 <button id="show">Show</button>
 
-<p style="display: none;">If you click on the "Hide" button, I will disappear.</p>
+<p>If you click on the "Hide" button, I will disappear.</p>
 
 <script>
 $(document).ready(function(){
