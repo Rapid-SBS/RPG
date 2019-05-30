@@ -240,7 +240,8 @@
 </div><!-- /Class Selection -->
 
 <script>
-console.log(localStorage.getItem("Class:" + 'rpg-class'));
+var rpgClass = localStorage.getItem('rpg-class');
+console.log("Class:" + rpgClass);
 </script>
 
 <footer class="footer mt-auto text-center bg-light">
