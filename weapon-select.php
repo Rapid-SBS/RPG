@@ -62,7 +62,7 @@
     $("#weapon-select").html("<h2>No Class Selected </h2>");
   
   }
-  }
+  });
 </script>
 
 </div><!-- /.y-flex-container -->
