@@ -202,7 +202,7 @@
   <a href="weapons-monk.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-red rounded">
       <div class="card-header text-center">
-        <h5>Monk</h5><img src="img/icon-monk.svg" />
+        <h5>Monk</h5><div style="background-color: #fff;"><img src="img/icon-monk.svg" /></div>
       </div>
       <div class="card-body pad-10 text-center">
         <p class="card-text text-center">Advocates of peace yet masters of combat, Monks have well-balanced stats and a wide selection of support abilities.</p>
