@@ -21,17 +21,7 @@
 
 </head>
 
-<body onload="classSelect()">
-
-	<script>
-		// --- Saves Class selection ---
-		var rpgClass = localStorage.getItem('rpg-class');
-
-		function classSelect(){
-			localStorage.setItem('rpg-class', 'Warrior');
-			console.log("Class:" + rpgClass);
-		}
-	</script>
+<body>
 
 <div class="y-flex-container pad-10">
 
@@ -49,6 +39,12 @@
 
 <script> 
 $(document).ready(function(){
+
+	// --- Saves Class selection ---
+		var rpgClass = localStorage.getItem('rpg-class');
+
+		localStorage.setItem('rpg-class', 'Warrior');
+		console.log("Class: " + rpgClass);
 
 	// --- Weapon Select Button script ---
   $(".rpg-wpn-sword").click(function(){
