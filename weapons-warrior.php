@@ -22,12 +22,12 @@
 </head>
 
 <body onload="classSelect()">
-	
+
 	<script>
 		// --- Saves Class selection ---
 		function classSelect(){
 			localStorage.setItem('rpg-class', 'Warrior');
-			console.log(localStorage.getItem('rpg-class'));
+			console.log(localStorage.getItem("Class:" + 'rpg-class'));
 		}
 	</script>
 
