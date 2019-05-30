@@ -22,13 +22,15 @@
 </head>
 
 <body onload="classSelect()">
-<script>
-	// --- Saves Class selection ---
-	function classSelect(){
-		localStorage.setItem('rpg-class', 'Warrior');
-		console.log(localStorage.getItem('rpg-class'));
-	}
-</script>
+	
+	<script>
+		// --- Saves Class selection ---
+		function classSelect(){
+			localStorage.setItem('rpg-class', 'Warrior');
+			console.log(localStorage.getItem('rpg-class'));
+		}
+	</script>
+
 <div class="y-flex-container pad-10">
 
 <?php include 'weapons/warrior-sword.php'; ?>

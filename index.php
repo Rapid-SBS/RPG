@@ -237,8 +237,11 @@
   </div>
   </a>
 
-</div><!-- /card-deck -->
-<!-- /Class Selection -->
+</div><!-- /Class Selection -->
+
+<script>
+console.log(localStorage.getItem('rpg-class'));
+</script>
 
 <footer class="footer mt-auto text-center bg-light">
   <div class="container pad-20">
