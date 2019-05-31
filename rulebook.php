@@ -23,16 +23,16 @@
 
 <body>
 
-<div class="container">
+<div>
 
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vT4dMTDu56LaDgkrw2Err_rfTjgLZewuR5WlG-6BHB-6a-ueBEe3Yli2mkwdpPsLbjnDS9HbMzFKlOl/pub?embedded=true" style="height: 90%; width: 100%;"></iframe>
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vT4dMTDu56LaDgkrw2Err_rfTjgLZewuR5WlG-6BHB-6a-ueBEe3Yli2mkwdpPsLbjnDS9HbMzFKlOl/pub?embedded=true" style="height: 90vh; width: 100%;"></iframe>
 
 </div>
 
 <footer class="footer mt-auto text-center bg-light">
   <div class="container pad-20">
     <div class="pad-b-20">
-      <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="index.php" role="button">home</a>
+      <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="index.php" role="button">Home</a>
     </div>
     <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
