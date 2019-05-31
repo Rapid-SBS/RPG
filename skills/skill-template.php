@@ -1,4 +1,4 @@
-<div id="rpg-skills-archer-lvl3">
+<div id="rpg-skills-archer-lvl3" class="container">
   
   <div class="row pad-10"><h4 class="mx-auto">LEVEL 3</h4></div>
 
@@ -55,4 +55,5 @@
     </div><!-- /.collapse -->
 
   </div><!-- /.row -->
-</div>
+
+</div><!-- /.container -->
