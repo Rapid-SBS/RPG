@@ -29,7 +29,7 @@
 
 <script>
   $(document).ready(function(){
-    $("#skill-select").load("skills/skill-template.php");
+    $("#skill-select").load("skills/skill-tree-archer.php");
   });
 </script>
 
