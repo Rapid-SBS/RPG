@@ -1,6 +1,6 @@
 <div class="row">
   <!-- Mark Enemy -->
-  <a class="btn text-white pad-10 mar-5 bg-green" href="#collapseMark" role="button" aria-expanded="false" aria-controls="collapseMark">
+  <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseMark" role="button" aria-expanded="false" aria-controls="collapseMark">
     <h6>Mark Enemy <span class="badge badge-light text-teal">2</span></h6>
   </a>
   <!-- Salve -->
