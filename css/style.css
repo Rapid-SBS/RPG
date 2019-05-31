@@ -8,17 +8,17 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Dark Pulsing Text --- */
 .pulsing-text-dark{
   color:#333;
-	-webkit-animation: flash linear 3s infinite;
-	animation: flash linear 3s infinite;
+	-webkit-animation: flash linear 2s infinite;
+	animation: flash linear 2s infinite;
 }
 @-webkit-keyframes flash {
 	0% { opacity: 1; } 
-	50% { opacity: .1; } 
+	50% { opacity: .05; } 
 	100% { opacity: 1; }
 }
 @keyframes flash {
 	0% { opacity: 1; } 
-	50% { opacity: .1; } 
+	50% { opacity: .05; } 
 	100% { opacity: 1; }
 }
 
