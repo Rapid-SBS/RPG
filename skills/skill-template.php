@@ -4,9 +4,9 @@
 
 
 <script>
-$('.popover-dismiss').popover({
-  trigger: 'focus'
-})
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
 </script>
   <!-- Salve
   <div class="rpg-wpn-bow card wide-160 mar-5 text-white bg-green">
