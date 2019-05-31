@@ -57,11 +57,11 @@
   var rpgClass = localStorage.getItem('rpgClass');
   var rpgWeapon = localStorage.getItem('rpgWeapon');
 
-  console.log("Class: " + rpgClass);
-
   $(document).ready(function(){
 
+    $("#tb-rpg-name").text(rpgName);
     $("#tb-rpg-class").text(rpgClass);
+    $("#tb-rpg-weapon").text(rpgWeapon);
 
   });
 </script>
