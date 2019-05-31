@@ -63,17 +63,17 @@
   });
 </script>
 
+</div><!-- /.y-flex-container -->
+
 <footer class="footer mt-auto bg-light">
   <div class="row text-center pad-t-20">
-    <a class="btn btn-dark text-white mar-r-20 pad-l-20" href="http://rapid-phyre.net" role="button">Restart</a>
-    <a class="btn btn-dark text-white mar-r-20 pad-l-20" href="character.php" role="button">View Character</a>
+    <a class="btn btn-dark text-white mar-r-20 mar-l-20" href="http://rapid-phyre.net" role="button">Restart</a>
+    <a class="btn btn-dark text-white mar-r-20 mar-l-20" href="character.php" role="button">View Character</a>
   </div>
   <div class="row text-center">
     <span class="pad-10 text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
 </footer>
-
-</div><!-- /.y-flex-container -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
