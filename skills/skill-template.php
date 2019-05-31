@@ -20,8 +20,8 @@
       <div class="card-body pad-5">
         <p class="card-text text-center">Lower enemy DEF for one turn. <br> Costs 2 Mana.</p>
       </div>
-      <ul class="list-group text-center light-transparency">
-        <li class="list-group-item align-items-center" style="padding: .35rem 1.25rem;">
+      <ul class="list-group text-center">
+        <li class="list-group-item light-transparency align-items-center" style="padding: .35rem 1.25rem;">
           <span class="badge badge-light text-green">-2</span>
           Enemy DEF
         </li>
@@ -38,8 +38,8 @@
       <div class="card-body pad-5">
         <p class="card-text text-center">Heal yourself or one ally. <br>HEAL = 2HP<br> Costs 2 Mana.</p>
       </div>
-      <ul class="list-group text-center light-transparency">
-        <li class="list-group-item align-items-center" style="padding: .35rem 1.25rem;">
+      <ul class="list-group text-center">
+        <li class="list-group-item light-transparency align-items-center" style="padding: .35rem 1.25rem;">
           <span class="badge badge-light text-red">+2</span>
           HP
         </li>
