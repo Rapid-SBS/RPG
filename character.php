@@ -53,7 +53,7 @@
 </div><!-- /.row -->
 
   <script>
-	var rpgName = localStorage.getItem('rpgName');
+  var rpgName = localStorage.getItem('rpgName');
   var rpgClass = localStorage.getItem('rpgClass');
   var rpgWeapon = localStorage.getItem('rpgWeapon');
 

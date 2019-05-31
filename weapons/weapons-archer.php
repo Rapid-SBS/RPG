@@ -1,16 +1,26 @@
 <?php include 'archer-bow.php'; ?>
   
-  <button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-bow" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <button type="button" onclick="setWeaponBow()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-bow" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <?php include 'archer-crossbow.php'; ?>
 
-  <button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-crossbow" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <button type="button" onclick="setWeaponCrossbow()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-crossbow" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <?php include 'archer-longbow.php'; ?>
 
-  <button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-longbow" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <button type="button" onclick="setWeaponLongbow()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-longbow" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <script> 
+var rpgClass = localStorage.getItem('rpgClass');
+var rpgWeapon = localStorage.getItem('rpgWeapon');
+
+console.log("Class: " + rpgClass);
+console.log("Weapon: " + rpgWeapon);
+
+function setWeaponBow() {
+  localStorage.setItem('rpgWeapon', 'Bow');
+}
+
 $(document).ready(function(){
 
   // --- Weapon Select Button script ---
