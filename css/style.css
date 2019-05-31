@@ -4,14 +4,10 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0;
 }
 
-/*
 .js-collapse-show {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  transition-delay: 1s;
-  transition: height 0.35s ease;
+  display: show;
 }
+
 
 .js-collapse-hide {
   position: relative;
@@ -21,7 +17,6 @@ h1, h2, h3, h4, h5, h6 {
   transition: height 0.35s ease;
 }
 
-*/
 
 
 /* --- Dark Pulsing Text --- */
