@@ -1,16 +1,16 @@
-<div id="rpg-skills-archer-lvl-6" class="container">
+<div id="rpg-skills-archer-lvl-6 border-top" class="container">
   
   <div class="row pad-10"><h4 class="mx-auto">LEVEL 6</h4></div>
 
   <div class="row justify-content-center">
 
     <!-- Flaming Arrow -->
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseFlamearrow" role="button" aria-expanded="false" aria-controls="collapseFlamearrow">
+    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseFlamearrow" role="button" aria-expanded="false" aria-controls="collapseFlamearrow">
       <h6>Flaming Arrow <span class="badge badge-light text-teal">2</span></h6>
     </a>
 
     <!-- Steel Jaw Trap -->  
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseSteeltrap" role="button" aria-expanded="false" aria-controls="collapseSteeltrap">
+    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseSteeltrap" role="button" aria-expanded="false" aria-controls="collapseSteeltrap">
       <h6>Steel Jaw Trap <span class="badge badge-light text-teal">2</span></h6>
     </a>
 
@@ -24,7 +24,7 @@
         <div class="card-header text-center">
           <h6>Attack Ability</h6>
         </div>
-        <div class="card-body pad-10">
+        <div class="card-body pad-5">
           <p class="card-text text-center">Deals damage and applies Burned debuff.<br> DMG = Weapon ATT + Player ATT.<br> Costs 4 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
@@ -42,8 +42,8 @@
         <div class="card-header text-center">
           <h6>Attack Ability</h6>
         </div>
-        <div class="card-body pad-10">
-          <p class="card-text text-center">Deals damage and applies Stun debuff.<br> Costs 5 Mana.</p>
+        <div class="card-body pad-5">
+          <p class="card-text text-center">Deals damage and applies Stun debuff.<br>DMG = Weapon ATT + Player ATT.<br> Costs 5 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">

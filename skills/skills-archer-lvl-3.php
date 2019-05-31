@@ -1,4 +1,4 @@
-<div id="rpg-skills-archer-lvl-3" class="container">
+<div id="rpg-skills-archer-lvl-3 border-top" class="container">
   
   <div class="row pad-10"><h4 class="mx-auto">LEVEL 3</h4></div>
 
@@ -29,7 +29,7 @@
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-green">-2</span>
+            <span class="badge bg-white text-green">-3</span>
             Enemy DEF
           </li>
         </ul>
@@ -47,7 +47,7 @@
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-red">+2</span>
+            <span class="badge bg-white text-red">+3</span>
             HP
           </li>
         </ul>
