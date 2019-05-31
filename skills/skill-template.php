@@ -10,16 +10,41 @@
 </div><!-- /.row -->
 
 <div id="support-archer" class="row">
+
   <!-- Mark Enemy -->
   <div class="collapse mx-auto" id="collapseMark" data-parent="#support-archer">
-    <div class="card card-body light-transparency">
-      Lowers enemy DEF for one turn. <br> Costs 2 Mana.
-    </div>
-  </div>
+    <div class="card light-transparency">
+      <div class="card-header text-center">
+        <h6>Support Ability</h4>
+      </div>
+      <div class="card-body">
+        <p class="card-text text-center">Lower enemy DEF for one turn. <br> Costs 2 Mana.</p>
+      </div>
+      <ul class="list-group text-center">
+        <li class="list-group-item align-items-center" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-green">-2</span>
+          Enemy DEF
+        </li>
+      </ul>
+    </div><!-- /.card -->
+  </div><!-- /.collapse -->
+
   <!-- Salve -->
   <div class="collapse mx-auto" id="collapseSalve" data-parent="#support-archer">
     <div class="card card-body light-transparency">
-      Heal yourself or one ally. <br> Costs 2 Mana.
-    </div>
-  </div>
+      <div class="card-header text-center">
+        <h6>Support Ability</h4>
+      </div>
+      <div class="card-body">
+        <p class="card-text text-center">Heal yourself or one ally. <br>HEAL = 2HP<br> Costs 2 Mana.</p>
+      </div>
+      <ul class="list-group text-center">
+        <li class="list-group-item align-items-center" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-red">+2</span>
+          HP
+        </li>
+      </ul>
+    </div><!-- /.card -->
+  </div><!-- /.collapse -->
+
 </div><!-- /.row -->
