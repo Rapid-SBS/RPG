@@ -241,6 +241,7 @@
 
 <script> // --- Store Class Selection ---
 var rpgClass = localStorage.getItem('rpgClass');
+var rpgWeapon = localStorage.getItem('rpgWeapon');
 
 $(document).ready(function(){
 
@@ -270,6 +271,7 @@ $(document).ready(function(){
   });
 
   console.log("Class: " + rpgClass);
+  console.log("Weapon: " + rpgWeapon);
 });
 </script>
 
