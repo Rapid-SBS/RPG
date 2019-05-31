@@ -2,7 +2,7 @@
   
   <div class="row pad-10"><h4 class="mx-auto">LEVEL 3</h4></div>
 
-  <div class="row">
+  <div class="row justify-content-center">
 
     <!-- Mark Enemy -->
     <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseMark" role="button" aria-expanded="false" aria-controls="collapseMark">
@@ -16,7 +16,7 @@
 
   </div><!-- /.row -->
 
-  <div id="support-archer" class="row pad-10">
+  <div id="support-archer" class="row wide-275 mx-auto pad-10">
 
     <!-- Mark Enemy -->
     <div class="collapse mx-auto" id="collapseMark" data-parent="#support-archer">
