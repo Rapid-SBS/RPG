@@ -1,6 +1,6 @@
 <div id="rpg-skills-archer-lvl3" class="row">
 
-  <div class="text-center pad-10"><h4>LEVEL 3</h4></div>
+  <div class="row text-center pad-10"><h4>LEVEL 3</h4></div>
 
   <!-- Mark Enemy -->
   <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseMark" role="button" aria-expanded="false" aria-controls="collapseMark">
