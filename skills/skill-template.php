@@ -1,10 +1,10 @@
 <div class="row">
   <!-- Mark Enemy -->
-  <a class="btn text-white pad-10 mar-5 bg-green" onfocus="showMark()" onblur="hideMark()" href="#collapseMark">
+  <a class="btn text-white pad-10 mar-5 bg-green" onclick="showMark()" onblur="hideMark()" href="#collapseMark">
     <h6>Mark Enemy <span class="badge badge-light text-teal">2</span></h6>
   </a>
   <!-- Salve -->
-  <a class="btn text-white pad-10 mar-5 bg-green" onfocus="showSalve()" onblur="hideSalve()" href="#collapseSalve">
+  <a class="btn text-white pad-10 mar-5 bg-green" onclick="showSalve()" onblur="hideSalve()" href="#collapseSalve">
     <h6>Salve <span class="badge badge-light text-teal">2</span></h6>
   </a>
 </div><!-- /.row -->
