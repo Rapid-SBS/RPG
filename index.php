@@ -278,7 +278,7 @@ $(document).ready(function(){
 <footer class="footer mt-auto text-center bg-light">
   <div class="container pad-20">
     <div class="pad-b-20">
-      <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="http://rapid-phyre.net" role="button">Rulebook</a>
+      <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="rulebook.php" role="button">Rulebook</a>
     </div>
     <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
