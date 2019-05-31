@@ -17,7 +17,7 @@
       <div class="card-header text-center">
         <h6>Support Ability</h4>
       </div>
-      <div class="card-body">
+      <div class="card-body pad-5">
         <p class="card-text text-center">Lower enemy DEF for one turn. <br> Costs 2 Mana.</p>
       </div>
       <ul class="list-group text-center light-transparency">
@@ -35,7 +35,7 @@
       <div class="card-header text-center">
         <h6>Support Ability</h4>
       </div>
-      <div class="card-body">
+      <div class="card-body pad-5">
         <p class="card-text text-center">Heal yourself or one ally. <br>HEAL = 2HP<br> Costs 2 Mana.</p>
       </div>
       <ul class="list-group text-center light-transparency">
