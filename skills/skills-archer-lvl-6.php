@@ -5,21 +5,21 @@
   <div class="row justify-content-center">
 
     <!-- Flaming Arrow -->
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseMark" role="button" aria-expanded="false" aria-controls="collapseMark">
+    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseFlamearrow" role="button" aria-expanded="false" aria-controls="collapseFlamearrow">
       <h6>Flaming Arrow <span class="badge badge-light text-teal">2</span></h6>
     </a>
 
     <!-- Steel Jaw Trap -->  
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseSalve" role="button" aria-expanded="false" aria-controls="collapseSalve">
+    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseSteeltrap" role="button" aria-expanded="false" aria-controls="collapseSteeltrap">
       <h6>Steel Jaw Trap <span class="badge badge-light text-teal">2</span></h6>
     </a>
 
   </div><!-- /.row -->
 
-  <div id="support-archer" class="row wide-275 mx-auto pad-10">
+  <div id="attack-archer" class="row wide-275 mx-auto pad-10">
 
     <!-- Flaming Arrow -->
-    <div class="collapse mx-auto" id="collapseMark" data-parent="#support-archer">
+    <div class="collapse mx-auto" id="collapseFlamearrow" data-parent="#attack-archer">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Attack Ability</h6>
@@ -37,7 +37,7 @@
     </div><!-- /.collapse -->
 
     <!-- Steel Jaw Trap -->
-    <div class="collapse mx-auto" id="collapseSalve" data-parent="#support-archer">
+    <div class="collapse mx-auto" id="collapseSteeltrap" data-parent="#attack-archer">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Attack Ability</h6>
