@@ -15,7 +15,7 @@ var rpgWeapon = localStorage.getItem('rpgWeapon');
 
 function setWeaponMace() {
   localStorage.setItem('rpgClass', 'Cleric');
-  localStorage.setItem('rpgWeapon', 'Mace');
+  localStorage.setItem('rpgWeapon', 'Mace & Shield');
 }
 function setWeaponQuarterstaff() {
   localStorage.setItem('rpgClass', 'Cleric');
@@ -23,7 +23,7 @@ function setWeaponQuarterstaff() {
 }
 function setWeaponTome() {
   localStorage.setItem('rpgClass', 'Cleric');
-  localStorage.setItem('rpgWeapon', 'Tome');
+  localStorage.setItem('rpgWeapon', 'Holy Tome');
 }
 
 $(document).ready(function(){

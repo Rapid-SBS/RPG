@@ -19,7 +19,7 @@ function setWeaponBostaff() {
 }
 function setWeaponFists() {
   localStorage.setItem('rpgClass', 'Monk');
-  localStorage.setItem('rpgWeapon', "Brawler's Fists");
+  localStorage.setItem('rpgWeapon', "Brawler's Fist");
 }
 function setWeaponWindfu() {
   localStorage.setItem('rpgClass', 'Monk');
