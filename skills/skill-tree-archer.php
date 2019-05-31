@@ -1,4 +1,4 @@
-<div id="skill-tree-archer">
+<div id="skill-tree-archer" style="width: 100%;">
 
 <?php include 'skills-archer-lvl-6.php'; ?>
 

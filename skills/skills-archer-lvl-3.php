@@ -1,4 +1,4 @@
-<div id="rpg-skills-archer-lvl-3" class="border-top mar-20">
+<div id="rpg-skills-archer-lvl-3" class="border-top pad-40">
   
   <div class="row pad-10"><h4 class="mx-auto">LEVEL 3</h4></div>
 
