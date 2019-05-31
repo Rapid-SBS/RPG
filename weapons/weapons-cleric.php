@@ -1,16 +1,28 @@
 <?php include 'cleric-mace.php'; ?>
 
-  <button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-mace" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <button type="button" onclick="setWeaponMace()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-mace" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <?php include 'cleric-quarterstaff.php'; ?>
 
-  <button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-quarterstaff" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <button type="button" onclick="setWeaponQuarterstaff()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-quarterstaff" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <?php include 'cleric-tome.php'; ?>
 
-  <button type="button" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-tome" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <button type="button" onclick="setWeaponTome()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-tome" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
-<script> 
+<script>
+var rpgWeapon = localStorage.getItem('rpgWeapon');
+
+function setWeaponMace() {
+  localStorage.setItem('rpgWeapon', 'Mace');
+}
+function setWeaponQuarterstaff() {
+  localStorage.setItem('rpgWeapon', 'Quarterstaff');
+}
+function setWeaponTome() {
+  localStorage.setItem('rpgWeapon', 'Tome');
+}
+
 $(document).ready(function(){
 
   // --- Weapon Select Button script ---

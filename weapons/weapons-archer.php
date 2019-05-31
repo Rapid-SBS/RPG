@@ -11,7 +11,6 @@
   <button type="button" onclick="setWeaponLongbow()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-longbow" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <script> 
-var rpgClass = localStorage.getItem('rpgClass');
 var rpgWeapon = localStorage.getItem('rpgWeapon');
 
 function setWeaponBow() {
