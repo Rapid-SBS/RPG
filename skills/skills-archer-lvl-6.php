@@ -1,4 +1,4 @@
-<div id="rpg-skills-archer-lvl-6 border-top" class="container">
+<div id="rpg-skills-archer-lvl-6" class="border-top mar-20">
   
   <div class="row pad-10"><h4 class="mx-auto">LEVEL 6</h4></div>
 
@@ -6,17 +6,17 @@
 
     <!-- Flaming Arrow -->
     <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseFlamearrow" role="button" aria-expanded="false" aria-controls="collapseFlamearrow">
-      <h6>Flaming Arrow <span class="badge badge-light text-teal">2</span></h6>
+      <h6>Flaming Arrow <span class="badge badge-light text-teal">4</span></h6>
     </a>
 
     <!-- Steel Jaw Trap -->  
     <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseSteeltrap" role="button" aria-expanded="false" aria-controls="collapseSteeltrap">
-      <h6>Steel Jaw Trap <span class="badge badge-light text-teal">2</span></h6>
+      <h6>Steel Jaw Trap <span class="badge badge-light text-teal">5</span></h6>
     </a>
 
   </div><!-- /.row -->
 
-  <div id="attack-archer" class="row wide-275 mx-auto pad-10">
+  <div id="attack-archer" class="row wide-320 mx-auto pad-10">
 
     <!-- Flaming Arrow -->
     <div class="collapse mx-auto" id="collapseFlamearrow" data-parent="#attack-archer">
@@ -29,7 +29,7 @@
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-orange">5</span>
+            <span class="badge bg-white text-orange">6</span>
             Weapon ATT
           </li>
         </ul>

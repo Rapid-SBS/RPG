@@ -1,4 +1,4 @@
-<div id="rpg-skills-archer-lvl-3 border-top" class="container">
+<div id="rpg-skills-archer-lvl-3" class="border-top mar-20">
   
   <div class="row pad-10"><h4 class="mx-auto">LEVEL 3</h4></div>
 
@@ -16,7 +16,7 @@
 
   </div><!-- /.row -->
 
-  <div id="support-archer" class="row wide-275 mx-auto pad-10">
+  <div id="support-archer" class="row wide-320 mx-auto pad-10">
 
     <!-- Mark Enemy -->
     <div class="collapse mx-auto" id="collapseMark" data-parent="#support-archer">

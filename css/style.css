@@ -70,6 +70,10 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: rgba(0,0,0,0.15);
 }
 
+.wide-320 {
+	width: 320px;
+}
+
 .wide-275 {
 	width: 275px;
 }
