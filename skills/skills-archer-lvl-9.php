@@ -5,12 +5,12 @@
   <div class="row justify-content-center">
 
     <!-- Arrow Storm -->
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseArrowstorm" role="button" aria-expanded="false" aria-controls="collapseArrowstorm">
+    <a class="btn text-white pad-10 mar-5 bg-yellow" data-toggle="collapse" href="#collapseArrowstorm" role="button" aria-expanded="false" aria-controls="collapseArrowstorm">
       <h6>Arrow Storm <span class="badge badge-light text-teal">11</span></h6>
     </a>
 
     <!-- Missile Salvo -->  
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseMissilesalvo" role="button" aria-expanded="false" aria-controls="collapseMissilesalvo">
+    <a class="btn text-white pad-10 mar-5 bg-yellow" data-toggle="collapse" href="#collapseMissilesalvo" role="button" aria-expanded="false" aria-controls="collapseMissilesalvo">
       <h6>Missile Salvo <span class="badge badge-light text-teal">9</span></h6>
     </a>
 
@@ -25,7 +25,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Hail arrows down upon all your enemies.<br> DMG = Weapon ATT + Player ATT.<br> Costs 11 Mana.</p>
+          <p class="card-text text-center">Hail arrows down upon all enemies.<br> DMG = Weapon ATT + Player ATT.<br> Costs 11 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
