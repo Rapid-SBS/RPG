@@ -23,7 +23,7 @@
 
 <body>
 
-<div id="skill-select" class="y-flex-container pad-10">
+<div id="skill-select" class="y-flex-container pad-b-10">
 
 </div><!-- /.y-flex-container -->
 
