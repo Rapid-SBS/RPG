@@ -1,6 +1,6 @@
 <div id="rpg-skills-archer-lvl3">
   
-  <div class="row text-center pad-10"><h4>LEVEL 3</h4></div>
+  <div class="row pad-10"><h4 class="mx-auto">LEVEL 3</h4></div>
 
   <div class="row">
 
@@ -11,7 +11,7 @@
 
     <!-- Salve -->
     <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseSalve" role="button" aria-expanded="false" aria-controls="collapseSalve">
-      <h6>Salve <span class="badge badge-light text-teal">2</span></h6>
+      <h6>Healing Salve <span class="badge badge-light text-teal">2</span></h6>
     </a>
 
   </div><!-- /.row -->
@@ -22,7 +22,7 @@
     <div class="collapse mx-auto" id="collapseMark" data-parent="#support-archer">
       <div class="card bg-light">
         <div class="card-header text-center">
-          <h4>Support Ability</h4>
+          <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-10">
           <p class="card-text text-center">Lower enemy DEF for one turn. <br> Costs 2 Mana.</p>
@@ -40,7 +40,7 @@
     <div class="collapse mx-auto" id="collapseSalve" data-parent="#support-archer">
       <div class="card bg-light">
         <div class="card-header text-center">
-          <h4>Support Ability</h4>
+          <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-10">
           <p class="card-text text-center">Heal yourself or one ally.<br> Costs 2 Mana.</p>
