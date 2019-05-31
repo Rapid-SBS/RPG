@@ -61,7 +61,7 @@
 
   $(document).ready(function(){
 
-    $("#tb-rpg-class").val(rpgClass);
+    $("#tb-rpg-class").text(rpgClass);
 
   });
 </script>
