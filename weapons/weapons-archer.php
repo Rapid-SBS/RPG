@@ -14,12 +14,15 @@
 var rpgWeapon = localStorage.getItem('rpgWeapon');
 
 function setWeaponBow() {
+  localStorage.setItem('rpgClass', 'Archer');
   localStorage.setItem('rpgWeapon', 'Bow');
 }
 function setWeaponCrossbow() {
+  localStorage.setItem('rpgClass', 'Archer');
   localStorage.setItem('rpgWeapon', 'Crossbow');
 }
 function setWeaponLongbow() {
+  localStorage.setItem('rpgClass', 'Archer');
   localStorage.setItem('rpgWeapon', 'Longbow');
 }
 

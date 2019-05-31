@@ -14,12 +14,15 @@
 var rpgWeapon = localStorage.getItem('rpgWeapon');
 
 function setWeaponMace() {
+  localStorage.setItem('rpgClass', 'Cleric');
   localStorage.setItem('rpgWeapon', 'Mace');
 }
 function setWeaponQuarterstaff() {
+  localStorage.setItem('rpgClass', 'Cleric');
   localStorage.setItem('rpgWeapon', 'Quarterstaff');
 }
 function setWeaponTome() {
+  localStorage.setItem('rpgClass', 'Cleric');
   localStorage.setItem('rpgWeapon', 'Tome');
 }
 
