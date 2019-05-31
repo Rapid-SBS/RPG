@@ -66,8 +66,16 @@
 </div><!-- /.y-flex-container -->
 
 <footer class="footer mt-auto text-center bg-light">
-  <div class="container pad-20">
-    <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
+  <div class="row">
+    <div class="col-4">
+      <button type="button" class="btn btn-dark text-white rpg-wpn-select-btn" href="http://rapid-phyre.net">Restart</button>
+    </div>
+    <div class="col-8">
+      <button type="button" class="btn btn-dark text-white rpg-wpn-select-btn" href="character.php">View Character</button>
+    </div>
+  </div>
+  <div class="row">
+    <span class="pad-20 text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
 </footer>
 
