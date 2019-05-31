@@ -16,7 +16,7 @@
 
   </div><!-- /.row -->
 
-  <div id="support-archer" class="row wide-320 mx-auto pad-10">
+  <div id="support-archer" class="row mx-auto pad-10">
 
     <!-- Mark Enemy -->
     <div class="collapse mx-auto" id="collapseMark" data-parent="#support-archer">

@@ -16,7 +16,7 @@
 
   </div><!-- /.row -->
 
-  <div id="attack-archer" class="row wide-320 mx-auto pad-10">
+  <div id="attack-archer" class="row mx-auto pad-10">
 
     <!-- Flaming Arrow -->
     <div class="collapse mx-auto" id="collapseFlamearrow" data-parent="#attack-archer">
