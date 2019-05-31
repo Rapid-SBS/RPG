@@ -67,10 +67,10 @@
 
 <footer class="footer mt-auto text-center bg-light">
   <div class="container pad-20">
-    <a class="btn btn-dark text-white mar-r-20 mar-l-20" href="http://rapid-phyre.net" role="button">Restart</a>
-    <a class="btn btn-dark text-white mar-r-20 mar-l-20" href="character.php" role="button">View Character</a>
+    <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="http://rapid-phyre.net" role="button">Restart</a>
+    <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="character.php" role="button">View Character</a>
     <br>
-    <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
+    <span class="text-muted pad-t-20">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
 </footer>
 
