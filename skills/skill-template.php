@@ -11,13 +11,13 @@
 
 <div id="support-archer" class="row">
   <!-- Mark Enemy -->
-  <div class="wide-275" id="collapseMark">
+  <div class="wide-275 js-collapse-hide" id="collapseMark">
     <div class="card card-body light-transparency">
       Lowers enemy DEF for one turn. <br> Costs 2 Mana.
     </div>
   </div>
   <!-- Salve -->
-  <div class="wide-275" id="collapseSalve">
+  <div class="wide-275 js-collapse-hide" id="collapseSalve">
     <div class="card card-body light-transparency">
       Heal yourself or one ally. <br> Costs 2 Mana.
     </div>
