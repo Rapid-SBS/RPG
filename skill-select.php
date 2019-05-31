@@ -31,6 +31,10 @@
   $(document).ready(function(){
     $("#skill-select").load("skills/skill-template.php");
   });
+
+  $('.popover-dismiss').popover({
+    trigger: 'focus'
+  })
 </script>
 
 <footer class="footer mt-auto text-center bg-light">
