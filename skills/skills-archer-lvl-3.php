@@ -1,4 +1,4 @@
-<div id="rpg-skills-archer-lvl-3" class="border-top pad-40">
+<div id="rpg-skills-archer-lvl-3" class="border-top pad-20">
   
   <div class="row pad-10"><h4 class="mx-auto">LEVEL 3</h4></div>
 
@@ -25,12 +25,12 @@
           <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-10">
-          <p class="card-text text-center">Lower enemy DEF for one turn. <br> Costs 2 Mana.</p>
+          <p class="card-text text-center">Lower one enemy's DEF for one turn. <br> Costs 2 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
             <span class="badge bg-white text-green">-3</span>
-            Enemy DEF
+            Enemy DEF debuff
           </li>
         </ul>
       </div><!-- /.card -->

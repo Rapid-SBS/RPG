@@ -25,7 +25,7 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Deals damage and applies Burned debuff.<br> DMG = Weapon ATT + Player ATT.<br> Costs 4 Mana.</p>
+          <p class="card-text text-center">Deals damage and applies Burn debuff.<br> DMG = Weapon ATT + Player ATT.<br> Costs 4 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
