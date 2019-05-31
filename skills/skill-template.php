@@ -1,6 +1,7 @@
 <div class="row">
   <!-- Mark Enemy -->
-  <a tabindex="0" class="btn btn-lg wide-160 text-white bg-green" role="button" data-toggle="popover" data-trigger="focus" title="Support Ability" data-content="Lowers enemy DEF for one turn. Costs 2 Mana.">Mark Enemy <span class="badge badge-light text-teal">2</span></a>
+<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+
 
 <script>
 $('.popover-dismiss').popover({
