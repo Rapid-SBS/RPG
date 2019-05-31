@@ -1,16 +1,31 @@
 <?php include 'mage-ice.php'; ?>
 
-  <button type="button" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-ice" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <button type="button" onclick="setWeaponIce()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-ice" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <?php include 'mage-fire.php'; ?>
 
-  <button type="button" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-fire" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <button type="button" onclick="setWeaponFire()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-fire" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <?php include 'mage-lightning.php'; ?>
 
-  <button type="button" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-lightning" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <button type="button" onclick="setWeaponLightning()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-lightning" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
-<script> 
+<script>
+var rpgWeapon = localStorage.getItem('rpgWeapon');
+
+function setWeaponIce() {
+  localStorage.setItem('rpgClass', 'Mage');
+  localStorage.setItem('rpgWeapon', 'Ice');
+}
+function setWeaponFire() {
+  localStorage.setItem('rpgClass', 'Mage');
+  localStorage.setItem('rpgWeapon', 'Fire');
+}
+function setWeaponLightning() {
+  localStorage.setItem('rpgClass', 'Mage');
+  localStorage.setItem('rpgWeapon', 'Lightning');
+}
+
 $(document).ready(function(){
 
   // --- Weapon Select Button script ---
