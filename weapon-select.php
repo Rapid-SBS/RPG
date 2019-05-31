@@ -25,9 +25,12 @@
 
 <div id="weapon-select" class="y-flex-container pad-10">
 
-  <script>
-	var rpgClass = localStorage.getItem('rpgClass');
-  console.log("Class: " + rpgClass);
+<script>
+var rpgClass = localStorage.getItem('rpgClass');
+var rpgWeapon = localStorage.getItem('rpgWeapon');
+
+console.log("Class: " + rpgClass);
+console.log("Weapon: " + rpgWeapon);
 
   $(document).ready(function(){
 
