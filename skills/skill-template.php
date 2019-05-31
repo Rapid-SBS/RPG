@@ -1,12 +1,14 @@
 <div class="row">
   <!-- Mark Enemy -->
-  <a tabindex="0" class="btn btn-lg wide-160 text-white bg-green" role="button" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Support Ability" data-content="Lowers enemy DEF for one turn. Costs 2 Mana."><h6>Mark Enemy <span class="badge badge-light text-teal">2</span></h6></a>
+  <a class="btn text-white wide-160 bg-green" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <h6>Mark Enemy <span class="badge badge-light text-teal">2</span></h6>
+  </a>
 
-<script>
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover();   
-});
-</script>
+  <div class="collapse wide-275" id="collapseExample">
+    <div class="card card-body light-transparency">
+      Lowers enemy DEF for one turn. <br> Costs 2 Mana.
+    </div>
+  </div>
   <!-- Salve
   <div class="rpg-wpn-bow card wide-160 mar-5 text-white bg-green">
   <div class="accordion" id="accordion-Salve">
