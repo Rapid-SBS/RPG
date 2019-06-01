@@ -4,6 +4,11 @@
 
     <?php include 'skills-vitality-1.php'; ?>
 
+    <?php include 'skills-vitality-2.php'; ?>
+
+    <?php include 'skills-vitality-3.php'; ?>
+
+
   </div><!-- /.row -->
 
 </div><!-- /.container -->
