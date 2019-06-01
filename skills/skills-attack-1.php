@@ -2,7 +2,7 @@
 
     <!-- Attack 1 -->
     <a class="btn text-white pad-10 mar-5 bg-red" data-toggle="collapse" href="#collapseAttack1" role="button" aria-expanded="false" aria-controls="collapseAttack1">
-      <h6>ATT &#8679;</h6>
+      <h6>ATT &#9650;</h6>
     </a>
 
   </div><!-- /.row -->
