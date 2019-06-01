@@ -1,7 +1,7 @@
   <div class="row justify-content-center">
 
     <!-- Vitality 1 -->
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseVitality1" role="button" aria-expanded="false" aria-controls="collapseVitality1">
+    <a class="btn text-white pad-10 mar-5 bg-red" data-toggle="collapse" href="#collapseVitality1" role="button" aria-expanded="false" aria-controls="collapseVitality1">
       <h6>Vitality 1</h6>
     </a>
 
