@@ -24,7 +24,7 @@
 <body>
 
 <div class="row pad-t-20">
-  <h4 class="pad-10 text-center" style>Basic Info</h4>
+  <h4 class="pad-10 mx-auto text-center" style>Basic Info</h4>
 </div><!-- /.row -->
 <div class="row">
   <table class="wide-275 text-center table table-bordered mx-auto">
@@ -50,7 +50,7 @@
 </div>
 
 <div class="row">
-  <h4 class="pad-10 text-center" style>Combat Stats</h4>
+  <h4 class="pad-10 mx-auto text-center" style>Combat Stats</h4>
 </div><!-- /.row -->
 <div class="row">
   <table class="wide-275 text-center table table-bordered mx-auto">
@@ -79,8 +79,8 @@
   </table>
 </div><!-- /.row -->
 
-<div class="row">
-  <h4 class="pad-10 text-center" style>Basic Info</h4>
+<div class="row pad-b-20">
+  <h4 class="pad-10 mx-auto text-center" style>Abilities</h4>
 </div><!-- /.row -->
 <div class="row">
   <table class="wide-275 text-center table table-bordered mx-auto">
@@ -171,10 +171,17 @@ var rpgPlayerUltimateAbility = localStorage.getItem('rpgPlayerUltimateAbility');
   <div class="container pad-20">
     <div class="pad-b-20">
       <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="http://rapid-phyre.net" role="button">Restart</a>
-      <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="character.php" role="button">Return</a>
+      <button class="btn btn-dark text-white mar-r-10 mar-l-10" onclick="goBack()" role="button">Return</button>
     </div>
     <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
 </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
