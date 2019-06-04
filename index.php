@@ -240,10 +240,10 @@
 </div><!-- /Class Selection -->
 
 <script> // --- Store Class Selection ---
-var jsonPlayer = {
+var rpgPlayer = {
   Name: null,
   Level: null,
-  Class: null,
+  Class: Test,
   Weapon: null,
 
   BaseHP: null,
@@ -258,11 +258,6 @@ var jsonPlayer = {
   AttackAbility: null,
   UltimateAbility: null,
 };
-
-var rpgPlayer = JSON.stringify(jsonPlayer);
-console.log(rpgPlayer);
-
-/*
 
 $(document).ready(function(){
 
@@ -291,8 +286,8 @@ $(document).ready(function(){
     localStorage.setItem('rpgPlayer.Weapon', null);
   });
 
+  console.log(rpgPlayer);
 });
-*/
 </script>
 
 <footer class="footer mt-auto text-center bg-light">
