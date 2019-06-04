@@ -1,7 +1,3 @@
-<div id="rpg-skills-archer-lvl-6" class="border-top pad-20">
-  
-  <div class="row pad-10"><h4 class="mx-auto">LEVEL 6</h4></div>
-
   <div class="row justify-content-center">
 
     <!-- Flaming Arrow -->
@@ -55,5 +51,3 @@
     </div><!-- /.collapse -->
 
   </div><!-- /.row -->
-
-</div><!-- /.container -->
