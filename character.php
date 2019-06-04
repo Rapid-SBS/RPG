@@ -115,7 +115,7 @@ var rpgPlayerLevel = localStorage.getItem('rpgPlayerLevel');
 var rpgPlayerClass = localStorage.getItem('rpgPlayerClass');
 var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 
-  var rpgPlayerClassHP = localStorage.getItem('rpgPlayerClassClassHP');
+  var rpgPlayerClassHP = localStorage.getItem('rpgPlayerClassHP');
   var rpgPlayerClassATT = localStorage.getItem('rpgPlayerClassATT');
   var rpgPlayerClassDEF = localStorage.getItem('rpgPlayerClassDEF');
   var rpgPlayerClassINT = localStorage.getItem('rpgPlayerClassINT');
