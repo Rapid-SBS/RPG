@@ -82,7 +82,7 @@
           HP
         </li>
         <li class="list-group-item align-items-center bg-green" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-orange">4</span>
+          <span class="badge badge-light text-orange">5</span>
           ATT
         </li>
         <li class="list-group-item align-items-center bg-green" style="padding: .35rem 1.25rem;">
@@ -124,7 +124,7 @@
           DEF
         </li>
         <li class="list-group-item align-items-center bg-blue" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-purple">5</span>
+          <span class="badge badge-light text-purple">6</span>
           INT
         </li>
         <li class="list-group-item align-items-center bg-blue" style="padding: .35rem 1.25rem;">
@@ -184,7 +184,7 @@
           HP
         </li>
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-orange">3</span>
+          <span class="badge badge-light text-orange">4</span>
           ATT
         </li>
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
@@ -264,7 +264,7 @@ $(document).ready(function(){
     localStorage.setItem('rpgPlayerClass', 'Archer');
     localStorage.setItem('rpgPlayerWeapon', '');
     localStorage.setItem('rpgPlayerClassHP', 16);
-    localStorage.setItem('rpgPlayerClassATT', 4);
+    localStorage.setItem('rpgPlayerClassATT', 5);
     localStorage.setItem('rpgPlayerClassDEF', 1);
     localStorage.setItem('rpgPlayerClassINT', 2);
     localStorage.setItem('rpgPlayerClassRES', 2);
@@ -275,7 +275,7 @@ $(document).ready(function(){
     localStorage.setItem('rpgPlayerClassHP', 14);
     localStorage.setItem('rpgPlayerClassATT', 0);
     localStorage.setItem('rpgPlayerClassDEF', 0);
-    localStorage.setItem('rpgPlayerClassINT', 5);
+    localStorage.setItem('rpgPlayerClassINT', 6);
     localStorage.setItem('rpgPlayerClassRES', 3);
   });
   $("#rpg-class-cleric").click(function(){
@@ -291,7 +291,7 @@ $(document).ready(function(){
     localStorage.setItem('rpgPlayerClass', 'Rogue');
     localStorage.setItem('rpgPlayerWeapon', '');
     localStorage.setItem('rpgPlayerClassHP', 14);
-    localStorage.setItem('rpgPlayerClassATT', 3);
+    localStorage.setItem('rpgPlayerClassATT', 4);
     localStorage.setItem('rpgPlayerClassDEF', 1);
     localStorage.setItem('rpgPlayerClassINT', 3);
     localStorage.setItem('rpgPlayerClassRES', 1);
