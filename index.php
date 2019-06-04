@@ -260,7 +260,7 @@ var jsonPlayer = {
 };
 
 var rpgPlayer = JSON.stringify(jsonPlayer);
-console.log(rpgPlayer.class);
+console.log(rpgPlayer);
 
 /*
 
