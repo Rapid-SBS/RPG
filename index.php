@@ -240,39 +240,58 @@
 </div><!-- /Class Selection -->
 
 <script> // --- Store Class Selection ---
-var rpgClass = localStorage.getItem('rpgClass');
-var rpgWeapon = localStorage.getItem('rpgWeapon');
+
+var rpgPlayer = {
+  Name: null,
+  Level: null,
+  Class: null,
+  Weapon: null,
+
+  BaseHP: null,
+  BaseATT: null,
+  BaseDEF: null,
+  BaseINT: null,
+  BaseRES: null,
+
+  BasicAbility: null,
+  SpecialAbility: null,
+  SupportAbility: null,
+  AttackAbility: null,
+  UltimateAbility: null,
+};
+
 
 $(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
-    localStorage.setItem('rpgClass', 'Warrior');
-    localStorage.setItem('rpgWeapon', '');
+    localStorage.setItem('rpgPlayer.Class', 'Warrior');
+    localStorage.setItem('rpgPlayer.Weapon', null);
   });
   $("#rpg-class-archer").click(function(){
-    localStorage.setItem('rpgClass', 'Archer');
-    localStorage.setItem('rpgWeapon', '');
+    localStorage.setItem('rpgPlayer.Class', 'Archer');
+    localStorage.setItem('rpgPlayer.Weapon', null);
   });
   $("#rpg-class-mage").click(function(){
-    localStorage.setItem('rpgClass', 'Mage');
-    localStorage.setItem('rpgWeapon', '');
+    localStorage.setItem('rpgPlayer.Class', 'Mage');
+    localStorage.setItem('rpgPlayer.Weapon', null);
   });
   $("#rpg-class-cleric").click(function(){
-    localStorage.setItem('rpgClass', 'Cleric');
-    localStorage.setItem('rpgWeapon', '');
+    localStorage.setItem('rpgPlayer.Class', 'Cleric');
+    localStorage.setItem('rpgPlayer.Weapon', null);
   });
   $("#rpg-class-rogue").click(function(){
-    localStorage.setItem('rpgClass', 'Rogue');
-    localStorage.setItem('rpgWeapon', '');
+   lvl-1 localStorage.setItem('rpgPlayer.Class', 'Rogue');
+    localStorage.setItem('rpgPlayer.Weapon', null);
   });
   $("#rpg-class-monk").click(function(){
-    localStorage.setItem('rpgClass', 'Monk');
-    localStorage.setItem('rpgWeapon', '');
+    localStorage.setItem('rpgPlayer.Class', 'Monk');
+    localStorage.setItem('rpgPlayer.Weapon', null);
   });
 
-  console.log("Class: " + rpgClass);
-  console.log("Weapon: " + rpgWeapon);
+  console.log(rpgPlayer);
 });
+
+*/
 </script>
 
 <footer class="footer mt-auto text-center bg-light">
