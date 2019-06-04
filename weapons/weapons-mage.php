@@ -1,14 +1,14 @@
 <?php include 'mage-ice.php'; ?>
 
-  <button type="button" onclick="setWeaponIce()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-ice" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <a role="button" onclick="setWeaponIce()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-ice" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'mage-fire.php'; ?>
 
-  <button type="button" onclick="setWeaponFire()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-fire" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <a role="button" onclick="setWeaponFire()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-fire" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'mage-lightning.php'; ?>
 
-  <button type="button" onclick="setWeaponLightning()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-lightning" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <a role="button" onclick="setWeaponLightning()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-lightning" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
 var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');

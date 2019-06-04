@@ -1,14 +1,14 @@
 <?php include 'warrior-sword.php'; ?>
 
-	<button type="button" onclick="setWeaponSword()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-sword" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+	<a role="button" onclick="setWeaponSword()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-sword" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'warrior-halberd.php'; ?>
 
-	<button type="button" onclick="setWeaponHalberd()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-halberd" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+	<a role="button" onclick="setWeaponHalberd()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-halberd" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'warrior-battleaxe.php'; ?>
 
-	<button type="button" onclick="setWeaponBattleaxe()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-battleaxe" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+	<a role="button" onclick="setWeaponBattleaxe()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-battleaxe" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
 var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');

@@ -1,14 +1,14 @@
 <?php include 'monk-bostaff.php'; ?>
 
-  <button type="button" onclick="setWeaponBostaff()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-bostaff" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <a role="button" onclick="setWeaponBostaff()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-bostaff" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'monk-fists.php'; ?>
 
-  <button type="button" onclick="setWeaponFists()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-fists" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <a role="button" onclick="setWeaponFists()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-fists" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'monk-windfu.php'; ?>
 
-  <button type="button" onclick="setWeaponWindfu()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-windfu" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <a role="button" onclick="setWeaponWindfu()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-windfu" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
 var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');

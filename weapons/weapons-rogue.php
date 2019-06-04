@@ -1,14 +1,14 @@
 <?php include 'rogue-dagger.php'; ?>
 
-  <button type="button" onclick="setWeaponDagger()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-dagger" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <a role="button" onclick="setWeaponDagger()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-dagger" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'rogue-sai.php'; ?>
 
-  <button type="button" onclick="setWeaponSai()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-sai" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <a role="button" onclick="setWeaponSai()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-sai" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'rogue-shuriken.php'; ?>
 
-  <button type="button" onclick="setWeaponShuriken()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-shuriken" style="display: none;"><span class="pulsing-text-white">Select</span></button>
+  <a role="button" onclick="setWeaponShuriken()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-shuriken" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
 var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
