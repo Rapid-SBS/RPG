@@ -79,11 +79,11 @@
   </table>
 </div><!-- /.row -->
 
-<div class="row pad-b-20">
+<div class="row">
   <h4 class="pad-10 mx-auto text-center" style>Abilities</h4>
 </div><!-- /.row -->
 <div class="row">
-  <table class="wide-275 text-center table table-bordered mx-auto">
+  <table class="wide-275 pad-b-20 text-center table table-bordered mx-auto">
     <tbody>
       <tr>
         <td>Basic</td>
