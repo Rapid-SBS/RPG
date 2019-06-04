@@ -240,54 +240,73 @@
 </div><!-- /Class Selection -->
 
 <script> // --- Store Class Selection ---
-var rpgPlayer = {
-  Name: null,
-  Level: null,
-  Class: Test,
-  Weapon: null,
+var rpgPlayerName;
+var rpgPlayerLevel;
+var rpgPlayerClass;
+var rpgPlayerWeapon;
 
-  BaseHP: null,
-  BaseATT: null,
-  BaseDEF: null,
-  BaseINT: null,
-  BaseRES: null,
+var rpgPlayerBaseHP;
+var rpgPlayerBaseATT;
+var rpgPlayerBaseDEF;
+var rpgPlayerBaseINT;
+var rpgPlayerBaseRES;
 
-  BasicAbility: null,
-  SpecialAbility: null,
-  SupportAbility: null,
-  AttackAbility: null,
-  UltimateAbility: null,
-};
+var rpgPlayerBasicAbility;
+var rpgPlayerSpecialAbility;
+var rpgPlayerSupportAbility;
+var rpgPlayerAttackAbility;
+var rpgPlayerUltimateAbility;
+
+
+var rpgClass = localStorage.getItem('rpgClass');
+var rpgWeapon = localStorage.getItem('rpgWeapon');
 
 $(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
-    localStorage.setItem('rpgPlayer.Class', 'Warrior');
-    localStorage.setItem('rpgPlayer.Weapon', null);
+    localStorage.setItem('rpgClass', 'Warrior');
+    localStorage.setItem('rpgWeapon', '');
   });
   $("#rpg-class-archer").click(function(){
-    localStorage.setItem('rpgPlayer.Class', 'Archer');
-    localStorage.setItem('rpgPlayer.Weapon', null);
+    localStorage.setItem('rpgClass', 'Archer');
+    localStorage.setItem('rpgWeapon', '');
   });
   $("#rpg-class-mage").click(function(){
-    localStorage.setItem('rpgPlayer.Class', 'Mage');
-    localStorage.setItem('rpgPlayer.Weapon', null);
+    localStorage.setItem('rpgClass', 'Mage');
+    localStorage.setItem('rpgWeapon', '');
   });
   $("#rpg-class-cleric").click(function(){
-    localStorage.setItem('rpgPlayer.Class', 'Cleric');
-    localStorage.setItem('rpgPlayer.Weapon', null);
+    localStorage.setItem('rpgClass', 'Cleric');
+    localStorage.setItem('rpgWeapon', '');
   });
   $("#rpg-class-rogue").click(function(){
-    localStorage.setItem('rpgPlayer.Class', 'Rogue');
-    localStorage.setItem('rpgPlayer.Weapon', null);
+    localStorage.setItem('rpgClass', 'Rogue');
+    localStorage.setItem('rpgWeapon', '');
   });
   $("#rpg-class-monk").click(function(){
-    localStorage.setItem('rpgPlayer.Class', 'Monk');
-    localStorage.setItem('rpgPlayer.Weapon', null);
+    localStorage.setItem('rpgClass', 'Monk');
+    localStorage.setItem('rpgWeapon', '');
   });
 
-  console.log(rpgPlayer);
+  console.log("Name: " + rpgPlayerName);
+  console.log("Level: " + rpgPlayerLevel);
+  console.log("Class: " + rpgPlayerClass);
+  console.log("Weapon: " + rpgPlayerWeapon);
+
+  console.log("HP: " + rpgPlayerBaseHP);
+  console.log("ATT: " + rpgPlayerBaseATT);
+  console.log("DEF: " + rpgPlayerBaseDEF);
+  console.log("INT: " + rpgPlayerBaseINT);
+  console.log("RES: " + rpgPlayerBaseRES);
+
+  console.log("Basic Ability: " + rpgPlayerBasicAbility);
+  console.log("Special Ability: " + rpgPlayerSpecialAbility);
+  console.log("Support Ability: " + rpgPlayerSupportAbility);
+  console.log("Attack Ability: " + rpgPlayerAttackAbility);
+  console.log("Ultimate Ability: " + rpgPlayerUltimateAbility);
+
 });
+</script>
 </script>
 
 <footer class="footer mt-auto text-center bg-light">
