@@ -24,7 +24,6 @@
 <body>
 
 <div class="row">
-
   <h4 class="pad-10 text-center mx-auto">Basic Info</h4>
   <table class="wide-275 text-center mar-40 table table-bordered mx-auto">
     <tbody>
@@ -46,7 +45,9 @@
       </tr>
     </tbody>
   </table>
+</div>
 
+<div class="row">
   <h4 class="pad-10 text-center mx-auto">Combat Stats</h4>
   <table class="wide-275 text-center mar-40 table table-bordered mx-auto">
     <tbody>
@@ -72,7 +73,9 @@
       </tr>
     </tbody>
   </table>
+</div>
 
+<div class="row">
   <h4 class="pad-10 text-center mx-auto">Abilities</h4>
   <table class="wide-275 text-center mar-40 table table-bordered mx-auto">
     <tbody>
@@ -98,7 +101,6 @@
       </tr>
     </tbody>
   </table>
-
 </div><!-- /.row -->
 
 <script>
