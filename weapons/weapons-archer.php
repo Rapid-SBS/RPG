@@ -16,14 +16,20 @@ var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 function setWeaponBow() {
   localStorage.setItem('rpgPlayerClass', 'Archer');
   localStorage.setItem('rpgPlayerWeapon', 'Bow');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Arrow');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Doubleshot');
 }
 function setWeaponCrossbow() {
   localStorage.setItem('rpgPlayerClass', 'Archer');
   localStorage.setItem('rpgPlayerWeapon', 'Crossbow');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Arrow');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Metal Arrow');
 }
 function setWeaponLongbow() {
   localStorage.setItem('rpgPlayerClass', 'Archer');
   localStorage.setItem('rpgPlayerWeapon', 'Longbow');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Arrow');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Snipe');
 }
 
 $(document).ready(function(){
