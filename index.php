@@ -240,7 +240,7 @@
 </div><!-- /Class Selection -->
 
 <script> // --- Store Class Selection ---
-var rpgPlayer = localStorage.setItem('rpgPlayer') {
+var rpgPlayer = {
   Name: null,
   Level: null,
   Class: null,
