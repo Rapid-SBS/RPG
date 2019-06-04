@@ -115,17 +115,12 @@ var rpgPlayerLevel = localStorage.getItem('rpgPlayerLevel');
 var rpgPlayerClass = localStorage.getItem('rpgPlayerClass');
 var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 
-  var rpgPlayerClassHP = localStorage.getItem('rpgPlayerClassHP');
-  var rpgPlayerClassATT = localStorage.getItem('rpgPlayerClassATT');
-  var rpgPlayerClassDEF = localStorage.getItem('rpgPlayerClassDEF');
-  var rpgPlayerClassINT = localStorage.getItem('rpgPlayerClassINT');
-  var rpgPlayerClassRES = localStorage.getItem('rpgPlayerClassRES');
+var rpgPlayerClassHP = localStorage.getItem('rpgPlayerClassHP');
+var rpgPlayerClassATT = localStorage.getItem('rpgPlayerClassATT');
+var rpgPlayerClassDEF = localStorage.getItem('rpgPlayerClassDEF');
+var rpgPlayerClassINT = localStorage.getItem('rpgPlayerClassINT');
+var rpgPlayerClassRES = localStorage.getItem('rpgPlayerClassRES');
 
-  var rpgPlayerSkillHP = localStorage.getItem('rpgPlayerSkillHP');
-  var rpgPlayerSkillATT = localStorage.getItem('rpgPlayerSkillATT');
-  var rpgPlayerSkillDEF = localStorage.getItem('rpgPlayerSkillDEF');
-  var rpgPlayerSkillINT = localStorage.getItem('rpgPlayerSkillINT');
-  var rpgPlayerSkillRES = localStorage.getItem('rpgPlayerSkillRES');
 
 var rpgPlayerBaseHP = parseInt(rpgPlayerClassHP) + parseInt(rpgPlayerSkillHP);
 var rpgPlayerBaseATT = parseInt(rpgPlayerClassATT) + parseInt(rpgPlayerSkillATT);
