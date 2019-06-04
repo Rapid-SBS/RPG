@@ -23,9 +23,11 @@
 
 <body>
 
+<div class="row pad-t-20">
+  <h4 class="pad-10 text-center" style>Basic Info</h4>
+</div><!-- /.row -->
 <div class="row">
-  <h4 class="pad-10 text-center mx-auto">Basic Info</h4>
-  <table class="wide-275 text-center mar-40 table table-bordered mx-auto">
+  <table class="wide-275 text-center table table-bordered mx-auto">
     <tbody>
       <tr>
         <td>Name</td>
@@ -48,8 +50,10 @@
 </div>
 
 <div class="row">
-  <h4 class="pad-10 text-center mx-auto">Combat Stats</h4>
-  <table class="wide-275 text-center mar-40 table table-bordered mx-auto">
+  <h4 class="pad-10 text-center" style>Combat Stats</h4>
+</div><!-- /.row -->
+<div class="row">
+  <table class="wide-275 text-center table table-bordered mx-auto">
     <tbody>
       <tr>
         <td>HP</td>
@@ -73,11 +77,13 @@
       </tr>
     </tbody>
   </table>
-</div>
+</div><!-- /.row -->
 
 <div class="row">
-  <h4 class="pad-10 text-center mx-auto">Abilities</h4>
-  <table class="wide-275 text-center mar-40 table table-bordered mx-auto">
+  <h4 class="pad-10 text-center" style>Basic Info</h4>
+</div><!-- /.row -->
+<div class="row">
+  <table class="wide-275 text-center table table-bordered mx-auto">
     <tbody>
       <tr>
         <td>Basic</td>
