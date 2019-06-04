@@ -240,7 +240,7 @@
 </div><!-- /Class Selection -->
 
 <script> // --- Store Class Selection ---
-var rpgPlayerName = null;
+var rpgPlayerName;
 var rpgPlayerLevel;
 var rpgPlayerClass;
 var rpgPlayerWeapon;
@@ -258,52 +258,35 @@ var rpgPlayerAttackAbility;
 var rpgPlayerUltimateAbility;
 
 
-var rpgClass = localStorage.getItem('rpgClass');
-var rpgWeapon = localStorage.getItem('rpgWeapon');
+var rpgClass = localStorage.getItem('rpgPlayerClass');
+var rpgWeapon = localStorage.getItem('rpgPlayerWeapon');
 
 $(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
-    localStorage.setItem('rpgClass', 'Warrior');
-    localStorage.setItem('rpgWeapon', '');
+    localStorage.setItem('rpgPlayerClass', 'Warrior');
+    localStorage.setItem('rpgPlayerWeapon', '');
   });
   $("#rpg-class-archer").click(function(){
-    localStorage.setItem('rpgClass', 'Archer');
-    localStorage.setItem('rpgWeapon', '');
+    localStorage.setItem('rpgPlayerClass', 'Archer');
+    localStorage.setItem('rpgPlayerWeapon', '');
   });
   $("#rpg-class-mage").click(function(){
-    localStorage.setItem('rpgClass', 'Mage');
-    localStorage.setItem('rpgWeapon', '');
+    localStorage.setItem('rpgPlayerClass', 'Mage');
+    localStorage.setItem('rpgPlayerWeapon', '');
   });
   $("#rpg-class-cleric").click(function(){
-    localStorage.setItem('rpgClass', 'Cleric');
-    localStorage.setItem('rpgWeapon', '');
+    localStorage.setItem('rpgPlayerClass', 'Cleric');
+    localStorage.setItem('rpgPlayerWeapon', '');
   });
   $("#rpg-class-rogue").click(function(){
-    localStorage.setItem('rpgClass', 'Rogue');
-    localStorage.setItem('rpgWeapon', '');
+    localStorage.setItem('rpgPlayerClass', 'Rogue');
+    localStorage.setItem('rpgPlayerWeapon', '');
   });
   $("#rpg-class-monk").click(function(){
-    localStorage.setItem('rpgClass', 'Monk');
-    localStorage.setItem('rpgWeapon', '');
+    localStorage.setItem('rpgPlayerClass', 'Monk');
+    localStorage.setItem('rpgPlayerWeapon', '');
   });
-
-  console.log("Name: " + rpgPlayerName);
-  console.log("Level: " + rpgPlayerLevel);
-  console.log("Class: " + rpgPlayerClass);
-  console.log("Weapon: " + rpgPlayerWeapon);
-
-  console.log("HP: " + rpgPlayerBaseHP);
-  console.log("ATT: " + rpgPlayerBaseATT);
-  console.log("DEF: " + rpgPlayerBaseDEF);
-  console.log("INT: " + rpgPlayerBaseINT);
-  console.log("RES: " + rpgPlayerBaseRES);
-
-  console.log("Basic Ability: " + rpgPlayerBasicAbility);
-  console.log("Special Ability: " + rpgPlayerSpecialAbility);
-  console.log("Support Ability: " + rpgPlayerSupportAbility);
-  console.log("Attack Ability: " + rpgPlayerAttackAbility);
-  console.log("Ultimate Ability: " + rpgPlayerUltimateAbility);
 
 });
 </script>

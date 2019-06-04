@@ -52,16 +52,32 @@
 
 </div><!-- /.row -->
 
-  <script>
+<script>
 
   $(document).ready(function(){
 
-    $("#tb-rpg-name").text(rpgPlayer.Name);
-    $("#tb-rpg-class").text(rpgPlayer.Class);
-    $("#tb-rpg-weapon").text(rpgPlayer.Weapon);
-  
-  console.log(rpgPlayer);
+    $("#tb-rpg-name").text(rpgPlayerName);
+    $("#tb-rpg-class").text(rpgPlayerClass);
+    $("#tb-rpg-weapon").text(rpgPlayerWeapon);
+
   });
+
+  console.log("Name: " + rpgPlayerName);
+  console.log("Level: " + rpgPlayerLevel);
+  console.log("Class: " + rpgPlayerClass);
+  console.log("Weapon: " + rpgPlayerWeapon);
+
+  console.log("HP: " + rpgPlayerBaseHP);
+  console.log("ATT: " + rpgPlayerBaseATT);
+  console.log("DEF: " + rpgPlayerBaseDEF);
+  console.log("INT: " + rpgPlayerBaseINT);
+  console.log("RES: " + rpgPlayerBaseRES);
+
+  console.log("Basic Ability: " + rpgPlayerBasicAbility);
+  console.log("Special Ability: " + rpgPlayerSpecialAbility);
+  console.log("Support Ability: " + rpgPlayerSupportAbility);
+  console.log("Attack Ability: " + rpgPlayerAttackAbility);
+  console.log("Ultimate Ability: " + rpgPlayerUltimateAbility);
 </script>
 
 
