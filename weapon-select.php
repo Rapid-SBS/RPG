@@ -23,8 +23,9 @@
 
 <body>
 
-<div id="weapon-select" class="y-flex-container pad-10">
 <h3 class="pad-10 text-gray text-center pulsing-text-dark"> Select a Weapon... </h3>
+
+<div id="weapon-select" class="y-flex-container pad-10">
 
 <script>
 var rpgPlayerClass = localStorage.getItem('rpgPlayerClass');
