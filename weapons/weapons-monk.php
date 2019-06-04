@@ -11,19 +11,19 @@
   <button type="button" onclick="setWeaponWindfu()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-windfu" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <script>
-var rpgWeapon = localStorage.getItem('rpgWeapon');
+var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 
 function setWeaponBostaff() {
-  localStorage.setItem('rpgClass', 'Monk');
-  localStorage.setItem('rpgWeapon', 'Bo Staff');
+  localStorage.setItem('rpgPlayerClass', 'Monk');
+  localStorage.setItem('rpgPlayerWeapon', 'Bo Staff');
 }
 function setWeaponFists() {
-  localStorage.setItem('rpgClass', 'Monk');
-  localStorage.setItem('rpgWeapon', "Brawler's Fist");
+  localStorage.setItem('rpgPlayerClass', 'Monk');
+  localStorage.setItem('rpgPlayerWeapon', "Brawler's Fist");
 }
 function setWeaponWindfu() {
-  localStorage.setItem('rpgClass', 'Monk');
-  localStorage.setItem('rpgWeapon', 'Wind Fu');
+  localStorage.setItem('rpgPlayerClass', 'Monk');
+  localStorage.setItem('rpgPlayerWeapon', 'Wind Fu');
 }
 
 $(document).ready(function(){

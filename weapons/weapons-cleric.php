@@ -11,19 +11,19 @@
   <button type="button" onclick="setWeaponTome()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-tome" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <script>
-var rpgWeapon = localStorage.getItem('rpgWeapon');
+var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 
 function setWeaponMace() {
-  localStorage.setItem('rpgClass', 'Cleric');
-  localStorage.setItem('rpgWeapon', 'Mace & Shield');
+  localStorage.setItem('rpgPlayerClass', 'Cleric');
+  localStorage.setItem('rpgPlayerWeapon', 'Mace & Shield');
 }
 function setWeaponQuarterstaff() {
-  localStorage.setItem('rpgClass', 'Cleric');
-  localStorage.setItem('rpgWeapon', 'Quarterstaff');
+  localStorage.setItem('rpgPlayerClass', 'Cleric');
+  localStorage.setItem('rpgPlayerWeapon', 'Quarterstaff');
 }
 function setWeaponTome() {
-  localStorage.setItem('rpgClass', 'Cleric');
-  localStorage.setItem('rpgWeapon', 'Holy Tome');
+  localStorage.setItem('rpgPlayerClass', 'Cleric');
+  localStorage.setItem('rpgPlayerWeapon', 'Holy Tome');
 }
 
 $(document).ready(function(){

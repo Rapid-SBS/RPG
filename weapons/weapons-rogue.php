@@ -11,19 +11,19 @@
   <button type="button" onclick="setWeaponShuriken()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-shuriken" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <script>
-var rpgWeapon = localStorage.getItem('rpgWeapon');
+var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 
 function setWeaponDagger() {
-  localStorage.setItem('rpgClass', 'Rogue');
-  localStorage.setItem('rpgWeapon', 'Dagger');
+  localStorage.setItem('rpgPlayerClass', 'Rogue');
+  localStorage.setItem('rpgPlayerWeapon', 'Dagger');
 }
 function setWeaponSai() {
-  localStorage.setItem('rpgClass', 'Rogue');
+  localStorage.setItem('rpgPlayerClass', 'Rogue');
   localStorage.setItem('rpgWeapon', 'Dual Sai');
 }
 function setWeaponShuriken() {
-  localStorage.setItem('rpgClass', 'Rogue');
-  localStorage.setItem('rpgWeapon', 'Shuriken');
+  localStorage.setItem('rpgPlayerClass', 'Rogue');
+  localStorage.setItem('rpgPlayerWeapon', 'Shuriken');
 }
 
 $(document).ready(function(){

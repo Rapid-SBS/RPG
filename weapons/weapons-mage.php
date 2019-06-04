@@ -11,19 +11,19 @@
   <button type="button" onclick="setWeaponLightning()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-lightning" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <script>
-var rpgWeapon = localStorage.getItem('rpgWeapon');
+var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 
 function setWeaponIce() {
-  localStorage.setItem('rpgClass', 'Mage');
-  localStorage.setItem('rpgWeapon', 'Ice Stone');
+  localStorage.setItem('rpgPlayerClass', 'Mage');
+  localStorage.setItem('rpgPlayerWeapon', 'Ice Stone');
 }
 function setWeaponFire() {
-  localStorage.setItem('rpgClass', 'Mage');
-  localStorage.setItem('rpgWeapon', 'Fire Stone');
+  localStorage.setItem('rpgPlayerClass', 'Mage');
+  localStorage.setItem('rpgPlayerWeapon', 'Fire Stone');
 }
 function setWeaponLightning() {
-  localStorage.setItem('rpgClass', 'Mage');
-  localStorage.setItem('rpgWeapon', 'Lightning Stone');
+  localStorage.setItem('rpgPlayerClass', 'Mage');
+  localStorage.setItem('rpgPlayerWeapon', 'Lightning Stone');
 }
 
 $(document).ready(function(){

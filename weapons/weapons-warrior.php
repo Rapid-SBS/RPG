@@ -11,19 +11,19 @@
 	<button type="button" onclick="setWeaponBattleaxe()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-battleaxe" style="display: none;"><span class="pulsing-text-white">Select</span></button>
 
 <script>
-var rpgWeapon = localStorage.getItem('rpgWeapon');
+var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 
 function setWeaponSword() {
-  localStorage.setItem('rpgClass', 'Warrior');
-  localStorage.setItem('rpgWeapon', 'Sword & Shield');
+  localStorage.setItem('rpgPlayerClass', 'Warrior');
+  localStorage.setItem('rpgPlayerWeapon', 'Sword & Shield');
 }
 function setWeaponHalberd() {
-  localStorage.setItem('rpgClass', 'Warrior');
-  localStorage.setItem('rpgWeapon', 'Halberd');
+  localStorage.setItem('rpgPlayerClass', 'Warrior');
+  localStorage.setItem('rpgPlayerWeapon', 'Halberd');
 }
 function setWeaponBattleaxe() {
-  localStorage.setItem('rpgClass', 'Warrior');
-  localStorage.setItem('rpgWeapon', 'Battleaxe');
+  localStorage.setItem('rpgPlayerClass', 'Warrior');
+  localStorage.setItem('rpgPlayerWeapon', 'Battleaxe');
 }
 
 $(document).ready(function(){

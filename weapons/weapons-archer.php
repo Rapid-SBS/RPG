@@ -11,19 +11,19 @@
   <a role="button" onclick="setWeaponLongbow()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-longbow" href="skill-select.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script> 
-var rpgWeapon = localStorage.getItem('rpgWeapon');
+var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 
 function setWeaponBow() {
-  localStorage.setItem('rpgClass', 'Archer');
-  localStorage.setItem('rpgWeapon', 'Bow');
+  localStorage.setItem('rpgPlayerClass', 'Archer');
+  localStorage.setItem('rpgPlayerWeapon', 'Bow');
 }
 function setWeaponCrossbow() {
-  localStorage.setItem('rpgClass', 'Archer');
-  localStorage.setItem('rpgWeapon', 'Crossbow');
+  localStorage.setItem('rpgPlayerClass', 'Archer');
+  localStorage.setItem('rpgPlayerWeapon', 'Crossbow');
 }
 function setWeaponLongbow() {
-  localStorage.setItem('rpgClass', 'Archer');
-  localStorage.setItem('rpgWeapon', 'Longbow');
+  localStorage.setItem('rpgPlayerClass', 'Archer');
+  localStorage.setItem('rpgPlayerWeapon', 'Longbow');
 }
 
 $(document).ready(function(){
