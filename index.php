@@ -240,7 +240,7 @@
 </div><!-- /Class Selection -->
 
 <script> // --- Store Class Selection ---
-var rpgPlayer = {
+var jsonPlayer = {
   Name: null,
   Level: null,
   Class: null,
