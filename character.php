@@ -25,6 +25,7 @@
 
 <div class="row">
 
+  <h4 class="pad-10 text-center mx-auto">Basic Info</h4>
   <table class="wide-275 text-center mar-40 table table-bordered mx-auto">
     <tbody>
       <tr>
@@ -43,7 +44,12 @@
         <td>Weapon</td>
         <td id="tb-rpg-weapon"> </td>
       </tr>
+    </tbody>
+  </table>
 
+  <h4 class="pad-10 text-center mx-auto">Combat Stats</h4>
+  <table class="wide-275 text-center mar-40 table table-bordered mx-auto">
+    <tbody>
       <tr>
         <td>HP</td>
         <td id="tb-rpg-hp"> </td>
@@ -64,28 +70,32 @@
         <td>RES</td>
         <td id="tb-rpg-res"> </td>
       </tr>
+    </tbody>
+  </table>
 
+  <h4 class="pad-10 text-center mx-auto">Abilities</h4>
+  <table class="wide-275 text-center mar-40 table table-bordered mx-auto">
+    <tbody>
       <tr>
-        <td>Basic Ability</td>
+        <td>Basic</td>
         <td id="tb-rpg-basic"> </td>
       </tr>
       <tr>
-        <td>Special Ability</td>
+        <td>Special</td>
         <td id="tb-rpg-special"> </td>
       </tr>
       <tr>
-        <td>Support Ability</td>
+        <td>Support</td>
         <td id="tb-rpg-support"> </td>
       </tr>
       <tr>
-        <td>Attack Ability</td>
+        <td>Attack</td>
         <td id="tb-rpg-attack"> </td>
       </tr>
       <tr>
-        <td>Ultimate Abilty</td>
+        <td>Ultimate</td>
         <td id="tb-rpg-ultimate"> </td>
       </tr>
-
     </tbody>
   </table>
 
