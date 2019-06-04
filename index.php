@@ -280,7 +280,7 @@ $(document).ready(function(){
     localStorage.setItem('rpgPlayer.Weapon', null);
   });
   $("#rpg-class-rogue").click(function(){
-   lvl-1 localStorage.setItem('rpgPlayer.Class', 'Rogue');
+    localStorage.setItem('rpgPlayer.Class', 'Rogue');
     localStorage.setItem('rpgPlayer.Weapon', null);
   });
   $("#rpg-class-monk").click(function(){
