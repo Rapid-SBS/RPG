@@ -259,6 +259,11 @@ var jsonPlayer = {
   UltimateAbility: null,
 };
 
+var rpgPlayer = JSON.stringify(jsonPlayer);
+console.log(rpgPlayer);
+
+/*
+
 $(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
@@ -286,8 +291,8 @@ $(document).ready(function(){
     localStorage.setItem('rpgPlayer.Weapon', null);
   });
 
-  console.log(rpgPlayer);
 });
+*/
 </script>
 
 <footer class="footer mt-auto text-center bg-light">
