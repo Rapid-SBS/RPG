@@ -53,16 +53,14 @@
 </div><!-- /.row -->
 
   <script>
-  var rpgName = localStorage.getItem('rpgName');
-  var rpgClass = localStorage.getItem('rpgClass');
-  var rpgWeapon = localStorage.getItem('rpgWeapon');
 
   $(document).ready(function(){
 
-    $("#tb-rpg-name").text(rpgName);
-    $("#tb-rpg-class").text(rpgClass);
-    $("#tb-rpg-weapon").text(rpgWeapon);
-
+    $("#tb-rpg-name").text(rpgPlayer.Name);
+    $("#tb-rpg-class").text(rpgPlayer.Class);
+    $("#tb-rpg-weapon").text(rpgPlayer.Weapon);
+  
+  console.log(rpgPlayer);
   });
 </script>
 
