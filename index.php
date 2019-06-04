@@ -240,7 +240,7 @@
 </div><!-- /Class Selection -->
 
 <script> // --- Store Class Selection ---
-var rpgPlayerName;
+var rpgPlayerName = null;
 var rpgPlayerLevel;
 var rpgPlayerClass;
 var rpgPlayerWeapon;

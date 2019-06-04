@@ -26,33 +26,35 @@
 <div id="weapon-select" class="y-flex-container pad-10">
 
 <script>
-var rpgPlayer.Class = localStorage.getItem('rpgPlayer.Class');
+var rpgClass = localStorage.getItem('rpgClass');
+var rpgWeapon = localStorage.getItem('rpgWeapon');
 
-console.log(rpgPlayer);
+console.log("Class: " + rpgClass);
+console.log("Weapon: " + rpgWeapon);
 
   $(document).ready(function(){
 
-  if (rpgPlayer.Class === "Warrior") {
+  if (rpgClass === "Warrior") {
 
     $("#weapon-select").load("weapons/weapons-warrior.php");
     
-  } else if (rpgPlayer.Class === "Archer") {
+  } else if (rpgClass === "Archer") {
 
     $("#weapon-select").load("weapons/weapons-archer.php");
 
-  } else if (rpgPlayer.Class === "Mage") {
+  } else if (rpgClass === "Mage") {
 
     $("#weapon-select").load("weapons/weapons-mage.php");
     
-  } else if (rpgPlayer.Class === "Cleric") {
+  } else if (rpgClass === "Cleric") {
 
     $("#weapon-select").load("weapons/weapons-cleric.php");
     
-  } else if (rpgPlayer.Class === "Rogue") {
+  } else if (rpgClass === "Rogue") {
 
     $("#weapon-select").load("weapons/weapons-rogue.php");
     
-  } else if (rpgPlayer.Class === "Monk") {
+  } else if (rpgClass === "Monk") {
 
     $("#weapon-select").load("weapons/weapons-monk.php");
     
