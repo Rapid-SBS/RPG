@@ -6,7 +6,7 @@
       </div><!-- /.card-header --> 
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <h6>Sword Strike</h6>
+          <h6>Slash </h6>
         </button>
       </div><!-- /.card-header --> 
       <div id="collapseOne" class="collapse hidden" aria-labelledby="headingOne" data-parent="#accordion-swordshield">

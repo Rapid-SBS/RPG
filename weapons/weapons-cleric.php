@@ -23,13 +23,13 @@ function setWeaponQuarterstaff() {
   localStorage.setItem('rpgPlayerClass', 'Cleric');
   localStorage.setItem('rpgPlayerWeapon', 'Quarterstaff');
   localStorage.setItem('rpgPlayerBasicAbility', 'Downward Strike');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Mend');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Flash Heal');
 }
 function setWeaponTome() {
   localStorage.setItem('rpgPlayerClass', 'Cleric');
   localStorage.setItem('rpgPlayerWeapon', 'Holy Tome');
   localStorage.setItem('rpgPlayerBasicAbility', 'Blessing');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Flash Heal');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Healing Circle');
 }
 
 $(document).ready(function(){

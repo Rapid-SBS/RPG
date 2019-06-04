@@ -16,14 +16,20 @@ var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 function setWeaponIce() {
   localStorage.setItem('rpgPlayerClass', 'Mage');
   localStorage.setItem('rpgPlayerWeapon', 'Ice Stone');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Ice Blast');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Glacial Barrier');
 }
 function setWeaponFire() {
   localStorage.setItem('rpgPlayerClass', 'Mage');
   localStorage.setItem('rpgPlayerWeapon', 'Fire Stone');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Fireball');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Immolate');
 }
 function setWeaponLightning() {
   localStorage.setItem('rpgPlayerClass', 'Mage');
   localStorage.setItem('rpgPlayerWeapon', 'Lightning Stone');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Spark');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Discharge');
 }
 
 $(document).ready(function(){

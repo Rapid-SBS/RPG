@@ -6,12 +6,12 @@
       </div><!-- /.card-header --> 
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <h6>Ice Beam</h6>
+          <h6>Ice Blast</h6>
         </button>
       </div><!-- /.card-header --> 
       <div id="collapseOne" class="collapse hidden" aria-labelledby="headingOne" data-parent="#accordion-ice">
         <div class="card-body light-transparency pad-10 text-center">
-          <p class="card-text text-center">Fires a beam of subzero energy. <br> Critical Hits apply Black Ice debuff. <br>DMG = Weapon ATT + Player INT</p>
+          <p class="card-text text-center">Fires a blast of subzero energy. <br> Critical Hits apply Black Ice debuff. <br>DMG = Weapon ATT + Player INT</p>
         </div>
         <ul class="list-group text-center">
           <li class="list-group-item align-items-center light-transparency bg-blue" style="padding: .35rem 1.25rem;">

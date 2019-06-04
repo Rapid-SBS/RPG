@@ -16,14 +16,20 @@ var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 function setWeaponBostaff() {
   localStorage.setItem('rpgPlayerClass', 'Monk');
   localStorage.setItem('rpgPlayerWeapon', 'Bo Staff');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Cross Strike');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Spinning Strike');
 }
 function setWeaponFists() {
   localStorage.setItem('rpgPlayerClass', 'Monk');
   localStorage.setItem('rpgPlayerWeapon', "Brawler's Fist");
+  localStorage.setItem('rpgPlayerBasicAbility', 'Uppercut');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Chi Burst');
 }
 function setWeaponWindfu() {
   localStorage.setItem('rpgPlayerClass', 'Monk');
   localStorage.setItem('rpgPlayerWeapon', 'Wind Fu');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Tornado Kick');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Wind Slicer');
 }
 
 $(document).ready(function(){

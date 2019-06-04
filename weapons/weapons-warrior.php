@@ -16,14 +16,20 @@ var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 function setWeaponSword() {
   localStorage.setItem('rpgPlayerClass', 'Warrior');
   localStorage.setItem('rpgPlayerWeapon', 'Sword & Shield');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Slash');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Shield Ally');
 }
 function setWeaponHalberd() {
   localStorage.setItem('rpgPlayerClass', 'Warrior');
   localStorage.setItem('rpgPlayerWeapon', 'Halberd');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Jab');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Sweeping Blow');
 }
 function setWeaponBattleaxe() {
   localStorage.setItem('rpgPlayerClass', 'Warrior');
   localStorage.setItem('rpgPlayerWeapon', 'Battleaxe');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Cleave');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Sunder Armor');
 }
 
 $(document).ready(function(){

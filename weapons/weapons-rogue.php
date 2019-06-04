@@ -16,14 +16,20 @@ var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 function setWeaponDagger() {
   localStorage.setItem('rpgPlayerClass', 'Rogue');
   localStorage.setItem('rpgPlayerWeapon', 'Dagger');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Stab');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Poisoned Blade');
 }
 function setWeaponSai() {
   localStorage.setItem('rpgPlayerClass', 'Rogue');
   localStorage.setItem('rpgWeapon', 'Dual Sai');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Riposte');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Blade Storm');
 }
 function setWeaponShuriken() {
   localStorage.setItem('rpgPlayerClass', 'Rogue');
   localStorage.setItem('rpgPlayerWeapon', 'Shuriken');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Shuriken Throw');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Smoke Bomb');
 }
 
 $(document).ready(function(){
