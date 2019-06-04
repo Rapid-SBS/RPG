@@ -160,22 +160,20 @@ var rpgPlayerUltimateAbility = localStorage.getItem('rpgPlayerUltimateAbility');
 
   });
 
-  console.log("Name: " + rpgPlayerName);
-  console.log("Level: " + rpgPlayerLevel);
-  console.log("Class: " + rpgPlayerClass);
-  console.log("Weapon: " + rpgPlayerWeapon);
+  console.log("Class HP: " + rpgPlayerClassHP);
+  console.log("Class ATT: " + rpgPlayerClassATT);
+  console.log("Class DEF: " + rpgPlayerClassDEF);
+  console.log("Class INT: " + rpgPlayerClassINT);
+  console.log("Class RES: " + rpgPlayerClassRES);
 
-  console.log("HP: " + rpgPlayerBaseHP);
-  console.log("ATT: " + rpgPlayerBaseATT);
-  console.log("DEF: " + rpgPlayerBaseDEF);
-  console.log("INT: " + rpgPlayerBaseINT);
-  console.log("RES: " + rpgPlayerBaseRES);
 
-  console.log("Basic Ability: " + rpgPlayerBasicAbility);
-  console.log("Special Ability: " + rpgPlayerSpecialAbility);
-  console.log("Support Ability: " + rpgPlayerSupportAbility);
-  console.log("Attack Ability: " + rpgPlayerAttackAbility);
-  console.log("Ultimate Ability: " + rpgPlayerUltimateAbility);
+  console.log("Skills HP: " + rpgPlayerSkillHP);
+  console.log("Skills ATT: " + rpgPlayerSkillATT);
+  console.log("Skills DEF: " + rpgPlayerSkillDEF);
+  console.log("Skills INT: " + rpgPlayerSkillINT);
+  console.log("Skills RES: " + rpgPlayerSkillRES);
+
+
 </script>
 
 
