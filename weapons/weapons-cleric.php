@@ -16,14 +16,20 @@ var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 function setWeaponMace() {
   localStorage.setItem('rpgPlayerClass', 'Cleric');
   localStorage.setItem('rpgPlayerWeapon', 'Mace & Shield');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Bludgeon');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Shield Ally');
 }
 function setWeaponQuarterstaff() {
   localStorage.setItem('rpgPlayerClass', 'Cleric');
   localStorage.setItem('rpgPlayerWeapon', 'Quarterstaff');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Downward Strike');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Mend');
 }
 function setWeaponTome() {
   localStorage.setItem('rpgPlayerClass', 'Cleric');
   localStorage.setItem('rpgPlayerWeapon', 'Holy Tome');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Blessing');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Flash Heal');
 }
 
 $(document).ready(function(){
