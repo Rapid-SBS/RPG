@@ -32,6 +32,10 @@
         <td id="tb-rpg-name"> </td>
       </tr>
       <tr>
+        <td>Level</td>
+        <td id="tb-rpg-level"> </td>
+      </tr>
+      <tr>
         <td>Class</td>
         <td id="tb-rpg-class"> </td>
       </tr>
@@ -39,26 +43,90 @@
         <td>Weapon</td>
         <td id="tb-rpg-weapon"> </td>
       </tr>
+
       <tr>
-        <td>Item</td>
-        <td id="tb-rpg-"> </td>
+        <td>HP</td>
+        <td id="tb-rpg-hp"> </td>
       </tr>
       <tr>
-        <td>Item</td>
-        <td id="tb-rpg-"> </td>
+        <td>ATT</td>
+        <td id="tb-rpg-att"> </td>
       </tr>
+      <tr>
+        <td>DEF</td>
+        <td id="tb-rpg-def"> </td>
+      </tr>
+      <tr>
+        <td>INT</td>
+        <td id="tb-rpg-int"> </td>
+      </tr>
+      <tr>
+        <td>RES</td>
+        <td id="tb-rpg-res"> </td>
+      </tr>
+
+      <tr>
+        <td>Basic Ability</td>
+        <td id="tb-rpg-basic"> </td>
+      </tr>
+      <tr>
+        <td>Special Ability</td>
+        <td id="tb-rpg-special"> </td>
+      </tr>
+      <tr>
+        <td>Support Ability</td>
+        <td id="tb-rpg-support"> </td>
+      </tr>
+      <tr>
+        <td>Attack Ability</td>
+        <td id="tb-rpg-attack"> </td>
+      </tr>
+      <tr>
+        <td>Ultimate Abilty</td>
+        <td id="tb-rpg-ultimate"> </td>
+      </tr>
+
     </tbody>
   </table>
 
 </div><!-- /.row -->
 
 <script>
+var rpgPlayerName = localStorage.getItem('rpgPlayerName');
+var rpgPlayerLevel = localStorage.getItem('rpgPlayerLevel');
+var rpgPlayerClass = localStorage.getItem('rpgPlayerClass');
+var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
+
+var rpgPlayerBaseHP = localStorage.getItem('rpgPlayerBaseHP');
+var rpgPlayerBaseATT = localStorage.getItem('rpgPlayerBaseATT');
+var rpgPlayerBaseDEF = localStorage.getItem('rpgPlayerBaseDEF');
+var rpgPlayerBaseINT = localStorage.getItem('rpgPlayerBaseINT');
+var rpgPlayerBaseRES = localStorage.getItem('rpgPlayerBaseRES');
+
+var rpgPlayerBasicAbility = localStorage.getItem('rpgPlayerBasicAbility');
+var rpgPlayerSpecialAbility = localStorage.getItem('rpgPlayerSpecialAbility');
+var rpgPlayerSupportAbility = localStorage.getItem('rpgPlayerSupportAbility');
+var rpgPlayerAttackAbility = localStorage.getItem('rpgPlayerAttackAbility');
+var rpgPlayerUltimateAbility = localStorage.getItem('rpgPlayerUltimateAbility');
 
   $(document).ready(function(){
 
     $("#tb-rpg-name").text(rpgPlayerName);
+    $("#tb-rpg-level").text(rpgPlayerLevel);
     $("#tb-rpg-class").text(rpgPlayerClass);
     $("#tb-rpg-weapon").text(rpgPlayerWeapon);
+
+    $("#tb-rpg-hp").text(rpgPlayerBaseHP);
+    $("#tb-rpg-att").text(rpgPlayerBaseATT);
+    $("#tb-rpg-def").text(rpgPlayerBaseDEF);
+    $("#tb-rpg-int").text(rpgPlayerBaseINT);
+    $("#tb-rpg-res").text(rpgPlayerBaseRES);
+
+    $("#tb-rpg-basic").text(rpgPlayerBasicAbility);
+    $("#tb-rpg-special").text(rpgPlayerSpecialAbility);
+    $("#tb-rpg-support").text(rpgPlayerSupportAbility);
+    $("#tb-rpg-attack").text(rpgPlayerAttackAbility);
+    $("#tb-rpg-ultimate").text(rpgPlayerUltimateAbility);
 
   });
 

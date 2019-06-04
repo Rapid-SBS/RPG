@@ -258,8 +258,8 @@ var rpgPlayerAttackAbility;
 var rpgPlayerUltimateAbility;
 
 
-var rpgClass = localStorage.getItem('rpgPlayerClass');
-var rpgWeapon = localStorage.getItem('rpgPlayerWeapon');
+var rpgPlayerClass = localStorage.getItem('rpgPlayerClass');
+var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 
 $(document).ready(function(){
 

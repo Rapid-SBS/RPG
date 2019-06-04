@@ -26,35 +26,35 @@
 <div id="weapon-select" class="y-flex-container pad-10">
 
 <script>
-var rpgClass = localStorage.getItem('rpgClass');
-var rpgWeapon = localStorage.getItem('rpgWeapon');
+var rpgPlayerClass = localStorage.getItem('rpgPlayerClass');
+var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 
-console.log("Class: " + rpgClass);
-console.log("Weapon: " + rpgWeapon);
+console.log("Class: " + rpgPlayerClass);
+console.log("Weapon: " + rpgPlayerWeapon);
 
   $(document).ready(function(){
 
-  if (rpgClass === "Warrior") {
+  if (rpgPlayerClass === "Warrior") {
 
     $("#weapon-select").load("weapons/weapons-warrior.php");
     
-  } else if (rpgClass === "Archer") {
+  } else if (rpgPlayerClass === "Archer") {
 
     $("#weapon-select").load("weapons/weapons-archer.php");
 
-  } else if (rpgClass === "Mage") {
+  } else if (rpgPlayerClass === "Mage") {
 
     $("#weapon-select").load("weapons/weapons-mage.php");
     
-  } else if (rpgClass === "Cleric") {
+  } else if (rpgPlayerClass === "Cleric") {
 
     $("#weapon-select").load("weapons/weapons-cleric.php");
     
-  } else if (rpgClass === "Rogue") {
+  } else if (rpgPlayerClass === "Rogue") {
 
     $("#weapon-select").load("weapons/weapons-rogue.php");
     
-  } else if (rpgClass === "Monk") {
+  } else if (rpgPlayerClass === "Monk") {
 
     $("#weapon-select").load("weapons/weapons-monk.php");
     
