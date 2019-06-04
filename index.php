@@ -243,13 +243,13 @@
 var rpgPlayerClass = localStorage.getItem('rpgPlayerClass');
 var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 
-$(document).ready(function(){
+localStorage.setItem('rpgPlayerSkillHP' , 0);
+localStorage.setItem('rpgPlayerSkillATT' , 0);
+localStorage.setItem('rpgPlayerSkillDEF' , 0);
+localStorage.setItem('rpgPlayerSkillINT' , 0);
+localStorage.setItem('rpgPlayerSkillRES' , 0);
 
-  localStorage.setItem('rpgPlayerSkillHP' , 0);
-  localStorage.setItem('rpgPlayerSkillATT' , 0);
-  localStorage.setItem('rpgPlayerSkillDEF' , 0);
-  localStorage.setItem('rpgPlayerSkillINT' , 0);
-  localStorage.setItem('rpgPlayerSkillRES' , 0);
+$(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
     localStorage.setItem('rpgPlayerClass', 'Warrior');
