@@ -28,7 +28,7 @@
     </div><!-- /.collapse -->
 
     <!-- Meteor Strike -->
-    <div class="collapse mx-auto" id="collapseMeteor Strike" data-parent="#ultimate-fire">
+    <div class="collapse mx-auto" id="collapseMeteorstrike" data-parent="#ultimate-fire">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Ultimate Ability</h6>
