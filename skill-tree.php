@@ -29,7 +29,7 @@
 
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 10</h4></div>
 
-    <?php include 'skills/support-lightning.php'; ?>
+    <?php include 'skills/ultimate-shuriken.php'; ?>
 
   </div><!-- / Level 10 -->
 
