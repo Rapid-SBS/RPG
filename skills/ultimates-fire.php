@@ -7,7 +7,7 @@
 
     <!-- Meteor Strike -->
     <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseMeteorstrike" role="button" aria-expanded="false" aria-controls="collapseMeteorstrike">
-      <h6>Meteor Strike <span class="badge badge-light text-teal">12</span></h6>
+      <h6>Meteor Strike <span class="badge badge-light text-teal">14</span></h6>
     </a>
 
 
