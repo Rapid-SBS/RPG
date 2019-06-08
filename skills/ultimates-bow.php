@@ -1,12 +1,12 @@
   <div class="row justify-content-center">
 
     <!-- Arrow Storm -->
-    <a class="btn text-white pad-10 mar-5 bg-yellow" data-toggle="collapse" href="#collapseArrowStorm" role="button" aria-expanded="false" aria-controls="collapseArrowstorm">
+    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseArrowStorm" role="button" aria-expanded="false" aria-controls="collapseArrowstorm">
       <h6>Arrow Storm <span class="badge badge-light text-teal">11</span></h6>
     </a>
 
     <!-- Rapid Fire -->  
-    <a class="btn text-white pad-10 mar-5 bg-yellow" data-toggle="collapse" href="#collapseRapidFire" role="button" aria-expanded="false" aria-controls="collapseRapidFire">
+    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseRapidFire" role="button" aria-expanded="false" aria-controls="collapseRapidFire">
       <h6>Rapid Fire <span class="badge badge-light text-teal">9</span></h6>
     </a>
 
