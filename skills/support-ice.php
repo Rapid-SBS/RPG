@@ -33,11 +33,11 @@
           <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Equip yourself or an ally with a<br>suit of Ice Armor for 3 turns.<br> Bonus RES = Player INT.<br> Costs 6 Mana.</p>
+          <p class="card-text text-center">Equip yourself or an ally with a<br>suit of Ice Armor for 3 turns.<br> Costs 6 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-orange">+3</span>
+            <span class="badge bg-white text-green">+3</span>
             Bonus DEF
           </li>
         </ul>
