@@ -7,7 +7,7 @@
 
     <!-- Chaos Blade -->  
     <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseChaosblade" role="button" aria-expanded="false" aria-controls="collapseChaosblade">
-      <h6>Chaos Blade <span class="badge badge-light text-teal">11</span></h6>
+      <h6>Chaos Blade <span class="badge badge-light text-teal">12</span></h6>
     </a>
 
   </div><!-- /.row -->
