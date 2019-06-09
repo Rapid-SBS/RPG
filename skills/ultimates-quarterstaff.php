@@ -44,7 +44,8 @@
         <div class="card-header text-center">
           <h6>Ultimate Ability</h6>
         </div>
-        <div class="card-body pad-5">Revive a fallen ally with full HP.<br> Costs 12 Mana.</p>
+        <div class="card-body pad-5">
+           <p class="card-text text-center">Revive a fallen ally with full HP.<br> Costs 12 Mana.</p>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
