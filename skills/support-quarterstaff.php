@@ -33,7 +33,7 @@
           <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Create a bright flash of light.<br>Roll a Triple-Crit die for each enemy.<br> Critical hits apply Stun debuff.<br><br> Costs 6 Mana.</p>
+          <p class="card-text text-center">Create a bright flash of light.<br>Roll a Triple-Crit die for each enemy.<br> Critical hits apply Stun debuff.<br> Costs 5 Mana.</p>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
