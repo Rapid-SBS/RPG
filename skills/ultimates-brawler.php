@@ -22,7 +22,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Soar into the sky and come <br>crashing down on your opponent.<br> DMG = Weapon ATT + Player ATT).<br> Costs 9 Mana.</p> 
+          <p class="card-text text-center">Soar into the sky and come <br>crashing down on your opponent.<br> DMG = Weapon ATT + Player ATT.<br> Costs 9 Mana.</p> 
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
             <span class="badge bg-white text-orange">22</span>
