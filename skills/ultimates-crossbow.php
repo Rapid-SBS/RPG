@@ -1,13 +1,13 @@
   <div class="row justify-content-center">
 
     <!-- Harpoon -->
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseHarpoon" role="button" aria-expanded="false" aria-controls="collapseArrowstorm">
+    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseHarpoon" role="button" aria-expanded="false" aria-controls="collapseHarpoon">
       <h6>Harpoon <span class="badge badge-light text-teal">10</span></h6>
     </a>
 
     <!-- Bomb Arrow -->  
     <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseBombarrow" role="button" aria-expanded="false" aria-controls="collapseBombarrow">
-      <h6>Bomb Arrow <span class="badge badge-light text-teal">9</span></h6>
+      <h6>Bomb Arrow <span class="badge badge-light text-teal">12</span></h6>
     </a>
 
   </div><!-- /.row -->
@@ -15,7 +15,7 @@
   <div id="ultimate-Crossbow" class="row mx-auto pad-10">
 
     <!-- Harpoon -->
-    <div class="collapse mx-auto" id="collapseArrowstorm" data-parent="#ultimate-Crossbow">
+    <div class="collapse mx-auto" id="collapseHarpoon" data-parent="#ultimate-Crossbow">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Ultimate Ability</h6>
