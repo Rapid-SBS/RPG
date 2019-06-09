@@ -29,7 +29,7 @@
 
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 10</h4></div>
 
-    <?php include 'skills/ultimates-quarterstaff.php'; ?>
+    <?php include 'skills/ultimates-tome.php'; ?>
 
   </div><!-- / Level 10 -->
 
