@@ -33,11 +33,17 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Throw a net over your enemies.<br>Increases Miss Rate to 3x for 2 turns. <br>Costs 5 Mana.</p>
+          <p class="card-text text-center">Throw a net over your enemies and fire at will.<br>Doubles enemy Miss Rate for 2 turns.<br>DMG = Weapon ATT.<br>Costs 6 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-teal">3x</span>
+            <span class="badge bg-white text-orange">4</span>
+            Weapon ATT
+          </li>
+        </ul>
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
+            <span class="badge bg-white text-teal">2x</span>
             Enemy Miss Rate
           </li>
         </ul>
