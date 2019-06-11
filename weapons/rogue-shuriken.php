@@ -34,18 +34,13 @@
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-          <h6>Smoke Bomb <span class="badge badge-light text-teal">4</span></h6>
+          <h6>Substitution <span class="badge badge-light text-teal">4</span></h6>
         </button>
       </div>
       <div id="collapseSix" class="collapse hidden" aria-labelledby="headingSix" data-parent="#accordion-shuriken">
         <div class="card-body light-transparency pad-10 text-center">
-          <p class="card-text text-center">Grants Hidden buff for 2 turns. <br>Costs 4 Mana.</p>
+          <p class="card-text text-center">Switch places with a shadow clone and<br>evade the next enemy attack.<br> Costs 3 Mana.</p>
         </div>
-          <ul class="list-group text-center">
-          <li class="list-group-item align-items-center light-transparency bg-gray" style="padding: .35rem 1.25rem;">
-            <strong>Hidden</strong>: You cannot be targeted.
-          </li>
-        </ul>
       </div>
   </div><!-- /.card -->    
   </div><!-- /.accordion -->
