@@ -27,7 +27,7 @@
     </div><!-- /.collapse -->
 
     <!-- Spark Bomb -->
-    <div class="collapse mx-auto" id="collapseSpark Bomb" data-parent="#support-crossbow">
+    <div class="collapse mx-auto" id="collapseSparkbomb" data-parent="#support-crossbow">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Support Ability</h6>

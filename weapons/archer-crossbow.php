@@ -31,7 +31,7 @@
         </div>
           <ul class="list-group text-center">
             <li class="list-group-item align-items-center light-transparency bg-green" style="padding: .35rem 1.25rem;">
-              <span class="badge badge-light text-orange">3</span>
+              <span class="badge badge-light text-orange">2</span>
               Weapon ATT
             </li>
           </ul>
