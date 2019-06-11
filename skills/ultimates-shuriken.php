@@ -39,7 +39,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">You and your shadow clones rain<br> shuriken on all enemies.<br>DMG = 3 x (Player ATT)<br> Costs 12 Mana.</p>
+          <p class="card-text text-center">You and your shadow clones rain<br> shuriken on all enemies.<br>DMG = 3 x (Player ATT)<br> Costs 11 Mana.</p>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->

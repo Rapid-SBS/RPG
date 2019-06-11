@@ -2,7 +2,7 @@
 
     <!-- Blackmarket Potion -->
     <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseBlackmarketpotion" role="button" aria-expanded="false" aria-controls="collapseBlackmarketpotion">
-      <h6>Blackmarketpotion <span class="badge badge-light text-teal">3</span></h6>
+      <h6>Blackmarket Potion <span class="badge badge-light text-teal">3</span></h6>
     </a>
 
     <!-- Smoke Bomb -->  
@@ -21,7 +21,7 @@
           <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Drink a smuggled potion that<br>heals you, but drains your mana.<br>HEAL = 4 HP<br> Costs 3 Mana.</p>
+          <p class="card-text text-center">Drink a smuggled potion that<br>heals you, but drains your mana.<br>HEAL = 4 HP.<br> Costs 3 Mana.</p>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
