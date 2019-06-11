@@ -7,7 +7,7 @@
 
     <!-- Frost Fury -->  
     <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseFrostfury" role="button" aria-expanded="false" aria-controls="collapseFrostfury">
-      <h6>Frost Fury <span class="badge badge-light text-teal">9</span></h6>
+      <h6>Frost Fury <span class="badge badge-light text-teal">11</span></h6>
     </a>
 
   </div><!-- /.row -->
@@ -21,7 +21,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Shape a weapon of your choosing <br>to strike your foe.<br> Critical hits apply Frozen debuff instead of bonus damage.<br> DMG = 4 x (Player INT).<br> Costs 10 Mana.</p>
+          <p class="card-text text-center">Shape a weapon of your <br>choosing to strike your foe.<br> Critical hits apply Frozen debuff<br> instead of bonus damage.<br> DMG = 4 x (Player INT).<br> Costs 10 Mana.</p>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
@@ -33,7 +33,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Create giant ice spikes high in the<br>atmosphere and rain them down on your foes.<br> DMG = 3 x (Player INT).<br> Costs 11 Mana.</p> 
+          <p class="card-text text-center">Create giant glacial spikes high in the<br>atmosphere and bring them<br> hailing down upon your foes.<br> DMG = 3 x (Player INT).<br> Costs 11 Mana.</p> 
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
