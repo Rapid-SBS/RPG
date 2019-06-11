@@ -31,13 +31,13 @@
         </div>
         <ul class="list-group text-center">
           <li class="list-group-item align-items-center light-transparency bg-blue" style="padding: .35rem 1.25rem;">
-            <span class="badge badge-light text-green">+4</span>
+            <span class="badge badge-light text-green">+2</span>
               Bonus DEF
           </li>
         </ul>
         <ul class="list-group text-center">
           <li class="list-group-item align-items-center light-transparency bg-blue" style="padding: .35rem 1.25rem;">
-            <span class="badge badge-light text-blue">+4</span>
+            <span class="badge badge-light text-blue">+2</span>
               Bonus RES
           </li>
         </ul>
