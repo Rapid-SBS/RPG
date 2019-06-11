@@ -7,7 +7,7 @@
 
     <!-- Nature's Blessing -->  
     <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseNaturesblessing" role="button" aria-expanded="false" aria-controls="collapseNaturesblessing">
-      <h6>Nature's Blessing <span class="badge badge-light text-teal">6</span></h6>
+      <h6>Nature's Blessing <span class="badge badge-light text-teal">3</span></h6>
     </a>
 
   </div><!-- /.row -->
