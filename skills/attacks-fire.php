@@ -33,7 +33,7 @@
     </div><!-- /.collapse -->
 
     <!-- Blaze Bomb -->
-    <div class="collapse mx-auto" id="collapseBlaze Bomb" data-parent="#attack-fire">
+    <div class="collapse mx-auto" id="collapseBlazebomb" data-parent="#attack-fire">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Attack Ability</h6>
