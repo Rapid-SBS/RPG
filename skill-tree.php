@@ -37,7 +37,7 @@
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 9</h4></div>
 
-    <?php include 'skills/supports-bow.php'; ?>
+    <?php include 'skills/attacks-bow.php'; ?>
 
   </div><!-- / Level 9 -->
 
@@ -45,7 +45,7 @@
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 8</h4></div>
 
-    <?php include 'skills/attacks-bow.php'; ?>
+    <?php include 'skills/supports-bow.php'; ?>
 
   </div><!-- / Level 8 -->
 

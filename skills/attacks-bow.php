@@ -25,7 +25,7 @@
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-orange">6</span>
+            <span class="badge bg-white text-orange">3</span>
             Weapon ATT
           </li>
         </ul>
@@ -39,14 +39,8 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Deals damage and applies Stun debuff.<br>DMG = Weapon ATT + Player ATT.<br> Costs 5 Mana.</p>
+          <p class="card-text text-center">Deals damage and applies Stun debuff.<br>DMG = Player ATT.<br> Costs 5 Mana.</p>
         </div>
-        <ul class="list-group list-group-flush text-center">
-          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-orange">3</span>
-            Weapon ATT
-          </li>
-        </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
