@@ -2,7 +2,7 @@
 
     <!-- Vortex Arrow -->
     <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseVortexarrow" role="button" aria-expanded="false" aria-controls="collapseVortexarrow">
-      <h6>Vortex Arrow <span class="badge badge-light text-teal">2</span></h6>
+      <h6>Vortex Arrow <span class="badge badge-light text-teal">9</span></h6>
     </a>
 
     <!-- Nature Surge -->  
@@ -21,12 +21,12 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Target an enemy's weakness. Increases Critical<br>Hit Rate of yourself or an ally by 1x<br> (Up to a maximum of 3x) for 1 turn.<br> Costs 2 Mana.</p>
+          <p class="card-text text-center">A powerful vortex of wind launches<br>your arrow at extreme speed.<br>Triple Critical Hit Rate.<br>DMG = 3 x (Player ATT).<br> Costs 9 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-teal">+1</span>
-            Critical Chance
+            <span class="badge bg-white text-teal">3x</span>
+            Crit Chance
           </li>
         </ul>
       </div><!-- /.card -->

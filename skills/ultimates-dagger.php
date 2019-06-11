@@ -21,8 +21,14 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Become hidden for one turn and<br> strike your enemy the next. <br> DMG = 5 x (Player ATT).<br> Costs 12 Mana.</p>
+          <p class="card-text text-center">Become hidden for one turn and<br> strike your enemy the next.<br>Never misses, but cannot Crit.<br> DMG = 5 x (Player ATT).<br> Costs 12 Mana.</p>
         </div>
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
+            <span class="badge bg-white text-teal">0x</span>
+            Crit Chance
+          </li>
+        </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
