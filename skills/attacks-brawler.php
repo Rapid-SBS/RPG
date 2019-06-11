@@ -2,12 +2,12 @@
 
     <!-- Crane Kick -->
     <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseCranekick" role="button" aria-expanded="false" aria-controls="collapseCranekick">
-      <h6>Cranekick <span class="badge badge-light text-teal">6</span></h6>
+      <h6>Cranekick <span class="badge badge-light text-teal">5</span></h6>
     </a>
 
     <!-- Destabilize -->  
     <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseDestabilize" role="button" aria-expanded="false" aria-controls="collapseDestabilize">
-      <h6>Destabilize <span class="badge badge-light text-teal">7</span></h6>
+      <h6>Destabilize <span class="badge badge-light text-teal">4</span></h6>
     </a>
 
   </div><!-- /.row -->
