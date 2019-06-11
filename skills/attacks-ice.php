@@ -6,7 +6,7 @@
     </a>
 
     <!-- Frost Wave -->  
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseSteeltrap" role="button" aria-expanded="false" aria-controls="collapseSteeltrap">
+    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseFrostwave" role="button" aria-expanded="false" aria-controls="collapseFrostwave">
       <h6>Frost Wave <span class="badge badge-light text-teal">7</span></h6>
     </a>
 
@@ -33,7 +33,7 @@
     </div><!-- /.collapse -->
 
     <!-- Frost Wave -->
-    <div class="collapse mx-auto" id="collapseSteeltrap" data-parent="#attack-ice">
+    <div class="collapse mx-auto" id="collapseFrostwave" data-parent="#attack-ice">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Attack Ability</h6>
