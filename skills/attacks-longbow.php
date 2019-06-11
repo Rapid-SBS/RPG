@@ -2,7 +2,7 @@
 
     <!-- Wind Arrow -->
     <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseWindarrow" role="button" aria-expanded="false" aria-controls="collapseWindarrow">
-      <h6>Wind Arrow <span class="badge badge-light text-teal">4</span></h6>
+      <h6>Wind Arrow <span class="badge badge-light text-teal">5</span></h6>
     </a>
 
     <!-- Net Trap -->  
@@ -21,14 +21,8 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">The wind grants your arrow increased velocity.<br> DMG = 2 x (Player ATT).<br> Costs 4 Mana.</p>
+          <p class="card-text text-center">The wind grants your arrow increased velocity.<br> DMG = 2 x (Player ATT).<br> Costs 5 Mana.</p>
         </div>
-        <ul class="list-group list-group-flush text-center">
-          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-orange">6</span>
-            Weapon ATT
-          </li>
-        </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
@@ -44,7 +38,7 @@
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
             <span class="badge bg-white text-teal">3x</span>
-            Miss Rate
+            Enemy Miss Rate
           </li>
         </ul>
       </div><!-- /.card -->
