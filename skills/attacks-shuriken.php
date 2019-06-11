@@ -21,7 +21,7 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Emerge from the shadows to strike your enemy.<br>Guaranteed Crit if used while Hidden.<br>DMG = 2 x (Player ATT).<br>Costs 5 Mana.</p>
+          <p class="card-text text-center">Hurl shuriken while concealed.<br>Guaranteed Crit if used while Hidden.<br>DMG = 2 x (Player ATT).<br>Costs 5 Mana.</p>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
