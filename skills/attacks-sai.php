@@ -6,7 +6,7 @@
     </a>
 
     <!-- Shadow Blitz -->  
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseShadow Blitz" role="button" aria-expanded="false" aria-controls="collapseShadow Blitz">
+    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseShadowblitz" role="button" aria-expanded="false" aria-controls="collapseShadowblitz">
       <h6>Shadow Blitz <span class="badge badge-light text-teal">7</span></h6>
     </a>
 
@@ -27,7 +27,7 @@
     </div><!-- /.collapse -->
 
     <!-- Shadow Blitz -->
-    <div class="collapse mx-auto" id="collapseShadow Blitz" data-parent="#attack-sai">
+    <div class="collapse mx-auto" id="collapseShadowblitz" data-parent="#attack-sai">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Attack Ability</h6>
