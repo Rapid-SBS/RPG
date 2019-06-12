@@ -1,7 +1,7 @@
   <div class="row justify-content-center">
 
     <!-- Lightbringer -->
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseLightbringer" role="button" aria-expanded="false" aria-controls="collapseLightbringer">
+    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseLightbringer" role="button" aria-expanded="false" aria-controls="collapseLightbringer">
       <h6>Lightbringer <span class="badge badge-light text-teal">9</span></h6>
     </a>
 
@@ -15,7 +15,7 @@
   <div id="ultimate-quarterstaff" class="row mx-auto pad-10">
 
     <!-- Lightbringer -->
-    <div class="collapse mx-auto" id="collapseLightbringer" data-parent="#attack-brawler">
+    <div class="collapse mx-auto" id="collapseLightbringer" data-parent="#ultimate-quarterstaff">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Ultimate Ability</h6>

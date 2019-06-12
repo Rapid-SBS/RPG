@@ -1,7 +1,7 @@
   <div class="row justify-content-center">
 
     <!-- Skull Bash -->
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseSkullbash" role="button" aria-expanded="false" aria-controls="collapseSkullbash">
+    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseSkullbash" role="button" aria-expanded="false" aria-controls="collapseSkullbash">
       <h6>Skull Bash <span class="badge badge-light text-teal">4</span></h6>
     </a>
 
@@ -15,10 +15,10 @@
   <div id="attack-quarterstaff" class="row mx-auto pad-10">
 
    <!-- Skull Bash -->
-    <div class="collapse mx-auto" id="collapseSkullbash" data-parent="#ultimate-quarterstaff">
+    <div class="collapse mx-auto" id="collapseSkullbash" data-parent="#attack-quarterstaff">
       <div class="card bg-light">
         <div class="card-header text-center">
-          <h6>Ultimate Ability</h6>
+          <h6>attack Ability</h6>
         </div>
         <div class="card-body pad-5">
           <p class="card-text text-center">Slam your quarterstaff into<br>the skull of an enemy. <br>Double Critical Hit Chance.<br> DMG = Weapon ATT + Player ATT.<br> Costs 4 Mana.</p>
@@ -39,7 +39,7 @@
     </div><!-- /.collapse -->
 
     <!-- Searing Light -->
-    <div class="collapse mx-auto" id="collapseSearing Light" data-parent="#attack-quarterstaff">
+    <div class="collapse mx-auto" id="collapseSearinglight" data-parent="#attack-quarterstaff">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Attack Ability</h6>
