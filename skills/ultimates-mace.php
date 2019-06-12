@@ -1,7 +1,7 @@
   <div class="row justify-content-center">
 
     <!-- Hammer of Dawn -->
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseHammerofdawn" role="button" aria-expanded="false" aria-controls="collapseHammerofdawn">
+    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseHammerofdawn" role="button" aria-expanded="false" aria-controls="collapseHammerofdawn">
       <h6>Hammer of Dawn <span class="badge badge-light text-teal">10</span></h6>
     </a>
 
@@ -15,7 +15,7 @@
   <div id="ultimate-mace" class="row mx-auto pad-10">
 
     <!-- Hammer of Dawn -->
-    <div class="collapse mx-auto" id="collapseHammerofdawn" data-parent="#attack-brawler">
+    <div class="collapse mx-auto" id="collapseHammerofdawn" data-parent="#ultimate-mace">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Ultimate Ability</h6>
@@ -38,7 +38,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-           <p class="card-text text-center">Invoke the sacred power of the Dawn Guardian,<br>greatly increasing the DEF and RES of<br>your allies for 1 turn.<br> Costs 10 Mana.</p>
+           <p class="card-text text-center">Invoke the sacred power of the Dawn Guardian,<br>greatly increasing ally defenses for 1 turn.<br> Costs 10 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
