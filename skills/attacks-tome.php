@@ -35,12 +35,6 @@
         <div class="card-body pad-5">
           <p class="card-text text-center">Bind your enemy with chains of light.<br>Deals damage and stuns enemy for 1 turn.<br>DMG = 1 x (Player INT).<br> Costs 6 Mana.</p>
         </div>
-        <ul class="list-group list-group-flush text-center">
-          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-teal">3x</span>
-            Crit Chance
-          </li>
-        </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
