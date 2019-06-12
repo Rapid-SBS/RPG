@@ -27,14 +27,14 @@
       </div>
       <div id="collapseSix" class="collapse hidden" aria-labelledby="headingFour" data-parent="#accordion-lightning">
         <div class="card-body light-transparency pad-10 text-center">
-          <p class="card-text text-center">Expel built-up static.<br> Damages all enemies. <br>DMG = Weapon ATT + Player INT.<br>Costs 4 Mana.</p>
+          <p class="card-text text-center">Expel built-up static.<br> Damages all enemies. <br>DMG = Weapon ATT.<br>Costs 4 Mana.</p>
         </div>
-          <ul class="list-group text-center">
-          <li class="list-group-item align-items-center light-transparency bg-blue" style="padding: .35rem 1.25rem;">
-            <span class="badge badge-light text-orange">2</span>
-             Weapon ATT
-          </li>
-        </ul>
       </div>
+      <ul class="list-group text-center">
+        <li class="list-group-item align-items-center light-transparency bg-blue" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-orange">4</span>
+          Weapon ATT
+        </li>
+      </ul>
   </div><!-- /.card -->    
   </div><!-- /.accordion -->

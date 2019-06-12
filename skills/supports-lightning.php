@@ -7,7 +7,7 @@
 
     <!-- Static Barrier -->  
     <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseStaticbarrier" role="button" aria-expanded="false" aria-controls="collapseStaticbarrier">
-      <h6>Static Barrier <span class="badge badge-light text-teal">4</span></h6>
+      <h6>Static Barrier <span class="badge badge-light text-teal">6</span></h6>
     </a>
 
   </div><!-- /.row -->
@@ -33,8 +33,14 @@
           <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Boost the RES of yourself or an<br>ally for one turn.<br> Bonus RES = Player INT.<br> Costs 5 Mana.</p>
+          <p class="card-text text-center">Boost the RES of yourself or <br>an ally for 1 turn.<br> Costs 6 Mana.</p>
         </div>
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
+            <span class="badge bg-white text-blue">+4</span>
+            Bonus RES
+          </li>
+        </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 

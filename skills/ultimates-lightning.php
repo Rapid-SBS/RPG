@@ -5,9 +5,9 @@
       <h6>Volt Driver <span class="badge badge-light text-teal">12</span></h6>
     </a>
 
-    <!-- Thunderstorm -->
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseThunderstorm" role="button" aria-expanded="false" aria-controls="collapseThunderstorm">
-      <h6>Thunderstorm <span class="badge badge-light text-teal">12</span></h6>
+    <!-- Thunder Rage -->
+    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseThunderrage" role="button" aria-expanded="false" aria-controls="collapseThunderrage">
+      <h6>Thunder Rage <span class="badge badge-light text-teal">11</span></h6>
     </a>
 
 
@@ -33,8 +33,8 @@
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
-    <!-- Thunderstorm -->
-    <div class="collapse mx-auto" id="collapseThunderstorm" data-parent="#ultimate-lightning">
+    <!-- Thunder Rage -->
+    <div class="collapse mx-auto" id="collapseThunderrage" data-parent="#ultimate-lightning">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Ultimate Ability</h6>
