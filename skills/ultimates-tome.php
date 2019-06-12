@@ -21,7 +21,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Call forth radiant light to bless your<br>allies while punishing your enemies.<br>Ignores all enemy RES.<br>HEAL = Weapon ATT.<br> DMG = Weapon ATT.<br> Costs 12 Mana.</p>
+          <p class="card-text text-center">Call forth radiant light to bless your<br>allies while punishing your enemies.<br>Ignores all enemy RES.<br>HEAL/DMG = Weapon ATT.<br> Costs 10 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">

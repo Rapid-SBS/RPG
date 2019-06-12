@@ -7,7 +7,7 @@
 
     <!-- Constrict -->  
     <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseConstrict" role="button" aria-expanded="false" aria-controls="collapseConstrict">
-      <h6>Constrict <span class="badge badge-light text-teal">4</span></h6>
+      <h6>Constrict <span class="badge badge-light text-teal">5</span></h6>
     </a>
 
   </div><!-- /.row -->
@@ -21,8 +21,14 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Fire a burst of light at all enemies.<br>DMG = 2 x (Player INT).<br>Costs 5 Mana.</p>
+          <p class="card-text text-center">Fire a burst of light at all enemies.<br>DMG = Weapon ATT + Player INT.<br>Costs 3 Mana.</p>
         </div>
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
+            <span class="badge bg-white text-orange">1</span>
+            Weapon ATT
+          </li>
+        </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
@@ -33,7 +39,7 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Bind your enemy with chains of light.<br>Deals damage and stuns enemy for 1 turn.<br>DMG = 1 x (Player INT).<br> Costs 6 Mana.</p>
+          <p class="card-text text-center">Bind your enemy with chains of light.<br>Deals damage and stuns enemy for 1 turn.<br>DMG = Player INT.<br> Costs 5 Mana.</p>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
