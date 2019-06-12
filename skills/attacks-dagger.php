@@ -21,7 +21,7 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Deal a stealthly blow to your enemy.<br>Your Critical Hit Chance increases by 1 for each<br> Poison effect you currently have on the enemy<br>(Max 3x Crit Chance).<br>DMG = 2 x (Player ATT).<br>Costs 6 Mana.</p>
+          <p class="card-text text-center">Deal a stealthly blow to your enemy.<br>Your Critical Hit Chance increases by 1 for each<br> Poison effect you currently have on the enemy.<br>(Max 3x Crit Chance).<br>DMG = 2 x (Player ATT).<br>Costs 6 Mana.</p>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
