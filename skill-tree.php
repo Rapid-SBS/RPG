@@ -29,7 +29,7 @@
 
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 10</h4></div>
 
-    <?php include 'skills/ultimates-quarterstaff.php'; ?>
+    <?php include 'skills/ultimates-tome.php'; ?>
 
   </div><!-- / Level 10 -->
 
@@ -37,7 +37,7 @@
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 9</h4></div>
 
-    <?php include 'skills/supports-quarterstaff.php'; ?>
+    <?php include 'skills/supports-tome.php'; ?>
 
   </div><!-- / Level 9 -->
 
@@ -45,7 +45,7 @@
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 8</h4></div>
 
-    <?php include 'skills/attacks-quarterstaff.php'; ?>
+    <?php include 'skills/attacks-tome.php'; ?>
 
   </div><!-- / Level 8 -->
 
