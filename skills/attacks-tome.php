@@ -2,7 +2,7 @@
 
     <!-- Light Burst -->
     <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseLightburst" role="button" aria-expanded="false" aria-controls="collapseLightburst">
-      <h6>Light Burst <span class="badge badge-light text-teal">5</span></h6>
+      <h6>Light Burst <span class="badge badge-light text-teal">3</span></h6>
     </a>
 
     <!-- Constrict -->  
