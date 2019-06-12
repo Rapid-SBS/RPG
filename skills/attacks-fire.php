@@ -39,7 +39,7 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Fling a small orb that violently<br>  detonates, damaging all enemies.<br> DMG = Weapon ATT + Player INT.<br> Costs 7 Mana.</p>
+          <p class="card-text text-center">Fling a small orb that violently<br>detonates, damaging all enemies.<br> DMG = Weapon ATT + Player INT.<br> Costs 7 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
