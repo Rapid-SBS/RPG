@@ -21,8 +21,18 @@
           <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Consume your homebrewed potion<br>to regenerate health.<br>HEAL = 6 HP.<br> Costs 2 Mana.</p>
+          <p class="card-text text-center">Speed up your metabolism with a homebrewed potion.<br>Regenerate HP and boost your stats for 2 turns.<br>HEAL = 6 HP.<br> Costs 4 Mana.</p>
         </div>
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
+            <span class="badge bg-white text-orange">+1</span>
+            Bonus ATT
+          </li>
+          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
+            <span class="badge bg-white text-teal">+1</span>
+            Bonus DEF
+          </li>
+        </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
