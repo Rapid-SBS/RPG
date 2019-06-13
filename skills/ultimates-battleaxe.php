@@ -22,7 +22,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Become an unstoppable force of ,<br>dealing damage to all enemies in your path.<br>You are immune to damage for 1 turn.<br> DMG = 3 x (Player ATT).<br> Costs 12 Mana.</p> 
+          <p class="card-text text-center">Become an unstoppable force of rage,<br>dealing damage to all enemies in your path.<br>You are immune to damage for 1 turn.<br> DMG = 3 x (Player ATT).<br> Costs 12 Mana.</p> 
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->

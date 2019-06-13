@@ -2,12 +2,12 @@
 
     <!-- Battle Roar -->  
     <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseBattleroar" role="button" aria-expanded="false" aria-controls="collapseBattleroar">
-      <h6>Battle Roar <span class="badge badge-light text-teal">2</span></h6>
+      <h6>Battle Roar <span class="badge badge-light text-teal">5</span></h6>
     </a>
 
     <!-- Bloodlust -->
     <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseBloodlust" role="button" aria-expanded="false" aria-controls="collapseBloodlust">
-      <h6>Bloodlust <span class="badge badge-light text-teal">3</span></h6>
+      <h6>Bloodlust <span class="badge badge-light text-teal">5</span></h6>
     </a>
 
   </div><!-- /.row -->
