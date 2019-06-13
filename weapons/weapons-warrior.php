@@ -4,7 +4,7 @@
 
 <?php include 'warrior-warhammer.php'; ?>
 
-	<a role="button" onclick="setWeaponWarhammer()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-halberd" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
+	<a role="button" onclick="setWeaponWarhammer()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-warhammer" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'warrior-battleaxe.php'; ?>
 
@@ -21,7 +21,7 @@ function setWeaponSword() {
 }
 function setWeaponWarhammer() {
   localStorage.setItem('rpgPlayerClass', 'Warrior');
-  localStorage.setItem('rpgPlayerWeapon', 'Halberd');
+  localStorage.setItem('rpgPlayerWeapon', 'warhammer');
   localStorage.setItem('rpgPlayerBasicAbility', 'Jab');
   localStorage.setItem('rpgPlayerSpecialAbility', 'Sweeping Blow');
 }
@@ -37,17 +37,17 @@ $(document).ready(function(){
 	// --- Weapon Select Button script ---
   $(".rpg-wpn-sword").click(function(){
   	$("#rpg-wpn-btn-battleaxe").slideUp(300);
-  	$("#rpg-wpn-btn-halberd").slideUp(300);
+  	$("#rpg-wpn-btn-warhammer").slideUp(300);
     $("#rpg-wpn-btn-sword").slideDown(300);
   });
-	$(".rpg-wpn-halberd").click(function(){
+	$(".rpg-wpn-warhammer").click(function(){
   	$("#rpg-wpn-btn-battleaxe").slideUp(300);
   	$("#rpg-wpn-btn-sword").slideUp(300);
-    $("#rpg-wpn-btn-halberd").slideDown(300);
+    $("#rpg-wpn-btn-warhammer").slideDown(300);
   });
 	$(".rpg-wpn-battleaxe").click(function(){
   	$("#rpg-wpn-btn-sword").slideUp(300);
-  	$("#rpg-wpn-btn-halberd").slideUp(300);
+  	$("#rpg-wpn-btn-warhammer").slideUp(300);
     $("#rpg-wpn-btn-battleaxe").slideDown(300);
   });
 
