@@ -21,7 +21,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Drive your oppponent back with an<br>overwhelming combo attack.<br> DMG = 5 x (Player ATT).<br> Costs 8 Mana.</p> 
+          <p class="card-text text-center">Drive your oppponent back with an<br>overwhelming combo attack.<br> DMG = 5 x (Player ATT).<br> Costs 9 Mana.</p> 
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
