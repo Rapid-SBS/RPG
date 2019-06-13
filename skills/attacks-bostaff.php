@@ -29,6 +29,12 @@
             Weapon ATT
           </li>
         </ul>
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
+            <span class="badge bg-white text-teal">2x</span>
+            Crit Chance
+          </li>
+        </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 

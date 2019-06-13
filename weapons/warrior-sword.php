@@ -33,11 +33,11 @@
       </div>
       <div id="collapseTwo" class="collapse hidden" aria-labelledby="headingTwo" data-parent="#accordion-swordshield">
         <div class="card-body light-transparency pad-10 text-center">
-          <p class="card-text text-center">Use your shield to protect <br>yourself or one ally. <br>Grants +4 DEF for one turn. <br>Costs 1 Mana.</p>
+          <p class="card-text text-center">Use your shield to protect <br>yourself or one ally. <br>Grants +2 DEF for one turn. <br>Costs 1 Mana.</p>
         </div>
         <ul class="list-group text-center">
           <li class="list-group-item align-items-center light-transparency bg-orange" style="padding: .35rem 1.25rem;">
-            <span class="badge badge-light text-green">+4</span>
+            <span class="badge badge-light text-green">+2</span>
             Bonus DEF
           </li>
         </ul>
