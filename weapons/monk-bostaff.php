@@ -6,7 +6,7 @@
       </div><!-- /.card-header --> 
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <h6>Cross Strike</h6>
+          <h6>Cross Strike</h6> 
         </button>
       </div><!-- /.card-header --> 
       <div id="collapseOne" class="collapse hidden" aria-labelledby="headingOne" data-parent="#accordion-bostaff">
@@ -22,7 +22,7 @@
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <h6>Spinning Strike <span class="badge badge-light text-teal">2</span></h6>
+          <h6>Leg Sweep <span class="badge badge-light text-teal">2</span></h6>
         </button>
       </div>
       <div id="collapseTwo" class="collapse hidden" aria-labelledby="headingTwo" data-parent="#accordion-bostaff">

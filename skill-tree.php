@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=devwindfu-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=devbostaff-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 
@@ -29,7 +29,7 @@
 
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 10</h4></div>
 
-    <?php include 'skills/ultimates-windfu.php'; ?>
+    <?php include 'skills/ultimates-bostaff.php'; ?>
 
   </div><!-- / Level 10 -->
 
@@ -37,7 +37,7 @@
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 9</h4></div>
 
-    <?php include 'skills/supports-windfu.php'; ?>
+    <?php include 'skills/supports-bostaff.php'; ?>
 
   </div><!-- / Level 9 -->
 
@@ -45,7 +45,7 @@
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 8</h4></div>
 
-    <?php include 'skills/attacks-windfu.php'; ?>
+    <?php include 'skills/attacks-bostaff.php'; ?>
 
   </div><!-- / Level 8 -->
 
