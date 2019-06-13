@@ -2,9 +2,9 @@
 
 	<a role="button" onclick="setWeaponSword()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-sword" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
-<?php include 'warrior-halberd.php'; ?>
+<?php include 'warrior-warhammer.php'; ?>
 
-	<a role="button" onclick="setWeaponHalberd()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-halberd" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
+	<a role="button" onclick="setWeaponWarhammer()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-halberd" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'warrior-battleaxe.php'; ?>
 
@@ -19,7 +19,7 @@ function setWeaponSword() {
   localStorage.setItem('rpgPlayerBasicAbility', 'Slash');
   localStorage.setItem('rpgPlayerSpecialAbility', 'Shield Ally');
 }
-function setWeaponHalberd() {
+function setWeaponWarhammer() {
   localStorage.setItem('rpgPlayerClass', 'Warrior');
   localStorage.setItem('rpgPlayerWeapon', 'Halberd');
   localStorage.setItem('rpgPlayerBasicAbility', 'Jab');
