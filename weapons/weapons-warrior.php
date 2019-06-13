@@ -22,8 +22,8 @@ function setWeaponSword() {
 function setWeaponWarhammer() {
   localStorage.setItem('rpgPlayerClass', 'Warrior');
   localStorage.setItem('rpgPlayerWeapon', 'warhammer');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Jab');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Sweeping Blow');
+  localStorage.setItem('rpgPlayerBasicAbility', 'Slam');
+  localStorage.setItem('rpgPlayerSpecialAbility', 'Swing');
 }
 function setWeaponBattleaxe() {
   localStorage.setItem('rpgPlayerClass', 'Warrior');
