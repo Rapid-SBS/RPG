@@ -31,7 +31,7 @@
         </ul>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-orange">+1</span>
+            <span class="badge bg-white text-purple">+1</span>
             Bonus INT
           </li>
         </ul>
