@@ -39,7 +39,7 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Swing your hammer into an enemy's chin,<br>dealing damage and applying Stun debuff.<br>DMG = Player ATT.<br>Costs 6 Mana.</p>
+          <p class="card-text text-center">Swing your hammer into an enemy's chin, dealing damage and applying Stun debuff.<br>DMG = Player ATT.<br>Costs 6 Mana.</p>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
