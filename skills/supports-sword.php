@@ -21,7 +21,7 @@
           <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Force enemies to direct singe-target<br>attacks towards you for 2 turns.<br>You may perform another action this turn.<br> Costs 2 Mana.</p>
+          <p class="card-text text-center">Force enemies to direct single-target<br>attacks towards you for 2 turns.<br>You may perform another action this turn.<br> Costs 2 Mana.</p>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
