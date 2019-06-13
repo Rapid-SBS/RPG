@@ -2,12 +2,12 @@
 
     <!-- Levitate -->
     <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseLevitate" role="button" aria-expanded="false" aria-controls="collapseLevitate">
-      <h6>Levitate <span class="badge badge-light text-teal">6</span></h6>
+      <h6>Levitate <span class="badge badge-light text-teal">4</span></h6>
     </a>
 
     <!-- Wind Wall -->  
     <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseWindwall" role="button" aria-expanded="false" aria-controls="collapseWindwall">
-      <h6>Wind Wall <span class="badge badge-light text-teal">8</span></h6>
+      <h6>Wind Wall <span class="badge badge-light text-teal">6</span></h6>
     </a>
 
   </div><!-- /.row -->
@@ -39,7 +39,7 @@
           <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Create a barrier of wind, boosting ally RES.<br> Costs 8 Mana.</p>
+          <p class="card-text text-center">Create a barrier of wind,<br> boosting ally RES for 1 turn.<br> Costs 8 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">

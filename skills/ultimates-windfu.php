@@ -2,12 +2,12 @@
 
     <!-- Air Cannon -->  
     <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseAircannon" role="button" aria-expanded="false" aria-controls="collapseAircannon">
-      <h6>Air Cannon <span class="badge badge-light text-teal">10</span></h6>
+      <h6>Air Cannon <span class="badge badge-light text-teal">8</span></h6>
     </a>
 
     <!-- Hurricane Sphere  -->
     <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseHurricanesphere" role="button" aria-expanded="false" aria-controls="collapseHurricanesphere">
-      <h6>Hurricane Sphere <span class="badge badge-light text-teal">13</span></h6>
+      <h6>Hurricane Sphere <span class="badge badge-light text-teal">10</span></h6>
     </a>
 
   </div><!-- /.row -->
