@@ -39,7 +39,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Strike the ground in front of you and drive massive<br>rock formations out of the earth beneath your enemies.<br> DMG = 3 x (Player ATT).<br> Costs 12 Mana.</p> 
+          <p class="card-text text-center">Strike the ground in front of you<br>and drive massive rock formations<br>out of the earth beneath your enemies.<br> DMG = 3 x (Player ATT).<br> Costs 12 Mana.</p> 
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
