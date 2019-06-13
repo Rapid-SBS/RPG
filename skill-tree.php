@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=devbattleaxe-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=devwarhammer-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 
@@ -29,7 +29,7 @@
 
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 10</h4></div>
 
-    <?php include 'skills/ultimates-battleaxe.php'; ?>
+    <?php include 'skills/ultimates-warhammer.php'; ?>
 
   </div><!-- / Level 10 -->
 
@@ -37,7 +37,7 @@
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 9</h4></div>
 
-    <?php include 'skills/attacks-battleaxe.php'; ?>
+    <?php include 'skills/attacks-warhammer.php'; ?>
 
   </div><!-- / Level 9 -->
 
@@ -45,7 +45,7 @@
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 8</h4></div>
 
-    <?php include 'skills/supports-battleaxe.php'; ?>
+    <?php include 'skills/supports-warhammer.php'; ?>
 
   </div><!-- / Level 8 -->
 

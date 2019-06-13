@@ -10,7 +10,6 @@
       <h6>Titan Slayer <span class="badge badge-light text-teal">12</span></h6>
     </a>
 
-
   </div><!-- /.row -->
 
   <div id="ultimate-battleaxe" class="row mx-auto pad-10">
