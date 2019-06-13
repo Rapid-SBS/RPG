@@ -2,12 +2,12 @@
 
     <!-- Taunt -->  
     <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseTaunt" role="button" aria-expanded="false" aria-controls="collapseTaunt">
-      <h6>Taunt <span class="badge badge-light text-teal">6</span></h6>
+      <h6>Taunt <span class="badge badge-light text-teal">2</span></h6>
     </a>
 
     <!-- Diversion -->
     <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseDiversion" role="button" aria-expanded="false" aria-controls="collapseDiversion">
-      <h6>Diversion <span class="badge badge-light text-teal">6</span></h6>
+      <h6>Diversion <span class="badge badge-light text-teal">3</span></h6>
     </a>
 
   </div><!-- /.row -->
@@ -37,7 +37,7 @@
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-orange">-3</span>
+            <span class="badge bg-white text-green">-3</span>
             Enemy DEF
           </li>
         </ul>

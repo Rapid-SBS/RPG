@@ -2,7 +2,7 @@
 
     <!-- Aegis Armor -->
     <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseAegisarmor" role="button" aria-expanded="false" aria-controls="collapseAegisarmor">
-      <h6>Aegis Armor <span class="badge badge-light text-teal">10</span></h6>
+      <h6>Aegis Armor <span class="badge badge-light text-teal">12</span></h6>
     </a>
 
     <!-- Bastion -->  
@@ -21,7 +21,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Summon Aegis Armor for 2 turns,<br>drastically raising your defenses.<br>Costs 10 Mana.</p>
+          <p class="card-text text-center">Summon Aegis Armor for 2 turns,<br>drastically raising your defenses.<br>Costs 12 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
@@ -50,7 +50,7 @@
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
             <span class="badge bg-white text-green">+8</span>
-            Bonus DEF
+            Ally DEF
           </li>
         </ul>
       </div><!-- /.card -->

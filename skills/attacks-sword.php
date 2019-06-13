@@ -2,12 +2,12 @@
 
     <!-- Shield Bash -->
     <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseShieldbash" role="button" aria-expanded="false" aria-controls="collapseShieldbash">
-      <h6>Shield Bash <span class="badge badge-light text-teal">7</span></h6>
+      <h6>Shield Bash <span class="badge badge-light text-teal">6</span></h6>
     </a>
 
     <!-- Blade Storm -->  
     <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseBladestorm" role="button" aria-expanded="false" aria-controls="collapseBladestorm">
-      <h6>Blade Storm <span class="badge badge-light text-teal">8</span></h6>
+      <h6>Blade Storm <span class="badge badge-light text-teal">6</span></h6>
     </a>
 
   </div><!-- /.row -->
