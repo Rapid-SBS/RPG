@@ -1,7 +1,7 @@
   <div class="row justify-content-center">
 
     <!-- Experience II -->
-    <a class="btn text-white pad-10 mar-5 bg-bluegray" data-toggle="collapse" href="#collapseExperience2" role="button" aria-expanded="false" aria-controls="collapseExperience2">
+    <a class="btn text-white pad-10 mar-5 bg-paleblue" data-toggle="collapse" href="#collapseExperience2" role="button" aria-expanded="false" aria-controls="collapseExperience2">
       <h6>Experience II</h6>
     </a>
 
@@ -16,7 +16,7 @@
           <h6>Passive Skill</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Your experiences and hard-fought battles have made you stronger.<br>Gain +1 on all stats.<br>
+          <p class="card-text text-center">Your experiences and hard-fought battles have made you even stronger.<br>Gain an additional +1 on all stats.<br>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">

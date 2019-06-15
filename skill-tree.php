@@ -25,8 +25,6 @@
 
 <div id="skill-select" class="y-flex-container pad-b-10">
 
-
-
 </div><!-- /.y-flex-container -->
 
 <script>
@@ -34,29 +32,77 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
 $(document).ready(function(){
 
-  if (weapon.name === "Battle Axe") {
+  if (weapon.name === "Bow") {
+
+    $("#skill-select").load("skills/skills-bow.php");
+    
+  } else if (weapon.name === "Crossbow") {
+
+    $("#skill-select").load("skills/skills-crossbow.php");
+
+  } else if (weapon.name === "Longbow") {
+
+    $("#skill-select").load("skills/skills-longbow.php");
+    
+  } else if (weapon.name === "Mace") {
+
+    $("#skill-select").load("skills/skills-mace.php");
+    
+  } else if (weapon.name === "Quarterstaff") {
+
+    $("#skill-select").load("skills/skills-quarterstaff.php");
+    
+  } else if (weapon.name === "Tome") {
+
+    $("#skill-select").load("skills/skills-tome.php");
+  
+  } else if (weapon.name === "Ice") {
+
+    $("#skill-select").load("skills/skills-ice.php");
+    
+  } else if (weapon.name === "Fire") {
+
+    $("#skill-select").load("skills/skills-fire.php");
+    
+  } else if (weapon.name === "Lightning") {
+
+    $("#skill-select").load("skills/skills-lightning.php");
+  
+  } else if (weapon.name === "Bo Staff") {
+
+    $("#skill-select").load("skills/skills-bostaff.php");
+    
+  } else if (weapon.name === "Brawler's Fist") {
+
+    $("#skill-select").load("skills/skills-fists.php");
+    
+  } else if (weapon.name === "Wind Fu") {
+
+    $("#skill-select").load("skills/skills-windfu.php");
+
+  } else if (weapon.name === "Dagger") {
+
+    $("#skill-select").load("skills/skills-dagger.php");
+    
+  } else if (weapon.name === "Dual Sai") {
+
+    $("#skill-select").load("skills/skills-sai.php");
+    
+  } else if (weapon.name === "Shuriken") {
+
+    $("#skill-select").load("skills/skills-shuriken.php");
+
+  } else if (weapon.name === "Sword & Shield") {
+
+    $("#skill-select").load("skills/skills-sword.php");
+    
+  } else if (weapon.name === "War Hammer") {
+
+    $("#skill-select").load("skills/skills-warhammer.php");
+    
+  } else if (weapon.name === "Battle Axe") {
 
     $("#skill-select").load("skills/skills-battleaxe.php");
-    
-  } else if (weapon.name === "Archer") {
-
-    $("#skill-select").load("skills/skills-archer.php");
-
-  } else if (weapon.name === "Mage") {
-
-    $("#skill-select").load("skills/skills-mage.php");
-    
-  } else if (weapon.name === "Cleric") {
-
-    $("#skill-select").load("skills/skills-cleric.php");
-    
-  } else if (weapon.name === "Rogue") {
-
-    $("#skill-select").load("skills/skills-rogue.php");
-    
-  } else if (weapon.name === "Monk") {
-
-    $("#skill-select").load("skills/skills-monk.php");
     
   } else {
 
