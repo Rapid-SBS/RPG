@@ -1,8 +1,7 @@
   <div id="rpg-skills-lvl-10" class="border-top pad-20" style="width: 100%;">
 
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 10</h4></div>
-    <?php include 'passives/experience2.php'; ?>
-
+    <?php include 'passives/attack2.php'; ?>
 
   </div><!-- / Level 10 -->
 
@@ -23,14 +22,14 @@
   <div id="rpg-skills-lvl-7" class="border-top pad-20" style="width: 100%;">
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 7</h4></div>
-    <?php include 'passives/defense.php'; ?>
+    <?php include 'passives/defense2.php'; ?>
 
   </div><!-- / Level 7 -->
 
   <div id="rpg-skills-lvl-6" class="border-top pad-20" style="width: 100%;">
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 6</h4></div>
-    <?php include 'passives/experience1.php'; ?>
+    <?php include 'passives/attack1.php'; ?>
 
   </div><!-- / Level 6 -->
 
@@ -51,6 +50,7 @@
   <div id="rpg-skills-lvl-3" class="border-top pad-20" style="width: 100%;">
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 3</h4></div>
+    <?php include 'passives/defense1.php'; ?>
 
   </div><!-- / Level 3 -->
 
@@ -64,5 +64,7 @@
   <div id="rpg-skills-lvl-1" class="border-top pad-20" style="width: 100%;">
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 1</h4></div>
+    <?php include 'passives/vitality.php'; ?>
+
 
   </div><!-- / Level 1 -->

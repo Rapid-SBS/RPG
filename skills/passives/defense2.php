@@ -1,22 +1,22 @@
   <div class="row justify-content-center">
 
-    <!-- DEF Boost -->
-    <a class="btn text-white pad-10 mar-5 bg-paleblue" data-toggle="collapse" href="#collapseDEFboost" role="button" aria-expanded="false" aria-controls="collapseDEFboost1">
-      <h6>DEF Boost</h6>
+    <!-- DEF Boost II -->
+    <a class="btn text-white pad-10 mar-5 bg-paleblue" data-toggle="collapse" href="#collapseDEFboost2" role="button" aria-expanded="false" aria-controls="collapseDEFboost2">
+      <h6>DEF Boost II</h6>
     </a>
 
-    <!-- RES Boost -->
-    <a class="btn text-white pad-10 mar-5 bg-paleblue" data-toggle="collapse" href="#collapseRESboost" role="button" aria-expanded="false" aria-controls="collapseRESboost">
-      <h6>RES Boost</h6>
+    <!-- RES Boost II -->
+    <a class="btn text-white pad-10 mar-5 bg-paleblue" data-toggle="collapse" href="#collapseRESboost2" role="button" aria-expanded="false" aria-controls="collapseRESboost2">
+      <h6>RES Boost II</h6>
     </a>
 
 
   </div><!-- /.row -->
 
-  <div id="passive-defense" class="row mx-auto pad-10">
+  <div id="passive-defense1" class="row mx-auto pad-10">
 
-    <!-- DEF Boost -->
-    <div class="collapse mx-auto" id="collapseDEFboost" data-parent="#passive-defense">
+    <!-- DEF Boost II -->
+    <div class="collapse mx-auto" id="collapseDEFboost" data-parent="#passive-defense1">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Passive Skill</h6>
@@ -33,8 +33,8 @@
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
-    <!-- RES Boost -->
-    <div class="collapse mx-auto" id="collapseRESboost" data-parent="#passive-defense">
+    <!-- RES Boost II -->
+    <div class="collapse mx-auto" id="collapseRESboost" data-parent="#passive-defense1">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Passive Skill</h6>
