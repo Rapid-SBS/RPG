@@ -244,6 +244,8 @@ var player = {
   name: "Test"
 }
 
+localStorage.setItem('objPlayer', JSON.stringify(player));
+
   console.log("name: " + player.name);
 
 /*

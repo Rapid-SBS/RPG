@@ -110,6 +110,8 @@
 </div><!-- /.row -->
 
 <script>
+var player = JSON.parse(localStorage.getItem('objPlayer'));
+
   console.log("name: " + player.name);
 	/*
 var rpgPlayerName = localStorage.getItem('rpgPlayerName');
