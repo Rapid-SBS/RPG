@@ -1,7 +1,7 @@
   <div class="row justify-content-center">
 
     <!-- Experience I -->
-    <a class="btn text-white pad-10 mar-5 bg-paleblue" data-toggle="collapse" href="#collapseExperience1" role="button" aria-expanded="false" aria-controls="collapseExperience1">
+    <a class="btn text-white pad-10 mar-5 bg-bla" data-toggle="collapse" href="#collapseExperience1" role="button" aria-expanded="false" aria-controls="collapseExperience1">
       <h6>Experience I</h6>
     </a>
 
