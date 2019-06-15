@@ -110,7 +110,7 @@
 </div><!-- /.row -->
 
 <script>
-
+  console.log("name: " + player.name);
 	/*
 var rpgPlayerName = localStorage.getItem('rpgPlayerName');
 var rpgPlayerLevel = localStorage.getItem('rpgPlayerLevel');

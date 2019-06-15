@@ -245,6 +245,7 @@ var player = {
 }
 
   console.log("name: " + player.name);
+
 /*
 var rpgPlayerClass = localStorage.getItem('rpgPlayerClass');
 var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
