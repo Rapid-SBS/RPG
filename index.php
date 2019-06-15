@@ -240,6 +240,12 @@
 </div><!-- /Class Selection -->
 
 <script> // --- Store Class Selection ---
+var player = {
+  name: "Test"
+}
+
+  console.log("name: " + player.name);
+/*
 var rpgPlayerClass = localStorage.getItem('rpgPlayerClass');
 var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 
@@ -307,7 +313,7 @@ $(document).ready(function(){
   });
 
 });
-</script>
+*/
 </script>
 
 <footer class="footer mt-auto text-center bg-light">

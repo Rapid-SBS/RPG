@@ -87,29 +87,31 @@
     <tbody>
       <tr>
         <td>Basic</td>
-        <td id="tb-rpg-basic"> </td>
+        <td id="tb-rpg-basic" class="font-weight-bold text-red"> </td>
       </tr>
       <tr>
         <td>Special</td>
-        <td id="tb-rpg-special"> </td>
+        <td id="tb-rpg-special" class="font-weight-bold text-yellow"> </td>
       </tr>
       <tr>
         <td>Support</td>
-        <td id="tb-rpg-support"> </td>
+        <td id="tb-rpg-support" class="font-weight-bold text-green"> </td>
       </tr>
       <tr>
         <td>Attack</td>
-        <td id="tb-rpg-attack"> </td>
+        <td id="tb-rpg-attack" class="font-weight-bold text-blue"> </td>
       </tr>
       <tr>
         <td>Ultimate</td>
-        <td id="tb-rpg-ultimate"> </td>
+        <td id="tb-rpg-ultimate" class="font-weight-bold text-purple"> </td>
       </tr>
     </tbody>
   </table>
 </div><!-- /.row -->
 
 <script>
+
+	/*
 var rpgPlayerName = localStorage.getItem('rpgPlayerName');
 var rpgPlayerLevel = localStorage.getItem('rpgPlayerLevel');
 var rpgPlayerClass = localStorage.getItem('rpgPlayerClass');
@@ -172,7 +174,7 @@ var rpgPlayerUltimateAbility = localStorage.getItem('rpgPlayerUltimateAbility');
   console.log("Skills DEF: " + rpgPlayerSkillDEF);
   console.log("Skills INT: " + rpgPlayerSkillINT);
   console.log("Skills RES: " + rpgPlayerSkillRES);
-
+*/
 
 </script>
 
