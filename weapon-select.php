@@ -28,31 +28,31 @@
 <div id="weapon-select" class="y-flex-container pad-b-10">
 
 <script>
-var player = JSON.parse(localStorage.getItem('objPlayer'));
+var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 
   $(document).ready(function(){
 
-  if (player.class === "Warrior") {
+  if (rpgclass.name === "Warrior") {
 
     $("#weapon-select").load("weapons/weapons-warrior.php");
     
-  } else if (player.class === "Archer") {
+  } else if (rpgclass.name === "Archer") {
 
     $("#weapon-select").load("weapons/weapons-archer.php");
 
-  } else if (player.class === "Mage") {
+  } else if (rpgclass.name === "Mage") {
 
     $("#weapon-select").load("weapons/weapons-mage.php");
     
-  } else if (player.class === "Cleric") {
+  } else if (rpgclass.name === "Cleric") {
 
     $("#weapon-select").load("weapons/weapons-cleric.php");
     
-  } else if (player.class === "Rogue") {
+  } else if (rpgclass.name === "Rogue") {
 
     $("#weapon-select").load("weapons/weapons-rogue.php");
     
-  } else if (player.class === "Monk") {
+  } else if (rpgclass.name === "Monk") {
 
     $("#weapon-select").load("weapons/weapons-monk.php");
     
