@@ -1,4 +1,13 @@
 
+.bg-paleblue {
+    background-color: #669999;
+}
+
+.text-paleblue {
+    color: #669999;
+}
+
+
 .bg-purple {
     background-color: #9900cc;
 }
@@ -69,13 +78,4 @@
 
 .text-gray {
     color: #444444;
-}
-
-
-.bg-paleblue {
-    background-color: #669999;
-}
-
-.text-paleblue {
-    color: #669999;
 }
