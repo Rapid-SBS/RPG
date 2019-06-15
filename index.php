@@ -241,7 +241,7 @@
 
 <script> // --- Store Class Selection ---
 var player = {
-  name: "Test"
+  name: undefined
 }
 
 localStorage.setItem('objPlayer', JSON.stringify(player));
