@@ -112,7 +112,7 @@
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
 
-  console.log("name: " + player.name);
+  console.log("name: " + player);
 	/*
 var rpgPlayerName = localStorage.getItem('rpgPlayerName');
 var rpgPlayerLevel = localStorage.getItem('rpgPlayerLevel');
