@@ -259,11 +259,11 @@ var player = {
 }
 
 var skills = {
-  hp: undefined,
-  att: undefined,
-  def: undefined,
-  int: undefined,
-  res: undefined,
+  hp: 0,
+  att: 0,
+  def: 0,
+  int: 0,
+  res: 0,
   support: undefined,
   attack: undefined,
   ultimate: undefined
