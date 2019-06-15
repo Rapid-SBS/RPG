@@ -30,7 +30,38 @@
 </div><!-- /.y-flex-container -->
 
 <script>
+var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
+  if (weapon.name === "Battle Axe") {
+
+    $("#skill-select").load("/skills/skills-battleaxe.php");
+    
+  } else if (weapon.name === "Archer") {
+
+    $("#skill-select").load("/skills/skills-archer.php");
+
+  } else if (weapon.name === "Mage") {
+
+    $("#skill-select").load("/skills/skills-mage.php");
+    
+  } else if (weapon.name === "Cleric") {
+
+    $("#skill-select").load("/skills/skills-cleric.php");
+    
+  } else if (weapon.name === "Rogue") {
+
+    $("#skill-select").load("/skills/skills-rogue.php");
+    
+  } else if (weapon.name === "Monk") {
+
+    $("#skill-select").load("/skills/skills-monk.php");
+    
+  } else {
+
+    $("#skill-select").html("<h2>No Class Selected </h2>");
+  
+  }
+  });
 </script>
 
 <footer class="footer mt-auto text-center bg-light">
