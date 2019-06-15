@@ -1,6 +1,7 @@
   <div id="rpg-skills-lvl-10" class="border-top pad-20" style="width: 100%;">
 
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 10</h4></div>
+    <?php include 'passives/experience2.php'; ?>
 
 
   </div><!-- / Level 10 -->
