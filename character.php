@@ -110,42 +110,18 @@
 </div><!-- /.row -->
 
 <script>
+var player = JSON.parse(localStorage.getItem('objPlayer'));
+var skills = JSON.parse(localStorage.getItem('objSkills'));
 var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 
   console.log("Class: " + rpgclass.name);
-   console.log("HP: " + rpgclass.hp);
-	/*
-var rpgPlayerName = localStorage.getItem('rpgPlayerName');
-var rpgPlayerLevel = localStorage.getItem('rpgPlayerLevel');
-var rpgPlayerClass = localStorage.getItem('rpgPlayerClass');
-var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
-
-  var rpgPlayerClassHP = localStorage.getItem('rpgPlayerClassHP');
-  var rpgPlayerClassATT = localStorage.getItem('rpgPlayerClassATT');
-  var rpgPlayerClassDEF = localStorage.getItem('rpgPlayerClassDEF');
-  var rpgPlayerClassINT = localStorage.getItem('rpgPlayerClassINT');
-  var rpgPlayerClassRES = localStorage.getItem('rpgPlayerClassRES');
-
-  var rpgPlayerSkillHP = localStorage.getItem('rpgPlayerSkillHP');
-  var rpgPlayerSkillATT = localStorage.getItem('rpgPlayerSkillATT');
-  var rpgPlayerSkillDEF = localStorage.getItem('rpgPlayerSkillDEF');
-  var rpgPlayerSkillINT = localStorage.getItem('rpgPlayerSkillINT');
-  var rpgPlayerSkillRES = localStorage.getItem('rpgPlayerSkillRES');
-
-var rpgPlayerBaseHP = parseInt(rpgPlayerClassHP) + parseInt(rpgPlayerSkillHP);
-var rpgPlayerBaseATT = parseInt(rpgPlayerClassATT) + parseInt(rpgPlayerSkillATT);
-var rpgPlayerBaseDEF = parseInt(rpgPlayerClassDEF) + parseInt(rpgPlayerSkillDEF);
-var rpgPlayerBaseINT = parseInt(rpgPlayerClassINT) + parseInt(rpgPlayerSkillINT);
-var rpgPlayerBaseRES = parseInt(rpgPlayerClassRES) + parseInt(rpgPlayerSkillRES);
-
-var rpgPlayerBasicAbility = localStorage.getItem('rpgPlayerBasicAbility');
-var rpgPlayerSpecialAbility = localStorage.getItem('rpgPlayerSpecialAbility');
-var rpgPlayerSupportAbility = localStorage.getItem('rpgPlayerSupportAbility');
-var rpgPlayerAttackAbility = localStorage.getItem('rpgPlayerAttackAbility');
-var rpgPlayerUltimateAbility = localStorage.getItem('rpgPlayerUltimateAbility');
+  console.log("HP: " + rpgclass.hp);
 
   $(document).ready(function(){
 
+  	player.hp = skills.hp + rpgclass.hp;
+    $("#tb-rpg-name").text(player.hp);
+/*
     $("#tb-rpg-name").text(rpgPlayerName);
     $("#tb-rpg-level").text(rpgPlayerLevel);
     $("#tb-rpg-class").text(rpgPlayerClass);
@@ -162,23 +138,8 @@ var rpgPlayerUltimateAbility = localStorage.getItem('rpgPlayerUltimateAbility');
     $("#tb-rpg-support").text(rpgPlayerSupportAbility);
     $("#tb-rpg-attack").text(rpgPlayerAttackAbility);
     $("#tb-rpg-ultimate").text(rpgPlayerUltimateAbility);
-
-  });
-
-  console.log("Class HP: " + rpgPlayerClassHP);
-  console.log("Class ATT: " + rpgPlayerClassATT);
-  console.log("Class DEF: " + rpgPlayerClassDEF);
-  console.log("Class INT: " + rpgPlayerClassINT);
-  console.log("Class RES: " + rpgPlayerClassRES);
-
-
-  console.log("Skills HP: " + rpgPlayerSkillHP);
-  console.log("Skills ATT: " + rpgPlayerSkillATT);
-  console.log("Skills DEF: " + rpgPlayerSkillDEF);
-  console.log("Skills INT: " + rpgPlayerSkillINT);
-  console.log("Skills RES: " + rpgPlayerSkillRES);
 */
-
+  });
 </script>
 
 

@@ -255,11 +255,22 @@ var player = {
   special: undefined,
   support: undefined,
   attack: undefined,
-  ultimate: undefined,
+  ultimate: undefined
+}
+
+var skills = {
+  hp: undefined,
+  att: undefined,
+  def: undefined,
+  int: undefined,
+  res: undefined,
+  support: undefined,
+  attack: undefined,
+  ultimate: undefined
 }
 
 localStorage.setItem('objPlayer', JSON.stringify(player));
-
+localStorage.setItem('objSkills', JSON.stringify(skills));
 
 $(document).ready(function(){
 
