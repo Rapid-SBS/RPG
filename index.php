@@ -239,19 +239,18 @@
 
 </div><!-- /Class Selection -->
 
-<script> // --- Store Class Selection ---
+<script> 
+// --- Initialize Player Object ---
 var player = {
   name: undefined,
   level: undefined,
   class: undefined,
   weapon: undefined,
-
   hp: undefined,
   att: undefined,
   def: undefined,
   int: undefined,
   res: undefined,
-
   basic: undefined,
   special: undefined,
   support: undefined,
@@ -261,20 +260,21 @@ var player = {
 
 localStorage.setItem('objPlayer', JSON.stringify(player));
 
-  console.log("name: " + player);
-/*
+
 $(document).ready(function(){
 
-
   $("#rpg-class-warrior").click(function(){
-    localStorage.setItem('rpgPlayerClass', 'Warrior');
-    localStorage.setItem('rpgPlayerWeapon', '');
-    localStorage.setItem('rpgPlayerClassHP', 18);
-    localStorage.setItem('rpgPlayerClassATT', 3);
-    localStorage.setItem('rpgPlayerClassDEF', 4);
-    localStorage.setItem('rpgPlayerClassINT', 1);
-    localStorage.setItem('rpgPlayerClassRES', 2);
+    var rpgclass = {
+      class: "Warrior",
+      hp: 18,
+      att: 3,
+      def: 4,
+      int: 1,
+      res: 2,
+    }
+    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
+  /*
   $("#rpg-class-archer").click(function(){
     localStorage.setItem('rpgPlayerClass', 'Archer');
     localStorage.setItem('rpgPlayerWeapon', '');
@@ -320,9 +320,9 @@ $(document).ready(function(){
     localStorage.setItem('rpgPlayerClassINT', 3);
     localStorage.setItem('rpgPlayerClassRES', 3);
   });
-
+  */
 });
-*/
+
 </script>
 
 <footer class="footer mt-auto text-center bg-light">

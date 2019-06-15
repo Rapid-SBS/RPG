@@ -110,9 +110,9 @@
 </div><!-- /.row -->
 
 <script>
-var player = JSON.parse(localStorage.getItem('objPlayer'));
+var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 
-  console.log("name: " + player);
+  console.log("name: " + rpgclass.name);
 	/*
 var rpgPlayerName = localStorage.getItem('rpgPlayerName');
 var rpgPlayerLevel = localStorage.getItem('rpgPlayerLevel');
