@@ -116,7 +116,10 @@ var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 
   $(document).ready(function(){
 
+  	player.name = "Player";
+  	player.level = 0;
   	player.class = rpgclass.name;
+  	player.weapon = weapon.name;
 
   	player.hp = skills.hp + rpgclass.hp;
   	player.att = skills.att + rpgclass.att;
@@ -124,6 +127,11 @@ var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
   	player.int = skills.int + rpgclass.int;
   	player.res = skills.res + rpgclass.res;
 
+  	player.basic = weapon.basic;
+  	player.special = weapon.special;
+  	player.support = skills.support;
+  	player.attack = skills.attack;
+  	player.ultimate = skills.ultimate;
 
     $("#tb-rpg-name").text(player.name);
     $("#tb-rpg-level").text(player.level);
@@ -142,24 +150,6 @@ var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
     $("#tb-rpg-attack").text(player.attack);
     $("#tb-rpg-ultimate").text(player.ultimate);
 
-/*
-    $("#tb-rpg-name").text(rpgPlayerName);
-    $("#tb-rpg-level").text(rpgPlayerLevel);
-    $("#tb-rpg-class").text(rpgPlayerClass);
-    $("#tb-rpg-weapon").text(rpgPlayerWeapon);
-
-    $("#tb-rpg-hp").text(rpgPlayerBaseHP);
-    $("#tb-rpg-att").text(rpgPlayerBaseATT);
-    $("#tb-rpg-def").text(rpgPlayerBaseDEF);
-    $("#tb-rpg-int").text(rpgPlayerBaseINT);
-    $("#tb-rpg-res").text(rpgPlayerBaseRES);
-
-    $("#tb-rpg-basic").text(rpgPlayerBasicAbility);
-    $("#tb-rpg-special").text(rpgPlayerSpecialAbility);
-    $("#tb-rpg-support").text(rpgPlayerSupportAbility);
-    $("#tb-rpg-attack").text(rpgPlayerAttackAbility);
-    $("#tb-rpg-ultimate").text(rpgPlayerUltimateAbility);
-*/
   });
 </script>
 
