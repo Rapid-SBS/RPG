@@ -11,25 +11,33 @@
 	<a role="button" onclick="setWeaponBattleaxe()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-battleaxe" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
-var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
-
 function setWeaponSword() {
-  localStorage.setItem('rpgPlayerClass', 'Warrior');
-  localStorage.setItem('rpgPlayerWeapon', 'Sword & Shield');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Slash');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Shield Ally');
+  weapon = {
+    name: "Sword & Shield",
+    basic: "Slash",
+    special: "Shield Ally",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
+
 function setWeaponWarhammer() {
-  localStorage.setItem('rpgPlayerClass', 'Warrior');
-  localStorage.setItem('rpgPlayerWeapon', 'War Hammer');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Slam');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Swing');
+  weapon = {
+    name: "War Hammer",
+    basic: "Slam",
+    special: "Hammer Swing",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
 function setWeaponBattleaxe() {
-  localStorage.setItem('rpgPlayerClass', 'Warrior');
-  localStorage.setItem('rpgPlayerWeapon', 'Battleaxe');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Cleave');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Sunder Armor');
+  weapon = {
+    name: "Battle Axe",
+    basic: "Cleave",
+    special: "Sunder Armor",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
 
 $(document).ready(function(){
