@@ -265,7 +265,7 @@ $(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
     var rpgclass = {
-      class: "Warrior",
+      name: "Warrior",
       hp: 18,
       att: 3,
       def: 4,

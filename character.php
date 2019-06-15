@@ -112,7 +112,8 @@
 <script>
 var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 
-  console.log("name: " + rpgclass.name);
+  console.log("Class: " + rpgclass.name);
+   console.log("HP: " + rpgclass.hp);
 	/*
 var rpgPlayerName = localStorage.getItem('rpgPlayerName');
 var rpgPlayerLevel = localStorage.getItem('rpgPlayerLevel');
