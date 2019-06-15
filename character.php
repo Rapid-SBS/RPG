@@ -114,16 +114,23 @@ var player = JSON.parse(localStorage.getItem('objPlayer'));
 var skills = JSON.parse(localStorage.getItem('objSkills'));
 var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 
-
   $(document).ready(function(){
 
+  	player.class = rpgclass.name;
+
   	player.hp = skills.hp + rpgclass.hp;
+  	player.att = skills.att + rpgclass.att;
+  	player.def = skills.def + rpgclass.def;
+  	player.int = skills.int + rpgclass.int;
+  	player.res = skills.res + rpgclass.res;
+
+
     $("#tb-rpg-name").text(player.hp);
 
 	console.log("player HP: " + player.hp);
   console.log("skills HP: " + rpgclass.hp);
   console.log("class HP: " + skills.hp);
-    
+
 /*
     $("#tb-rpg-name").text(rpgPlayerName);
     $("#tb-rpg-level").text(rpgPlayerLevel);
