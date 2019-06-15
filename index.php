@@ -274,53 +274,67 @@ $(document).ready(function(){
     }
     localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
-  /*
+
   $("#rpg-class-archer").click(function(){
-    localStorage.setItem('rpgPlayerClass', 'Archer');
-    localStorage.setItem('rpgPlayerWeapon', '');
-    localStorage.setItem('rpgPlayerClassHP', 16);
-    localStorage.setItem('rpgPlayerClassATT', 5);
-    localStorage.setItem('rpgPlayerClassDEF', 1);
-    localStorage.setItem('rpgPlayerClassINT', 2);
-    localStorage.setItem('rpgPlayerClassRES', 2);
+    var rpgclass = {
+      name: "Archer",
+      hp: 16,
+      att: 5,
+      def: 1,
+      int: 2,
+      res: 2,
+    }
+    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
+
   $("#rpg-class-mage").click(function(){
-    localStorage.setItem('rpgPlayerClass', 'Mage');
-    localStorage.setItem('rpgPlayerWeapon', '');
-    localStorage.setItem('rpgPlayerClassHP', 14);
-    localStorage.setItem('rpgPlayerClassATT', 0);
-    localStorage.setItem('rpgPlayerClassDEF', 0);
-    localStorage.setItem('rpgPlayerClassINT', 6);
-    localStorage.setItem('rpgPlayerClassRES', 3);
+    var rpgclass = {
+      name: "Mage",
+      hp: 14,
+      att: 0,
+      def: 0,
+      int: 6,
+      res: 3,
+    }
+    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
+
   $("#rpg-class-cleric").click(function(){
-    localStorage.setItem('rpgPlayerClass', 'Cleric');
-    localStorage.setItem('rpgPlayerWeapon', '');
-    localStorage.setItem('rpgPlayerClassHP', 15);
-    localStorage.setItem('rpgPlayerClassATT', 2);
-    localStorage.setItem('rpgPlayerClassDEF', 2);
-    localStorage.setItem('rpgPlayerClassINT', 3);
-    localStorage.setItem('rpgPlayerClassRES', 4);
+    var rpgclass = {
+      name: "Cleric",
+      hp: 15,
+      att: 2,
+      def: 2,
+      int: 3,
+      res: 4,
+    }
+    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
+
   $("#rpg-class-rogue").click(function(){
-    localStorage.setItem('rpgPlayerClass', 'Rogue');
-    localStorage.setItem('rpgPlayerWeapon', '');
-    localStorage.setItem('rpgPlayerClassHP', 14);
-    localStorage.setItem('rpgPlayerClassATT', 4);
-    localStorage.setItem('rpgPlayerClassDEF', 1);
-    localStorage.setItem('rpgPlayerClassINT', 3);
-    localStorage.setItem('rpgPlayerClassRES', 1);
+    var rpgclass = {
+      name: "Rogue",
+      hp: 14,
+      att: 6,
+      def: 1,
+      int: 3,
+      res: 1,
+    }
+    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
+
   $("#rpg-class-monk").click(function(){
-    localStorage.setItem('rpgPlayerClass', 'Monk');
-    localStorage.setItem('rpgPlayerWeapon', '');
-    localStorage.setItem('rpgPlayerClassHP', 17);
-    localStorage.setItem('rpgPlayerClassATT', 3);
-    localStorage.setItem('rpgPlayerClassDEF', 3);
-    localStorage.setItem('rpgPlayerClassINT', 3);
-    localStorage.setItem('rpgPlayerClassRES', 3);
+    var rpgclass = {
+      name: "Monk",
+      hp: 17,
+      att: 3,
+      def: 3,
+      int: 3,
+      res: 3,
+    }
+    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
-  */
+
 });
 
 </script>
