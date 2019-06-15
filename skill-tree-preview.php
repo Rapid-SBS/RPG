@@ -23,14 +23,17 @@
 
 <body>
 
+<div class="text-white text-center bg-primary">
+  <h5 class="pad-10"> Skill Tree (Preview Only) </h5>
+  <p class="pad-b-10">Access Skill Tree after character creation.</p>
+</div>
+
 <div id="skill-select" class="y-flex-container pad-b-10">
 
 </div><!-- /.y-flex-container -->
 
 <script>
-var player = JSON.parse(localStorage.getItem('objPlayer'));
 var weapon = JSON.parse(localStorage.getItem('objWeapon'));
-var skills = JSON.parse(localStorage.getItem('objSkills'));
 
 $(document).ready(function(){
 

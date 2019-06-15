@@ -1,14 +1,14 @@
 <?php include 'cleric-mace.php'; ?>
 
-  <a role="button" onclick="setWeaponMace()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-mace" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
+  <a role="button" onclick="setWeaponMace()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-mace" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'cleric-quarterstaff.php'; ?>
 
-  <a role="button" onclick="setWeaponQuarterstaff()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-quarterstaff" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
+  <a role="button" onclick="setWeaponQuarterstaff()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-quarterstaff" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'cleric-tome.php'; ?>
 
-  <a role="button" onclick="setWeaponTome()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-tome" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
+  <a role="button" onclick="setWeaponTome()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-tome" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
 
