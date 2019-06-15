@@ -6,12 +6,12 @@
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-          <h6>Tornado Kick</h6>
+          <h6>Reverse Kick</h6>
        </button>
       </div>
       <div id="collapseFive" class="collapse hidden" aria-labelledby="headingThree" data-parent="#accordion-windfu">
         <div class="card-body light-transparency pad-10 text-center">
-          <p class="card-text text-center">Kick with tornado force. <br>Critical Hits apply Stun debuff. <br>DMG = Weapon ATT + Player ATT. </p>
+          <p class="card-text text-center">Perform a spinning kick. <br>Critical Hits apply Stun debuff. <br>DMG = Weapon ATT + Player ATT. </p>
         </div>
         <ul class="list-group text-center">
           <li class="list-group-item align-items-center light-transparency bg-red" style="padding: .35rem 1.25rem;">

@@ -11,25 +11,33 @@
   <a role="button" onclick="setWeaponShuriken()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-shuriken" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
-var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
-
 function setWeaponDagger() {
-  localStorage.setItem('rpgPlayerClass', 'Rogue');
-  localStorage.setItem('rpgPlayerWeapon', 'Dagger');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Stab');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Poisoned Blade');
+  weapon = {
+    name: "Dagger",
+    basic: "Stab",
+    special: "Poison Blade",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
+
 function setWeaponSai() {
-  localStorage.setItem('rpgPlayerClass', 'Rogue');
-  localStorage.setItem('rpgWeapon', 'Dual Sai');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Riposte');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Blade Storm');
+  weapon = {
+    name: "Dual Sai",
+    basic: "Riposte",
+    special: "Blade Dance",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
 function setWeaponShuriken() {
-  localStorage.setItem('rpgPlayerClass', 'Rogue');
-  localStorage.setItem('rpgPlayerWeapon', 'Shuriken');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Shuriken Throw');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Smoke Bomb');
+  weapon = {
+    name: "Shuriken",
+    basic: "Shuriken Throw",
+    special: "Substitution",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
 
 $(document).ready(function(){

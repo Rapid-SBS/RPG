@@ -22,10 +22,15 @@
 </head>
 
 <body>
+	
+<div class="text-white text-center bg-primary">
+  <h5 class="pad-10"> Character Sheet </h5>
+</div>
 
 <div class="row pad-t-20">
   <h4 class="pad-10 mx-auto text-center" style>Basic Info</h4>
 </div><!-- /.row -->
+
 <div class="row">
   <table class="wide-275 text-center table table-bordered mx-auto">
     <tbody>

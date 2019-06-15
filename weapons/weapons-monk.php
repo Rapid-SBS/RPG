@@ -11,25 +11,33 @@
   <a role="button" onclick="setWeaponWindfu()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-windfu" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
-var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
-
 function setWeaponBostaff() {
-  localStorage.setItem('rpgPlayerClass', 'Monk');
-  localStorage.setItem('rpgPlayerWeapon', 'Bo Staff');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Cross Strike');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Spinning Strike');
+  weapon = {
+    name: "Bo Staff",
+    basic: "Cross Strike",
+    special: "Leg Sweep",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
+
 function setWeaponFists() {
-  localStorage.setItem('rpgPlayerClass', 'Monk');
-  localStorage.setItem('rpgPlayerWeapon', "Brawler's Fist");
-  localStorage.setItem('rpgPlayerBasicAbility', 'Uppercut');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Chi Burst');
+  weapon = {
+    name: "Brawler's Fist",
+    basic: "Uppercut",
+    special: "Chi Burst",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
 function setWeaponWindfu() {
-  localStorage.setItem('rpgPlayerClass', 'Monk');
-  localStorage.setItem('rpgPlayerWeapon', 'Wind Fu');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Tornado Kick');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Wind Slicer');
+  weapon = {
+    name: "Wind Fu",
+    basic: "Reverse Kick",
+    special: "Wind Slicer",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
 
 $(document).ready(function(){

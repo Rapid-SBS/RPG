@@ -11,25 +11,34 @@
   <a role="button" onclick="setWeaponTome()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-tome" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
-var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 
 function setWeaponMace() {
-  localStorage.setItem('rpgPlayerClass', 'Cleric');
-  localStorage.setItem('rpgPlayerWeapon', 'Mace & Shield');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Bludgeon');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Shield Ally');
+  weapon = {
+    name: "Mace",
+    basic: "Bludgeon",
+    special: "Shield Ally",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
+
 function setWeaponQuarterstaff() {
-  localStorage.setItem('rpgPlayerClass', 'Cleric');
-  localStorage.setItem('rpgPlayerWeapon', 'Quarterstaff');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Downward Strike');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Flash Heal');
+  weapon = {
+    name: "Quarterstaff",
+    basic: "Downward Strike",
+    special: "Flash Heal",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
 function setWeaponTome() {
-  localStorage.setItem('rpgPlayerClass', 'Cleric');
-  localStorage.setItem('rpgPlayerWeapon', 'Holy Tome');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Blessing');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Healing Circle');
+  weapon = {
+    name: "Tome",
+    basic: "Blessing",
+    special: "Healing Circle",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
 
 $(document).ready(function(){

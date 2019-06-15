@@ -11,25 +11,33 @@
   <a role="button" onclick="setWeaponLightning()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-lightning" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
-var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
-
 function setWeaponIce() {
-  localStorage.setItem('rpgPlayerClass', 'Mage');
-  localStorage.setItem('rpgPlayerWeapon', 'Ice Stone');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Ice Blast');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Glacial Barrier');
+  weapon = {
+    name: "Ice",
+    basic: "Ice Blast",
+    special: "Glacial Barrier",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
+
 function setWeaponFire() {
-  localStorage.setItem('rpgPlayerClass', 'Mage');
-  localStorage.setItem('rpgPlayerWeapon', 'Fire Stone');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Fireball');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Immolate');
+  weapon = {
+    name: "Fire",
+    basic: "Fireball",
+    special: "Immolate",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
 function setWeaponLightning() {
-  localStorage.setItem('rpgPlayerClass', 'Mage');
-  localStorage.setItem('rpgPlayerWeapon', 'Lightning Stone');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Spark');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Discharge');
+  weapon = {
+    name: "Lightning",
+    basic: "Spark",
+    special: "Discharge",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
 
 $(document).ready(function(){

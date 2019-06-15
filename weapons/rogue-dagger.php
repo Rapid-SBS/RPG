@@ -28,7 +28,7 @@
       </div>
       <div class="card-header pad-5 text-center">
         <button class="btn btn-link text-white text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <h6>Poisoned Blade <span class="badge badge-light text-teal">2</span></h6>
+          <h6>Poison Blade <span class="badge badge-light text-teal">2</span></h6>
         </button>
       </div>
       <div id="collapseTwo" class="collapse hidden" aria-labelledby="headingTwo" data-parent="#accordion-dagger">
