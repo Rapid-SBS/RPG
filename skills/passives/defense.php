@@ -7,16 +7,16 @@
 
     <!-- RES Boost -->
     <a class="btn text-white pad-10 mar-5 bg-paleblue" data-toggle="collapse" href="#collapseRESboost" role="button" aria-expanded="false" aria-controls="collapseRESboost">
-      <h6>DEF Boost</h6>
+      <h6>RES Boost</h6>
     </a>
 
 
   </div><!-- /.row -->
 
-  <div id="passive-DEFboost" class="row mx-auto pad-10">
+  <div id="passive-defense" class="row mx-auto pad-10">
 
     <!-- DEF Boost -->
-    <div class="collapse mx-auto" id="collapseDEFboost" data-parent="#passive-DEFboost">
+    <div class="collapse mx-auto" id="collapseDEFboost" data-parent="#passive-defense">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Passive Skill</h6>
@@ -34,7 +34,7 @@
     </div><!-- /.collapse -->
 
     <!-- RES Boost -->
-    <div class="collapse mx-auto" id="collapseRESboost" data-parent="#passive-RESboost">
+    <div class="collapse mx-auto" id="collapseRESboost" data-parent="#passive-defense">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Passive Skill</h6>
