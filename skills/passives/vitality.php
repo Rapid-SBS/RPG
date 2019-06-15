@@ -7,10 +7,10 @@
 
   </div><!-- /.row -->
 
-  <div id="passive-Vitality" class="row mx-auto pad-10">
+  <div id="passive-vitality" class="row mx-auto pad-10">
 
     <!-- Vitality -->
-    <div class="collapse mx-auto" id="collapseVitality" data-parent="#passive-Vitality">
+    <div class="collapse mx-auto" id="collapseVitality" data-parent="#passive-vitality">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Passive Skill</h6>

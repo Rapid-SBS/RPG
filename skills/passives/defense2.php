@@ -13,10 +13,10 @@
 
   </div><!-- /.row -->
 
-  <div id="passive-defense1" class="row mx-auto pad-10">
+  <div id="passive-defense2" class="row mx-auto pad-10">
 
     <!-- DEF Boost II -->
-    <div class="collapse mx-auto" id="collapseDEFboost" data-parent="#passive-defense1">
+    <div class="collapse mx-auto" id="collapseDEFboost" data-parent="#passive-defense2">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Passive Skill</h6>
@@ -34,7 +34,7 @@
     </div><!-- /.collapse -->
 
     <!-- RES Boost II -->
-    <div class="collapse mx-auto" id="collapseRESboost" data-parent="#passive-defense1">
+    <div class="collapse mx-auto" id="collapseRESboost" data-parent="#passive-defense2">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Passive Skill</h6>
