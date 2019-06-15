@@ -11,25 +11,34 @@
   <a role="button" onclick="setWeaponLongbow()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-longbow" href="skill-tree.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script> 
-var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
 
 function setWeaponBow() {
-  localStorage.setItem('rpgPlayerClass', 'Archer');
-  localStorage.setItem('rpgPlayerWeapon', 'Bow');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Arrow');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Doubleshot');
+  weapon = {
+    name: "Bow",
+    basic: "Arrow",
+    special: "Doubleshot",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
+
 function setWeaponCrossbow() {
-  localStorage.setItem('rpgPlayerClass', 'Archer');
-  localStorage.setItem('rpgPlayerWeapon', 'Crossbow');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Arrow');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Metal Arrow');
+  weapon = {
+    name: "Crossbow",
+    basic: "Arrow",
+    special: "Metal Arrow",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
 function setWeaponLongbow() {
-  localStorage.setItem('rpgPlayerClass', 'Archer');
-  localStorage.setItem('rpgPlayerWeapon', 'Longbow');
-  localStorage.setItem('rpgPlayerBasicAbility', 'Arrow');
-  localStorage.setItem('rpgPlayerSpecialAbility', 'Snipe');
+  weapon = {
+    name: "Longbow",
+    basic: "Arrow",
+    special: "Snipe",
+  }
+
+  localStorage.setItem('objWeapon', JSON.stringify(weapon));
 }
 
 $(document).ready(function(){
