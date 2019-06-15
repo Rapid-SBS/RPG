@@ -241,24 +241,30 @@
 
 <script> // --- Store Class Selection ---
 var player = {
-  name: undefined
+  name: undefined,
+  level: undefined,
+  class: undefined,
+  weapon: undefined,
+
+  hp: undefined,
+  att: undefined,
+  def: undefined,
+  int: undefined,
+  res: undefined,
+
+  basic: undefined,
+  special: undefined,
+  support: undefined,
+  attack: undefined,
+  ultimate: undefined,
 }
 
 localStorage.setItem('objPlayer', JSON.stringify(player));
 
-  console.log("name: " + player.name);
-
+  console.log("name: " + player);
 /*
-var rpgPlayerClass = localStorage.getItem('rpgPlayerClass');
-var rpgPlayerWeapon = localStorage.getItem('rpgPlayerWeapon');
-
-localStorage.setItem('rpgPlayerSkillHP' , 0);
-localStorage.setItem('rpgPlayerSkillATT' , 0);
-localStorage.setItem('rpgPlayerSkillDEF' , 0);
-localStorage.setItem('rpgPlayerSkillINT' , 0);
-localStorage.setItem('rpgPlayerSkillRES' , 0);
-
 $(document).ready(function(){
+
 
   $("#rpg-class-warrior").click(function(){
     localStorage.setItem('rpgPlayerClass', 'Warrior');
