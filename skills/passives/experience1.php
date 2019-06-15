@@ -1,7 +1,7 @@
   <div class="row justify-content-center">
 
     <!-- Experience I -->
-    <a class="btn text-white pad-10 mar-5 bg-bluegray" data-toggle="collapse" href="#collapseExperience1" role="button" aria-expanded="false" aria-controls="collapseExperience1">
+    <a class="btn text-white pad-10 mar-5 bg-paleblue" data-toggle="collapse" href="#collapseExperience1" role="button" aria-expanded="false" aria-controls="collapseExperience1">
       <h6>Experience I</h6>
     </a>
 
@@ -20,7 +20,7 @@
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-bluegray">+1</span>
+            <span class="badge bg-white text-teal">+1</span>
             All Stats
           </li>
         </ul>
