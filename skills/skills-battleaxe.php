@@ -23,6 +23,7 @@
   <div id="rpg-skills-lvl-7" class="border-top pad-20" style="width: 100%;">
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 7</h4></div>
+    <?php include 'passives/defense.php'; ?>
 
   </div><!-- / Level 7 -->
 
