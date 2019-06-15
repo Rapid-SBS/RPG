@@ -114,8 +114,9 @@ var player = JSON.parse(localStorage.getItem('objPlayer'));
 var skills = JSON.parse(localStorage.getItem('objSkills'));
 var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 
-  console.log("Class: " + rpgclass.name);
-  console.log("HP: " + rpgclass.hp);
+	console.log("player HP: " + player.hp);
+  console.log("skills HP: " + rpgclass.hp);
+  console.log("class HP: " + skills.hp);
 
   $(document).ready(function(){
 
