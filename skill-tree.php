@@ -32,6 +32,8 @@
 <script>
 var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
+$(document).ready(function(){
+
   if (weapon.name === "Battle Axe") {
 
     $("#skill-select").load("skills/skills-battleaxe.php");
@@ -61,7 +63,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
     $("#skill-select").html("<h2>No Class Selected </h2>");
   
   }
-  });
+});
 </script>
 
 <footer class="footer mt-auto text-center bg-light">
