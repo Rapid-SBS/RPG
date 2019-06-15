@@ -9,7 +9,7 @@
   <div id="rpg-skills-lvl-9" class="border-top pad-20" style="width: 100%;">
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 9</h4></div>
-
+    <?php include 'passives/mana2.php'; ?>
 
   </div><!-- / Level 9 -->
 
@@ -43,6 +43,7 @@
   <div id="rpg-skills-lvl-4" class="border-top pad-20" style="width: 100%;">
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 4</h4></div>
+    <?php include 'passives/mana1.php'; ?>
 
   </div><!-- / Level 4 -->
 
