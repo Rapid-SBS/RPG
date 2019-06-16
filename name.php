@@ -31,22 +31,25 @@
 
 <div class="row pad-20">
 
-<p class="text-center" id="rpg-class">You are a</p>
+<p class="text-center">You are a <span id="rpg-class"></span></p>
 
-</div><!-- /.row -->
 
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
 var skills = JSON.parse(localStorage.getItem('objSkills'));
 var weapon = JSON.parse(localStorage.getItem('objWeapon'));
+var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 
 $(document).ready(function(){
-var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
+
 console.log(rpgclass.name)
 
- $("#rpg-class").text("Warrior");
+
+  if (rpgclass.name === "Warrior ") {
+
+    $("#rpg-class").text("Warrior");
     
-  
+  } 
 /*
   else if (rpgclass.name === "Archer") {
 
@@ -68,10 +71,15 @@ console.log(rpgclass.name)
 
     $("#rpg-class").text("wise " + rpgclass.name);
     
-  } */
+  } */ else {
+
+    $("#weapon-select").html("<h2>No Class Selected </h2>");
+  
+  } 
   });
 </script>
 
+</div><!-- /.row -->
 
 <footer class="footer mt-auto text-center bg-light">
   <div class="container pad-20">
