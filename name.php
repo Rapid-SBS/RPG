@@ -60,6 +60,8 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
   if (weapon.name === "Battle Axe" || "War Hammer") {
     $("#rpg-weapon").text("mighty " + weapon.name);
+  } else {
+    $("#rpg-weapon").text(weapon.name);
   }
 
   });
