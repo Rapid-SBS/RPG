@@ -58,7 +58,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   	player.attack = skills.attack;
   	player.ultimate = skills.ultimate;
 
-  if (rpgclass.name === "Warrior ") {
+  if (rpgclass.name === "Warrior") {
 
     $("#rpg-class").text("skilled " + rpgclass.name);
 
