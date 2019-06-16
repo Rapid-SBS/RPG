@@ -38,11 +38,10 @@
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
 var skills = JSON.parse(localStorage.getItem('objSkills'));
-var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
 $(document).ready(function(){
-
+var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 console.log(rpgclass.name)
 
   if (rpgclass.name === "Warrior ") {
