@@ -39,18 +39,21 @@
 var player = JSON.parse(localStorage.getItem('objPlayer'));
 var skills = JSON.parse(localStorage.getItem('objSkills'));
 var weapon = JSON.parse(localStorage.getItem('objWeapon'));
+var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 
 $(document).ready(function(){
-var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
+
+
 console.log(rpgclass.name)
-$("#rpg-class").text("Warrior");
+
 
   if (rpgclass.name === "Warrior ") {
 
     $("#rpg-class").text("Warrior");
     
-    
-  } else if (rpgclass.name === "Archer") {
+  } 
+/*
+  else if (rpgclass.name === "Archer") {
 
     $("#rpg-class").text("skilled " + rpgclass.name);
 
@@ -74,7 +77,7 @@ $("#rpg-class").text("Warrior");
 
     $("#weapon-select").html("<h2>No Class Selected </h2>");
   
-  }
+  } */
   });
 </script>
 
