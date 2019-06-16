@@ -43,9 +43,11 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
 $(document).ready(function(){
 
+console.log(rpgclass.name)
+
   if (rpgclass.name === "Warrior ") {
 
-    $("#rpg-class").html("strong" + rpgclass.name);
+    $("#rpg-class").text("strong" + rpgclass.name);
     
   } else if (rpgclass.name === "Archer") {
 
