@@ -31,7 +31,7 @@
 
 <div class="row pad-20">
 
-<p class="text-center">You are a <span id="rpg-class"></span></p>
+<p class="text-center">You are a</p> <span id="rpg-class">Test</span>
 
 </div><!-- /.row -->
 
