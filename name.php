@@ -57,7 +57,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
 
   if (weapon.name === "Battle Axe") {
-    $("#rpg-weapon").text("mighty " + rpgclass.name);
+    $("#rpg-weapon").text("mighty " + weapon.name);
   }
 
   });
