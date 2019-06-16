@@ -140,7 +140,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   	player.attack = skills.attack;
   	player.ultimate = skills.ultimate;
 
-    $("#rpg-class").text("Warrior");
+    $("#rpg-class").text(rpgclass.name);
 
     $("#tb-rpg-name").text(player.name);
     $("#tb-rpg-level").text(player.level);
