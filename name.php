@@ -27,8 +27,10 @@
   <h5 class="pad-10"> Character Sheet </h5>
 </div>
 
-<div class="row pad-20">
-  <p class="mx-auto">You are a <span id="rpg-class"></span> who wields a <span id="rpg-weapon"></span></p>
+<div class="row pad-40">
+  <div class="col">
+    <p class="mx-auto">You are a <span id="rpg-class"></span> who wields a <span id="rpg-weapon"></span></p>
+  </div>
 </div><!-- /.row -->
 
 <script>
@@ -56,7 +58,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   } 
 
 
-  if (weapon.name === "Battle Axe") {
+  if (weapon.name === "Battle Axe" || "War Hammer") {
     $("#rpg-weapon").text("mighty " + weapon.name);
   }
 
