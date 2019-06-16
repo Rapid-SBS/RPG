@@ -44,13 +44,13 @@ var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 $(document).ready(function(){
 
 
-console.log(rpgclass.name)
 
 
   if (rpgclass.name === "Warrior ") {
 
     $("#rpg-class").text("Warrior");
-    
+    console.log(rpgclass.name)
+
   } 
 /*
   else if (rpgclass.name === "Archer") {
