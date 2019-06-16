@@ -112,9 +112,8 @@
       </tr>
     </tbody>
   </table>
-<span id="rpg-class"></span>
 </div><!-- /.row -->
-
+<span id="rpg-class"></span>
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
 var skills = JSON.parse(localStorage.getItem('objSkills'));
@@ -140,7 +139,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   	player.attack = skills.attack;
   	player.ultimate = skills.ultimate;
 
-    $("#rpg-class").text(rpgclass.name);
+    $("#rpg-class").text("You are a" + rpgclass.name);
 
     $("#tb-rpg-name").text(player.name);
     $("#tb-rpg-level").text(player.level);
