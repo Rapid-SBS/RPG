@@ -27,12 +27,10 @@
   <h5 class="pad-10"> Character Sheet </h5>
 </div>
 
-<div class="row pad-t-20">
-  <h4 class="pad-10 mx-auto text-center" style>Basic Info</h4>
-</div><!-- /.row -->
+
 
 <div class="row">
-  <p class="text-center">You are a <span id="rpg-class"></span></p>
+  <p class="mx-auto">You are a <span id="rpg-class"></span></p>
 </div><!-- /.row -->
 
 <script>
@@ -60,8 +58,36 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   	player.attack = skills.attack;
   	player.ultimate = skills.ultimate;
 
+  if (rpgclass.name === "Warrior ") {
+
     $("#rpg-class").text("skilled " + rpgclass.name);
 
+  } 
+  else if (rpgclass.name === "Archer") {
+
+    $("#rpg-class").text("skilled " + rpgclass.name);
+
+  } else if (rpgclass.name === "Mage") {
+
+    $("#rpg-class").text("talented " + rpgclass.name);
+    
+  } else if (rpgclass.name === "Cleric") {
+
+    $("#rpg-class").text("gifted " + rpgclass.name);
+    
+  } else if (rpgclass.name === "Rogue") {
+
+    $("#rpg-class").text("deadly " + rpgclass.name);
+    
+  } else if (rpgclass.name === "Monk") {
+
+    $("#rpg-class").text("wise " + rpgclass.name);
+    
+  } else {
+
+    $("#weapon-select").html("<h2>No Class Selected </h2>");
+  
+  } 
   });
 </script>
 
