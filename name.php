@@ -47,7 +47,7 @@ console.log(rpgclass.name)
 
   if (rpgclass.name === "Warrior ") {
 
-    $("#rpg-class").text(rpgclass.name);
+    $("#rpg-class").html("Warrior");
     
   } else if (rpgclass.name === "Archer") {
 
