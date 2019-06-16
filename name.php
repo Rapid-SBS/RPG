@@ -27,10 +27,8 @@
   <h5 class="pad-10"> Character Sheet </h5>
 </div>
 
-
-
-<div class="row">
-  <p class="mx-auto">You are a <span id="rpg-class"></span></p>
+<div class="row pad-20">
+  <p class="mx-auto">You are a <span id="rpg-class"></span> who wields a<span id="rpg-weapon"></span></p>
 </div><!-- /.row -->
 
 <script>
@@ -41,26 +39,10 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
   $(document).ready(function(){
 
-  	player.name = "Player";
-  	player.level = 0;
-  	player.class = rpgclass.name;
-  	player.weapon = weapon.name;
-
-  	player.hp = skills.hp + rpgclass.hp;
-  	player.att = skills.att + rpgclass.att;
-  	player.def = skills.def + rpgclass.def;
-  	player.int = skills.int + rpgclass.int;
-  	player.res = skills.res + rpgclass.res;
-
-  	player.basic = weapon.basic;
-  	player.special = weapon.special;
-  	player.support = skills.support;
-  	player.attack = skills.attack;
-  	player.ultimate = skills.ultimate;
-
   if (rpgclass.name === "Warrior") {
 
-    $("#rpg-class").text("skilled " + rpgclass.name);
+    $("#rpg-class").text("strong " + rpgclass.name);
+    $("#rpg-weapon").text(weapon.name);
 
   } 
   else if (rpgclass.name === "Archer") {
