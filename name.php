@@ -44,12 +44,9 @@ $(document).ready(function(){
 var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 console.log(rpgclass.name)
 
-
-  if (rpgclass.name === "Warrior ") {
-
-    $("#rpg-class").text("Warrior");
+ $("#rpg-class").text("Warrior");
     
-  } 
+  
 /*
   else if (rpgclass.name === "Archer") {
 
@@ -71,11 +68,7 @@ console.log(rpgclass.name)
 
     $("#rpg-class").text("wise " + rpgclass.name);
     
-  } */ else {
-
-    $("#weapon-select").html("<h2>No Class Selected </h2>");
-  
-  } 
+  } */
   });
 </script>
 
