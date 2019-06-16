@@ -31,7 +31,7 @@
 
 <div class="row pad-20">
 
-<p class="text-center">You are a</p> <span id="rpg-class">Test</span>
+<p class="text-center" id="rpg-class">You are a</p>
 
 </div><!-- /.row -->
 
@@ -46,7 +46,7 @@ console.log(rpgclass.name)
 
   if (rpgclass.name === "Warrior ") {
 
-    $("#rpg-class").html("Warrior");
+    $("#rpg-class").text("Warrior");
     
   } else if (rpgclass.name === "Archer") {
 
