@@ -45,7 +45,7 @@ $(document).ready(function(){
 
   if (rpgclass.name === "Warrior ") {
 
-    $("#rpg-class").text("strong" + rpgclass.name);
+    $("#rpg-class").html("strong" + rpgclass.name);
     
   } else if (rpgclass.name === "Archer") {
 
