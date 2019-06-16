@@ -25,7 +25,7 @@
 
 <div class="text-white text-center bg-primary">
   <h5 class="pad-10"> Skill Tree (Preview Only) </h5>
-  <p class="pad-b-10">Access Skill Tree after character creation.</p>
+  <p class="pad-b-10" style="margin-bottom: 0;">Access Skill Tree after character creation.</p>
 </div>
 
 <div id="skill-select" class="y-flex-container pad-b-10">
@@ -121,7 +121,7 @@ $(document).ready(function(){
   <div class="container pad-20">
     <div class="pad-b-20">
       <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="http://rapid-phyre.net" role="button">Restart</a>
-      <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="character.php" role="button">View Character</a>
+      <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="name.php" role="button">Continue</a>
     </div>
     <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
