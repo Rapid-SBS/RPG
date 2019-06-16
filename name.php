@@ -31,8 +31,8 @@
 
 <div class="row pad-20">
 
-<p class="text-center">You are a <span id="rpg-class"></span></p>
-
+<p class="text-center">You are a <span id="rpg-class">
+  
 
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
@@ -78,7 +78,7 @@ console.log(rpgclass.name)
   } 
   });
 </script>
-
+</span></p>
 </div><!-- /.row -->
 
 <footer class="footer mt-auto text-center bg-light">
