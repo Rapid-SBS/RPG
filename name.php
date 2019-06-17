@@ -37,13 +37,6 @@
     </div>
   </div><!-- /.row -->
 
-  <div id="name-saved" class="row bg-success pad-t-20" style="display: none;">
-    <div class="col">
-      <h5 class="mx-auto text-center">Name Saved!</h5>
-    </div>
-  </div><!-- /.row -->
-
-
   <form>
     <div class="form-row pad-b-40">
       <div class="wide-275 mx-auto text-center">
@@ -54,6 +47,10 @@
   </form>
 
 </div><!-- /.container -->
+
+<div id="name-saved" class="text-white text-center pad-20 bg-primary" style="display: none;">
+  <h5 class="pad-10">Name Saved!</h5>
+</div>
 
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
