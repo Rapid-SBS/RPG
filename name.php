@@ -29,7 +29,7 @@
 
 <div class="row pad-40">
   <div class="col">
-    <p class="mx-auto">You are a <span id="rpg-class"></span> who wields a <span id="rpg-weapon"></span></p>
+    <p class="mx-auto">You are a <span id="rpg-class"></span> <span id="rpg-weapon"></span></p>
   </div>
 </div><!-- /.row -->
 
@@ -63,11 +63,21 @@ console.log(weapon.name)
 
   $(document).ready(function(){
     if (weapon.name === "Battle Axe" || "War Hammer") {
-      $("#rpg-weapon").text("fearsome " + weapon.name);
+      $("#rpg-weapon").text("who wields a fearsome " + weapon.name);
+    } else if (weapon.name === "Bow" || "Crossbow" || "Longbow") {
+      $("#rpg-weapon").text("attacking from afar with your " + weapon.name);
+    } else if (weapon.name === "Sword & Shield") {
+      $("#rpg-weapon").text("mighty " + weapon.name);
+    } else if (weapon.name === "Sword & Shield") {
+      $("#rpg-weapon").text("mighty " + weapon.name);
+    } else if (weapon.name === "Sword & Shield") {
+      $("#rpg-weapon").text("mighty " + weapon.name);
+    } else if (weapon.name === "Sword & Shield") {
+      $("#rpg-weapon").text("mighty " + weapon.name);
     } else if (weapon.name === "Sword & Shield") {
       $("#rpg-weapon").text("mighty " + weapon.name);
     } else {
-      $("#rpg-weapon").text("Else " + weapon.name);
+      $("#rpg-weapon").text("who wields a " + weapon.name);
     }
   });
 </script>
