@@ -64,7 +64,7 @@ console.log(weapon.name)
   $(document).ready(function(){
     if (weapon.name === "Battle Axe" || weapon.name === "War Hammer") {
       $("#rpg-weapon").text("who wields a fearsome " + weapon.name);
-    } else if (weapon.name === "Bow" || "Crossbow" || "Longbow") {
+    } else if (weapon.name === "Bow" || weapon.name === "Crossbow" || weapon.name === "Longbow") {
       $("#rpg-weapon").text("attacking from afar with your " + weapon.name);
     } else if (weapon.name === "Sword & Shield") {
       $("#rpg-weapon").text("mighty " + weapon.name);
