@@ -280,7 +280,7 @@ var skills = {
   ultimate: undefined
 }
 
-localStorage.setItem('objPlayer', JSON.stringify(player));
+/* localStorage.setItem('objPlayer', JSON.stringify(player)); */
 localStorage.setItem('objSkills', JSON.stringify(skills));
 
 $(document).ready(function(){
