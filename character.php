@@ -156,6 +156,8 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
     $("#tb-rpg-attack").text(player.attack);
     $("#tb-rpg-ultimate").text(player.ultimate);
 
+      console.log("playerName:" + playerName);
+      console.log("player.name:" + player.name);
   });
 </script>
 
