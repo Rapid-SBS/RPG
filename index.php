@@ -260,7 +260,7 @@ var player = {
   ultimate: undefined
 }
 
-var pdata = player;
+var pdata = player.name;
 var p = new Vue({
   data: pdata
 })
