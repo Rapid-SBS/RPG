@@ -106,7 +106,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
       console.log(player.name);
 
       localStorage.setItem('objPlayer', JSON.stringify(player));
-    }
+    });
   });
 </script>
 
