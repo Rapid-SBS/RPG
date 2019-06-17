@@ -122,7 +122,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
   $(document).ready(function(){
 
-  	player.name = "Player";
+  	player.name = undefined;
   	player.level = 0;
   	player.class = rpgclass.name;
   	player.weapon = weapon.name;
@@ -156,8 +156,6 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
     $("#tb-rpg-attack").text(player.attack);
     $("#tb-rpg-ultimate").text(player.ultimate);
 
-      console.log("playerName:" + playerName);
-      console.log("player.name:" + player.name);
   });
 </script>
 
