@@ -29,7 +29,7 @@
 
 <div class="row pad-40">
   <div class="col">
-    <p class="mx-auto text-center">You are a <span id="rpg-class"></span> <span id="rpg-weapon" class="text-lowercase"></span></p>
+    <p class="mx-auto text-center">You are a <span id="rpg-class"></span>, <span id="rpg-weapon" class="text-lowercase"></span>.</p>
   </div>
 </div><!-- /.row -->
 
@@ -39,11 +39,7 @@ var skills = JSON.parse(localStorage.getItem('objSkills'));
 var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
-console.log(rpgclass.name)
-console.log(weapon.name)
-
-
-  $(document).ready(function(){
+  $(document).ready(function(){ // ----- Display Class -----
     if (rpgclass.name === "Warrior") {
       $("#rpg-class").text("strong " + rpgclass.name);
     } else if (rpgclass.name === "Archer") {
@@ -61,7 +57,7 @@ console.log(weapon.name)
     } 
   });
 
-  $(document).ready(function(){
+  $(document).ready(function(){ // ----- Display Weapon -----
     if (weapon.name === "Battle Axe" || weapon.name === "War Hammer") {
       $("#rpg-weapon").text("who wields a fearsome " + weapon.name);
     } else if (weapon.name === "Bow" || weapon.name === "Crossbow" || weapon.name === "Longbow") {
