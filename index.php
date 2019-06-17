@@ -249,7 +249,7 @@ var player = new Vue({
   data: {
     name: "Test Name"
   }
-})
+});
 
 // --- Initialize Player Object ---
 /* var player = {
