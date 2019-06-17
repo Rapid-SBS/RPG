@@ -241,7 +241,7 @@
 </div><!-- /Class Selection -->
 
 <div id="app">
-  <h1>{{product}}</h1>
+  <h1>{{ product }}</h1>
 </div>
 
 <script> 
@@ -280,8 +280,8 @@ localStorage.setItem('objSkills', JSON.stringify(skills));
 $(document).ready(function(){
 
 
-  var testvar = new Vue({
-    el: '#testvar',
+  var app = new Vue({
+    el: '#app',
     data: {
       product: 'Stuff'
     }
