@@ -37,11 +37,18 @@
     </div>
   </div><!-- /.row -->
 
+  <div id="name-saved" class="row bg-success pad-t-20" style="display: none;">
+    <div class="col">
+      <h5 class="mx-auto text-center">Name Saved!</h5>
+    </div>
+  </div><!-- /.row -->
+
+
   <form>
     <div class="form-row pad-b-40">
       <div class="wide-275 mx-auto text-center">
         <input type="text" class="form-control pad-10" id="inputName" aria-describedby="emailHelp" placeholder="Enter a name...">
-        <button id="save-name" type="submit" class="btn btn-primary mar-t-20">Save</button>
+        <button id="save-name" type="submit" :style="" class="btn btn-primary mar-t-20">Save</button>
       </div>
     </div><!-- /.form-row -->
   </form>
@@ -106,8 +113,10 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
       var playerName = document.getElementById('inputName').value
       player.name = playerName;
       localStorage.setItem('objPlayer', JSON.stringify(player));
-      console.log("playerName:" + playerName);
-      console.log("player.name:" + player.name);
+      $('#name-saved').fadeIn('slow', function(){
+        $('#name-saved').delay(3000).fadeOut();
+        }
+       )
     });
   });
 </script>
