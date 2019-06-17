@@ -36,7 +36,7 @@
  
   <!-- Warrior -->
   <a id="rpg-class-warrior" href="weapon-select.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
-  <div class="text-white bg-orange rounded">
+  <div class="text-white bg-red rounded">
     <div class="card-header text-center">
       <h5>Warrior</h5>
     </div>
@@ -44,27 +44,95 @@
       <p class="card-text text-center">Masters of swords, shields, and axes, Warriors can deal physical damage or protect their allies with their high defense.</p>
     </div>
     <ul class="list-group text-center">
-      <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+      <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
         <span class="badge badge-light text-red">18</span>
         HP
       </li>
-      <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+      <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
         <span class="badge badge-light text-orange">3</span>
         ATT
       </li>
-      <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+      <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
         <span class="badge badge-light text-green">4</span>
         DEF
       </li>
-      <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+      <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
         <span class="badge badge-light text-purple">1</span>
         INT
       </li>
-      <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+      <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
         <span class="badge badge-light text-blue">2</span>
         RES
       </li>
     </ul>
+  </div>
+  </a>
+
+  <!-- Monk -->
+  <a id="rpg-class-monk" href="weapon-select.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
+  <div class="text-white bg-orange rounded">
+      <div class="card-header text-center">
+        <h5>Monk</h5>
+      </div>
+      <div class="card-body pad-10 text-center">
+        <p class="card-text text-center">Advocates of peace yet masters of combat, Monks have well-balanced stats and a wide selection of support abilities.</p>
+      </div>
+      <ul class="list-group text-center">
+        <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-red">17</span>
+          HP
+        </li>
+        <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-orange">3</span>
+          ATT
+        </li>
+        <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-green">3</span>
+          DEF
+        </li>
+        <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-purple">3</span>
+          INT
+        </li>
+        <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-blue">3</span>
+          RES
+        </li>
+      </ul>
+  </div>
+  </a>
+
+  <!-- Cleric -->
+  <a id="rpg-class-cleric" href="weapon-select.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
+  <div class="text-white bg-yellow rounded">
+      <div class="card-header text-center">
+        <h5>Cleric</h5>
+      </div>
+      <div class="card-body pad-10 text-center">
+        <p class="card-text text-center">With the power to heal, enhance, or resurrect your allies with potent light magic, the Cleric is the ultimate support class.</p>
+      </div>
+      <ul class="list-group text-center">
+        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-red">15</span>
+          HP
+        </li>
+        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-orange">2</span>
+          ATT
+        </li>
+        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-green">2</span>
+          DEF
+        </li>
+        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-purple">3</span>
+          INT
+        </li>
+        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-blue">4</span>
+          RES
+        </li>
+      </ul>
   </div>
   </a>
 
@@ -136,40 +204,6 @@
   </div>
   </a>
 
-  <!-- Cleric -->
-  <a id="rpg-class-cleric" href="weapon-select.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
-  <div class="text-white bg-yellow rounded">
-      <div class="card-header text-center">
-        <h5>Cleric</h5>
-      </div>
-      <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">With the power to heal, enhance, or resurrect your allies with potent light magic, the Cleric is the ultimate support class.</p>
-      </div>
-      <ul class="list-group text-center">
-        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-red">15</span>
-          HP
-        </li>
-        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-orange">2</span>
-          ATT
-        </li>
-        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-green">2</span>
-          DEF
-        </li>
-        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-purple">3</span>
-          INT
-        </li>
-        <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-blue">4</span>
-          RES
-        </li>
-      </ul>
-  </div>
-  </a>
-
   <!-- Rogue -->
   <a id="rpg-class-rogue" href="weapon-select.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
   <div class="text-white bg-gray rounded">
@@ -198,40 +232,6 @@
         </li>
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
           <span class="badge badge-light text-blue">1</span>
-          RES
-        </li>
-      </ul>
-  </div>
-  </a>
-
-  <!-- Monk -->
-  <a id="rpg-class-monk" href="weapon-select.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
-  <div class="text-white bg-red rounded">
-      <div class="card-header text-center">
-        <h5>Monk</h5>
-      </div>
-      <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">Advocates of peace yet masters of combat, Monks have well-balanced stats and a wide selection of support abilities.</p>
-      </div>
-      <ul class="list-group text-center">
-        <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-red">17</span>
-          HP
-        </li>
-        <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-orange">3</span>
-          ATT
-        </li>
-        <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-green">3</span>
-          DEF
-        </li>
-        <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-purple">3</span>
-          INT
-        </li>
-        <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-blue">3</span>
           RES
         </li>
       </ul>
