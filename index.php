@@ -211,27 +211,27 @@
         <h5>Rune Master</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">Masters of the arcane, Rune Masters can use all elements with runestones or wield a deadly Runeblade.</p>
+        <p class="card-text text-center">Masters of the arcane, Rune Masters can use all elements via runestones and inscriptions or wield a deadly Runeblade.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-red">14</span>
+          <span class="badge badge-light text-red">15</span>
           HP
         </li>
         <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-orange">4</span>
+          <span class="badge badge-light text-orange">3</span>
           ATT
         </li>
         <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-green">1</span>
+          <span class="badge badge-light text-green">2</span>
           DEF
         </li>
         <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-purple">3</span>
+          <span class="badge badge-light text-purple">4</span>
           INT
         </li>
         <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-blue">1</span>
+          <span class="badge badge-light text-blue">2</span>
           RES
         </li>
       </ul>
@@ -321,6 +321,30 @@ $(document).ready(function(){
     localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
 
+  $("#rpg-class-monk").click(function(){
+    var rpgclass = {
+      name: "Monk",
+      hp: 17,
+      att: 3,
+      def: 3,
+      int: 3,
+      res: 3,
+    }
+    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
+  });
+
+  $("#rpg-class-cleric").click(function(){
+    var rpgclass = {
+      name: "Cleric",
+      hp: 15,
+      att: 2,
+      def: 2,
+      int: 3,
+      res: 4,
+    }
+    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
+  });
+
   $("#rpg-class-archer").click(function(){
     var rpgclass = {
       name: "Archer",
@@ -345,14 +369,14 @@ $(document).ready(function(){
     localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
 
-  $("#rpg-class-cleric").click(function(){
+  $("#rpg-class-runemaster").click(function(){
     var rpgclass = {
-      name: "Cleric",
+      name: "Rune Master",
       hp: 15,
-      att: 2,
+      att: 3,
       def: 2,
-      int: 3,
-      res: 4,
+      int: 4,
+      res: 2,
     }
     localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
@@ -365,18 +389,6 @@ $(document).ready(function(){
       def: 1,
       int: 3,
       res: 1,
-    }
-    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
-  });
-
-  $("#rpg-class-monk").click(function(){
-    var rpgclass = {
-      name: "Monk",
-      hp: 17,
-      att: 3,
-      def: 3,
-      int: 3,
-      res: 3,
     }
     localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
