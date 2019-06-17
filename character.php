@@ -138,34 +138,13 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
     player.support = skills.support; player.attack = skills.attack;
     player.ultimate = skills.ultimate;
 
-    pdata = player;
-
+    // --- Copy player data to be interpolated ---
+    let pdata = player;
     var playerapp = new Vue({
       el: '#app-player',
-      data: {
-        p: pdata
-      }
-
+      data: { p: pdata }
     })
 
-/*
-    $("#tb-rpg-name").text(player.name);
-    $("#tb-rpg-level").text(player.level);
-    $("#tb-rpg-class").text(player.class); 
-    $("#tb-rpg-weapon").text(player.weapon);
-
-    $("#tb-rpg-hp").text(player.hp);
-    $("#tb-rpg-att").text(player.att);
-    $("#tb-rpg-def").text(player.def);
-    $("#tb-rpg-int").text(player.int);
-    $("#tb-rpg-res").text(player.res);
-
-    $("#tb-rpg-basic").text(player.basic);
-    $("#tb-rpg-special").text(player.special);
-    $("#tb-rpg-support").text(player.support);
-    $("#tb-rpg-attack").text(player.attack);
-    $("#tb-rpg-ultimate").text(player.ultimate);
-  */
   });
 
 </script>
