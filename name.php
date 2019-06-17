@@ -31,7 +31,7 @@
 
   <div class="row pad-t-40">
     <div class="col">
-      <p class="mx-auto text-center">You are a <span id="rpg-class"></span> <span id="rpg-weapon" class="text-lowercase"></span>.</p>
+      <p class="mx-auto text-center">You are a<span id="rpg-class"></span> <span id="rpg-weapon" class="text-lowercase"></span>.</p>
       <p class="mx-auto text-center">What is your name?</p>
     </div>
   </div><!-- /.row -->
@@ -101,11 +101,12 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
   $(document).ready(function(){ // ----- Save Name -----
     $("#save-name").click(function(){
-      event.preventDefault()
-      player.name = "Name";
-      console.log(player.name);
 
+      event.preventDefault()
+
+      player.name = document.getElementByID('inputName');
       localStorage.setItem('objPlayer', JSON.stringify(player));
+      console.log(player.name);
     });
   });
 </script>
