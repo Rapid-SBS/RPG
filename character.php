@@ -32,88 +32,90 @@
   <h4 class="pad-10 mx-auto text-center" style>Basic Info</h4>
 </div><!-- /.row -->
 
-<div class="row">
-  <table class="wide-275 text-center table table-bordered mx-auto">
-    <tbody>
-      <tr>
-        <td>Name</td>
-        <td id="tb-rpg-name"> </td>
-      </tr>
-      <tr>
-        <td>Level</td>
-        <td id="tb-rpg-level"> </td>
-      </tr>
-      <tr>
-        <td>Class</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Weapon</td>
-        <td id="tb-rpg-weapon"> </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<div id="app-player">
+  <div class="row">
+    <table class="wide-275 text-center table table-bordered mx-auto">
+      <tbody>
+        <tr>
+          <td>Name</td>
+          <td>{{ p.name }}</td>
+        </tr>
+        <tr>
+          <td>Level</td>
+          <td>{{ p.level }}</td>
+        </tr>
+        <tr>
+          <td>Class</td>
+          <td>{{ p.class }}</td>
+        </tr>
+        <tr>
+          <td>Weapon</td>
+          <td>{{ p.weapon }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-<div class="row">
-  <h4 class="pad-10 mx-auto text-center" style>Combat Stats</h4>
-</div><!-- /.row -->
-<div class="row">
-  <table class="wide-275 text-center table table-bordered mx-auto">
-    <tbody>
-      <tr>
-        <td>HP</td>
-        <td id="tb-rpg-hp"> </td>
-      </tr>
-      <tr>
-        <td>ATT</td>
-        <td id="tb-rpg-att"> </td>
-      </tr>
-      <tr>
-        <td>DEF</td>
-        <td id="tb-rpg-def"> </td>
-      </tr>
-      <tr>
-        <td>INT</td>
-        <td id="tb-rpg-int"> </td>
-      </tr>
-      <tr>
-        <td>RES</td>
-        <td id="tb-rpg-res"> </td>
-      </tr>
-    </tbody>
-  </table>
-</div><!-- /.row -->
+  <div class="row">
+    <h4 class="pad-10 mx-auto text-center" style>Combat Stats</h4>
+  </div><!-- /.row -->
+  <div class="row">
+    <table class="wide-275 text-center table table-bordered mx-auto">
+      <tbody>
+        <tr>
+          <td>HP</td>
+          <td>{{ p.hp }}</td>
+        </tr>
+        <tr>
+          <td>ATT</td>
+          <td>{{ p.att }}</td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td>{{ p.def }}</td>
+        </tr>
+        <tr>
+          <td>INT</td>
+          <td>{{ p.int }}</td>
+        </tr>
+        <tr>
+          <td>RES</td>
+          <td>{{ p.res }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- /.row -->
 
-<div class="row">
-  <h4 class="pad-10 mx-auto text-center" style>Abilities</h4>
-</div><!-- /.row -->
-<div class="row pad-b-20">
-  <table class="wide-275 text-center table table-bordered mx-auto">
-    <tbody>
-      <tr>
-        <td>Basic</td>
-        <td id="tb-rpg-basic" class="font-weight-bold text-red"> </td>
-      </tr>
-      <tr>
-        <td>Special</td>
-        <td id="tb-rpg-special" class="font-weight-bold text-yellow"> </td>
-      </tr>
-      <tr>
-        <td>Support</td>
-        <td id="tb-rpg-support" class="font-weight-bold text-green"> </td>
-      </tr>
-      <tr>
-        <td>Attack</td>
-        <td id="tb-rpg-attack" class="font-weight-bold text-blue"> </td>
-      </tr>
-      <tr>
-        <td>Ultimate</td>
-        <td id="tb-rpg-ultimate" class="font-weight-bold text-purple"> </td>
-      </tr>
-    </tbody>
-  </table>
-</div><!-- /.row -->
+  <div class="row">
+    <h4 class="pad-10 mx-auto text-center" style>Abilities</h4>
+  </div><!-- /.row -->
+  <div class="row pad-b-20">
+    <table class="wide-275 text-center table table-bordered mx-auto">
+      <tbody>
+        <tr>
+          <td>Basic</td>
+          <td class="font-weight-bold text-red">{{ p.basic }}</td>
+        </tr>
+        <tr>
+          <td>Special</td>
+          <td class="font-weight-bold text-yellow">{{ p.special }}</td>
+        </tr>
+        <tr>
+          <td>Support</td>
+          <td class="font-weight-bold text-green">{{ p.support }}</td>
+        </tr>
+        <tr>
+          <td>Attack</td>
+          <td class="font-weight-bold text-blue">{{ p.attack }}</td>
+        </tr>
+        <tr>
+          <td>Ultimate</td>
+          <td class="font-weight-bold text-purple">{{ p.ultimate }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- /.row -->
+</div><!-- /#app-player -->
 
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
@@ -138,6 +140,17 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   	player.attack = skills.attack;
   	player.ultimate = skills.ultimate;
 
+    pdata = player;
+
+    var p = new Vue({
+      el: '#app-player',
+      data: {
+        player: pdata
+      }
+
+    })
+
+/*
     $("#tb-rpg-name").text(player.name);
     $("#tb-rpg-level").text(player.level);
     $("#tb-rpg-class").text(player.class); 
@@ -156,6 +169,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
     $("#tb-rpg-ultimate").text(player.ultimate);
 
   });
+  */
 </script>
 
 <footer class="footer mt-auto text-center bg-lightgray">
