@@ -177,7 +177,7 @@
         <h5>Mage</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">Specialize in ice, fire, or lightning abilities with the Mage. Critical Hits apply debuffs instead of bonus damage.</p>
+        <p class="card-text text-center">Use incredible ice, fire, or lightning abilities with the Mage. Critical Hits apply debuffs instead of bonus damage.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-blue" style="padding: .35rem 1.25rem;">
@@ -198,6 +198,40 @@
         </li>
         <li class="list-group-item align-items-center bg-blue" style="padding: .35rem 1.25rem;">
           <span class="badge badge-light text-blue">3</span>
+          RES
+        </li>
+      </ul>
+  </div>
+  </a>
+
+  <!-- Rune Master -->
+  <a id="rpg-class-runemaster" href="weapon-select.php" class="card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
+  <div class="text-white bg-purple rounded">
+      <div class="card-header text-center">
+        <h5>Rune Master</h5>
+      </div>
+      <div class="card-body pad-10 text-center">
+        <p class="card-text text-center">Masters of the arcane, Rune Masters can use all elements with runestones or wield a deadly Runeblade.</p>
+      </div>
+      <ul class="list-group text-center">
+        <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-red">14</span>
+          HP
+        </li>
+        <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-orange">4</span>
+          ATT
+        </li>
+        <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-green">1</span>
+          DEF
+        </li>
+        <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-purple">3</span>
+          INT
+        </li>
+        <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">
+          <span class="badge badge-light text-blue">1</span>
           RES
         </li>
       </ul>
