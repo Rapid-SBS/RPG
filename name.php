@@ -62,12 +62,12 @@ console.log(weapon.name)
   });
 
   $(document).ready(function(){
-    if (weapon.name === "Battle Axe") {
+    if (weapon.name === "Battle Axe" || "War Hammer") {
       $("#rpg-weapon").text("fearsome " + weapon.name);
     } else if (weapon.name === "Sword & Shield") {
-      $("#rpg-weapon").text("mighty" + weapon.name);
+      $("#rpg-weapon").text("mighty " + weapon.name);
     } else {
-      $("#rpg-weapon").text("Else" + weapon.name);
+      $("#rpg-weapon").text("Else " + weapon.name);
     }
   });
 </script>
