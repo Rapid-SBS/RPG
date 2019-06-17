@@ -244,7 +244,7 @@
 // --- Initialize Player Object ---
 var player = {
   name: undefined,
-  level: undefined,
+  level: 0,
   class: undefined,
   weapon: undefined,
   hp: undefined,
