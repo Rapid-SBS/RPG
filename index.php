@@ -239,13 +239,13 @@
   </a>
 
 </div><!-- /Class Selection -->
-<div id="player">
+<div id="app-player">
   <h1 class="mx-auto">{{player.name}}</h1>
 </div>
 
 <script> 
 var player = new Vue({
-  el: '#player',
+  el: '#app-player',
   data: {
     name: "Test Name"
   }
