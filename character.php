@@ -134,11 +134,9 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   	player.int = skills.int + rpgclass.int;
   	player.res = skills.res + rpgclass.res;
 
-  	player.basic = weapon.basic;
-  	player.special = weapon.special;
-  	player.support = skills.support;
-  	player.attack = skills.attack;
-  	player.ultimate = skills.ultimate;
+  	player.basic = weapon.basic; player.special = weapon.special;
+    player.support = skills.support; player.attack = skills.attack;
+    player.ultimate = skills.ultimate;
 
     pdata = player;
 
@@ -169,9 +167,9 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
     $("#tb-rpg-support").text(player.support);
     $("#tb-rpg-attack").text(player.attack);
     $("#tb-rpg-ultimate").text(player.ultimate);
-
-  });
   */
+  });
+
 </script>
 
 <footer class="footer mt-auto text-center bg-lightgray">
