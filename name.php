@@ -34,11 +34,13 @@
   </div>
 </div><!-- /.row -->
 
-<form class="pad-20">
-  <div class="form-group">
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter a name...">
-  </div>
-  <button type="submit" class="btn btn-primary">Save</button>
+<form>
+  <div class="form-row">
+    <div class="col-4">
+      <input type="text" class="form-control" id="inputName" aria-describedby="emailHelp" placeholder="Enter a name...">
+      <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+  </div><!-- /.form-row -->
 </form>
 
 <script>
