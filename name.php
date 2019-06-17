@@ -40,30 +40,29 @@ var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
   $(document).ready(function(){
+    if (rpgclass.name === "Warrior") {
+      $("#rpg-class").text("strong " + rpgclass.name);
+    } else if (rpgclass.name === "Archer") {
+      $("#rpg-class").text("skilled " + rpgclass.name);
+    } else if (rpgclass.name === "Mage") {
+      $("#rpg-class").text("talented " + rpgclass.name);
+    } else if (rpgclass.name === "Cleric") {
+      $("#rpg-class").text("gifted " + rpgclass.name);
+    } else if (rpgclass.name === "Rogue") {
+      $("#rpg-class").text("deadly " + rpgclass.name);
+    } else if (rpgclass.name === "Monk") {
+      $("#rpg-class").text("wise " + rpgclass.name);
+    } else {
+      $("#weapon-select").html("<h2>No Class Selected </h2>");
+    } 
+  });
 
-  if (rpgclass.name === "Warrior") {
-    $("#rpg-class").text("strong " + rpgclass.name);
-  } else if (rpgclass.name === "Archer") {
-    $("#rpg-class").text("skilled " + rpgclass.name);
-  } else if (rpgclass.name === "Mage") {
-    $("#rpg-class").text("talented " + rpgclass.name);
-  } else if (rpgclass.name === "Cleric") {
-    $("#rpg-class").text("gifted " + rpgclass.name);
-  } else if (rpgclass.name === "Rogue") {
-    $("#rpg-class").text("deadly " + rpgclass.name);
-  } else if (rpgclass.name === "Monk") {
-    $("#rpg-class").text("wise " + rpgclass.name);
-  } else {
-    $("#weapon-select").html("<h2>No Class Selected </h2>");
-  } 
-
-
-  if (weapon.name === "Battle Axe" || "War Hammer") {
-    $("#rpg-weapon").text("mighty " + weapon.name);
-  } else {
-    $("#rpg-weapon").text(weapon.name);
-  }
-
+  $(document).ready(function(){
+    if (weapon.name == "Battle Axe" || "War Hammer") {
+      $("#rpg-weapon").text("mighty " + weapon.name);
+    } else {
+      $("#rpg-weapon").text(weapon.name);
+    }
   });
 </script>
 
