@@ -11,8 +11,7 @@
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 
   <title>RPGenerator</title>
 
@@ -46,7 +45,7 @@
       </tr>
       <tr>
         <td>Class</td>
-        <td id="tb-rpg-class"> </td>
+        <td>{{player.class}} </td>
       </tr>
       <tr>
         <td>Weapon</td>
@@ -143,7 +142,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
     $("#tb-rpg-name").text(player.name);
     $("#tb-rpg-level").text(player.level);
-    $("#tb-rpg-class").text(player.class);
+/*    $("#tb-rpg-class").text(player.class); */
     $("#tb-rpg-weapon").text(player.weapon);
 
     $("#tb-rpg-hp").text(player.hp);

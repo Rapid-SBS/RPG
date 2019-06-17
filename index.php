@@ -240,11 +240,6 @@
 
 </div><!-- /Class Selection -->
 
-<div id="app">
-  <h1>{{ product }}</h1>
-  <p>{{ description }}</p>
-</div>
-
 <script> 
 // --- Initialize Player Object ---
 var player = {
@@ -274,14 +269,6 @@ var skills = {
   attack: undefined,
   ultimate: undefined
 }
-
-var app = new Vue({
-    el: '#app',
-    data: {
-      product: 'Stuff',
-      description: 'test'
-    }
-})
 
 localStorage.setItem('objPlayer', JSON.stringify(player));
 localStorage.setItem('objSkills', JSON.stringify(skills));
