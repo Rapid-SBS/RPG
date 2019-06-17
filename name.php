@@ -27,21 +27,25 @@
   <h5 class="pad-10"> Character Name </h5>
 </div>
 
-<div class="row pad-40">
-  <div class="col">
-    <p class="mx-auto text-center">You are a <span id="rpg-class"></span> <span id="rpg-weapon" class="text-lowercase"></span>.</p>
-    <p class="mx-auto text-center">What is your name?</p>
-  </div>
-</div><!-- /.row -->
+<div class="container">
 
-<form>
-  <div class="form-row">
-    <div class="col-4">
-      <input type="text" class="form-control" id="inputName" aria-describedby="emailHelp" placeholder="Enter a name...">
-      <button type="submit" class="btn btn-primary">Save</button>
+  <div class="row pad-t-40">
+    <div class="col">
+      <p class="mx-auto text-center">You are a <span id="rpg-class"></span> <span id="rpg-weapon" class="text-lowercase"></span>.</p>
+      <p class="mx-auto text-center">What is your name?</p>
     </div>
-  </div><!-- /.form-row -->
-</form>
+  </div><!-- /.row -->
+
+  <form>
+    <div class="form-row">
+      <div class="wide-275">
+        <input type="text" class="form-control" id="inputName" aria-describedby="emailHelp" placeholder="Enter a name...">
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </div><!-- /.form-row -->
+  </form>
+
+</div><!-- /.container -->
 
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
