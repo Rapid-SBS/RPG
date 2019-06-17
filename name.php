@@ -29,7 +29,7 @@
 
 <div class="row pad-40">
   <div class="col">
-    <p class="mx-auto">You are a <span id="rpg-class"></span> <span id="rpg-weapon"></span></p>
+    <p class="mx-auto text-center">You are a <span id="rpg-class"></span> <span id="rpg-weapon"></span></p>
   </div>
 </div><!-- /.row -->
 
@@ -62,7 +62,7 @@ console.log(weapon.name)
   });
 
   $(document).ready(function(){
-    if (weapon.name === "Battle Axe" || "War Hammer") {
+    if (weapon.name === "Battle Axe" || weapon.name === "War Hammer") {
       $("#rpg-weapon").text("who wields a fearsome " + weapon.name);
     } else if (weapon.name === "Bow" || "Crossbow" || "Longbow") {
       $("#rpg-weapon").text("attacking from afar with your " + weapon.name);
