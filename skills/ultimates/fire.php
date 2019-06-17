@@ -1,8 +1,8 @@
   <div class="row justify-content-center">
 
-    <!-- Plasma Beam -->  
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapsePlasmabeam" role="button" aria-expanded="false" aria-controls="collapsePlasmabeam">
-      <h6>Plasma Beam <span class="badge badge-light text-teal">9</span></h6>
+    <!-- Nova Beam -->  
+    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseNovabeam" role="button" aria-expanded="false" aria-controls="collapseNovabeam">
+      <h6>Nova Beam <span class="badge badge-light text-teal">9</span></h6>
     </a>
 
     <!-- Meteor Strike -->
@@ -15,8 +15,8 @@
 
   <div id="ultimate-fire" class="row mx-auto pad-10">
 
-    <!-- Plasma Beam -->
-    <div class="collapse mx-auto" id="collapsePlasmabeam" data-parent="#ultimate-fire">
+    <!-- Nova Beam -->
+    <div class="collapse mx-auto" id="collapseNovabeam" data-parent="#ultimate-fire">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Ultimate Ability</h6>

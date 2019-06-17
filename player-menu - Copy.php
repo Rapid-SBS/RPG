@@ -50,31 +50,9 @@
 
   <div class="row">
     <div class="wide-275 mx-auto text-center">
-        <button type="button" class="btn btn-dark text-white mar-r-10 mar-l-10" data-toggle="modal" data-target="#confirmModal">
-        Delete Character</button>
+       <a class="btn btn-primary text-white mar-10" href="index.php" role="button">Delete Character</a>
     </div>
   </div><!-- /.row -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Warning!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          This option will delete your character and send you to character creation. Do you wish to continue?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-danger">Confirm Deletion</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
 </div><!-- /.container -->
 
