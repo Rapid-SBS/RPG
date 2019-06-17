@@ -145,7 +145,9 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
     var p = new Vue({
       el: '#app-player',
       data: {
-        p: pdata
+        p: {
+          class: "Warrior"
+        }
       }
 
     })
