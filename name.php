@@ -39,6 +39,10 @@ var skills = JSON.parse(localStorage.getItem('objSkills'));
 var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
+console.log(rpgclass.name)
+console.log(weapon.name)
+
+
   $(document).ready(function(){
     if (rpgclass.name === "Warrior") {
       $("#rpg-class").text("strong " + rpgclass.name);
