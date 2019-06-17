@@ -37,10 +37,10 @@
   </div><!-- /.row -->
 
   <form>
-    <div class="form-row">
-      <div class="wide-275 mx-auto">
-        <input type="text" class="form-control mar-10" id="inputName" aria-describedby="emailHelp" placeholder="Enter a name...">
-        <button type="submit" class="btn btn-primary mar-10">Save</button>
+    <div class="form-row pad-b-40">
+      <div class="wide-275 mx-auto text-center">
+        <input type="text" class="form-control pad-10" id="inputName" aria-describedby="emailHelp" placeholder="Enter a name...">
+        <button type="submit" class="btn btn-primary mar-t-20">Save</button>
       </div>
     </div><!-- /.form-row -->
   </form>
