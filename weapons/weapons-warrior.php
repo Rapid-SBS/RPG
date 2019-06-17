@@ -1,14 +1,14 @@
 <?php include 'warrior-sword.php'; ?>
 
-	<a role="button" @click="setWeaponSword" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-sword" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
+	<a role="button" onclick="setWeaponSword()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-sword" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'warrior-warhammer.php'; ?>
 
-	<a role="button" @click="setWeaponWarhammer" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-warhammer" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
+	<a role="button" onclick="setWeaponWarhammer()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-warhammer" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'warrior-battleaxe.php'; ?>
 
-	<a role="button" @click="setWeaponBattleaxe" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-battleaxe" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
+	<a role="button" onclick="setWeaponBattleaxe()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-battleaxe" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
 function setWeaponSword() {
