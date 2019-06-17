@@ -32,7 +32,7 @@
 
   <div class="row pad-t-40">
     <div class="col">
-      <p class="mx-auto text-center">You are a<span id="rpg-class"></span> <span id="rpg-weapon" class="text-lowercase"></span>.</p>
+      <p class="mx-auto text-center">You are a <span id="rpg-class"></span><span id="rpg-weapon" class="text-lowercase"></span>.</p>
       <p class="mx-auto text-center">What is your name?</p>
     </div>
   </div><!-- /.row -->
@@ -48,7 +48,7 @@
 
 </div><!-- /.container -->
 
-<div id="name-saved" class="text-white text-center pad-20 bg-primary" style="display: none;">
+<div id="name-saved" class="text-white text-center pad-10 bg-primary" style="display: none;">
   <h5 class="pad-10">Name Saved!</h5>
 </div>
 
