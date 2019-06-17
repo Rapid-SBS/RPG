@@ -50,8 +50,7 @@
 
   <div class="row">
     <div class="wide-275 mx-auto text-center">
-        <button type="button" class="btn btn-warning text-white mar-r-10 mar-l-10" data-toggle="modal" data-target="#confirmModal">
-        Delete Character</button>
+        <button type="button" class="btn btn-danger text-white mar-10" data-toggle="modal" data-target="#confirmModal">Delete Character</button>
     </div>
   </div><!-- /.row -->
 
