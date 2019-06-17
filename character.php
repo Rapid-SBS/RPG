@@ -45,7 +45,7 @@
       </tr>
       <tr>
         <td>Class</td>
-        <td>{{player.class}} </td>
+        <td>{{ player.class }} </td>
       </tr>
       <tr>
         <td>Weapon</td>
