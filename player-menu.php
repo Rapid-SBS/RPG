@@ -28,19 +28,32 @@
   <h5 class="pad-10"> Player Menu </h5>
 </div>
 
-<div class="container">
+<div class="container pad-20">
 
   <div class="row">
     <div class="wide-275 mx-auto text-center">
-       <a class="btn btn-primary text-white mar-10" href="" role="button">View Character Sheet</a>
+       <a class="btn btn-primary text-white mar-10" href="character.php" role="button">View Character</a>
     </div>
   </div><!-- /.row -->
+
   <div class="row">
     <div class="wide-275 mx-auto text-center">
-       <a class="btn btn-primary text-white mar-10" href="" role="button">Reset Character</a>
+       <a class="btn btn-primary text-white mar-10" href="skill-tree.php" role="button">View Skill Tree</a>
     </div>
   </div><!-- /.row -->
-  
+
+  <div class="row">
+    <div class="wide-275 mx-auto text-center">
+       <a class="btn btn-primary text-white mar-10" href="name.php" role="button">Rename Character</a>
+    </div>
+  </div><!-- /.row -->
+
+  <div class="row">
+    <div class="wide-275 mx-auto text-center">
+       <a class="btn btn-primary text-white mar-10" href="index.php" role="button">Delete Character</a>
+    </div>
+  </div><!-- /.row -->
+
 </div><!-- /.container -->
 
 <script>
@@ -58,8 +71,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 <footer class="footer mt-auto text-center bg-lightgray">
   <div class="container pad-20">
     <div class="pad-b-20">
-      <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="http://rapid-phyre.net" role="button">Restart</a>
-      <button class="btn btn-dark text-white mar-r-10 mar-l-10" onclick="goBack()" role="button">Return</button>
+      <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="rulebook.php" role="button">View Rulebook</a>
     </div>
     <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
