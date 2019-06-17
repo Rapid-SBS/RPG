@@ -142,7 +142,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
     pdata = player;
 
-    var p = new Vue({
+    var playerapp = new Vue({
       el: '#app-player',
       data: {
         p: {
