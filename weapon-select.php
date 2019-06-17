@@ -39,35 +39,35 @@ var weapon = {
 
   $(document).ready(function(){
 
-  if (rpgclass.name === "Warrior") {
+    // ----- Loads the selected class -----
+    if (rpgclass.name === "Warrior") {
 
-    $("#weapon-select").load("weapons/weapons-warrior.php");
-    
-  } else if (rpgclass.name === "Archer") {
+      $("#weapon-select").load("weapons/weapons-warrior.php");
+      
+    } else if (rpgclass.name === "Archer") {
 
-    $("#weapon-select").load("weapons/weapons-archer.php");
+      $("#weapon-select").load("weapons/weapons-archer.php");
 
-  } else if (rpgclass.name === "Mage") {
+    } else if (rpgclass.name === "Mage") {
 
-    $("#weapon-select").load("weapons/weapons-mage.php");
-    
-  } else if (rpgclass.name === "Cleric") {
+      $("#weapon-select").load("weapons/weapons-mage.php");
+      
+    } else if (rpgclass.name === "Cleric") {
 
-    $("#weapon-select").load("weapons/weapons-cleric.php");
-    
-  } else if (rpgclass.name === "Rogue") {
+      $("#weapon-select").load("weapons/weapons-cleric.php");
+      
+    } else if (rpgclass.name === "Rogue") {
 
-    $("#weapon-select").load("weapons/weapons-rogue.php");
-    
-  } else if (rpgclass.name === "Monk") {
+      $("#weapon-select").load("weapons/weapons-rogue.php");
+      
+    } else if (rpgclass.name === "Monk") {
 
-    $("#weapon-select").load("weapons/weapons-monk.php");
-    
-  } else {
+      $("#weapon-select").load("weapons/weapons-monk.php");
+      
+    } else {
 
-    $("#weapon-select").html("<h2>No Class Selected </h2>");
-  
-  }
+      $("#weapon-select").html("<h2>No Class Selected </h2>");
+    }
   });
 </script>
 
