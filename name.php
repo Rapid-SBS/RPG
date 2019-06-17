@@ -38,9 +38,9 @@
 
   <form>
     <div class="form-row">
-      <div class="wide-275">
-        <input type="text" class="form-control pad-10" id="inputName" aria-describedby="emailHelp" placeholder="Enter a name...">
-        <button type="submit" class="btn btn-primary pad-10">Save</button>
+      <div class="wide-275 mx-auto">
+        <input type="text" class="form-control mar-10" id="inputName" aria-describedby="emailHelp" placeholder="Enter a name...">
+        <button type="submit" class="btn btn-primary mar-10">Save</button>
       </div>
     </div><!-- /.form-row -->
   </form>
