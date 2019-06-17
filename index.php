@@ -239,12 +239,21 @@
   </a>
 
 </div><!-- /Class Selection -->
+<div id="player">
+  <h1 class="mx-auto">{{player.name}}</h1>
+</div>
 
-<h1 class="mx-auto">{{p.name}}</h1>
 <script> 
+var player = new Vue({
+  el: '#app',
+  data: {
+    name: "Test Name"
+  }
+})
+
 // --- Initialize Player Object ---
-var player = {
-  name: "test",
+/* var player = {
+  name: undefined,
   level: undefined,
   class: undefined,
   weapon: undefined,
@@ -258,13 +267,7 @@ var player = {
   support: undefined,
   attack: undefined,
   ultimate: undefined
-}
-
-var pdata = player.name;
-var p = new Vue({
-  data: pdata
-})
-console.log(p.name);
+} */
 
 var skills = {
   hp: 0,
