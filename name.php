@@ -24,14 +24,22 @@
 <body>
 	
 <div class="text-white text-center bg-primary">
-  <h5 class="pad-10"> Character Sheet </h5>
+  <h5 class="pad-10"> Character Name </h5>
 </div>
 
 <div class="row pad-40">
   <div class="col">
     <p class="mx-auto text-center">You are a <span id="rpg-class"></span> <span id="rpg-weapon" class="text-lowercase"></span>.</p>
+    <p class="mx-auto text-center">What is your name?</p>
   </div>
 </div><!-- /.row -->
+
+<form class="pad-20">
+  <div class="form-group">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter a name...">
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
 
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
