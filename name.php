@@ -29,7 +29,7 @@
 
 <div class="row pad-40">
   <div class="col">
-    <p class="mx-auto text-center">You are a <span id="rpg-class"></span> <span id="rpg-weapon"></span></p>
+    <p class="mx-auto text-center">You are a <span id="rpg-class"></span> <span id="rpg-weapon" class="text-lowercase"></span></p>
   </div>
 </div><!-- /.row -->
 
