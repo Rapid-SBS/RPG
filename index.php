@@ -242,7 +242,7 @@
 
 <script> 
 // --- Initialize Player Object ---
-var player = {
+var player = new Vue({
   name: undefined,
   level: undefined,
   class: undefined,
@@ -257,7 +257,7 @@ var player = {
   support: undefined,
   attack: undefined,
   ultimate: undefined
-}
+})
 
 var skills = {
   hp: 0,
