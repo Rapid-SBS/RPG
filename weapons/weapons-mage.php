@@ -13,7 +13,7 @@
 <script>
 function setWeaponIce() {
   weapon = {
-    name: "Ice",
+    name: "Ice Stone",
     basic: "Ice Blast",
     special: "Glacial Barrier",
   }
@@ -23,7 +23,7 @@ function setWeaponIce() {
 
 function setWeaponFire() {
   weapon = {
-    name: "Fire",
+    name: "Fire Stone",
     basic: "Fireball",
     special: "Immolate",
   }
@@ -32,7 +32,7 @@ function setWeaponFire() {
 }
 function setWeaponLightning() {
   weapon = {
-    name: "Lightning",
+    name: "Lightning Stone",
     basic: "Spark",
     special: "Discharge",
   }

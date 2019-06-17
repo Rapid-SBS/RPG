@@ -62,16 +62,24 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
       $("#rpg-weapon").text("who wields a fearsome " + weapon.name);
     } else if (weapon.name === "Bow" || weapon.name === "Crossbow" || weapon.name === "Longbow") {
       $("#rpg-weapon").text("attacking from afar with your " + weapon.name);
-    } else if (weapon.name === "Sword & Shield") {
-      $("#rpg-weapon").text("mighty " + weapon.name);
-    } else if (weapon.name === "Sword & Shield") {
-      $("#rpg-weapon").text("mighty " + weapon.name);
-    } else if (weapon.name === "Sword & Shield") {
-      $("#rpg-weapon").text("mighty " + weapon.name);
-    } else if (weapon.name === "Sword & Shield") {
-      $("#rpg-weapon").text("mighty " + weapon.name);
-    } else if (weapon.name === "Sword & Shield") {
-      $("#rpg-weapon").text("mighty " + weapon.name);
+    } else if (weapon.name === "Sword & Shield" || weapon.name === "Mace & Shield") {
+      $("#rpg-weapon").text("defending your allies with your " + weapon.name);
+    } else if (weapon.name === "Quarterstaff" || weapon.name === "Holy Tome") {
+      $("#rpg-weapon").text("supporting your allies with your " + weapon.name);
+    } else if (weapon.name === "Ice Stone" || weapon.name === "Fire Stone" || weapon.name === "Lightning Stone") {
+      $("#rpg-weapon").text("harnessing the power of the elements with your " + weapon.name);
+    } else if (weapon.name === "Bo Staff") {
+      $("#rpg-weapon").text("and a master of the " + weapon.name);
+    } else if (weapon.name === "Brawler's Fist") {
+      $("#rpg-weapon").text("a master of martial arts and chi manipulation" + weapon.name);
+    } else if (weapon.name === "Wind Fu") {
+      $("#rpg-weapon").text("mixing martial arts with the wind element" + weapon.name);
+    } else if (weapon.name === "Shuriken") {
+      $("#rpg-weapon").text("the ultimate assassin with your shuriken and shadow clones");
+    } else if (weapon.name === "Dual Sai") {
+      $("#rpg-weapon").text("ravaging enemies with your dual sai and shadow abilities");
+    } else if (weapon.name === "Dagger") {
+      $("#rpg-weapon").text("wreaking havoc with your dagger and alchemical potions");
     } else {
       $("#rpg-weapon").text("who wields a " + weapon.name);
     }

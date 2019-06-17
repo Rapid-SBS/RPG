@@ -14,7 +14,7 @@
 
 function setWeaponMace() {
   weapon = {
-    name: "Mace",
+    name: "Mace & Shield",
     basic: "Bludgeon",
     special: "Shield Ally",
   }
@@ -33,7 +33,7 @@ function setWeaponQuarterstaff() {
 }
 function setWeaponTome() {
   weapon = {
-    name: "Tome",
+    name: "Holy Tome",
     basic: "Blessing",
     special: "Healing Circle",
   }
