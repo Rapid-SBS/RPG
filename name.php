@@ -40,7 +40,7 @@
     <div class="form-row pad-b-40">
       <div class="wide-275 mx-auto text-center">
         <input type="text" class="form-control pad-10" id="inputName" aria-describedby="emailHelp" placeholder="Enter a name...">
-        <button type="submit" class="btn btn-primary mar-t-20">Save</button>
+        <button id="save-name" type="submit" class="btn btn-primary mar-t-20" onclick="savePlayerName()">Save</button>
       </div>
     </div><!-- /.form-row -->
   </form>
@@ -97,6 +97,15 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
     } else {
       $("#rpg-weapon").text("who wields a " + weapon.name);
     }
+  });
+
+  $(document).ready(function(){ // ----- Save Name -----
+    $("#save-name").click(function(){
+     
+      player.name = "Name";
+      console.log(player.name);
+
+      localStorage.setItem('objPlayer', JSON.stringify(player));
   });
 </script>
 
