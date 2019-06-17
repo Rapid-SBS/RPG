@@ -58,9 +58,9 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   });
 
   $(document).ready(function(){
-    if (weapon.name == "Battle Axe" || "War Hammer") {
+    if (weapon.name === "Battle Axe") {
       $("#rpg-weapon").text("mighty " + weapon.name);
-    } else if (weapon.name == "Sword & Shield") {
+    } else if (weapon.name === "Sword & Shield") {
       $("#rpg-weapon").text(weapon.name);
     } else {
       $("#rpg-weapon").text(weapon.name);
