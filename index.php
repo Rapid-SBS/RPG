@@ -239,11 +239,11 @@
   </a>
 
 </div><!-- /Class Selection -->
-
+<h1>{{player.name}}</h1>
 <script> 
 // --- Initialize Player Object ---
 var player = new Vue({
-  name: undefined,
+  name: "test",
   level: undefined,
   class: undefined,
   weapon: undefined,
