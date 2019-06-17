@@ -72,7 +72,7 @@ var weapon = {
 
 </div><!-- /.y-flex-container -->
 
-<footer class="footer mt-auto text-center bg-light">
+<footer class="footer mt-auto text-center bg-lightgray">
   <div class="container pad-20">
     <div class="pad-b-20">
       <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="http://rapid-phyre.net" role="button">Restart</a>
