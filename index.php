@@ -247,7 +247,9 @@
 var player = new Vue({
   el: '#app-player',
   data: {
-    name: "Test Name"
+    player: {
+      name: "Test Name"
+    }
   }
 });
 
