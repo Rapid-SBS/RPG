@@ -101,7 +101,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
   $(document).ready(function(){ // ----- Save Name -----
     $("#save-name").click(function(){
-     
+      event.preventDefault()
       player.name = "Name";
       console.log(player.name);
 
