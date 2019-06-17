@@ -38,17 +38,17 @@
   </div><!-- /.row -->
 
   <form>
-    <div class="form-row pad-b-40">
+    <div class="form-row pad-b-20">
       <div class="wide-275 mx-auto text-center">
         <input type="text" class="form-control pad-10" id="inputName" aria-describedby="emailHelp" placeholder="Enter a name...">
-        <button id="save-name" type="submit" :style="" class="btn btn-primary mar-t-20">Save</button>
+        <button id="save-name" type="submit" class="btn btn-primary mar-t-20">Save</button>
       </div>
     </div><!-- /.form-row -->
   </form>
 
 </div><!-- /.container -->
 
-<div id="name-saved" class="text-white text-center pad-10 mar-b-10 bg-primary" style="display: none;">
+<div id="name-saved" class="text-white text-center pad-10 mar-b-20 bg-primary" style="display: none;">
   <h5 class="pad-10">Name Saved!</h5>
 </div>
 
