@@ -122,9 +122,7 @@ var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
   $(document).ready(function(){
-
-  	player.name = undefined;
-  	player.level = 0;
+    
   	player.class = rpgclass.name;
   	player.weapon = weapon.name;
 
@@ -139,10 +137,10 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   	player.support = skills.support;
   	player.attack = skills.attack;
   	player.ultimate = skills.ultimate;
-
+/*
     $("#tb-rpg-name").text(player.name);
     $("#tb-rpg-level").text(player.level);
-/*    $("#tb-rpg-class").text(player.class); */
+    $("#tb-rpg-class").text(player.class); 
     $("#tb-rpg-weapon").text(player.weapon);
 
     $("#tb-rpg-hp").text(player.hp);
@@ -156,7 +154,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
     $("#tb-rpg-support").text(player.support);
     $("#tb-rpg-attack").text(player.attack);
     $("#tb-rpg-ultimate").text(player.ultimate);
-
+*/
   });
 </script>
 
