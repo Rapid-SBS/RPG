@@ -24,24 +24,23 @@
 
 <body>
 
+<div class="text-white text-center bg-primary">
+  <h5 class="pad-10"> Player Menu </h5>
+</div>
+
 <div class="container">
 
   <div class="row">
-
-    <div class="text-white text-center bg-primary">
-      <h5 class="pad-10"> Player Menu </h5>
-    </div>
-
     <div class="wide-275 mx-auto text-center">
        <a class="btn btn-primary text-white mar-10" href="" role="button">View Character Sheet</a>
     </div>
-    <br>
+  </div><!-- /.row -->
+  <div class="row">
     <div class="wide-275 mx-auto text-center">
        <a class="btn btn-primary text-white mar-10" href="" role="button">Reset Character</a>
     </div>
-
   </div><!-- /.row -->
-
+  
 </div><!-- /.container -->
 
 <script>
