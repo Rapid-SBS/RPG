@@ -71,7 +71,9 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
       $("#rpg-class").text("deadly " + rpgclass.name);
     } else if (rpgclass.name === "Monk") {
       $("#rpg-class").text("wise " + rpgclass.name);
-    } else {
+    } else if (rpgclass.name === "Rune Master") {
+      $("#rpg-class").text("powerful " + rpgclass.name);
+    }else {
       $("#weapon-select").html("<h2>No Class Selected </h2>");
     } 
   });
@@ -99,7 +101,13 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
       $("#rpg-weapon").text(", ravaging enemies with your dual sai and shadow abilities");
     } else if (weapon.name === "Dagger") {
       $("#rpg-weapon").text(", wreaking havoc with your dagger and alchemical potions");
-    } else {
+    } else if (weapon.name === "Runeblade") {
+      $("#rpg-weapon").text(", channeling the elements through your runeblade with the might of a warrior and the powers of a mage");
+    } else if (weapon.name === "Runestone") {
+      $("#rpg-weapon").text(", wielding and combining multiple elements with your collection of runestones");
+    } else if (weapon.name === "Aether Stone") {
+      $("#rpg-weapon").text(", one of the only known people to wield both light and dark elements");
+    }else {
       $("#rpg-weapon").text("who wields a " + weapon.name);
     }
   });

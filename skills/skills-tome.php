@@ -36,7 +36,7 @@
   <div id="rpg-skills-lvl-5" class="border-top pad-20" style="width: 100%;">
     
     <div class="row pad-10"><h5 class="mx-auto">LEVEL 5</h5></div>
-    <?php include 'attacks/tome.php'; ?>
+    <?php include 'supports/tome.php'; ?>
 
   </div><!-- / Level 5 -->
 
@@ -57,7 +57,7 @@
   <div id="rpg-skills-lvl-2" class="border-top pad-20" style="width: 100%;">
     
     <div class="row pad-10"><h5 class="mx-auto">LEVEL 2</h5></div>
-    <?php include 'supports/tome.php'; ?>
+    <?php include 'attacks/tome.php'; ?>
 
   </div><!-- / Level 2 -->
 
