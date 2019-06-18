@@ -29,23 +29,33 @@
 </div>
 
 <div class="container">
+  <div class="row pad-40 text-center">
 
-
-</div><!-- /.container -->
-
-<div id="name-saved" class="text-white text-center pad-10 mar-b-20 bg-lightgreen" style="display: none;">
-  <h5 class="pad-10">Name Saved!</h5>
+<div id="blog-post-demo">
+<blog-post post-title="hello!"></blog-post>
 </div>
 
+  </div>
+</div><!-- /.container -->
+
+
 <script>
-var player = JSON.parse(localStorage.getItem('objPlayer'));
-var skills = JSON.parse(localStorage.getItem('objSkills'));
-var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
-var weapon = JSON.parse(localStorage.getItem('objWeapon'));
+Vue.component('blog-post', {
+  props: {
+    title: String,
+  }
+  template: '<h3>{{ post.title }}</h3>'
+})
 
-  $(document).ready(function(){
+new Vue({
+  el: '#blog-post-demo',
+  data: {
+    post: {
+      title: 'My Journey with Vue'
+    }
+  }
+})
 
-  });
 </script>
 
 <footer class="footer mt-auto text-center bg-lightgray">
