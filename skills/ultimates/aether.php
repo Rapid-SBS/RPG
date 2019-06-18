@@ -21,13 +21,8 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Combine wind with ice to create a blizzard,<br>dealing damage to all enemies and increasing<br>their Miss Chance for 1 turn.<br>DMG = 3 x (Player INT).<br> Costs 12 Mana.</p> 
+          <p class="card-text text-center">Light falls from the sky like shooting<br>stars and barrages a single enemy.<br>DMG = 4 x (Player INT).<br> Costs 9 Mana.</p> 
         </div>
-        <ul class="list-group list-group-flush text-center">
-          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            Miss Rate <span class="badge bg-white text-teal">+1</span>
-          </li>
-        </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
@@ -38,7 +33,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Combine lightning with fire to form plasma,<br>piercing enemy defenses with its extreme heat.<br>Ignores all enemy RES.<br>DMG = 4 x (Player INT).<br> Costs 10 Mana.</p>
+          <p class="card-text text-center">Open a massive rift to the shadow abyss<br>beneath your enemies, consuming them with darkness.<br>Ignores all enemy RES.<br>DMG = 3 x (Player INT).<br> Costs 12 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
