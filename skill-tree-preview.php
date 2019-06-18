@@ -80,7 +80,7 @@ $(document).ready(function(){
     
   } else if (weapon.name === "Brawler's Fist") {
 
-    $("#skill-select").load("skills/skills-fists.php");
+    $("#skill-select").load("skills/skills-brawler.php");
     
   } else if (weapon.name === "Wind Fu") {
 
