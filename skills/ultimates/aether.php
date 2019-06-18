@@ -2,7 +2,7 @@
 
     <!-- Starfire -->  
     <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseStarfire" role="button" aria-expanded="false" aria-controls="collapseStarfire">
-      <h6>Starfire <span class="badge badge-light text-teal">12</span></h6>
+      <h6>Starfire <span class="badge badge-light text-teal">9</span></h6>
     </a>
 
     <!-- Abyss Break -->
@@ -21,7 +21,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Light falls from the sky like shooting<br>stars and barrages a single enemy.<br>DMG = 4 x (Player INT).<br> Costs 9 Mana.</p> 
+          <p class="card-text text-center">Light falls from the sky and barrages a single enemy.<br>DMG = 4 x (Player INT).<br> Costs 9 Mana.</p> 
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
@@ -33,7 +33,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Open a massive rift to the shadow abyss<br>beneath your enemies, consuming them with darkness.<br>Ignores all enemy RES.<br>DMG = 3 x (Player INT).<br> Costs 12 Mana.</p>
+          <p class="card-text text-center">Open a massive rift to the Shadow Abyss beneath<br> your enemies, overwhelming them with darkness.<br>Ignores all enemy RES.<br>DMG = 3 x (Player INT).<br> Costs 12 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
