@@ -50,7 +50,7 @@ $(document).ready(function(){
 
     $("#skill-select").load("skills/skills-longbow.php");
     
-  } else if (weapon.name === "Mace") {
+  } else if (weapon.name === "Mace & Shield") {
 
     $("#skill-select").load("skills/skills-mace.php");
     
@@ -62,15 +62,15 @@ $(document).ready(function(){
 
     $("#skill-select").load("skills/skills-tome.php");
   
-  } else if (weapon.name === "Ice") {
+  } else if (weapon.name === "Ice Stone") {
 
     $("#skill-select").load("skills/skills-ice.php");
     
-  } else if (weapon.name === "Fire") {
+  } else if (weapon.name === "Fire Stone") {
 
     $("#skill-select").load("skills/skills-fire.php");
     
-  } else if (weapon.name === "Lightning") {
+  } else if (weapon.name === "Lightning Stone") {
 
     $("#skill-select").load("skills/skills-lightning.php");
   

@@ -245,7 +245,7 @@
         <h5>Rogue</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">As deadly thieves and assassins, Rogues can attack using daggers or throwing knives with high critical attack rate.</p>
+        <p class="card-text text-center">As deadly thieves and assassins, Rogues can attack using daggers, sai, or shuriken with high critical attack rate.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
