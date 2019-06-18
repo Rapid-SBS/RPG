@@ -107,7 +107,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
       $("#rpg-weapon").text(", wielding and combining multiple elements with your collection of runestones");
     } else if (weapon.name === "Aether Stone") {
       $("#rpg-weapon").text(", one of the only known people to wield both light and dark elements");
-    }else {
+    } else {
       $("#rpg-weapon").text("who wields a " + weapon.name);
     }
   });
