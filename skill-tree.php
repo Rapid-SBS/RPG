@@ -2,10 +2,10 @@
 
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 
   <script
   src="https://code.jquery.com/jquery-3.4.1.js"
@@ -35,98 +35,44 @@ var skills = JSON.parse(localStorage.getItem('objSkills'));
 
 $(document).ready(function(){
 
-  if (weapon.name === "Bow") {
-
-    $("#skill-select").load("skills/skills-bow.php");
-    
-  } else if (weapon.name === "Crossbow") {
-
-    $("#skill-select").load("skills/skills-crossbow.php");
-
-  } else if (weapon.name === "Longbow") {
-
-    $("#skill-select").load("skills/skills-longbow.php");
-    
-  } else if (weapon.name === "Mace") {
-
-    $("#skill-select").load("skills/skills-mace.php");
-    
-  } else if (weapon.name === "Quarterstaff") {
-
-    $("#skill-select").load("skills/skills-quarterstaff.php");
-    
-  } else if (weapon.name === "Tome") {
-
-    $("#skill-select").load("skills/skills-tome.php");
-  
-  } else if (weapon.name === "Ice") {
-
-    $("#skill-select").load("skills/skills-ice.php");
-    
-  } else if (weapon.name === "Fire") {
-
-    $("#skill-select").load("skills/skills-fire.php");
-    
-  } else if (weapon.name === "Lightning") {
-
-    $("#skill-select").load("skills/skills-lightning.php");
-  
-  } else if (weapon.name === "Bo Staff") {
-
-    $("#skill-select").load("skills/skills-bostaff.php");
-    
-  } else if (weapon.name === "Brawler's Fist") {
-
-    $("#skill-select").load("skills/skills-fists.php");
-    
-  } else if (weapon.name === "Wind Fu") {
-
-    $("#skill-select").load("skills/skills-windfu.php");
-
-  } else if (weapon.name === "Dagger") {
-
-    $("#skill-select").load("skills/skills-dagger.php");
-    
-  } else if (weapon.name === "Dual Sai") {
-
-    $("#skill-select").load("skills/skills-sai.php");
-    
-  } else if (weapon.name === "Shuriken") {
-
-    $("#skill-select").load("skills/skills-shuriken.php");
-
-  } else if (weapon.name === "Sword & Shield") {
-
-    $("#skill-select").load("skills/skills-sword.php");
-    
-  } else if (weapon.name === "War Hammer") {
-
-    $("#skill-select").load("skills/skills-warhammer.php");
-    
-  } else if (weapon.name === "Battle Axe") {
-
-    $("#skill-select").load("skills/skills-battleaxe.php");
-    
-  } else {
-
-    $("#skill-select").html("<h2>No Class Selected </h2>");
-  
+  if (weapon.name === "Bow") { $("#skill-select").load("skills/skills-bow.php");
+  } else if (weapon.name === "Crossbow") { $("#skill-select").load("skills/skills-crossbow.php");
+  } else if (weapon.name === "Longbow") { $("#skill-select").load("skills/skills-longbow.php");
+  } else if (weapon.name === "Mace") { $("#skill-select").load("skills/skills-mace.php");
+  } else if (weapon.name === "Quarterstaff") { $("#skill-select").load("skills/skills-quarterstaff.php");
+  } else if (weapon.name === "Tome") { $("#skill-select").load("skills/skills-tome.php");
+  } else if (weapon.name === "Ice") { $("#skill-select").load("skills/skills-ice.php");
+  } else if (weapon.name === "Fire") { $("#skill-select").load("skills/skills-fire.php");
+  } else if (weapon.name === "Lightning") { $("#skill-select").load("skills/skills-lightning.php");  
+  } else if (weapon.name === "Bo Staff") { $("#skill-select").load("skills/skills-bostaff.php");
+  } else if (weapon.name === "Brawler's Fist") { $("#skill-select").load("skills/skills-fists.php");
+  } else if (weapon.name === "Wind Fu") { $("#skill-select").load("skills/skills-windfu.php");
+  } else if (weapon.name === "Dagger") { $("#skill-select").load("skills/skills-dagger.php");
+  } else if (weapon.name === "Dual Sai") { $("#skill-select").load("skills/skills-sai.php");
+  } else if (weapon.name === "Shuriken") { $("#skill-select").load("skills/skills-shuriken.php");
+  } else if (weapon.name === "Sword & Shield") { $("#skill-select").load("skills/skills-sword.php");
+  } else if (weapon.name === "War Hammer") { $("#skill-select").load("skills/skills-warhammer.php");
+  } else if (weapon.name === "Battle Axe") { $("#skill-select").load("skills/skills-battleaxe.php");
+  } else if (weapon.name === "Aether Stone") { $("#skill-select").load("skills/skills-aether.php");
+  } else if (weapon.name === "Runestone") { $("#skill-select").load("skills/skills-runestone.php");
+  } else if (weapon.name === "Runblade") { $("#skill-select").load("skills/skills-runeblade.php");
+  } else { $("#skill-select").html("<h2>No Class Selected </h2>");
   }
 });
 </script>
 
 <footer class="footer mt-auto text-center bg-lightgray">
   <div class="container pad-20">
-    <div class="pad-b-20">
-      <button class="btn btn-dark text-white mar-r-10 mar-l-10" onclick="goBack()" role="button">Return</button>
-    </div>
-    <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
+<div class="pad-b-20">
+  <button class="btn btn-dark text-white mar-r-10 mar-l-10" onclick="goBack()" role="button">Return</button>
+</div>
+<span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
 
   <script>
-    function goBack() {
-      window.history.back();
-    }
+function goBack() {
+  window.history.back();
+}
   </script>
 
 </footer>
