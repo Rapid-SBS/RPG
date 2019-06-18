@@ -58,7 +58,7 @@ $(document).ready(function(){
 
     $("#skill-select").load("skills/skills-quarterstaff.php");
     
-  } else if (weapon.name === "Tome") {
+  } else if (weapon.name === "Holy Tome") {
 
     $("#skill-select").load("skills/skills-tome.php");
   
