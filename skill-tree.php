@@ -24,6 +24,11 @@
 
 <body>
 
+<div class="text-white text-center bg-primary">
+  <h5 class="pad-10"> Skill Tree</h5>
+  <p class="pad-b-10" style="margin-bottom: 0;">You may select 1 skill for each level.</p>
+</div>
+
 <div id="skill-select" class="y-flex-container pad-b-10">
 
 </div><!-- /.y-flex-container -->

@@ -1,4 +1,4 @@
-  <div id="rpg-skills-lvl-10" class="border-top pad-20" style="width: 100%;">
+  <div id="rpg-skills-lvl-10" class="border-top pad-20 overlay" style="width: 100%;">
 
     <div class="row pad-10"><h5 class="mx-auto">LEVEL 10</h5></div>
     <?php include 'passives/attack2.php'; ?>
