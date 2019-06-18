@@ -1,3 +1,30 @@
+/* ===== [ Width Style ] ===== */
+
+.wide-320 {
+    width: 320px;
+}
+
+.max-wide-320 {
+    max-width: 320px;
+}
+
+.wide-275 {
+    width: 275px;
+}
+
+.max-wide-275 {
+    max-width: 275px;
+}
+
+.wide-160 {
+    width: 160px;
+}
+
+.max-wide-160 {
+    max-width: 160px;
+}
+
+
 /* ===== [ Padding Style ] ===== */
 
 .pad-5 {
