@@ -211,7 +211,7 @@
         <h5>Rune Master</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">Masters of the arcane, Rune Masters can combine elements via runestones and inscriptions or wield a deadly Runeblade.</p>
+        <p class="card-text text-center">Masters of the arcane, Rune Masters can combine elements via runestones or wield an Aether Stone or deadly Runeblade.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">

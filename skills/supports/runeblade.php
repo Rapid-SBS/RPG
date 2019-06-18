@@ -1,40 +1,52 @@
   <div class="row justify-content-center">
 
-    <!-- Thunder Blade -->
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseThunderblade" role="button" aria-expanded="false" aria-controls="collapseThunderblade">
-      <h6>Thunder Blade <span class="badge badge-light text-teal">10</span></h6>
+    <!-- Blade Block -->
+    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseBladeblock" role="button" aria-expanded="false" aria-controls="collapseBladeblock">
+      <h6>Blade Block <span class="badge badge-light text-teal">3</span></h6>
     </a>
 
-    <!-- Eruption -->  
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseEruption" role="button" aria-expanded="false" aria-controls="collapseEruption">
-      <h6>Eruption <span class="badge badge-light text-teal">12</span></h6>
+    <!-- Rune Upgrade -->  
+    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseRuneupgrade" role="button" aria-expanded="false" aria-controls="collapseRuneupgrade">
+      <h6>Rune Upgrade <span class="badge badge-light text-teal">2</span></h6>
     </a>
 
   </div><!-- /.row -->
 
-  <div id="ultimate-runeblade" class="row mx-auto pad-10">
+  <div id="support-runeblade" class="row mx-auto pad-10">
 
-    <!-- Thunder Blade -->
-    <div class="collapse mx-auto" id="collapseThunderblade" data-parent="#ultimate-runeblade">
+    <!-- Blade Block -->
+    <div class="collapse mx-auto" id="collapseBladeblock" data-parent="#support-runeblade">
       <div class="card bg-light">
         <div class="card-header text-center">
-          <h6>Ultimate Ability</h6>
+          <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Charge your blade with electricity<br>and attack an enemy with extreme speed.<br>DMG = 5 x (Player INT).<br> Costs 11 Mana.</p>
+          <p class="card-text text-center">Shield yourself with the broad side of your runeblade.<br>Raises DEF for 1 turn..<br>Costs 3 Mana.</p>
         </div>
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
+            <span class="badge bg-white text-green">+2</span>
+            Bonus DEF
+          </li>
+        </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
-    <!-- Eruption -->
-    <div class="collapse mx-auto" id="collapseEruption" data-parent="#ultimate-runeblade">
+    <!-- Rune Upgrade -->
+    <div class="collapse mx-auto" id="collapseRuneupgrade" data-parent="#support-runeblade">
       <div class="card bg-light">
         <div class="card-header text-center">
-          <h6>Ultimate Ability</h6>
+          <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Strike the ground with your runeblade and<br>cause the ground under your enemies to erupt.<br>Applies Burn debuff.<br>DMG = 3 x (Player INT).<br> Costs 12 Mana.</p> 
+          <p class="card-text text-center">Empower your runeblade with a stronger runestone.<br>Boosts INT for 2 turns.<br>Costs 2 Mana.</p> 
         </div>
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
+            <span class="badge bg-white text-purple">+1</span>
+            Bonus INT
+          </li>
+        </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 

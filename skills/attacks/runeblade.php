@@ -1,40 +1,46 @@
   <div class="row justify-content-center">
 
-    <!-- Thunder Blade -->
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseThunderblade" role="button" aria-expanded="false" aria-controls="collapseThunderblade">
-      <h6>Thunder Blade <span class="badge badge-light text-teal">10</span></h6>
+    <!-- Frost Core -->
+    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseFrostcore" role="button" aria-expanded="false" aria-controls="collapseFrostcore">
+      <h6>Frost Core <span class="badge badge-light text-teal">6</span></h6>
     </a>
 
-    <!-- Eruption -->  
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseEruption" role="button" aria-expanded="false" aria-controls="collapseEruption">
-      <h6>Eruption <span class="badge badge-light text-teal">12</span></h6>
+    <!-- Whirlwind -->  
+    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseWhirlwind" role="button" aria-expanded="false" aria-controls="collapseWhirlwind">
+      <h6>Whirlwind <span class="badge badge-light text-teal">6</span></h6>
     </a>
 
   </div><!-- /.row -->
 
-  <div id="ultimate-runeblade" class="row mx-auto pad-10">
+  <div id="attack-runeblade" class="row mx-auto pad-10">
 
-    <!-- Thunder Blade -->
-    <div class="collapse mx-auto" id="collapseThunderblade" data-parent="#ultimate-runeblade">
+    <!-- Frost Core -->
+    <div class="collapse mx-auto" id="collapseFrostcore" data-parent="#attack-runeblade">
       <div class="card bg-light">
         <div class="card-header text-center">
-          <h6>Ultimate Ability</h6>
+          <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Charge your blade with electricity<br>and attack an enemy with extreme speed.<br>DMG = 5 x (Player INT).<br> Costs 11 Mana.</p>
+          <p class="card-text text-center">Plunge your runeblade into your opponent while<br> channeling the ice element, applying Freeze debuff for 1 turn.<br>DMG = 2 x Player ATT.<br> Costs 6 Mana.</p>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
-    <!-- Eruption -->
-    <div class="collapse mx-auto" id="collapseEruption" data-parent="#ultimate-runeblade">
+    <!-- Whirlwind -->
+    <div class="collapse mx-auto" id="collapseWhirlwind" data-parent="#attack-runeblade">
       <div class="card bg-light">
         <div class="card-header text-center">
-          <h6>Ultimate Ability</h6>
+          <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Strike the ground with your runeblade and<br>cause the ground under your enemies to erupt.<br>Applies Burn debuff.<br>DMG = 3 x (Player INT).<br> Costs 12 Mana.</p> 
+          <p class="card-text text-center">Spin up a whirlwind with your runeblade,<br>damaging all enemies.<br>DMG = Weapon ATT + Player INT.<br> Costs 6 Mana.</p> 
         </div>
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
+            <span class="badge bg-white text-orange">3</span>
+            Weapon ATT
+          </li>
+        </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
