@@ -1,5 +1,5 @@
   <!-- Wind Fu-->
-  <div class="rpg-wpn-windfu card wide-275 mar-20 text-white bg-red">
+  <div class="rpg-wpn-windfu card wide-275 mar-20 text-white bg-orange">
   <div class="accordion" id="accordion-windfu">
       <div class="card-header text-center">
         <h4>Wind Fu</h4>
@@ -14,7 +14,7 @@
           <p class="card-text text-center">Perform a spinning kick. <br>Critical Hits apply Stun debuff. <br>DMG = Weapon ATT + Player ATT. </p>
         </div>
         <ul class="list-group text-center">
-          <li class="list-group-item align-items-center light-transparency bg-red" style="padding: .35rem 1.25rem;">
+          <li class="list-group-item align-items-center light-transparency bg-orange" style="padding: .35rem 1.25rem;">
             <span class="badge badge-light text-red">3</span>
             Weapon ATT
           </li>
@@ -30,7 +30,7 @@
           <p class="card-text text-center">Fire razor-sharp winds. <br> Triple Critical Hit Chance. <br>DMG = Weapon ATT + Player INT.<br>Costs 3 Mana.</p>
         </div>
           <ul class="list-group text-center">
-          <li class="list-group-item align-items-center light-transparency bg-red" style="padding: .35rem 1.25rem;">
+          <li class="list-group-item align-items-center light-transparency bg-orange" style="padding: .35rem 1.25rem;">
             <span class="badge badge-light text-red">2</span>
              Weapon ATT
           </li>
