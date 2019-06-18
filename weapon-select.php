@@ -64,6 +64,10 @@ var weapon = {
 
       $("#weapon-select").load("weapons/weapons-monk.php");
       
+    } else if (rpgclass.name === "Runemaster") {
+
+      $("#weapon-select").load("weapons/weapons-runemaster.php");
+      
     } else {
 
       $("#weapon-select").html("<h2>No Class Selected </h2>");
