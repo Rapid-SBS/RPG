@@ -7,7 +7,7 @@
   <div id="rpg-skills-lvl-9" class="border-top pad-20" style="width: 100%;">
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 9</h4></div>
-    <?php include '/ultimates/.php'; ?>
+    <?php include '/ultimates/mace.php'; ?>
 
   </div><!-- / Level 9 -->
 
@@ -26,7 +26,7 @@
   <div id="rpg-skills-lvl-6" class="border-top pad-20" style="width: 100%;">
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 6</h4></div>
-    <?php include '/attacks/.php'; ?>
+    <?php include '/attacks/mace.php'; ?>
 
   </div><!-- / Level 6 -->
 
@@ -45,7 +45,7 @@
   <div id="rpg-skills-lvl-3" class="border-top pad-20" style="width: 100%;">
     
     <div class="row pad-10"><h4 class="mx-auto">LEVEL 3</h4></div>
-    <?php include '/supports/.php'; ?>
+    <?php include '/supports/mace.php'; ?>
 
   </div><!-- / Level 3 -->
 
