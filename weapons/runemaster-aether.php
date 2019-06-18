@@ -11,7 +11,7 @@
       </div>
       <div id="collapseFive" class="collapse hidden" aria-labelledby="headingThree" data-parent="#accordion-aether">
         <div class="card-body light-transparency pad-10 text-center">
-          <p class="card-text text-center">Fire light energy at an enemy.<br>C<br>DMG = Weapon ATT + Player INT. </p>
+          <p class="card-text text-center">Fire light energy at an enemy.<br>DMG = Weapon ATT + Player INT. </p>
         </div>
         <ul class="list-group text-center">
           <li class="list-group-item align-items-center light-transparency bg-purple" style="padding: .35rem 1.25rem;">
@@ -27,7 +27,7 @@
       </div>
       <div id="collapseSix" class="collapse hidden" aria-labelledby="headingFour" data-parent="#accordion-aether">
         <div class="card-body light-transparency pad-10 text-center">
-          <p class="card-text text-center">Fire a dark orb that seeks out an enemy.<br>This attack never misses.<br>DMG = Weapon ATT.<br>Costs 2 Mana.</p>
+          <p class="card-text text-center">Fire a dark orb that seeks out an<br>enemy. This attack never misses.<br>DMG = Weapon ATT.<br>Costs 2 Mana.</p>
         </div>
         <ul class="list-group text-center">
           <li class="list-group-item align-items-center light-transparency bg-purple" style="padding: .35rem 1.25rem;">

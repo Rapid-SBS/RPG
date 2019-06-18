@@ -110,6 +110,18 @@ $(document).ready(function(){
 
     $("#skill-select").load("skills/skills-battleaxe.php");
     
+  } else if (weapon.name === "Aether Stone") {
+
+    $("#skill-select").load("skills/skills-aether.php");
+    
+  } else if (weapon.name === "Runestone") {
+
+    $("#skill-select").load("skills/skills-runestone.php");
+    
+  } else if (weapon.name === "Runeblade") {
+
+    $("#skill-select").load("skills/skills-runeblade.php");
+    
   } else {
 
     $("#skill-select").html("<h2>No Class Selected </h2>");
