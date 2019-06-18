@@ -21,7 +21,7 @@
           <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Partially phase out of this dimension for 1 turn.<br>You are immune to damage but unable to attack.<br>DMG = 4 x (Player INT).<br> Costs 4 Mana.</p> 
+          <p class="card-text text-center">Partially phase out of this dimension for 1 turn.<br>You are immune to damage but unable to attack.<br>Costs 4 Mana.</p> 
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->

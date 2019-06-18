@@ -21,7 +21,7 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Plunge your runeblade into your opponent while<br> channeling the ice element, applying Freeze debuff for 1 turn.<br>DMG = 2 x Player ATT.<br> Costs 6 Mana.</p>
+          <p class="card-text text-center">Plunge your runeblade into your opponent while<br> channeling the ice element, applying Freeze debuff for 1 turn.<br>DMG = 2 x (Player ATT).<br> Costs 6 Mana.</p>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->

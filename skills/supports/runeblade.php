@@ -21,7 +21,7 @@
           <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Shield yourself with the broad side of your runeblade.<br>Raises DEF for 1 turn..<br>Costs 3 Mana.</p>
+          <p class="card-text text-center">Shield yourself with the broad side of your runeblade.<br>Raises DEF for 1 turn.<br>Costs 3 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">

@@ -1,12 +1,12 @@
   <div class="row justify-content-center">
 
     <!-- Steam Shot -->
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseSteamshot" role="button" aria-expanded="false" aria-controls="collapseSteamshot">
+    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseSteamshot" role="button" aria-expanded="false" aria-controls="collapseSteamshot">
       <h6>Steam Shot <span class="badge badge-light text-teal">4</span></h6>
     </a>
 
     <!-- Flame Vortex -->  
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseFlamevortex" role="button" aria-expanded="false" aria-controls="collapseFlamevortex">
+    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseFlamevortex" role="button" aria-expanded="false" aria-controls="collapseFlamevortex">
       <h6>Flame Vortex <span class="badge badge-light text-teal">7</span></h6>
     </a>
 
@@ -38,7 +38,7 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Combine wind with fire to create a flame ,<br>vortex dealing damage to all enemies.<br>DMG = 2 x (Player INT).<br> Costs 12 Mana.</p> 
+          <p class="card-text text-center">Combine wind with fire to create a flame<br>vortex, dealing damage to all enemies.<br>DMG = 2 x (Player INT).<br> Costs 7 Mana.</p> 
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->

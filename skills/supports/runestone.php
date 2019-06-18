@@ -1,12 +1,12 @@
   <div class="row justify-content-center">
 
     <!-- Ward Rune -->
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseWardrune" role="button" aria-expanded="false" aria-controls="collapseWardrune">
+    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseWardrune" role="button" aria-expanded="false" aria-controls="collapseWardrune">
       <h6>Ward Rune <span class="badge badge-light text-teal">4</span></h6>
     </a>
 
     <!-- Healing Rune -->  
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseHealingrune" role="button" aria-expanded="false" aria-controls="collapseHealingrune">
+    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseHealingrune" role="button" aria-expanded="false" aria-controls="collapseHealingrune">
       <h6>Healing Rune <span class="badge badge-light text-teal">5</span></h6>
     </a>
 

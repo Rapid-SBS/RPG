@@ -2,7 +2,7 @@
 
     <!-- Thunder Blade -->
     <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseThunderblade" role="button" aria-expanded="false" aria-controls="collapseThunderblade">
-      <h6>Thunder Blade <span class="badge badge-light text-teal">10</span></h6>
+      <h6>Thunder Blade <span class="badge badge-light text-teal">11</span></h6>
     </a>
 
     <!-- Eruption -->  
