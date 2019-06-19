@@ -128,7 +128,7 @@
       event.preventDefault()
       console.log("Attack Ability: " + $("#attack-selection").text());
       skills.attack = $("#attack-selection").text();
-      localStorage.setItem('objPlayer', JSON.stringify(skills));
+      localStorage.setItem('objSkills', JSON.stringify(skills));
     });
   });
 
