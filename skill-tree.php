@@ -40,7 +40,8 @@ var skills = JSON.parse(localStorage.getItem('objSkills'));
 
 $(document).ready(function(){
   if (weapon.name === "Bow") { $("#skill-select").load("skills/skills-bow.php");
-  } else if (weapon.name === "Crossbow") { $("#skill-select").load("skills/skills-crossbow.php");
+  } else if (weapon.name === "Crossbow") { $("#skill-select").load("skills/skills-crossbow.php");  
+  $("#rpg-skills-lvl-10").hide(); 
   } else if (weapon.name === "Longbow") { $("#skill-select").load("skills/skills-longbow.php");
   } else if (weapon.name === "Mace & Shield") { $("#skill-select").load("skills/skills-mace.php");
   } else if (weapon.name === "Quarterstaff") { $("#skill-select").load("skills/skills-quarterstaff.php");
