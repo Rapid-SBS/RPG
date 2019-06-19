@@ -107,8 +107,8 @@
   });
 
   </script>
-  
-  <script>
+
+  <script> // --- Toggles active state on radio buttons ---
   $('label').click(function() {
      $(this).addClass("active")
             .siblings('label').removeClass("active");
