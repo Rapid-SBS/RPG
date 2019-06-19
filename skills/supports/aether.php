@@ -7,7 +7,7 @@
       </label>
 
       <!-- Light Prism -->
-      <label class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseLightprism" role="button" aria-expanded="false" aria-controls="collapseLightprism">
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseLightprism" role="button" aria-expanded="false" aria-controls="collapseLightprism">
         <input type="radio" name="picked" value="Light Prism" v-model="supportSelection">
         <h6>Light Prism</h6>
       </label>
