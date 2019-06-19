@@ -103,13 +103,16 @@
         $('#skills-saved').delay(2000).fadeOut();
         }
        )
-
-      $('label').click(function() {
-         $(this).addClass("active")
-                .siblings('label').removeClass("active");
-        });
     });
+  });
 
+  </script>
+  
+  <script>
+  $('label').click(function() {
+     $(this).addClass("active")
+            .siblings('label').removeClass("active");
+  });
   </script>
 
   <div id="skills-saved" class="text-white text-center pad-10 bg-lightgreen" style="display: none; width: 100%">
