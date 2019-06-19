@@ -85,7 +85,7 @@
         $("#rpg-skills-lvl-1").addClass("overlay"); 
       }
     });
-/*
+    
   $(document).ready(function(){ // ----- Save Skills -----
 
     $("#save-name").click(function(){
@@ -104,10 +104,7 @@
        )
     });
   });
-*/
   </script>
-
-  </div><!-- / Level 1 -->
 
   <div id="skills-saved" class="text-white text-center pad-10 bg-lightgreen" style="display: none; width: 100%">
     <h5 class="pad-10">Skills Saved!</h5>
