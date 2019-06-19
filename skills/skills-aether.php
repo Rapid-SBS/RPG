@@ -67,7 +67,8 @@
     <?php include 'passives/vitality.php'; ?>
 
   <script>
-
+  var player = JSON.parse(localStorage.getItem('objPlayer'));
+  
     $(document).ready(function(){
       console.log(player.level);
       if (player.level <= 10) { 

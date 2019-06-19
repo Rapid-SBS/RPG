@@ -34,9 +34,7 @@
 </div><!-- /.y-flex-container -->
 
 <script>
-var player = JSON.parse(localStorage.getItem('objPlayer'));
 var weapon = JSON.parse(localStorage.getItem('objWeapon'));
-var skills = JSON.parse(localStorage.getItem('objSkills'));
 
 $(document).ready(function(){
   if (weapon.name === "Bow") { $("#skill-select").load("skills/skills-bow.php");
