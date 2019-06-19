@@ -1,15 +1,19 @@
   <div class="row justify-content-center">
 
-    <!-- Spectral Shift -->  
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseSpectralshift" role="button" aria-expanded="false" aria-controls="collapseSpectralshift">
-      <h6>Spectral Shift <span class="badge badge-light text-teal">4</span></h6>
-    </a>
+    <div id="support-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Spectral Shift -->  
+      <label class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseSpectralshift" role="button" aria-expanded="false" aria-controls="collapseSpectralshift"><input type="radio" name="picked" value="Spectral Shift" v-model="supportSelection">
+        <h6>Spectral Shift</h6>
+      </label>
 
-    <!-- Light Prism -->
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseLightprism" role="button" aria-expanded="false" aria-controls="collapseLightprism">
-      <h6>Light Prism <span class="badge badge-light text-teal">4</span></h6>
-    </a>
-
+      <!-- Light Prism -->
+      <label class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseLightprism" role="button" aria-expanded="false" aria-controls="collapseLightprism">
+        <input type="radio" name="picked" value="Light Prism" v-model="supportSelection">
+        <h6>Light Prism</h6>
+      </label>
+      <br>
+      <h4 style="display: none;" id="support-selection">{{supportSelection}}</h4>
+    </div>
   </div><!-- /.row -->
 
   <div id="support-aether" class="row mx-auto pad-10">
@@ -21,7 +25,7 @@
           <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Partially phase out of this dimension for 1 turn.<br>You are immune to damage but unable to attack.<br>Costs 4 Mana.</p> 
+          <p class="card-text text-center">Partially phase out of this dimension for 1 turn.<br>You are immune to damage but unable to support.<br>Costs 4 Mana.</p> 
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->

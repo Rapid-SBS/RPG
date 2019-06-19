@@ -3,12 +3,14 @@
     <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
       <!-- Void Fissure -->  
       <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseVoidfissure" role="button" aria-expanded="false" aria-controls="collapseVoidfissure">
-        <input type="radio" name="picked" value="Void Fissure" v-model="attackSelection"><h6>Void Fissure <span class="badge badge-light text-teal">5</span></h6>
+        <input type="radio" name="picked" value="Void Fissure" v-model="attackSelection">
+        <h6>Void Fissure</h6>
       </label>
 
       <!-- Light Shatter -->
       <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
-        <input type="radio" name="picked" value="Light Shatter" v-model="attackSelection"><h6>Light Shatter <span class="badge badge-light text-teal">7</span></h6>
+        <input type="radio" name="picked" value="Light Shatter" v-model="attackSelection">
+        <h6>Light Shatter</h6>
       </label>
       <br>
       <h4 style="display: none;" id="attack-selection">{{attackSelection}}</h4>
