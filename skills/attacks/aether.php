@@ -10,7 +10,9 @@
       <a class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
         <input type="radio" name="options" id="attack2" autocomplete="off" value="2" v-model="attackSelection"><h6>Light Shatter <span class="badge badge-light text-teal">7</span></h6>
       </a>
+      <h2>{{attackSelection}}</h2>
     </div>
+
 
     <div>{{attackSelection}}</div>
   </div><!-- /.row -->
