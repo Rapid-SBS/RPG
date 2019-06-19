@@ -77,7 +77,7 @@
         $("#rpg-skills-lvl-3").addClass("overlay"); 
       }
       if (player.level <= 2) { 
-        $("#rpg-skills-lvl-2 > div > label.btn").addClass("disabled"); 
+        $("#support-select > label.btn").addClass("disabled"); 
         $("#rpg-skills-lvl-2").addClass("overlay"); 
       }
       if (player.level <= 1) { 
