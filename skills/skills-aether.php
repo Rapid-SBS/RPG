@@ -91,7 +91,7 @@
         $("#rpg-skills-lvl-6").addClass("overlay"); 
       }
       if (player.level <= 5) { 
-        $("#rpg-skills-lvl-5 > div > a.btn").addClass("disabled"); 
+        $("#rpg-skills-lvl-5 > div > label.btn").addClass("disabled"); 
         $("#rpg-skills-lvl-5").addClass("overlay"); 
       }
       if (player.level <= 4) { 
