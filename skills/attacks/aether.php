@@ -12,18 +12,6 @@
       </a>
     </div>
 
-<!-- 
-
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseVoidfissure" role="button" aria-expanded="false" aria-controls="collapseVoidfissure">
-      <h6>Void Fissure <span class="badge badge-light text-teal">5</span></h6>
-    </a>
-
-
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
-      <h6>Light Shatter <span class="badge badge-light text-teal">7</span></h6>
-    </a>
--->
-
   </div><!-- /.row -->
 
   <div id="attack-aether" class="row mx-auto pad-10">
