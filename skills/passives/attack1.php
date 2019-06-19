@@ -1,16 +1,21 @@
   <div class="row justify-content-center">
 
-    <!-- ATT Boost I -->
-    <a class="btn text-white pad-10 mar-5 bg-paleblue" data-toggle="collapse" href="#collapseATTboost1" role="button" aria-expanded="false" aria-controls="collapseATTboost1">
-      <h6>ATT Boost I</h6>
-    </a>
+    <div id="lvl-1-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- ATT Boost I -->
+      <label class="btn text-white pad-10 mar-5 btn-paleblue" data-toggle="collapse" href="#collapseATTboost1" role="button" aria-expanded="false" aria-controls="collapseATTboost1">
+        <input type="radio" name="passive" value="ATT I" v-model="lvl1Selection">
+        <h6>ATT Boost I</h6>
+      </label>
 
-    <!-- INT Boost I -->
-    <a class="btn text-white pad-10 mar-5 bg-paleblue" data-toggle="collapse" href="#collapseINTboost1" role="button" aria-expanded="false" aria-controls="collapseINTboost1">
-      <h6>INT Boost I</h6>
-    </a>
+      <!-- INT Boost I -->
+      <label class="btn text-white pad-10 mar-5 btn-paleblue" data-toggle="collapse" href="#collapseINTboost1" role="button" aria-expanded="false" aria-controls="collapseINTboost1">
+        <input type="radio" name="passive" value="INT I" v-model="lvl1Selection">
+        <h6>INT Boost I</h6>
+      </label>
 
-
+      <br>
+      <h4 style="display: none;" id="attack-selection">{{lvl1Selection}}</h4>
+    </div>
   </div><!-- /.row -->
 
   <div id="passive-attack1" class="row mx-auto pad-10">

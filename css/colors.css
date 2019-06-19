@@ -114,3 +114,19 @@
   border-color: #7300A6;
   border-radius: .25rem !important;
 }
+
+.btn-paleblue {
+  color: #fff;
+  background-color: #669999;
+  border-color: ##669999;
+  border-radius: .25rem !important;
+}
+.btn-paleblue:hover,
+.btn-paleblue:active,
+.btn-paleblue:focus,
+.btn-paleblue.active {
+  background: #517A7A;
+  color: #ffffff;
+  border-color: #517A7A;
+  border-radius: .25rem !important;
+}
