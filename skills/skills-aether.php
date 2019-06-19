@@ -124,11 +124,21 @@
     });
 
   $(document).ready(function(){ // ----- Save Skills -----
+
     $("#save-name").click(function(){
       event.preventDefault()
       console.log("Attack Ability: " + $("#attack-selection").text());
+
       skills.attack = $("#attack-selection").text();
+      skills.support = $("#support-selection").text();
+      skills.ultimate = $("#ultimate-selection").text();
+
       localStorage.setItem('objSkills', JSON.stringify(skills));
+
+      $('#skills-saved').fadeIn('slow', function(){
+        $('#skills-saved').delay(2000).fadeOut();
+        }
+       )
     });
   });
 
@@ -139,4 +149,6 @@
     <button id="save-name" type="submit" class="btn btn-primary">Save Loadout</button>
   </div>
 
-
+  <div id="skills-saved" class="text-white text-center pad-10 bg-lightgreen" style="display: none;">
+    <h5 class="pad-10">Skills Saved!</h5>
+  </div>
