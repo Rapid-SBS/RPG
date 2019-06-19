@@ -111,6 +111,15 @@
         $("#rpg-skills-lvl-1").addClass("overlay"); 
       }
     });
+
+  $(document).ready(function(){ // ----- Save Skills -----
+    $("#save-name").click(function(){
+      event.preventDefault()
+      console.log("Ability: " + $("#attack-selection").text());
+    });
+  });
+
   </script>
   </div><!-- / Level 1 -->
+
 

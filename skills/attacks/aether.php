@@ -50,20 +50,12 @@
 <button id="save-name" type="submit" class="btn btn-primary mar-t-20">Save</button>
 
 <script>
-
-console.log("Ability: " + $("#attack-selection").text())
-
 new Vue({
   el: '#attack-select',
   data: {
     attackSelection: '',
   }
 })
-  $(document).ready(function(){ // ----- Save Name -----
-    $("#save-name").click(function(){
-      event.preventDefault()
-      console.log("Ability: " + $("#attack-selection").text());
-    });
-  });
+
 </script>
   </div><!-- /.row -->
