@@ -103,12 +103,12 @@
         $('#skills-saved').delay(2000).fadeOut();
         }
        )
-    });
 
       $('label').click(function() {
          $(this).addClass("active")
                 .siblings('label').removeClass("active");
         });
+    });
 
   </script>
 
