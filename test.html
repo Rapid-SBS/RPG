@@ -30,7 +30,7 @@
 
 <div class="container">
 
-<div id="attack-select" class="btn-group btn-group-toggle">
+<div id="attack-select" class="btn-group btn-group-toggle" data-toggle="button">
   <label class="btn btn-blue active">
     <input type="radio" name="options" id="option1" autocomplete="off" value="Void Fissure" v-model="attackSelection" checked> Option 1
   </label>
@@ -38,9 +38,13 @@
     <input type="radio" name="options" id="option2" autocomplete="off" value="Light Shatter" v-model="attackSelection"> Option 2
   </label>
 
-    <h3>{{attack('ability')}}</h3>
+  <h4 style="display: none;" id="attack-selection">{{attackSelection}}</h4>
+
 </div>
 
+  <div class="border-top pad-20" style="width: 100%;">
+    <button id="save-name" type="submit" class="btn btn-primary mar-t-20">Save</button>
+  </div>
 
 </div><!-- /.container -->
 
@@ -49,14 +53,15 @@ new Vue({
   el: '#attack-select',
   data: {
     attackSelection: '',
-  },
-  methods: {
-    attack: function(item){
-      return 'Your ' + item + ' is ' + this.attackSelection
-      console.log(this.attackSelection)
-    }
   }
 })
+
+$(document).ready(function(){ // ----- Save Skills -----
+  $("#save-name").click(function(){
+    event.preventDefault()
+    console.log("Ability: " + $("#attack-selection").text());
+  });
+});
 
 </script>
 

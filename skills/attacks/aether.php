@@ -11,7 +11,7 @@
         <input type="radio" name="picked" value="Light Shatter" v-model="attackSelection"><h6>Light Shatter <span class="badge badge-light text-teal">7</span></h6>
       </label>
       <br>
-      <h4 style="display: none;" id="attack-selection">{{attackSelection}}</h4>
+      <p id="attack-selection">{{attackSelection}}</p>
     </div>
   </div><!-- /.row -->
 
