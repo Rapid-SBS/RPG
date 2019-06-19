@@ -1,14 +1,16 @@
   <div class="row justify-content-center">
 
-    <!-- Void Fissure -->  
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseVoidfissure" role="button" aria-expanded="false" aria-controls="collapseVoidfissure">
-      <input type="radio" name="options" id="option1" autocomplete="off"><h6>Void Fissure <span class="badge badge-light text-teal">5</span></h6>
-    </a>
+    <div class="btn-group btn-toolbar btn-group-toggle" data-toggle="buttons">
+      <!-- Void Fissure -->  
+      <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseVoidfissure" role="button" aria-expanded="false" aria-controls="collapseVoidfissure">
+        <input type="radio" name="options" id="option1" autocomplete="off"><h6>Void Fissure <span class="badge badge-light text-teal">5</span></h6>
+      </a>
 
-    <!-- Light Shatter -->
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
-      <input type="radio" name="options" id="option2" autocomplete="off"><h6>Light Shatter <span class="badge badge-light text-teal">7</span></h6>
-    </a>
+      <!-- Light Shatter -->
+      <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
+        <input type="radio" name="options" id="option2" autocomplete="off"><h6>Light Shatter <span class="badge badge-light text-teal">7</span></h6>
+      </a>
+    </div>
 
 <!-- 
 
