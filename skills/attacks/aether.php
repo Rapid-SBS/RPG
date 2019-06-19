@@ -1,17 +1,18 @@
   <div class="row justify-content-center">
 
-    <div class="btn-group btn-toolbar btn-group-toggle" data-toggle="buttons">
+    <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle" data-toggle="buttons">
       <!-- Void Fissure -->  
       <a class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseVoidfissure" role="button" aria-expanded="false" aria-controls="collapseVoidfissure">
-        <input type="radio" name="options" id="option1" autocomplete="off"><h6>Void Fissure <span class="badge badge-light text-teal">5</span></h6>
+        <input type="radio" name="options" id="attack1" autocomplete="off" value="Void Fissure" v-model="attack-selection"><h6>Void Fissure <span class="badge badge-light text-teal">5</span></h6>
       </a>
 
       <!-- Light Shatter -->
       <a class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
-        <input type="radio" name="options" id="option2" autocomplete="off"><h6>Light Shatter <span class="badge badge-light text-teal">7</span></h6>
+        <input type="radio" name="options" id="attack2" autocomplete="off" value="Light Shatter" v-model="attack-selection"><h6>Light Shatter <span class="badge badge-light text-teal">7</span></h6>
       </a>
     </div>
 
+    <div>{{ attack-selection }}</div>
   </div><!-- /.row -->
 
   <div id="attack-aether" class="row mx-auto pad-10">
@@ -45,5 +46,13 @@
         </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
+
+
+  <script>
+    $(document).ready(function(){
+      console.log(player.level);
+
+    }
+
 
   </div><!-- /.row -->

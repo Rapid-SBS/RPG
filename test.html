@@ -29,30 +29,22 @@
 </div>
 
 <div class="container">
-  <div class="row pad-40 text-center">
 
-<div id="blog-post-demo">
-<blog-post post-title="hello!"></blog-post>
+<div id="radio">
+  <p>
+    <input type="radio" name="picked" value="one" v-model="picked">
+    <input type="radio" name="picked" value="two" v-model="picked">
+    {{picked}}
+  </p>
 </div>
 
-  </div>
 </div><!-- /.container -->
 
-
 <script>
-Vue.component('blog-post', {
-  props: {
-    title: String,
-  }
-  template: '<h3>{{ post.title }}</h3>'
-})
-
 new Vue({
-  el: '#blog-post-demo',
+  el: '#radio',
   data: {
-    post: {
-      title: 'My Journey with Vue'
-    }
+    picked   : '',
   }
 })
 
