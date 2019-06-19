@@ -66,7 +66,7 @@ $(document).ready(function(){
 $(document).ready(function(){
   player.level = 2;
   console.log(player.level);
-  if (player.level >= 1) { $("a.btn").addClass("disabled"); }
+  if (player.level >= 1) { $("a").addClass("disabled"); }
 
 });
 </script>
