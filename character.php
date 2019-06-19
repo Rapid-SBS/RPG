@@ -134,8 +134,10 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   	player.int = skills.int + rpgclass.int;
   	player.res = skills.res + rpgclass.res;
 
-  	player.basic = weapon.basic; player.special = weapon.special;
-    player.support = skills.support; player.attack = skills.attack;
+  	player.basic = weapon.basic; 
+    player.special = weapon.special;
+    player.support = skills.support; 
+    player.attack = skills.attack;
     player.ultimate = skills.ultimate;
 
     // --- Copy player data to be interpolated ---

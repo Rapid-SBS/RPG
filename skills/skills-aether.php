@@ -67,7 +67,7 @@
     <?php include 'passives/vitality.php'; ?>
 
   <script>
-  var player = JSON.parse(localStorage.getItem('objPlayer'));
+  var skills = JSON.parse(localStorage.getItem('objSkills'));
 
   new Vue({ el: '#attack-select',
   data: { attackSelection: '' } })
@@ -127,8 +127,8 @@
     $("#save-name").click(function(){
       event.preventDefault()
       console.log("Attack Ability: " + $("#attack-selection").text());
-      player.attack = $("#attack-selection").text();
-      localStorage.setItem('objPlayer', JSON.stringify(player));
+      skills.attack = $("#attack-selection").text();
+      localStorage.setItem('objPlayer', JSON.stringify(skills));
     });
   });
 
