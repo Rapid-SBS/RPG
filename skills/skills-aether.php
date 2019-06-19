@@ -122,4 +122,8 @@
   </script>
   </div><!-- / Level 1 -->
 
+  <div class="border-top pad-20" style="width: 100%;">
+    <button id="save-name" type="submit" class="btn btn-primary mar-t-20">Save</button>
+  </div>
+
 
