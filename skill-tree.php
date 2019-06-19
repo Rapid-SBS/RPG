@@ -60,7 +60,7 @@ $(document).ready(function(){
   } else if (weapon.name === "Runblade") { $("#skill-select").load("skills/skills-runeblade.php");
   } else { $("#skill-select").html("<h2>No Class Selected </h2>"); }
 
-  $("#skill-tree-footer").load("footer.php")
+  $("#skill-tree-footer").load("footer.php");
 });
 
 </script>
