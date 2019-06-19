@@ -10,14 +10,14 @@
 -->
     <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
       <!-- Void Fissure -->  
-      <a class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseVoidfissure" role="button" aria-expanded="false" aria-controls="collapseVoidfissure">
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseVoidfissure" role="button" aria-expanded="false" aria-controls="collapseVoidfissure">
         <input type="radio" name="picked" value="one" v-model="attackSelection"><h6>Void Fissure <span class="badge badge-light text-teal">5</span></h6>
-      </a>
+      </label>
 
       <!-- Light Shatter -->
-      <a class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
         <input type="radio" name="picked" value="two" v-model="attackSelection"><h6>Light Shatter <span class="badge badge-light text-teal">7</span></h6>
-      </a>
+      </label>
       <h2>{{attackSelection}}</h2>
     </div>
   </div><!-- /.row -->
