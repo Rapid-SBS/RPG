@@ -85,7 +85,7 @@
         $("#rpg-skills-lvl-1").addClass("overlay"); 
       }
     });
-
+/*
   $(document).ready(function(){ // ----- Save Skills -----
 
     $("#save-name").click(function(){
@@ -104,7 +104,7 @@
        )
     });
   });
-
+*/
   </script>
 
   </div><!-- / Level 1 -->
