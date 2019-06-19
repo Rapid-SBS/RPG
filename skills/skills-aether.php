@@ -68,10 +68,10 @@
 
   </div><!-- / Level 1 -->
 
-  <script>
-    $(document).ready(function(){
+<script>
+  $(document).ready(function(){
+    console.log(player.level);
+    if (player.level == 0) { $("a.btn").addClass("disabled"); }
 
-    $("#rpg-skills-lvl-10").hide(); 
-
-});
+  });
 </script>
