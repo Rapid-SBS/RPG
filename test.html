@@ -30,14 +30,27 @@
 
 <div class="container">
 
+<div id="attack-select" class="btn-group btn-group-toggle">
+  <label class="btn btn-blue active">
+    <input type="radio" name="options" id="option1" autocomplete="off" value="Void Fissure" v-model="attackSelection" checked> Option 1
+  </label>
+  <label class="btn btn-blue">
+    <input type="radio" name="options" id="option2" autocomplete="off" value="Light Shatter" v-model="attackSelection"> Option 2
+  </label>
+    <h2>{{attackSelection}}</h2>
+</div>
+
+
+<!--
 <div id="attack-select">
   <p>
-    <input type="radio" name="picked" value="one" v-model="attackSelection">
-    <input type="radio" name="picked" value="two" v-model="attackSelection">
+        <input class="btn text-white btn-blue" type="radio" name="picked" value="Void Fissure" v-model="attackSelection"><h6>Void Fissure <span class="badge badge-light text-teal">5</span></h6>
+
+        <input class="btn text-white btn-blue" type="radio" name="picked" value="Light Shatter" v-model="attackSelection"><h6>Light Shatter <span class="badge badge-light text-teal">5</span></h6>
   </p>
   <h2>{{attackSelection}}</h2>
 </div>
-
+-->
 </div><!-- /.container -->
 
 <script>
