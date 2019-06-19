@@ -126,7 +126,8 @@
   $(document).ready(function(){ // ----- Save Skills -----
     $("#save-name").click(function(){
       event.preventDefault()
-      console.log("Ability: " + $("#attack-selection").text());
+      console.log("Attack Ability: " + $("#attack-selection").text());
+      localStorage.setItem('objPlayer', JSON.stringify(player.attack));
     });
   });
 
@@ -134,7 +135,7 @@
   </div><!-- / Level 1 -->
 
   <div class="wide-275 mar-10 mx-auto text-center">
-    <button id="save-name" type="submit" class="btn btn-primary mar-t-20">Save Loadout</button>
+    <button id="save-name" type="submit" class="btn btn-primary">Save Loadout</button>
   </div>
 
 
