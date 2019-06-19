@@ -69,7 +69,7 @@
   <script>
     $(document).ready(function(){
       console.log(player.level);
-      if (player.level == 0) { $("a.btn").addClass("disabled"); }
+      if (player.level == 0) { $("#rpg-skills-lvl-1 > div > a.btn").addClass("disabled"); }
 
     });
   </script>
