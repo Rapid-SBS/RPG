@@ -1,16 +1,21 @@
   <div class="row justify-content-center">
 
-    <!-- Mana Regen II -->
-    <a class="btn text-white pad-10 mar-5 bg-paleblue" data-toggle="collapse" href="#collapseMana1" role="button" aria-expanded="false" aria-controls="collapseMana1">
-      <h6>Mana Regen II</h6>
-    </a>
+    <div id="lvl-9-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Mana Regen II -->
+      <label class="btn text-white pad-10 mar-5 btn-paleblue" data-toggle="collapse" href="#collapseMana2" role="button" aria-expanded="false" aria-controls="collapseMana2">
+        <input type="radio" name="passive" value="Mana II" v-model="lvl9Selection">
+        <h6>Mana Regen II</h6>
+      </label>
 
+      <br>
+      <h9 style="display: none;" id="#lvl-9-select">{{lvl9Selection}}</h9>
+    </div>
   </div><!-- /.row -->
 
-  <div id="passive-mana2" class="row mx-auto pad-10">
+  <div id="passive-mana1" class="row mx-auto pad-10">
 
     <!-- Mana Regen II -->
-    <div class="collapse mx-auto" id="collapseMana1" data-parent="#passive-mana2">
+    <div class="collapse mx-auto" id="collapseMana2" data-parent="#passive-mana2">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Passive Skill</h6>

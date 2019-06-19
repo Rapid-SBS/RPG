@@ -4,7 +4,7 @@
       <!-- Mana Regen I -->
       <label class="btn text-white pad-10 mar-5 btn-paleblue" data-toggle="collapse" href="#collapseMana1" role="button" aria-expanded="false" aria-controls="collapseMana1">
         <input type="radio" name="passive" value="Mana I" v-model="lvl4Selection">
-        <h4>Mana Regen I</h4>
+        <h6>Mana Regen I</h6>
       </label>
 
       <br>
@@ -18,7 +18,7 @@
     <div class="collapse mx-auto" id="collapseMana1" data-parent="#passive-mana1">
       <div class="card bg-light">
         <div class="card-header text-center">
-          <h4>Passive Skill</h4>
+          <h6>Passive Skill</h6>
         </div>
         <div class="card-body pad-5">
           <p class="card-text text-center">Using your Basic Ability restores 1 mana.<br>
