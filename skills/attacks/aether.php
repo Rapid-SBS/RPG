@@ -12,9 +12,6 @@
       </a>
       <h2>{{attackSelection}}</h2>
     </div>
-
-
-    <div>{{attackSelection}}</div>
   </div><!-- /.row -->
 
   <div id="attack-aether" class="row mx-auto pad-10">
