@@ -12,7 +12,7 @@
     </div>
   </div><!-- /.row -->
 
-  <div id="passive-mana1" class="row mx-auto pad-10">
+  <div id="passive-mana2" class="row mx-auto pad-10">
 
     <!-- Mana Regen II -->
     <div class="collapse mx-auto" id="collapseMana2" data-parent="#passive-mana2">

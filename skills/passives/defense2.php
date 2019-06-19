@@ -27,7 +27,7 @@
           <h6>Passive Skill</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Permanently increase DEF by 1.<br>
+          <p class="card-text text-center">Permanently increase DEF by an additional 1.<br>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
@@ -45,7 +45,7 @@
           <h6>Passive Skill</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Permanently increase RES by 1.<br>
+          <p class="card-text text-center">Permanently increase RES by an additional 1.<br>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
