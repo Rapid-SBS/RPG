@@ -29,7 +29,7 @@
   <p class="pad-b-10" style="margin-bottom: 0;">You may select 1 skill for each level.</p>
 </div>
 
-<div id="skill-select" class="y-flex-container pad-b-10">
+<div id="skill-select" class="y-flex-container">
 
 </div><!-- /.y-flex-container -->
 
@@ -59,24 +59,15 @@ $(document).ready(function(){
   } else if (weapon.name === "Runestone") { $("#skill-select").load("skills/skills-runestone.php");
   } else if (weapon.name === "Runblade") { $("#skill-select").load("skills/skills-runeblade.php");
   } else { $("#skill-select").html("<h2>No Class Selected </h2>"); }
+
+  $("#skill-tree-footer").load("footer.php")
 });
+
 </script>
 
-<footer class="footer mt-auto text-center bg-lightgray">
-  <div class="container pad-20">
-<div class="pad-b-20">
-  <button class="btn btn-dark text-white mar-r-10 mar-l-10" onclick="goBack()" role="button">Return</button>
+<div id="skill-tree-footer">
+
 </div>
-<span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
-  </div>
-
-  <script>
-function goBack() {
-  window.history.back();
-}
-  </script>
-
-</footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
