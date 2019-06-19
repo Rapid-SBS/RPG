@@ -3,13 +3,13 @@
     <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
       <!-- Void Fissure -->  
       <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseVoidfissure" role="button" aria-expanded="false" aria-controls="collapseVoidfissure">
-        <input type="radio" name="picked" value="Void Fissure" v-model="attackSelection">
+        <input type="radio" name="ability" value="Void Fissure" v-model="attackSelection">
         <h6>Void Fissure</h6>
       </label>
 
       <!-- Light Shatter -->
       <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
-        <input type="radio" name="picked" value="Light Shatter" v-model="attackSelection">
+        <input type="radio" name="ability" value="Light Shatter" v-model="attackSelection">
         <h6>Light Shatter</h6>
       </label>
       <br>
@@ -48,5 +48,12 @@
         </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
+
+<script>
+  $('input:radio[name="ability"]').click(function() {
+   $(this).addClass("active")
+          .siblings('input:radio[name="ability"]').removeClass("active");
+});
+</script>
 
   </div><!-- /.row -->
