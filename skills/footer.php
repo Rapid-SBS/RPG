@@ -2,6 +2,16 @@
   var player = JSON.parse(localStorage.getItem('objPlayer'));
   var skills = JSON.parse(localStorage.getItem('objSkills'));
 
+  skills = {
+      hp: 0,
+      att: 0,
+      def: 0,
+      int: 0,
+      res: 0,
+    }
+
+  console.log(skills)
+
   new Vue({ el: '#attack-select',
   data: { attackSelection: '' } })
 
@@ -11,6 +21,26 @@
   new Vue({ el: '#ultimate-select',
   data: { ultimateSelection: '' } })
 
+  new Vue({ el: '#lvl-1-select',
+  data: { lvl1Selection: '' } })
+
+  new Vue({ el: '#lvl-3-select',
+  data: { lvl3Selection: '' } })
+
+  new Vue({ el: '#lvl-4-select',
+  data: { lvl4Selection: '' } })
+
+  new Vue({ el: '#lvl-6-select',
+  data: { lvl6Selection: '' } })
+
+  new Vue({ el: '#lvl-7-select',
+  data: { lvl7Selection: '' } })
+
+  new Vue({ el: '#lvl-9-select',
+  data: { lvl9Selection: '' } })
+
+  new Vue({ el: '#lvl-10-select',
+  data: { lvl10Selection: '' } })
 
     $(document).ready(function(){
       console.log(player.level);
