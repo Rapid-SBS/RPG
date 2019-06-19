@@ -127,7 +127,8 @@
     $("#save-name").click(function(){
       event.preventDefault()
       console.log("Attack Ability: " + $("#attack-selection").text());
-      localStorage.setItem('objPlayer', JSON.stringify(player.attack));
+      player.attack = $("#attack-selection").text();
+      localStorage.setItem('objPlayer', JSON.stringify(player));
     });
   });
 
