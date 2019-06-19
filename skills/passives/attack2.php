@@ -1,16 +1,21 @@
   <div class="row justify-content-center">
 
-    <!-- ATT Boost II -->
-    <a class="btn text-white pad-10 mar-5 bg-paleblue" data-toggle="collapse" href="#collapseATTboost2" role="button" aria-expanded="false" aria-controls="collapseATTboost2">
-      <h6>ATT Boost II</h6>
-    </a>
+    <div id="lvl-10-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- ATT Boost II -->
+      <label class="btn text-white pad-10 mar-5 btn-paleblue" data-toggle="collapse" href="#collapseATTboost2" role="button" aria-expanded="false" aria-controls="collapseATTboost2">
+        <input type="radio" name="passive" value="ATT II" v-model="lvl10Selection">
+        <h6>ATT Boost II</h6>
+      </label>
 
-    <!-- INT Boost II -->
-    <a class="btn text-white pad-10 mar-5 bg-paleblue" data-toggle="collapse" href="#collapseINTboost2" role="button" aria-expanded="false" aria-controls="collapseINTboost2">
-      <h6>INT Boost II</h6>
-    </a>
+      <!-- INT Boost II -->
+      <label class="btn text-white pad-10 mar-5 btn-paleblue" data-toggle="collapse" href="#collapseINTboost2" role="button" aria-expanded="false" aria-controls="collapseINTboost2">
+        <input type="radio" name="passive" value="INT II" v-model="lvl10Selection">
+        <h6>INT Boost II</h6>
+      </label>
 
-
+      <br>
+      <h4 style="display: none;" id="#lvl-10-select">{{lvl10Selection}}</h4>
+    </div>
   </div><!-- /.row -->
 
   <div id="passive-attack2" class="row mx-auto pad-10">
@@ -22,7 +27,7 @@
           <h6>Passive Skill</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Permanently increase ATT by 1.<br>
+          <p class="card-text text-center">Permanently increase ATT by an additional 1.<br>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
@@ -40,7 +45,7 @@
           <h6>Passive Skill</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Permanently increase INT by 1.<br>
+          <p class="card-text text-center">Permanently increase INT by an additional 1.<br>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">

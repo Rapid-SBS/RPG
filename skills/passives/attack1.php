@@ -1,20 +1,20 @@
   <div class="row justify-content-center">
 
-    <div id="lvl-1-select" class="btn-group btn-toolbar btn-group-toggle">
+    <div id="lvl-6-select" class="btn-group btn-toolbar btn-group-toggle">
       <!-- ATT Boost I -->
       <label class="btn text-white pad-10 mar-5 btn-paleblue" data-toggle="collapse" href="#collapseATTboost1" role="button" aria-expanded="false" aria-controls="collapseATTboost1">
-        <input type="radio" name="passive" value="ATT I" v-model="lvl1Selection">
+        <input type="radio" name="passive" value="ATT I" v-model="lvl6Selection">
         <h6>ATT Boost I</h6>
       </label>
 
       <!-- INT Boost I -->
       <label class="btn text-white pad-10 mar-5 btn-paleblue" data-toggle="collapse" href="#collapseINTboost1" role="button" aria-expanded="false" aria-controls="collapseINTboost1">
-        <input type="radio" name="passive" value="INT I" v-model="lvl1Selection">
+        <input type="radio" name="passive" value="INT I" v-model="lvl6Selection">
         <h6>INT Boost I</h6>
       </label>
 
       <br>
-      <h4 style="display: none;" id="attack-selection">{{lvl1Selection}}</h4>
+      <h4 style="display: none;" id="#lvl-6-select">{{lvl6Selection}}</h4>
     </div>
   </div><!-- /.row -->
 
