@@ -50,9 +50,9 @@
     </div><!-- /.collapse -->
 
 <script>
-  $('input:radio[name="ability"]').click(function() {
+$('label').click(function() {
    $(this).addClass("active")
-          .siblings('input:radio[name="ability"]').removeClass("active");
+          .siblings('label').removeClass("active");
 });
 </script>
 
