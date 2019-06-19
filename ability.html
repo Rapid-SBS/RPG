@@ -30,15 +30,29 @@
 
 <div class="container">
 
-<div id="attack-select" class="btn-group btn-group-toggle">
-  <label class="btn btn-blue active">
-    <input type="radio" name="options" id="option1" autocomplete="off" value="Void Fissure" v-model="attackSelection" checked> Option 1
-  </label>
-  <label class="btn btn-blue">
-    <input type="radio" name="options" id="option2" autocomplete="off" value="Light Shatter" v-model="attackSelection"> Option 2
-  </label>
+    <div id="ability-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Void Fissure -->  
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" v-bind:href="labelhref" role="button" aria-expanded="false" v-bind:aria-controls="ariacontrols">
+        <input type="radio" name="picked" v-bind:value="radiovalue" v-model="attackSelection"><h6>{{ name }}</h6>
+      </label>
+    </div>
 
-    <h3>{{attack('ability')}}</h3>
+  <div id="attack-aether" class="row mx-auto pad-10">
+
+    <!-- Void Fissure -->
+    <div class="collapse mx-auto" id="collapseVoidfissure" data-parent="#attack-aether">
+      <div class="card bg-light">
+        <div class="card-header text-center">
+          <h6>Attack Ability</h6>
+        </div>
+        <div class="card-body pad-5">
+          <p class="card-text text-center">Channel energy from the shadow realm<br>and release it upon your enemy.<br>DMG = 2 x (Player INT).<br> Costs 5 Mana.</p> 
+        </div>
+      </div><!-- /.card -->
+    </div><!-- /.collapse -->
+
+  </div>
+
 </div>
 
 
@@ -46,16 +60,14 @@
 
 <script>
 new Vue({
-  el: '#attack-select',
+  el: '#ability-select',
   data: {
-    attackSelection: '',
+    name: "Void Fissure ",
+    ariacontrols: "collapseVoidfissure",
+    labelhref: "#collapseVoidfissure",
+    radiovalue: "Void Fissure"
   },
-  methods: {
-    attack: function(item){
-      return 'Your ' + item + ' is ' + this.attackSelection
-      console.log(this.attackSelection)
-    }
-  }
+
 })
 
 </script>
