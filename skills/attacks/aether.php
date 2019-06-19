@@ -1,18 +1,13 @@
   <div class="row justify-content-center">
 
-    <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle" data-toggle="buttons">
-      <!-- Void Fissure -->  
-      <a class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseVoidfissure" role="button" aria-expanded="false" aria-controls="collapseVoidfissure">
-        <input type="radio" name="options" id="attack1" autocomplete="off" value="1" v-model="attackSelection"><h6>Void Fissure <span class="badge badge-light text-teal">5</span></h6>
-      </a>
+<div id="attack-select">
+  <p>
+    <input type="radio" name="picked" value="one" v-model="attackSelection">
+    <input type="radio" name="picked" value="two" v-model="attackSelection">
+  </p>
+  <h2>{{attackSelection}}</h2>
+</div>
 
-      <!-- Light Shatter -->
-      <a class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
-        <input type="radio" name="options" id="attack2" autocomplete="off" value="2" v-model="attackSelection"><h6>Light Shatter <span class="badge badge-light text-teal">7</span></h6>
-      </a>
-      <h2>{{attackSelection}}</h2>
-    </div>
-  </div><!-- /.row -->
 
   <div id="attack-aether" class="row mx-auto pad-10">
 
