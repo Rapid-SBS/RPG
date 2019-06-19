@@ -39,7 +39,6 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 var skills = JSON.parse(localStorage.getItem('objSkills'));
 
 $(document).ready(function(){
-
   if (weapon.name === "Bow") { $("#skill-select").load("skills/skills-bow.php");
   } else if (weapon.name === "Crossbow") { $("#skill-select").load("skills/skills-crossbow.php");
   } else if (weapon.name === "Longbow") { $("#skill-select").load("skills/skills-longbow.php");
@@ -61,8 +60,14 @@ $(document).ready(function(){
   } else if (weapon.name === "Aether Stone") { $("#skill-select").load("skills/skills-aether.php");
   } else if (weapon.name === "Runestone") { $("#skill-select").load("skills/skills-runestone.php");
   } else if (weapon.name === "Runblade") { $("#skill-select").load("skills/skills-runeblade.php");
-  } else { $("#skill-select").html("<h2>No Class Selected </h2>");
-  }
+  } else { $("#skill-select").html("<h2>No Class Selected </h2>"); }
+});
+
+$(document).ready(function(){
+  player.level = 2;
+  console.log(player.level);
+  if (player.level >= 1) { $("a.btn").addClass("disabled"); }
+
 });
 </script>
 
