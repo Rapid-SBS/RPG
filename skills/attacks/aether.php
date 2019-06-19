@@ -52,7 +52,7 @@
 new Vue({
   el: '#attack-select',
   data: {
-    attack-selection   : '',
+    attack-selection: '',
   }
 })
 </script>
