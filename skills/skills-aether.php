@@ -133,8 +133,8 @@
   </script>
   </div><!-- / Level 1 -->
 
-  <div class="border-top pad-20" style="width: 100%;">
-    <button id="save-name" type="submit" class="btn btn-primary mar-t-20">Save</button>
+  <div class="wide-275 mar-10 mx-auto text-center">
+    <button id="save-name" type="submit" class="btn btn-primary mar-t-20">Save Loadout</button>
   </div>
 
 
