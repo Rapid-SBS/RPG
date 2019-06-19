@@ -66,5 +66,12 @@
     <div class="row pad-10"><h5 class="mx-auto">LEVEL 1</h5></div>
     <?php include 'passives/vitality.php'; ?>
 
-
   </div><!-- / Level 1 -->
+
+  <script>
+    $(document).ready(function(){
+
+    $("#rpg-skills-lvl-10").hide(); 
+
+});
+</script>
