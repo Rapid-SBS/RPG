@@ -62,6 +62,12 @@ $(document).ready(function(){
   } else if (weapon.name === "Runblade") { $("#skill-select").load("skills/skills-runeblade.php");
   } else { $("#skill-select").html("<h2>No Class Selected </h2>"); }
 });
+
+    $(document).ready(function(){
+      console.log(player.level);
+      if (player.level == 0) { $("#rpg-skills-lvl-1 > div > a.btn").addClass("disabled"); }
+    });
+    
 </script>
 
 <footer class="footer mt-auto text-center bg-lightgray">

@@ -66,12 +66,5 @@
     <div class="row pad-10"><h5 class="mx-auto">LEVEL 1</h5></div>
     <?php include 'passives/vitality.php'; ?>
 
-  <script>
-    $(document).ready(function(){
-      console.log(player.level);
-      if (player.level == 0) { $("#rpg-skills-lvl-1 > div > a.btn").addClass("disabled"); }
-
-    });
-  </script>
   </div><!-- / Level 1 -->
 
