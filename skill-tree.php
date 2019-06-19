@@ -64,11 +64,8 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  player.level = 2;
-  console.log(player.level);
-  if (4 >= 1) { 
-    $("a").addClass("disabled"); 
-  }
+
+    $("#rpg-skills-lvl-10").hide(); 
 
 });
 </script>
