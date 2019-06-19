@@ -30,11 +30,11 @@
 
 <div class="container">
 
-<div id="radio">
+<div id="attack-select">
   <p>
-    <input type="radio" name="picked" value="one" v-model="picked">
-    <input type="radio" name="picked" value="two" v-model="picked">
-    {{picked}}
+    <input type="radio" name="picked" value="one" v-model="attackSelection">
+    <input type="radio" name="picked" value="two" v-model="attackSelection">
+    {{attackSelection}}
   </p>
 </div>
 
@@ -42,9 +42,9 @@
 
 <script>
 new Vue({
-  el: '#radio',
+  el: '#attack-select',
   data: {
-    picked   : '',
+    attackSelection: '',
   }
 })
 
