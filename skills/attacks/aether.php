@@ -47,8 +47,6 @@
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
-<button id="save-name" type="submit" class="btn btn-primary mar-t-20">Save</button>
-
 <script>
 new Vue({
   el: '#attack-select',
