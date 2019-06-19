@@ -104,7 +104,11 @@
         }
        )
     });
-  });
+
+      $('label').click(function() {
+         $(this).addClass("active")
+                .siblings('label').removeClass("active");
+        });
 
   </script>
 
