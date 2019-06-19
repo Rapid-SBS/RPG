@@ -2,13 +2,25 @@
 
     <!-- Void Fissure -->  
     <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseVoidfissure" role="button" aria-expanded="false" aria-controls="collapseVoidfissure">
-      <h6>Void Fissure <span class="badge badge-light text-teal">5</span></h6>
+      <input type="radio" name="options" id="option1" autocomplete="off"><h6>Void Fissure <span class="badge badge-light text-teal">5</span></h6>
     </a>
 
     <!-- Light Shatter -->
     <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
+      <input type="radio" name="options" id="option2" autocomplete="off"><h6>Light Shatter <span class="badge badge-light text-teal">7</span></h6>
+    </a>
+
+<!-- 
+
+    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseVoidfissure" role="button" aria-expanded="false" aria-controls="collapseVoidfissure">
+      <h6>Void Fissure <span class="badge badge-light text-teal">5</span></h6>
+    </a>
+
+
+    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
       <h6>Light Shatter <span class="badge badge-light text-teal">7</span></h6>
     </a>
+-->
 
   </div><!-- /.row -->
 
