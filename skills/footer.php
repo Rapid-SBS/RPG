@@ -79,10 +79,6 @@
 
   </div><!-- / Level 1 -->
 
-  <div class="wide-275 mar-10 mx-auto text-center">
-    <button id="save-name" type="submit" class="btn btn-primary">Save Loadout</button>
-  </div>
-
   <div id="skills-saved" class="text-white text-center pad-10 bg-lightgreen" style="display: none; width: 100%">
     <h5 class="pad-10">Skills Saved!</h5>
   </div>
@@ -91,8 +87,9 @@
   <div class="container pad-20">
     <div class="pad-b-20">
       <button class="btn btn-dark text-white mar-r-10 mar-l-10" onclick="goBack()" role="button">Return</button>
+      <button id="save-name" type="submit" class="btn btn-primary">Save Loadout</button>
     </div>
-<span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
+    <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
 
   <script>
