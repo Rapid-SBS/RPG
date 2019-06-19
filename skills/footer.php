@@ -10,7 +10,7 @@
       res: 0,
     }
 
-  console.log(skills)
+  console.log(skills);
 
   new Vue({ el: '#attack-select',
   data: { attackSelection: '' } })
