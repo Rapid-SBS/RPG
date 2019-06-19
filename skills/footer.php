@@ -11,7 +11,7 @@
     }
 
   console.log(skills);
-/*
+
   new Vue({ el: '#attack-select',
   data: { attackSelection: '' } })
 
@@ -41,28 +41,28 @@
 
   new Vue({ el: '#lvl-10-select',
   data: { lvl10Selection: '' } })
-  */
+
 
     $(document).ready(function(){
       console.log(player.level);
       if (player.level <= 10) { 
-        $("#rpg-skills-lvl-10 > div > a.btn").addClass("disabled"); 
+        $("#rpg-skills-lvl-10 > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-10").addClass("overlay"); 
       }
       if (player.level <= 9) { 
-        $("#rpg-skills-lvl-9 > div > a.btn").addClass("disabled"); 
+        $("#rpg-skills-lvl-9 > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-9").addClass("overlay"); 
       }
       if (player.level <= 8) { 
-        $("#rpg-skills-lvl-8 > div > a.btn").addClass("disabled"); 
+        $("#rpg-skills-lvl-8 > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-8").addClass("overlay"); 
       }
       if (player.level <= 7) { 
-        $("#rpg-skills-lvl-7 > div > a.btn").addClass("disabled"); 
+        $("#rpg-skills-lvl-7 > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-7").addClass("overlay"); 
       }
       if (player.level <= 6) { 
-        $("#rpg-skills-lvl-6 > div > a.btn").addClass("disabled"); 
+        $("#rpg-skills-lvl-6 > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-6").addClass("overlay"); 
       }
       if (player.level <= 5) { 
@@ -70,19 +70,19 @@
         $("#rpg-skills-lvl-5").addClass("overlay"); 
       }
       if (player.level <= 4) { 
-        $("#rpg-skills-lvl-4 > div > a.btn").addClass("disabled"); 
+        $("#rpg-skills-lvl-4 > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-4").addClass("overlay"); 
       }
       if (player.level <= 3) { 
-        $("#rpg-skills-lvl-3 > div > a.btn").addClass("disabled"); 
+        $("#rpg-skills-lvl-3 > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-3").addClass("overlay"); 
       }
       if (player.level <= 2) { 
-        $("#rpg-skills-lvl-2 > div > a.btn").addClass("disabled"); 
+        $("#rpg-skills-lvl-2 > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-2").addClass("overlay"); 
       }
       if (player.level <= 1) { 
-        $("#rpg-skills-lvl-1 > div > a.btn").addClass("disabled"); 
+        $("#rpg-skills-lvl-1 > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-1").addClass("overlay"); 
       }
     });
