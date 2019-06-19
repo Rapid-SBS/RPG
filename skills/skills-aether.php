@@ -67,6 +67,7 @@
     <?php include 'passives/vitality.php'; ?>
 
   <script>
+  var player = JSON.parse(localStorage.getItem('objPlayer'));
   var skills = JSON.parse(localStorage.getItem('objSkills'));
 
   new Vue({ el: '#attack-select',
@@ -149,6 +150,6 @@
     <button id="save-name" type="submit" class="btn btn-primary">Save Loadout</button>
   </div>
 
-  <div id="skills-saved" class="text-white text-center pad-10 bg-lightgreen" style="display: none;">
+  <div id="skills-saved" class="text-white text-center pad-10 bg-lightgreen" style="display: none; width: 100%">
     <h5 class="pad-10">Skills Saved!</h5>
   </div>
