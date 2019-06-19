@@ -11,7 +11,7 @@
     }
 
   console.log(skills);
-
+/*
   new Vue({ el: '#attack-select',
   data: { attackSelection: '' } })
 
@@ -41,6 +41,7 @@
 
   new Vue({ el: '#lvl-10-select',
   data: { lvl10Selection: '' } })
+  */
 
     $(document).ready(function(){
       console.log(player.level);
