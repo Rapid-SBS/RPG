@@ -68,7 +68,15 @@
 
   <script>
   var player = JSON.parse(localStorage.getItem('objPlayer'));
-  
+
+  new Vue({
+  el: '#attack-select',
+  data: {
+    attackSelection: '',
+  }
+})
+
+
     $(document).ready(function(){
       console.log(player.level);
       if (player.level <= 10) { 

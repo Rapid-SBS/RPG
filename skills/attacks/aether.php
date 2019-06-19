@@ -47,13 +47,4 @@
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
-<script>
-new Vue({
-  el: '#attack-select',
-  data: {
-    attackSelection: '',
-  }
-})
-
-</script>
   </div><!-- /.row -->
