@@ -69,12 +69,14 @@
   <script>
   var player = JSON.parse(localStorage.getItem('objPlayer'));
 
-  new Vue({
-  el: '#attack-select',
-  data: {
-    attackSelection: '',
-  }
-})
+  new Vue({ el: '#attack-select',
+  data: { attackSelection: '' } })
+
+  new Vue({ el: '#support-select',
+  data: { supportSelection: '' } })
+
+  new Vue({ el: '#ultimate-select',
+  data: { ultimateSelection: '' } })
 
 
     $(document).ready(function(){
