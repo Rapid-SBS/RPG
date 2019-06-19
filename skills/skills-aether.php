@@ -69,7 +69,10 @@
   <script>
     $(document).ready(function(){
       console.log(player.level);
-      if (player.level <= 3) { $("#rpg-skills-lvl-3 > div > a.btn").addClass("disabled"); }
+      if (player.level <= 3) { 
+        $("#rpg-skills-lvl-3 > div > a.btn").addClass("disabled"); 
+        $("#rpg-skills-lvl-3").addClass("overlay"); 
+      }
       if (player.level <= 2) { $("#rpg-skills-lvl-2 > div > a.btn").addClass("disabled"); }
       if (player.level <= 1) { $("#rpg-skills-lvl-1 > div > a.btn").addClass("disabled"); }
     });
