@@ -1,6 +1,6 @@
   <div class="row justify-content-center">
 
-    <div id="lvl-1-select" class="btn-group btn-toolbar btn-group-toggle">
+    <div id="lvl-3-select" class="btn-group btn-toolbar btn-group-toggle">
       <!-- DEF Boost I -->
       <label class="btn text-white pad-10 mar-5 btn-paleblue" data-toggle="collapse" href="#collapseDEFboost1" role="button" aria-expanded="false" aria-controls="collapseDEFboost1">
         <input type="radio" name="passive" value="DEF I" v-model="lvlthreeSelection">
