@@ -117,19 +117,19 @@
 
       if (passives.six === "ATT I") { 
           skills.att = skills.att + 1; 
-        } else if (passives.three === "INT I") {
+        } else if (passives.six === "INT I") {
           skills.int = skills.int + 1; 
         }
 
       if (passives.seven === "DEF II") { 
           skills.def = skills.def + 1; 
-        } else if (passives.three === "RES II") {
+        } else if (passives.seven === "RES II") {
           skills.res = skills.res + 1; 
         }
 
-      if (passives.six === "ATT II") { 
+      if (passives.ten === "ATT II") { 
           skills.att = skills.att + 1; 
-        } else if (passives.three === "INT II") {
+        } else if (passives.ten === "INT II") {
           skills.int = skills.int + 1; 
         }
 
