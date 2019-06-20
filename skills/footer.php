@@ -98,12 +98,17 @@
       skills.support = $("#support-selection").text();
       skills.ultimate = $("#ultimate-selection").text();
 
+      var lvlone = $("#lvl-1-select").text();
+      var lvlthree = $("#lvl-3-select").text();
+      console.log(lvlone);
+      console.log(lvlthree);
+/*
     if ($("#lvl-1-select").text() == "Vitality") { 
         skills.hp = 1; 
       }
     if ($("#lvl-3-select").text() == "DEF I") { 
         skills.def = 1; 
-      }
+      } */
       console.log(skills);
 
       localStorage.setItem('objSkills', JSON.stringify(skills));
