@@ -16,7 +16,7 @@
     </div>
   </div><!-- /.row -->
 
-  <div id="support-battleaxe" class="row mx-auto pad-10">
+  <div id="support-battleaxe" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Battle Roar -->
     <div class="collapse mx-auto" id="collapseBattleroar" data-parent="#support-battleaxe">

@@ -17,7 +17,7 @@
     </div>
   </div><!-- /.row -->
 
-  <div id="ultimate-battleaxe" class="row mx-auto pad-10">
+  <div id="ultimate-battleaxe" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Berserk -->
     <div class="collapse mx-auto" id="collapseBerserk" data-parent="#ultimate-battleaxe">

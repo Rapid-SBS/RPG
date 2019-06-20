@@ -17,7 +17,7 @@
     </div>
   </div><!-- /.row -->
 
-  <div id="attack-sword" class="row mx-auto pad-10">
+  <div id="attack-sword" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Helix Strike -->
     <div class="collapse mx-auto" id="collapseHelixstrike" data-parent="#attack-sword">
