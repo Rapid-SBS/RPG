@@ -17,7 +17,7 @@
     </div>
   </div><!-- /.row -->
 
-  <div id="ultimate-aether" class="row mx-auto pad-10">
+  <div id="ultimate-aether" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Starfire -->
     <div class="collapse mx-auto" id="collapseStarfire" data-parent="#ultimate-aether">
@@ -38,7 +38,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Open a massive rift to the Shadow Abyss beneath<br> your enemies, overwhelming them with darkness.<br>Ignores all enemy RES.<br>DMG = 3 x (Player INT).<br> Costs 12 Mana.</p>
+          <p class="card-text text-center">Open a massive rift to the Shadow Abyss beneath your enemies, overwhelming them with darkness.<br>Ignores all enemy RES.<br>DMG = 3 x (Player INT).<br> Costs 12 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">

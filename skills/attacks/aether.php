@@ -17,7 +17,7 @@
     </div>
   </div><!-- /.row -->
 
-  <div id="attack-aether" class="row mx-auto pad-10">
+  <div id="attack-aether" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Void Fissure -->
     <div class="collapse mx-auto" id="collapseVoidfissure" data-parent="#attack-aether">
@@ -26,7 +26,7 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Channel energy from the shadow realm<br>and release it upon your enemy.<br>DMG = 2 x (Player INT).<br> Costs 5 Mana.</p> 
+          <p class="card-text text-center">Channel energy from the shadow realm and release it upon your enemy.<br>DMG = 2 x (Player INT).<br> Costs 5 Mana.</p> 
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
