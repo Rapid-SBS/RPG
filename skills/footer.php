@@ -14,20 +14,20 @@
 
   player.level = 9;
 
-  var attackselect = new Vue({ el: '#attack-select',
+  new Vue({ el: '#attack-select',
   data: { attackSelection: '' } })
 
-  var supportselect = new Vue({ el: '#support-select',
+  new Vue({ el: '#support-select',
   data: { supportSelection: '' } })
 
-  var ultimateselect = new Vue({ el: '#ultimate-select',
+  new Vue({ el: '#ultimate-select',
   data: { ultimateSelection: '' } })
 
-  var oneselect = new Vue({ el: '#lvl-1-select',
-  data: { lvloneSelection: '' } })
+  new Vue({ el: '#lvl-1-select',
+  data: { lvl3Selection: '' } })
 
-  var threeselect = new Vue({ el: '#lvl-3-select',
-  data: { lvlthreeSelection: '' } })
+  new Vue({ el: '#lvl-3-select',
+  data: { lvl3Selection: '' } })
 /*
   new Vue({ el: '#lvl-4-select',
   data: { lvl4Selection: '' } })

@@ -3,18 +3,18 @@
     <div id="lvl-3-select" class="btn-group btn-toolbar btn-group-toggle">
       <!-- DEF Boost I -->
       <label class="btn text-white pad-10 mar-5 btn-paleblue" data-toggle="collapse" href="#collapseDEFboost1" role="button" aria-expanded="false" aria-controls="collapseDEFboost1">
-        <input type="radio" name="passive" value="DEF I" v-model="lvlthreeSelection">
+        <input type="radio" name="passive" value="DEF I" v-model="lvl3Selection">
         <h6>DEF Boost I</h6>
       </label>
 
       <!-- RES Boost I -->
       <label class="btn text-white pad-10 mar-5 btn-paleblue" data-toggle="collapse" href="#collapseRESboost1" role="button" aria-expanded="false" aria-controls="collapseRESboost1">
-        <input type="radio" name="passive" value="RES I" v-model="lvlthreeSelection">
+        <input type="radio" name="passive" value="RES I" v-model="lvl3Selection">
         <h6>RES Boost I</h6>
       </label>
 
       <br>
-      <h4 id="#lvl-3-select">{{lvlthreeSelection}}</h4>
+      <h4 id="#lvl-3-select">{{lvl3Selection}}</h4>
     </div>
   </div><!-- /.row -->
 
