@@ -1,18 +1,22 @@
   <div class="row justify-content-center">
 
-    <!-- Strafe -->
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseStrafe" role="button" aria-expanded="false" aria-controls="collapseStrafe">
-      <h6>Strafe <span class="badge badge-light text-teal">2</span></h6>
-    </a>
+    <div id="support-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Strafe -->  
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseStrafe" role="button" aria-expanded="false" aria-controls="collapseStrafe"><input type="radio" name="picked" value="Strafe" v-model="supportSelection">
+        <h6>Strafe</h6>
+      </label>
 
-    <!-- Spark Bomb -->  
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseSparkbomb" role="button" aria-expanded="false" aria-controls="collapseSparkbomb">
-      <h6>Spark Bomb <span class="badge badge-light text-teal">3</span></h6>
-    </a>
-
+      <!-- Spark Bomb -->
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseSparkbomb" role="button" aria-expanded="false" aria-controls="collapseSparkbomb">
+        <input type="radio" name="picked" value="Spark Bomb" v-model="supportSelection">
+        <h6>Spark Bomb</h6>
+      </label>
+      <br>
+      <p class="jhide" id="support-selection">{{supportSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="support-crossbow" class="row mx-auto pad-10">
+  <div id="support-crossbow" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Strafe -->
     <div class="collapse mx-auto" id="collapseStrafe" data-parent="#support-crossbow">

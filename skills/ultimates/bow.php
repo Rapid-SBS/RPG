@@ -17,7 +17,7 @@
     </div>
   </div><!-- /.row -->
 
-  <div id="ultimate-bow" class="row mx-auto pad-1 max-wide-380">
+  <div id="ultimate-bow" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Rapid Fire -->
     <div class="collapse mx-auto" id="collapseRapidfire" data-parent="#ultimate-bow">

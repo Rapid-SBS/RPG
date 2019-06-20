@@ -36,7 +36,7 @@
   <div id="rpg-skills-lvl-5" class="border-top pad-10" style="width: 100%;">
     
     <div class="row pad-10"><h6 class="mx-auto">LEVEL 5</h6></div>
-    <?php include 'attacks/brawler.php'; ?>
+    <?php include 'supports/brawler.php'; ?>
 
   </div><!-- / Level 5 -->
 
@@ -57,7 +57,7 @@
   <div id="rpg-skills-lvl-2" class="border-top pad-10" style="width: 100%;">
     
     <div class="row pad-10"><h6 class="mx-auto">LEVEL 2</h6></div>
-    <?php include 'supports/brawler.php'; ?>
+    <?php include 'attacks/brawler.php'; ?>
 
   </div><!-- / Level 2 -->
 
