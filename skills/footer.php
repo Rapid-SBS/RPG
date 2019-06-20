@@ -106,7 +106,7 @@
 
 
     if (passives.one === "Vitality") { 
-        skills.hp++; 
+        skills.hp = skills.hp + 1; 
       }
 
       console.log(skills);
