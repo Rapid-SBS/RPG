@@ -20,7 +20,7 @@
   <div id="ultimate-bow" class="row mx-auto pad-1 max-wide-380">
 
     <!-- Rapid Fire -->
-    <div class="collapse mx-auto" id="collapseRapidFire" data-parent="#ultimate-bow">
+    <div class="collapse mx-auto" id="collapseRapidfire" data-parent="#ultimate-bow">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Ultimate Ability</h6>
