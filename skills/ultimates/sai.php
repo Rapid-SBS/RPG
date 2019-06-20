@@ -50,7 +50,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Unleash the full horror of your shadow energy, siphoning life from your enemies<br>while they are consumed by darkness.<br>Ignores all enemy RES.<br>Restores full health.<br>DMG = 3 x (Player ATT)<br>Costs 14 Mana.</p>
+          <p class="card-text text-center">Unleash the full horror of your shadow energy, siphoning life from your enemies while they are consumed by darkness.<br>Ignores all enemy RES.<br>Restores full health.<br>DMG = 3 x (Player ATT)<br>Costs 14 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
