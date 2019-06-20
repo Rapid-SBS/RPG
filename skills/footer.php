@@ -115,6 +115,24 @@
           skills.res = skills.res + 1; 
         }
 
+      if (passives.six === "ATT I") { 
+          skills.att = skills.att + 1; 
+        } else if (passives.three === "INT I") {
+          skills.int = skills.int + 1; 
+        }
+
+      if (passives.seven === "DEF II") { 
+          skills.def = skills.def + 1; 
+        } else if (passives.three === "RES II") {
+          skills.res = skills.res + 1; 
+        }
+
+      if (passives.six === "ATT II") { 
+          skills.att = skills.att + 1; 
+        } else if (passives.three === "INT II") {
+          skills.int = skills.int + 1; 
+        }
+
       console.log(skills);
       console.log(passives);
 
