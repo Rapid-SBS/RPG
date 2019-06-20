@@ -25,7 +25,8 @@
 </head>
 
 <body>
-	
+
+  
 <div class="text-white text-center bg-primary">
   <h5 class="pad-10"> Character Level </h5>
   <p class="pad-b-10" style="margin-bottom: 0;">Add Experience points or manually set level.</p>
@@ -33,7 +34,7 @@
 
 <div class="container">
   <div class="row pad-t-40">
-      <div class="col max-wide-380">
+      <div class="col mx-auto max-wide-380">
         <input id="setlevel"
             type="range"
             min="0"                
@@ -47,88 +48,38 @@
 
     <div class="row">
       <div class="wide-275 mx-auto text-center">
-        <button id="save-value" type="submit" class="btn btn-primary mar-t-20">Set Level</button>
+        <button id="save-value" type="submit" class="btn btn-primary mar-20">Set Level</button>
       </div>
     </div>
 
 </div><!-- /.container -->
-
-<div id="name-saved" class="text-white text-center pad-10 mar-b-20 bg-lightgreen" style="display: none;">
-  <h5 class="pad-10">Name Saved!</h5>
-</div>
-
 <script>
-var player = JSON.parse(localStorage.getItem('objPlayer'));
-var skills = JSON.parse(localStorage.getItem('objSkills'));
-var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
-var weapon = JSON.parse(localStorage.getItem('objWeapon'));
-
-  $(document).ready(function(){ // ----- Display Class -----
-    if (rpgclass.name === "Warrior") {
-      $("#rpg-class").text("strong " + rpgclass.name);
-    } else if (rpgclass.name === "Archer") {
-      $("#rpg-class").text("skilled " + rpgclass.name);
-    } else if (rpgclass.name === "Mage") {
-      $("#rpg-class").text("talented " + rpgclass.name);
-    } else if (rpgclass.name === "Cleric") {
-      $("#rpg-class").text("gifted " + rpgclass.name);
-    } else if (rpgclass.name === "Rogue") {
-      $("#rpg-class").text("deadly " + rpgclass.name);
-    } else if (rpgclass.name === "Monk") {
-      $("#rpg-class").text("wise " + rpgclass.name);
-    } else if (rpgclass.name === "Rune Master") {
-      $("#rpg-class").text("powerful " + rpgclass.name);
-    }else {
-      $("#weapon-select").html("<h2>No Class Selected </h2>");
-    } 
-  });
-
-  $(document).ready(function(){ // ----- Display Weapon -----
-    if (weapon.name === "Battle Axe" || weapon.name === "War Hammer") {
-      $("#rpg-weapon").text(", wielding a fearsome " + weapon.name);
-    } else if (weapon.name === "Bow" || weapon.name === "Crossbow" || weapon.name === "Longbow") {
-      $("#rpg-weapon").text(", attacking from afar with your " + weapon.name);
-    } else if (weapon.name === "Sword & Shield" || weapon.name === "Mace & Shield") {
-      $("#rpg-weapon").text(", defending your allies with your " + weapon.name);
-    } else if (weapon.name === "Quarterstaff" || weapon.name === "Holy Tome") {
-      $("#rpg-weapon").text(", supporting your allies with your " + weapon.name);
-    } else if (weapon.name === "Ice Stone" || weapon.name === "Fire Stone" || weapon.name === "Lightning Stone") {
-      $("#rpg-weapon").text(", harnessing the power of the elements with your " + weapon.name);
-    } else if (weapon.name === "Bo Staff") {
-      $("#rpg-weapon").text("and a master of the " + weapon.name);
-    } else if (weapon.name === "Brawler's Fist") {
-      $("#rpg-weapon").text(", a master of martial arts and chi manipulation" + weapon.name);
-    } else if (weapon.name === "Wind Fu") {
-      $("#rpg-weapon").text(", mixing martial arts with the wind element" + weapon.name);
-    } else if (weapon.name === "Shuriken") {
-      $("#rpg-weapon").text(", the ultimate assassin with your shuriken and shadow clones");
-    } else if (weapon.name === "Dual Sai") {
-      $("#rpg-weapon").text(", ravaging enemies with your dual sai and shadow abilities");
-    } else if (weapon.name === "Dagger") {
-      $("#rpg-weapon").text(", wreaking havoc with your dagger and alchemical potions");
-    } else if (weapon.name === "Runeblade") {
-      $("#rpg-weapon").text(", channeling the elements through your runeblade with the might of a warrior and the powers of a mage");
-    } else if (weapon.name === "Runestone") {
-      $("#rpg-weapon").text(", wielding and combining multiple elements with your collection of runestones");
-    } else if (weapon.name === "Aether Stone") {
-      $("#rpg-weapon").text(", one of the only known people to wield both light and dark elements");
-    } else {
-      $("#rpg-weapon").text("who wields a " + weapon.name);
-    }
-  });
+var $element = $('input[type="range"]');
+var $output = $('output');
 
   $(document).ready(function(){ // ----- Save Name -----
-    $("#save-name").click(function(){
-      event.preventDefault()
-      var playerName = document.getElementById('inputName').value
-      player.name = playerName;
-      localStorage.setItem('objPlayer', JSON.stringify(player));
-      $('#name-saved').fadeIn('slow', function(){
-        $('#name-saved').delay(3000).fadeOut();
+
+    function updateOutput(el, val) {
+      el.textContent = val;
+    }
+
+    $element
+      .rangeslider({
+        polyfill: false,
+        onInit: function() {
+          updateOutput($output[0], this.value);
         }
-       )
-    });
+      })
+      .on('input', function() {
+        updateOutput($output[0], this.value);
+      });
+
+    $("#save-value").click(function(){  
+      var rangeval = document.getElementById('setlevel').value;
+      console.log(rangeval);
+      });
   });
+
 </script>
 
 <footer class="footer mt-auto text-center bg-lightgray">

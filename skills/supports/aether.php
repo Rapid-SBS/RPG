@@ -12,7 +12,7 @@
         <h6>Light Prism</h6>
       </label>
       <br>
-      <h4 id="support-selection">{{supportSelection}}</h4>
+      <p class="jhide" id="support-selection">{{supportSelection}}</p>
     </div>
   </div><!-- /.row -->
 

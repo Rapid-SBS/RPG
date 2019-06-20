@@ -25,25 +25,34 @@
 </head>
 
 <body>
-	
+
+  
 <div class="text-white text-center bg-primary">
-  <h5 class="pad-10"> Test Page </h5>
+  <h5 class="pad-10"> Character Level </h5>
+  <p class="pad-b-10" style="margin-bottom: 0;">Add Experience points or manually set level.</p>
 </div>
 
 <div class="container">
+  <div class="row pad-t-40">
+      <div class="col mx-auto max-wide-380">
+        <input id="setlevel"
+            type="range"
+            min="0"                
+            max="10"                
+            step="1"                  
+            value="1"
+            >
+        <h4 class="text-center mx-auto pad-t-10"><output></output></h4>
+      </div>
+    </div>  
 
-<input id="ranger"
-    type="range"
-    min="0"                
-    max="10"                
-    step="1"                  
-    value="1"
-    class="custom-range max-wide-380"
->
-<h4><output></output></h4>
-<button id="save-value" type="submit" class="btn btn-primary mar-t-20">Update</button>
+    <div class="row">
+      <div class="wide-275 mx-auto text-center">
+        <button id="save-value" type="submit" class="btn btn-primary mar-20">Set Level</button>
+      </div>
+    </div>
+
 </div><!-- /.container -->
-
 <script>
 var $element = $('input[type="range"]');
 var $output = $('output');
@@ -66,7 +75,7 @@ var $output = $('output');
       });
 
     $("#save-value").click(function(){  
-      var rangeval = document.getElementById('ranger').value;
+      var rangeval = document.getElementById('setlevel').value;
       console.log(rangeval);
       });
   });
