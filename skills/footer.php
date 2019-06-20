@@ -12,14 +12,6 @@
       ten: undefined
     }
 
-  skills = {
-      hp: 0,
-      att: 0,
-      def: 0,
-      int: 0,
-      res: 0,
-    }
-
   player.level = 10;
 
   new Vue({ el: '#attack-select',
@@ -100,6 +92,7 @@
   $(document).ready(function(){ // ----- Save Skills -----
 
     $("#save-name").click(function(){
+      skills = { hp: 0, att: 0, def: 0, int: 0, res: 0, }
       skills.attack = $("#attack-selection").text();
       skills.support = $("#support-selection").text();
       skills.ultimate = $("#ultimate-selection").text();
@@ -111,15 +104,17 @@
       passives.nine = $("#lvl-9-selection").text();
       passives.ten = $("#lvl-10-selection").text();
 
-      console.log(skills);
-      console.log(passives);
-/*
+      /*
+
     if ($("#lvl-1-select").text() == "Vitality") { 
         skills.hp = 1; 
       }
     if ($("#lvl-3-select").text() == "DEF I") { 
         skills.def = 1; 
-      } */
+      } 
+*/
+      console.log(skills);
+      console.log(passives);
 
       localStorage.setItem('objSkills', JSON.stringify(skills));
       localStorage.setItem('objPassives', JSON.stringify(passives));
