@@ -1,18 +1,23 @@
   <div class="row justify-content-center">
 
-    <!-- Overhead Smash -->
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseOverheadsmash" role="button" aria-expanded="false" aria-controls="collapseOverheadsmash">
-      <h6>Overhead Smash <span class="badge badge-light text-teal">5</span></h6>
-    </a>
+    <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Overhead Smash -->  
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseOverheadsmash" role="button" aria-expanded="false" aria-controls="collapseOverheadsmash">
+        <input type="radio" name="ability" value="Overhead Smash" v-model="attackSelection">
+        <h6>Overhead Smash</h6>
+      </label>
 
-    <!-- Spinning Strike -->  
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseSpinningstrike" role="button" aria-expanded="false" aria-controls="collapseSpinningstrike">
-      <h6>Spinning Strike <span class="badge badge-light text-teal">4</span></h6>
-    </a>
-
+      <!-- Spinning Strike -->
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseSpinningstrike" role="button" aria-expanded="false" aria-controls="collapseSpinningstrike">
+        <input type="radio" name="ability" value="Spinning Strike" v-model="attackSelection">
+        <h6>Spinning Strike</h6>
+      </label>
+      <br>
+      <p class="jhide" id="attack-selection">{{attackSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="attack-bostaff" class="row mx-auto pad-10">
+  <div id="attack-bostaff" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Overhead Smash -->
     <div class="collapse mx-auto" id="collapseOverheadsmash" data-parent="#attack-bostaff">

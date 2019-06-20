@@ -1,21 +1,26 @@
   <div class="row justify-content-center">
 
-    <!-- Battering Assault -->  
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseBatteringassault" role="button" aria-expanded="false" aria-controls="collapseBatteringassault">
-      <h6>Battering Assault <span class="badge badge-light text-teal">9</span></h6>
-    </a>
+    <div id="ultimate-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Battering Assault -->  
+      <label class="btn text-white pad-10 mar-5 btn-purple" data-toggle="collapse" href="#collapseBatteringassault" role="button" aria-expanded="false" aria-controls="collapseBatteringassault">
+        <input type="radio" name="ability" value="Battering Assault" v-model="ultimateSelection">
+        <h6>Battering Assault</h6>
+      </label>
 
-    <!-- Unbreakable Spirit -->
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseUnbreakablespirit" role="button" aria-expanded="false" aria-controls="collapseUnbreakablespirit">
-      <h6>Unbreakable Spirit <span class="badge badge-light text-teal">10</span></h6>
-    </a>
-
+      <!-- Unbreakable Spirit -->
+      <label class="btn text-white pad-10 mar-5 btn-purple" data-toggle="collapse" href="#collapseUnbreakablespirit" role="button" aria-expanded="false" aria-controls="collapseUnbreakablespirit">
+        <input type="radio" name="ability" value="Unbreakable Spirit" v-model="ultimateSelection">
+        <h6>Unbreakable Spirit</h6>
+      </label>
+      <br>
+      <p class="jhide" id="ultimate-selection">{{ultimateSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="ultimate-brawler" class="row mx-auto pad-10">
+  <div id="ultimate-bostaff" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Battering Assault -->
-    <div class="collapse mx-auto" id="collapseBatteringassault" data-parent="#ultimate-brawler">
+    <div class="collapse mx-auto" id="collapseBatteringassault" data-parent="#ultimate-bostaff">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Ultimate Ability</h6>
@@ -27,7 +32,7 @@
     </div><!-- /.collapse -->
 
     <!-- Unbreakable Spirit -->
-    <div class="collapse mx-auto" id="collapseUnbreakablespirit" data-parent="#ultimate-brawler">
+    <div class="collapse mx-auto" id="collapseUnbreakablespirit" data-parent="#ultimate-bostaff">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Ultimate Ability</h6>

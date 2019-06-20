@@ -26,7 +26,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Light falls from the sky and barrages a single enemy.<br>DMG = 4 x (Player INT).<br> Costs 9 Mana.</p> 
+          <p class="card-text text-center">Light falls from the sky and bombards a single enemy.<br>DMG = 4 x (Player INT).<br> Costs 9 Mana.</p> 
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
@@ -38,7 +38,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Open a massive rift to the Shadow Abyss beneath your enemies, overwhelming them with darkness.<br>Ignores all enemy RES.<br>DMG = 3 x (Player INT).<br> Costs 12 Mana.</p>
+          <p class="card-text text-center">Open a rift to the Shadow Abyss beneath your enemies, overwhelming them with darkness.<br>Ignores all enemy RES.<br>DMG = 3 x (Player INT).<br> Costs 12 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
