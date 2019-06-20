@@ -48,7 +48,7 @@
         </ul>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-green">-6</span>
+            <span class="badge bg-white text-green">-2</span>
             Enemy DEF
           </li>
         </ul>
