@@ -12,7 +12,7 @@
 
   console.log(skills);
 
-  player.level = 9;
+  player.level = 10;
 
   new Vue({ el: '#attack-select',
   data: { attackSelection: '' } })
@@ -28,7 +28,7 @@
 
   new Vue({ el: '#lvl-3-select',
   data: { lvl3Selection: '' } })
-/*
+
   new Vue({ el: '#lvl-4-select',
   data: { lvl4Selection: '' } })
 
@@ -43,47 +43,47 @@
 
   new Vue({ el: '#lvl-10-select',
   data: { lvl10Selection: '' } })
-*/
+
 
     $(document).ready(function(){
       console.log(player.level);
-      if (player.level <= 10) { 
+      if (player.level < 10) { 
         $("#rpg-skills-lvl-10 > div > div > label").addClass("disabled unclickable"); 
         $("#rpg-skills-lvl-10").addClass("overlay"); 
       }
-      if (player.level <= 9) { 
+      if (player.level < 9) { 
         $("#rpg-skills-lvl-9 > div > div > label").addClass("disabled unclickable"); 
         $("#rpg-skills-lvl-9").addClass("overlay"); 
       }
-      if (player.level <= 8) { 
+      if (player.level < 8) { 
         $("#rpg-skills-lvl-8 > div > div > label").addClass("disabled unclickable"); 
         $("#rpg-skills-lvl-8").addClass("overlay"); 
       }
-      if (player.level <= 7) { 
+      if (player.level < 7) { 
         $("#rpg-skills-lvl-7 > div > div > label").addClass("disabled unclickable"); 
         $("#rpg-skills-lvl-7").addClass("overlay"); 
       }
-      if (player.level <= 6) { 
+      if (player.level < 6) { 
         $("#rpg-skills-lvl-6 > div > div > label").addClass("disabled unclickable"); 
         $("#rpg-skills-lvl-6").addClass("overlay"); 
       }
-      if (player.level <= 5) { 
+      if (player.level < 5) { 
         $("#rpg-skills-lvl-5 > div > div > label").addClass("disabled unclickable"); 
         $("#rpg-skills-lvl-5").addClass("overlay"); 
       }
-      if (player.level <= 4) { 
+      if (player.level < 4) { 
         $("#rpg-skills-lvl-4 > div > div > label").addClass("disabled unclickable"); 
         $("#rpg-skills-lvl-4").addClass("overlay"); 
       }
-      if (player.level <= 3) { 
+      if (player.level < 3) { 
         $("#rpg-skills-lvl-3 > div > div > label").addClass("disabled unclickable"); 
         $("#rpg-skills-lvl-3").addClass("overlay"); 
       }
-      if (player.level <= 2) { 
+      if (player.level < 2) { 
         $("#rpg-skills-lvl-2 > div > div > label").addClass("disabled unclickable"); 
         $("#rpg-skills-lvl-2").addClass("overlay"); 
       }
-      if (player.level <= 1) { 
+      if (player.level < 1) { 
         $("#rpg-skills-lvl-1 > div > div > label").addClass("disabled unclickable");
         $("#rpg-skills-lvl-1").addClass("overlay"); 
       }
