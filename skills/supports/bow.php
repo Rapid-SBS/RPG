@@ -1,18 +1,22 @@
- <div class="row justify-content-center">
+  <div class="row justify-content-center">
 
-    <!-- Mark Enemy -->
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseMarkenemy" role="button" aria-expanded="false" aria-controls="collapseMarkenemy">
-      <h6>Mark Enemy <span class="badge badge-light text-teal">2</span></h6>
-    </a>
+    <div id="support-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Mark Enemy -->  
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseMarkenemy" role="button" aria-expanded="false" aria-controls="collapseMarkenemy"><input type="radio" name="picked" value="Mark Enemy" v-model="supportSelection">
+        <h6>Mark Enemy</h6>
+      </label>
 
-    <!-- Healing Salve -->  
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseHealingsalve" role="button" aria-expanded="false" aria-controls="collapseHealingsalve">
-      <h6>Healing Salve <span class="badge badge-light text-teal">3</span></h6>
-    </a>
-
+      <!-- Healing Salve -->
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseHealingsalve" role="button" aria-expanded="false" aria-controls="collapseHealingsalve">
+        <input type="radio" name="picked" value="Healing Salve" v-model="supportSelection">
+        <h6>Healing Salve</h6>
+      </label>
+      <br>
+      <p class="jhide" id="support-selection">{{supportSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="support-bow" class="row mx-auto pad-10">
+  <div id="support-bow" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Mark Enemy -->
     <div class="collapse mx-auto" id="collapseMarkenemy" data-parent="#support-bow">
