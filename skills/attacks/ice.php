@@ -1,18 +1,23 @@
   <div class="row justify-content-center">
 
-    <!-- Glacial Spike -->
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseGlacialspike" role="button" aria-expanded="false" aria-controls="collapseGlacialspike">
-      <h6>Glacial Spike <span class="badge badge-light text-teal">4</span></h6>
-    </a>
+    <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Glacial Spike -->  
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseGlacialspike" role="button" aria-expanded="false" aria-controls="collapseGlacialspike">
+        <input type="radio" name="ability" value="Glacial Spike" v-model="attackSelection">
+        <h6>Glacial Spike</h6>
+      </label>
 
-    <!-- Frost Wave -->  
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseFrostwave" role="button" aria-expanded="false" aria-controls="collapseFrostwave">
-      <h6>Frost Wave <span class="badge badge-light text-teal">5</span></h6>
-    </a>
-
+      <!-- Frost Wave -->
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseFrostwave" role="button" aria-expanded="false" aria-controls="collapseFrostwave">
+        <input type="radio" name="ability" value="Frost Wave" v-model="attackSelection">
+        <h6>Frost Wave</h6>
+      </label>
+      <br>
+      <p class="jhide" id="attack-selection">{{attackSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="attack-ice" class="row mx-auto pad-10">
+  <div id="attack-ice" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Glacial Spike -->
     <div class="collapse mx-auto" id="collapseGlacialspike" data-parent="#attack-ice">
@@ -21,7 +26,7 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Conjure a large spike of ice<br>and hurl it at an enemy.<br>DMG = Weapon ATT + Player INT.<br> Costs 4 Mana.</p>
+          <p class="card-text text-center">Conjure a large spike of ice and hurl it at an enemy.<br>DMG = Weapon ATT + Player INT.<br> Costs 4 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
@@ -39,7 +44,7 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Unleash a wave of subzero energy.<br> Double Critical Hit Chance.<br>Critical hits apply Frozen debuff<br> instead of bonus damage.<br> DMG = Player INT.<br> Costs 5 Mana.</p>
+          <p class="card-text text-center">Unleash a wave of subzero energy.<br> Double Critical Hit Chance.<br>Critical hits apply Frozen debuff instead of bonus damage.<br> DMG = Player INT.<br> Costs 5 Mana.</p>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
