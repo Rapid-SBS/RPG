@@ -64,6 +64,7 @@ new Vue({
 })
 
 $(document).ready(function(){ // ----- Save Skills -----
+  $("label").off("click")
   $("#save-name").click(function(){
     event.preventDefault()
     console.log("Ability: " + $("#attack-selection").text());
