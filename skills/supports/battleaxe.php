@@ -25,7 +25,7 @@
           <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Let out a fierce battle roar that<br>intimidates enemies and emboldens allies.<br> Costs 5 Mana.</p>
+          <p class="card-text text-center">Let out a fierce battle roar that intimidates enemies and emboldens allies.<br>Costs 5 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
@@ -55,7 +55,7 @@
           <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Increase DEF for 1 turn. On your next attack,<br>you heal the same amount of damage you deal.<br>Costs 5 Mana.</p>
+          <p class="card-text text-center">Increase DEF for 1 turn. On your next attack, you heal the same amount of damage you deal.<br>Costs 5 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
