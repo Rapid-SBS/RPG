@@ -13,7 +13,7 @@
         <h6>Light Shatter</h6>
       </label>
       <br>
-      <h4 style="display: none;" id="attack-selection">{{attackSelection}}</h4>
+      <h4 id="attack-selection">{{attackSelection}}</h4>
     </div>
   </div><!-- /.row -->
 
