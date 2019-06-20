@@ -16,18 +16,6 @@
       <p class="jhide" id="ultimate-selection">{{ultimateSelection}}</p>
     </div>
   </div><!-- /.row -->
-  
-    <!-- Berserk -->  
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseBerserk" role="button" aria-expanded="false" aria-controls="collapseBerserk">
-      <h6>Berserk <span class="badge badge-light text-teal">12</span></h6>
-    </a>
-
-    <!-- Titan Slayer -->
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseTitanslayer" role="button" aria-expanded="false" aria-controls="collapseTitanslayer">
-      <h6>Titan Slayer <span class="badge badge-light text-teal">12</span></h6>
-    </a>
-
-  </div><!-- /.row -->
 
   <div id="ultimate-battleaxe" class="row mx-auto pad-10">
 
