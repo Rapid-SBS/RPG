@@ -3,7 +3,7 @@
     <div id="lvl-1-select" class="btn-group btn-toolbar btn-group-toggle">
       <!-- Vitality -->
       <label class="btn text-white pad-10 mar-5 btn-paleblue" data-toggle="collapse" href="#collapseVitality" role="button" aria-expanded="false" aria-controls="collapseVitality">
-        <input type="radio" name="passive" value="Mana I" v-model="lvl1Selection">
+        <input type="radio" name="passive" value="Vitality" v-model="lvl1Selection">
         <h6>Vitality</h6>
       </label>
 
