@@ -46,7 +46,7 @@
     $(document).ready(function(){
       console.log(player.level);
       if (player.level <= 10) { 
-        $("#rpg-skills-lvl-10 > label").addClass("disabled"); 
+        $("#rpg-skills-lvl-10 > div > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-10").addClass("overlay"); 
       }
       if (player.level <= 9) { 
@@ -79,10 +79,12 @@
       }
       if (player.level <= 2) { 
         $("#rpg-skills-lvl-2 > div > div > label").addClass("disabled"); 
+        $("#rpg-skills-lvl-2 > div > div > label").off("click");
         $("#rpg-skills-lvl-2").addClass("overlay"); 
       }
       if (player.level <= 1) { 
-        $("#rpg-skills-lvl-1 > label").addClass("disabled"); 
+        $("#rpg-skills-lvl-1 > label").addClass("disabled");
+        $("#rpg-skills-lvl-1 > div > div > label").off("click");
         $("#rpg-skills-lvl-1").addClass("overlay"); 
       }
     });
