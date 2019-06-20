@@ -115,7 +115,7 @@
           skills.res = skills.res + 1; 
         }
 
-      if (passives.one === "Mana I") { 
+      if (passives.four === "Mana I") { 
           skills.mana = skills.mana + 1; 
         }
 
@@ -131,7 +131,7 @@
           skills.res = skills.res + 1; 
         }
 
-      if (passives.one === "Mana II") { 
+      if (passives.nine === "Mana II") { 
           skills.mana = skills.mana + 1; 
         }
 
