@@ -79,7 +79,7 @@
       }
       if (player.level <= 2) { 
         $("#rpg-skills-lvl-2 > div > div > label").addClass("disabled"); 
-        $("#rpg-skills-lvl-2 > div > div > label").off("click");
+        $("#rpg-skills-lvl-2 > div > div").off("click");
         $("#rpg-skills-lvl-2").addClass("overlay"); 
       }
       if (player.level <= 1) { 
