@@ -81,8 +81,12 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   $(document).ready(function(){ // ----- Display Weapon -----
     if (weapon.name === "Battle Axe" || weapon.name === "War Hammer") {
       $("#rpg-weapon").text(", wielding a fearsome " + weapon.name);
-    } else if (weapon.name === "Bow" || weapon.name === "Crossbow" || weapon.name === "Longbow") {
+    } else if (weapon.name === "Bow") {
       $("#rpg-weapon").text(", attacking from afar with your " + weapon.name);
+    } else if (weapon.name === "Crossbow") {
+      $("#rpg-weapon").text(", piercing enemy defenses with your " + weapon.name);
+    } else if (weapon.name === "Longbow") {
+      $("#rpg-weapon").text(", supporting allies with your Nature abilities and attacking with your " + weapon.name);
     } else if (weapon.name === "Sword & Shield" || weapon.name === "Mace & Shield") {
       $("#rpg-weapon").text(", defending your allies with your " + weapon.name);
     } else if (weapon.name === "Quarterstaff" || weapon.name === "Holy Tome") {
@@ -90,7 +94,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
     } else if (weapon.name === "Ice Stone" || weapon.name === "Fire Stone" || weapon.name === "Lightning Stone") {
       $("#rpg-weapon").text(", harnessing the power of the elements with your " + weapon.name);
     } else if (weapon.name === "Bo Staff") {
-      $("#rpg-weapon").text("and a master of the " + weapon.name);
+      $("#rpg-weapon").text(" and a master of the " + weapon.name);
     } else if (weapon.name === "Brawler's Fist") {
       $("#rpg-weapon").text(", a master of martial arts and chi manipulation" + weapon.name);
     } else if (weapon.name === "Wind Fu") {
