@@ -34,10 +34,9 @@
   new Vue({ el: '#lvl-10-select',
   data: { lvl10Selection: '' } })
 
+  $("h4").hide();
 
   $(document).ready(function(){
-    
-    $("h4").hide();
 
     if (player.level < 10) { 
       $("#rpg-skills-lvl-10 > div > div > label").addClass("disabled unclickable"); 
