@@ -35,7 +35,7 @@
 
 <script>
 var weapon = JSON.parse(localStorage.getItem('objWeapon'));
-
+$("h4").hide();
 $(document).ready(function(){
 
   if (weapon.name === "Bow") { $("#skill-select").load("skills/skills-bow.php");
