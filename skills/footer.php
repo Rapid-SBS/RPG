@@ -91,8 +91,7 @@
           six: undefined,
           seven: undefined,
           nine: undefined,
-          ten: undefined
-        }
+          ten: undefined}
 
       skills.attack = $("#attack-selection").text();
       skills.support = $("#support-selection").text();
@@ -107,40 +106,33 @@
 
 
       if (passives.one === "Vitality") { 
-          skills.hp = skills.hp + 2; 
-        }
+          skills.hp = skills.hp + 2; }
 
       if (passives.three === "DEF I") { 
-          skills.def = skills.def + 1; 
-        } else if (passives.three === "RES I") {
-          skills.res = skills.res + 1; 
-        }
+          skills.def = skills.def + 1; } 
+      else if (passives.three === "RES I") {
+          skills.res = skills.res + 1; }
 
       if (passives.four === "Mana I") { 
-          skills.mana = skills.mana + 1; 
-        }
+          skills.mana = skills.mana + 1; }
 
       if (passives.six === "ATT I") { 
-          skills.att = skills.att + 1; 
-        } else if (passives.six === "INT I") {
-          skills.int = skills.int + 1; 
-        }
+          skills.att = skills.att + 1; } 
+      else if (passives.six === "INT I") {
+          skills.int = skills.int + 1; }
 
       if (passives.seven === "DEF II") { 
-          skills.def = skills.def + 1; 
-        } else if (passives.seven === "RES II") {
-          skills.res = skills.res + 1; 
-        }
+          skills.def = skills.def + 1; } 
+      else if (passives.seven === "RES II") {
+          skills.res = skills.res + 1; }
 
       if (passives.nine === "Mana II") { 
-          skills.mana = skills.mana + 1; 
-        }
+          skills.mana = skills.mana + 1; }
 
       if (passives.ten === "ATT II") { 
-          skills.att = skills.att + 1; 
-        } else if (passives.ten === "INT II") {
-          skills.int = skills.int + 1; 
-        }
+          skills.att = skills.att + 1; } 
+      else if (passives.ten === "INT II") {
+          skills.int = skills.int + 1; }
 
       console.log(skills);
       console.log(passives);

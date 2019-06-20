@@ -1,15 +1,19 @@
   <div class="row justify-content-center">
 
-    <!-- Battle Roar -->  
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseBattleroar" role="button" aria-expanded="false" aria-controls="collapseBattleroar">
-      <h6>Battle Roar <span class="badge badge-light text-teal">5</span></h6>
-    </a>
+    <div id="support-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Battle Roar -->  
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseBattleroar" role="button" aria-expanded="false" aria-controls="collapseBattleroar"><input type="radio" name="picked" value="Battle Roar" v-model="supportSelection">
+        <h6>Battle Roar</h6>
+      </label>
 
-    <!-- Bloodlust -->
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseBloodlust" role="button" aria-expanded="false" aria-controls="collapseBloodlust">
-      <h6>Bloodlust <span class="badge badge-light text-teal">5</span></h6>
-    </a>
-
+      <!-- Bloodlust -->
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseBloodlust" role="button" aria-expanded="false" aria-controls="collapseBloodlust">
+        <input type="radio" name="picked" value="Bloodlust" v-model="supportSelection">
+        <h6>Bloodlust</h6>
+      </label>
+      <br>
+      <p class="jhide" id="support-selection">{{supportSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
   <div id="support-battleaxe" class="row mx-auto pad-10">

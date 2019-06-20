@@ -1,15 +1,20 @@
   <div class="row justify-content-center">
 
-    <!-- Helix Strike -->
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseHelixstrike" role="button" aria-expanded="false" aria-controls="collapseHelixstrike">
-      <h6>Helix Strike <span class="badge badge-light text-teal">6</span></h6>
-    </a>
+    <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Helix Strike -->  
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseHelixstrike" role="button" aria-expanded="false" aria-controls="collapseHelixstrike">
+        <input type="radio" name="ability" value="Helix Strike" v-model="attackSelection">
+        <h6>Helix Strike</h6>
+      </label>
 
-    <!-- Shatter -->  
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseShatter" role="button" aria-expanded="false" aria-controls="collapseShatter">
-      <h6>Shatter <span class="badge badge-light text-teal">7</span></h6>
-    </a>
-
+      <!-- Shatter -->
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseShatter" role="button" aria-expanded="false" aria-controls="collapseShatter">
+        <input type="radio" name="ability" value="Shatter" v-model="attackSelection">
+        <h6>Shatter</h6>
+      </label>
+      <br>
+      <p class="jhide" id="attack-selection">{{attackSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
   <div id="attack-sword" class="row mx-auto pad-10">
