@@ -13,7 +13,7 @@
   console.log(skills);
 
   player.level = 9;
-  
+
   new Vue({ el: '#attack-select',
   data: { attackSelection: '' } })
 
@@ -26,10 +26,9 @@
   new Vue({ el: '#lvl-1-select',
   data: { lvl1Selection: '' } })
 
-/*
   new Vue({ el: '#lvl-3-select',
   data: { lvl3Selection: '' } })
-
+/*
   new Vue({ el: '#lvl-4-select',
   data: { lvl4Selection: '' } })
 
@@ -102,7 +101,9 @@
     if ($("#lvl-1-select").text() == "Vitality") { 
         skills.hp = 1; 
       }
-
+    if ($("#lvl-3-select").text() == "DEF I") { 
+        skills.def = 1; 
+      }
       console.log(skills);
 
       localStorage.setItem('objSkills', JSON.stringify(skills));
