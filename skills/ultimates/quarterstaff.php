@@ -1,18 +1,23 @@
   <div class="row justify-content-center">
 
-    <!-- Lightbringer -->
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseLightbringer" role="button" aria-expanded="false" aria-controls="collapseLightbringer">
-      <h6>Lightbringer <span class="badge badge-light text-teal">9</span></h6>
-    </a>
+    <div id="ultimate-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Lightbringer -->  
+      <label class="btn text-white pad-10 mar-5 btn-purple" data-toggle="collapse" href="#collapseLightbringer" role="button" aria-expanded="false" aria-controls="collapseLightbringer">
+        <input type="radio" name="ability" value="Lightbringer" v-model="ultimateSelection">
+        <h6>Lightbringer</h6>
+      </label>
 
-    <!-- Revive -->  
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseRevive" role="button" aria-expanded="false" aria-controls="collapseRevive">
-      <h6>Revive <span class="badge badge-light text-teal">12</span></h6>
-    </a>
-
+      <!-- Revive -->
+      <label class="btn text-white pad-10 mar-5 btn-purple" data-toggle="collapse" href="#collapseRevive" role="button" aria-expanded="false" aria-controls="collapseRevive">
+        <input type="radio" name="ability" value="Revive" v-model="ultimateSelection">
+        <h6>Revive</h6>
+      </label>
+      <br>
+      <p class="jhide" id="ultimate-selection">{{ultimateSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="ultimate-quarterstaff" class="row mx-auto pad-10">
+  <div id="ultimate-quarterstaff" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Lightbringer -->
     <div class="collapse mx-auto" id="collapseLightbringer" data-parent="#ultimate-quarterstaff">
@@ -21,7 +26,7 @@
           <h6>Ultimate Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Your quarterstaff begins to glow, releasing<br>explosions of light as you strike your enemy.<br>DMG = 4 x (Player INT).<br>Costs 9 Mana.</p>
+          <p class="card-text text-center">Your quarterstaff begins to glow, releasing explosions of light as you strike your enemy.<br>Ignores all enemy RES.<br>DMG = 4 x (Player INT).<br>Costs 9 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">

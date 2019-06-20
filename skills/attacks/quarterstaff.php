@@ -1,18 +1,23 @@
   <div class="row justify-content-center">
 
-    <!-- Skull Bash -->
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseSkullbash" role="button" aria-expanded="false" aria-controls="collapseSkullbash">
-      <h6>Skull Bash <span class="badge badge-light text-teal">4</span></h6>
-    </a>
+    <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Skull Bash -->  
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseSkullbash" role="button" aria-expanded="false" aria-controls="collapseSkullbash">
+        <input type="radio" name="ability" value="Skull Bash" v-model="attackSelection">
+        <h6>Skull Bash</h6>
+      </label>
 
-    <!-- Searing Light -->  
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseSearinglight" role="button" aria-expanded="false" aria-controls="collapseSearinglight">
-      <h6>Searing Light <span class="badge badge-light text-teal">4</span></h6>
-    </a>
-
+      <!-- Searing light -->
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseSearinglight" role="button" aria-expanded="false" aria-controls="collapseSearinglight">
+        <input type="radio" name="ability" value="Searing light" v-model="attackSelection">
+        <h6>Searing light</h6>
+      </label>
+      <br>
+      <p class="jhide" id="attack-selection">{{attackSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="attack-quarterstaff" class="row mx-auto pad-10">
+  <div id="attack-quarterstaff" class="row mx-auto pad-10 max-wide-380">
 
    <!-- Skull Bash -->
     <div class="collapse mx-auto" id="collapseSkullbash" data-parent="#attack-quarterstaff">
@@ -21,7 +26,7 @@
           <h6>attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Slam your quarterstaff into<br>the skull of an enemy. <br>Double Critical Hit Chance.<br> DMG = Weapon ATT + Player ATT.<br> Costs 4 Mana.</p>
+          <p class="card-text text-center">Slam your quarterstaff into the skull of an enemy. <br>Double Critical Hit Chance.<br>DMG = Weapon ATT + Player ATT.<br>Costs 4 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
