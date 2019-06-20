@@ -12,6 +12,8 @@
 
   console.log(skills);
 
+  player.level = 9;
+  
   new Vue({ el: '#attack-select',
   data: { attackSelection: '' } })
 
@@ -24,10 +26,10 @@
   new Vue({ el: '#lvl-1-select',
   data: { lvl1Selection: '' } })
 
-/*
+
   new Vue({ el: '#lvl-3-select',
   data: { lvl3Selection: '' } })
-
+/*
   new Vue({ el: '#lvl-4-select',
   data: { lvl4Selection: '' } })
 
