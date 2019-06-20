@@ -83,14 +83,14 @@
 
     $("#save-name").click(function(){
       skills = { hp: 0, att: 0, def: 0, int: 0, res: 0, }
-      var passives = {
-          one: '',
-          three: '',
-          four: '',
-          six: '',
-          seven: '',
-          nine: '',
-          ten: ''
+      let passives = {
+          one: undefined,
+          three: undefined,
+          four: undefined,
+          six: undefined,
+          seven: undefined,
+          nine: undefined,
+          ten: undefined
         }
 
       skills.attack = $("#attack-selection").text();
@@ -104,15 +104,11 @@
       passives.nine = $("#lvl-9-selection").text();
       passives.ten = $("#lvl-10-selection").text();
 
-      /*
 
-    if ($("#lvl-1-select").text() == "Vitality") { 
-        skills.hp = 1; 
+    if (passives.one === "Vitality") { 
+        skills.hp = skills.hp + 1; 
       }
-    if ($("#lvl-3-select").text() == "DEF I") { 
-        skills.def = 1; 
-      } 
-*/
+
       console.log(skills);
       console.log(passives);
 
