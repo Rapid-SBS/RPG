@@ -82,6 +82,10 @@
           <td>RES</td>
           <td>{{ p.res }}</td>
         </tr>
+        <tr>
+          <td>Mana Regen</td>
+          <td>{{ p.mana }}</td>
+        </tr>
       </tbody>
     </table>
   </div><!-- /.row -->
@@ -133,6 +137,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   	player.def = skills.def + rpgclass.def;
   	player.int = skills.int + rpgclass.int;
   	player.res = skills.res + rpgclass.res;
+    player.mana = skills.mana;
 
   	player.basic = weapon.basic; 
     player.special = weapon.special;

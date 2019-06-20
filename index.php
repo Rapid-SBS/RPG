@@ -299,6 +299,7 @@ var skills = {
   def: 0,
   int: 0,
   res: 0,
+  mana: 1,
   support: undefined,
   attack: undefined,
   ultimate: undefined

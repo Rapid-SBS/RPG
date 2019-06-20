@@ -21,7 +21,7 @@
           <h6>Passive Skill</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Using your Basic Ability restores 1 mana.<br>
+          <p class="card-text text-center">Regenerate 1 extra mana per turn.<br>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->

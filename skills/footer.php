@@ -82,7 +82,7 @@
   $(document).ready(function(){ // ----- Save Skills -----
 
     $("#save-name").click(function(){
-      skills = { hp: 0, att: 0, def: 0, int: 0, res: 0, }
+      skills = { hp: 0, att: 0, def: 0, int: 0, res: 0, mana: 1}
       let passives = {
           one: undefined,
           three: undefined,
@@ -106,13 +106,17 @@
 
 
       if (passives.one === "Vitality") { 
-          skills.hp = skills.hp + 1; 
+          skills.hp = skills.hp + 2; 
         }
 
       if (passives.three === "DEF I") { 
           skills.def = skills.def + 1; 
         } else if (passives.three === "RES I") {
           skills.res = skills.res + 1; 
+        }
+
+      if (passives.one === "Mana I") { 
+          skills.mana = skills.mana + 1; 
         }
 
       if (passives.six === "ATT I") { 
@@ -125,6 +129,10 @@
           skills.def = skills.def + 1; 
         } else if (passives.seven === "RES II") {
           skills.res = skills.res + 1; 
+        }
+
+      if (passives.one === "Mana II") { 
+          skills.mana = skills.mana + 1; 
         }
 
       if (passives.ten === "ATT II") { 
