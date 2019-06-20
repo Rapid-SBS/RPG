@@ -1,18 +1,22 @@
   <div class="row justify-content-center">
 
-    <!-- Alchemic Potion -->
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseAlchemicpotion" role="button" aria-expanded="false" aria-controls="collapseAlchemicpotion">
-      <h6>Alchemic Potion <span class="badge badge-light text-teal">4</span></h6>
-    </a>
+    <div id="support-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Alchemic Potion -->  
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseAlchemicpotion" role="button" aria-expanded="false" aria-controls="collapseAlchemicpotion"><input type="radio" name="picked" value="Alchemic Potion" v-model="supportSelection">
+        <h6>Alchemic Potion</h6>
+      </label>
 
-    <!-- Deadly Toxin -->  
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseDeadlytoxin" role="button" aria-expanded="false" aria-controls="collapseDeadlytoxin">
-      <h6>Deadly Toxin <span class="badge badge-light text-teal">5</span></h6>
-    </a>
-
+      <!-- Deadly Toxin -->
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseDeadlytoxin" role="button" aria-expanded="false" aria-controls="collapseDeadlytoxin">
+        <input type="radio" name="picked" value="Deadly Toxin" v-model="supportSelection">
+        <h6>Deadly Toxin</h6>
+      </label>
+      <br>
+      <p class="jhide" id="support-selection">{{supportSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="support-dagger" class="row mx-auto pad-10">
+  <div id="support-dagger" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Alchemic Potion -->
     <div class="collapse mx-auto" id="collapseAlchemicpotion" data-parent="#support-dagger">
