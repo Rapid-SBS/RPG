@@ -1,15 +1,20 @@
   <div class="row justify-content-center">
 
-    <!-- Starfire -->  
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseStarfire" role="button" aria-expanded="false" aria-controls="collapseStarfire">
-      <h6>Starfire <span class="badge badge-light text-teal">9</span></h6>
-    </a>
+    <div id="ultimate-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Starfire -->  
+      <label class="btn text-white pad-10 mar-5 btn-purple" data-toggle="collapse" href="#collapseStarfire" role="button" aria-expanded="false" aria-controls="collapseStarfire">
+        <input type="radio" name="ability" value="Starfire" v-model="ultimateSelection">
+        <h6>Starfire</h6>
+      </label>
 
-    <!-- Abyss Break -->
-    <a class="btn text-white pad-10 mar-5 bg-purple" data-toggle="collapse" href="#collapseAbyssbreak" role="button" aria-expanded="false" aria-controls="collapseAbyssbreak">
-      <h6>Abyss Break <span class="badge badge-light text-teal">10</span></h6>
-    </a>
-
+      <!-- Abyss Break -->
+      <label class="btn text-white pad-10 mar-5 btn-purple" data-toggle="collapse" href="#collapseAbyssbreak" role="button" aria-expanded="false" aria-controls="collapseAbyssbreak">
+        <input type="radio" name="ability" value="Abyss Break" v-model="ultimateSelection">
+        <h6>Abyss Break</h6>
+      </label>
+      <br>
+      <h4 style="display: none;" id="ultimate-selection">{{ultimateSelection}}</h4>
+    </div>
   </div><!-- /.row -->
 
   <div id="ultimate-aether" class="row mx-auto pad-10">
