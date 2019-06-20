@@ -1,18 +1,23 @@
   <div class="row justify-content-center">
 
-    <!-- Lightning Bolt -->
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseLightningbolt" role="button" aria-expanded="false" aria-controls="collapseLightningbolt">
-      <h6>Lightning Bolt <span class="badge badge-light text-teal">4</span></h6>
-    </a>
+    <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Lightning Bolt -->  
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseLightningbolt" role="button" aria-expanded="false" aria-controls="collapseLightningbolt">
+        <input type="radio" name="ability" value="Lightning Bolt" v-model="attackSelection">
+        <h6>Lightning Bolt</h6>
+      </label>
 
-    <!-- Arc Sphere -->  
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseArcsphere" role="button" aria-expanded="false" aria-controls="collapseArcsphere">
-      <h6>Arc Sphere <span class="badge badge-light text-teal">5</span></h6>
-    </a>
-
+      <!-- Arc Sphere -->
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseArcsphere" role="button" aria-expanded="false" aria-controls="collapseArcsphere">
+        <input type="radio" name="ability" value="Arc Sphere" v-model="attackSelection">
+        <h6>Arc Sphere</h6>
+      </label>
+      <br>
+      <p class="jhide" id="attack-selection">{{attackSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="attack-lightning" class="row mx-auto pad-10">
+  <div id="attack-lightning" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Lightning Bolt -->
     <div class="collapse mx-auto" id="collapseLightningbolt" data-parent="#attack-lightning">
