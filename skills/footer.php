@@ -24,6 +24,7 @@
   new Vue({ el: '#lvl-1-select',
   data: { lvl1Selection: '' } })
 
+/*
   new Vue({ el: '#lvl-3-select',
   data: { lvl3Selection: '' } })
 
@@ -41,7 +42,7 @@
 
   new Vue({ el: '#lvl-10-select',
   data: { lvl10Selection: '' } })
-
+*/
 
     $(document).ready(function(){
       console.log(player.level);
@@ -86,7 +87,8 @@
         $("#rpg-skills-lvl-1").addClass("overlay"); 
       }
     });
-
+</script>
+<script>
 
   $(document).ready(function(){ // ----- Save Skills -----
 

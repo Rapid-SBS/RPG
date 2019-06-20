@@ -8,7 +8,7 @@
       </label>
 
       <br>
-      <h9 style="display: none;" id="#lvl-9-select">{{lvl9Selection}}</h9>
+      <h6 style="display: none;" id="#lvl-9-select">{{lvl9Selection}}</h6>
     </div>
   </div><!-- /.row -->
 
