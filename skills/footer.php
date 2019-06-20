@@ -2,16 +2,6 @@
   var player = JSON.parse(localStorage.getItem('objPlayer'));
   var skills = JSON.parse(localStorage.getItem('objSkills'));
   
-  var passives = {
-      one: undefined,
-      three: undefined,
-      four: undefined,
-      six: undefined,
-      seven: undefined,
-      nine: undefined,
-      ten: undefined
-    }
-
   player.level = 10;
 
   new Vue({ el: '#attack-select',
@@ -93,6 +83,16 @@
 
     $("#save-name").click(function(){
       skills = { hp: 0, att: 0, def: 0, int: 0, res: 0, }
+      var passives = {
+          one: undefined,
+          three: undefined,
+          four: undefined,
+          six: undefined,
+          seven: undefined,
+          nine: undefined,
+          ten: undefined
+        }
+      
       skills.attack = $("#attack-selection").text();
       skills.support = $("#support-selection").text();
       skills.ultimate = $("#ultimate-selection").text();
