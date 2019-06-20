@@ -83,6 +83,9 @@ var $output = $('output');
     $("#save-level").click(function(){
       var playerLevel = $("#setlevel").val();
       player.level = playerLevel;
+
+      console.log(player.level)
+
       localStorage.setItem('objPlayer', JSON.stringify(player));
       $('#level-saved').fadeIn('slow', function(){
         $('#level-saved').delay(3000).fadeOut();
