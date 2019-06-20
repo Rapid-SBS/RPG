@@ -24,7 +24,7 @@
   data: { ultimateSelection: '' } })
 
   new Vue({ el: '#lvl-1-select',
-  data: { lvl3Selection: '' } })
+  data: { lvl1Selection: '' } })
 
   new Vue({ el: '#lvl-3-select',
   data: { lvl3Selection: '' } })
