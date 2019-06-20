@@ -1,18 +1,22 @@
   <div class="row justify-content-center">
 
-    <!-- Shadow Sense -->
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseShadowsense" role="button" aria-expanded="false" aria-controls="collapseShadowsense">
-      <h6>Shadow Sense <span class="badge badge-light text-teal">3</span></h6>
-    </a>
+    <div id="support-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Shadow Sense -->  
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseShadowsense" role="button" aria-expanded="false" aria-controls="collapseShadowsense"><input type="radio" name="picked" value="Shadow Sense" v-model="supportSelection">
+        <h6>Shadow Sense</h6>
+      </label>
 
-    <!-- Shadow Meld -->  
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseShadowmeld" role="button" aria-expanded="false" aria-controls="collapseShadowmeld">
-      <h6>Shadow Meld <span class="badge badge-light text-teal">4</span></h6>
-    </a>
-
+      <!-- Shadow Meld -->
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseShadowmeld" role="button" aria-expanded="false" aria-controls="collapseShadowmeld">
+        <input type="radio" name="picked" value="Shadow Meld" v-model="supportSelection">
+        <h6>Shadow Meld</h6>
+      </label>
+      <br>
+      <p class="jhide" id="support-selection">{{supportSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="support-sai" class="row mx-auto pad-10">
+  <div id="support-sai" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Shadow Sense -->
     <div class="collapse mx-auto" id="collapseShadowsense" data-parent="#support-sai">
@@ -25,13 +29,13 @@
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-orange">+2</span>
+            <span class="badge bg-white text-orange">+1</span>
             Bonus ATT
           </li>
         </ul>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            <span class="badge bg-white text-green">+2</span>
+            <span class="badge bg-white text-green">+1</span>
             Bonus DEF
           </li>
         </ul>

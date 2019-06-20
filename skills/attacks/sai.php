@@ -1,18 +1,23 @@
   <div class="row justify-content-center">
 
-    <!-- Eviscerate -->
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseEviscerate" role="button" aria-expanded="false" aria-controls="collapseEviscerate">
-      <h6>Eviscerate <span class="badge badge-light text-teal">6</span></h6>
-    </a>
+    <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Eviscerate -->  
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseEviscerate" role="button" aria-expanded="false" aria-controls="collapseEviscerate">
+        <input type="radio" name="ability" value="Eviscerate" v-model="attackSelection">
+        <h6>Eviscerate</h6>
+      </label>
 
-    <!-- Shadow Blitz -->  
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseShadowblitz" role="button" aria-expanded="false" aria-controls="collapseShadowblitz">
-      <h6>Shadow Blitz <span class="badge badge-light text-teal">7</span></h6>
-    </a>
-
+      <!-- Shadow Blitz -->
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseShadowblitz" role="button" aria-expanded="false" aria-controls="collapseShadowblitz">
+        <input type="radio" name="ability" value="Shadow Blitz" v-model="attackSelection">
+        <h6>Shadow Blitz</h6>
+      </label>
+      <br>
+      <p class="jhide" id="attack-selection">{{attackSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="attack-sai" class="row mx-auto pad-10">
+  <div id="attack-sai" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Eviscerate -->
     <div class="collapse mx-auto" id="collapseEviscerate" data-parent="#attack-sai">
@@ -33,7 +38,7 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Use your shadow energy to ravage<br>all enemies with extreme speed.<br>DMG = Weapon ATT + Player ATT.<br> Costs 7 Mana.</p>
+          <p class="card-text text-center">Use your shadow energy to ravage all enemies with extreme speed.<br>DMG = Weapon ATT + Player ATT.<br> Costs 7 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
