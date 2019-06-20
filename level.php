@@ -48,12 +48,18 @@
 
     <div class="row">
       <div class="wide-275 mx-auto text-center">
-        <button id="save-value" type="submit" class="btn btn-primary mar-20">Set Level</button>
+        <button id="save-level" type="submit" class="btn btn-primary mar-20">Set Level</button>
       </div>
     </div>
 
 </div><!-- /.container -->
+
+<div id="level-saved" class="text-white text-center pad-10 mar-b-20 bg-lightgreen" style="display: none;">
+  <h5 class="pad-10">Level Updated!</h5>
+</div>
+
 <script>
+var player = JSON.parse(localStorage.getItem('objPlayer'));
 var $element = $('input[type="range"]');
 var $output = $('output');
 
@@ -74,10 +80,15 @@ var $output = $('output');
         updateOutput($output[0], this.value);
       });
 
-    $("#save-value").click(function(){  
-      var rangeval = document.getElementById('setlevel').value;
-      console.log(rangeval);
-      });
+    $("#save-level").click(function(){
+      var playerLevel = document.getElementById('setLevel').value
+      player.level = playerLevel;
+      localStorage.setItem('objPlayer', JSON.stringify(player));
+      $('#level-saved').fadeIn('slow', function(){
+        $('#level-saved').delay(3000).fadeOut();
+        }
+       )
+    });
   });
 
 </script>
