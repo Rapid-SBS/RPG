@@ -35,14 +35,14 @@
 <div class="container">
   <div class="row pad-t-40">
       <div class="col mx-auto max-wide-380">
-        <input id="setlevel"
+        <input
             type="range"
             min="0"                
             max="10"                
             step="1"                  
             value="1"
             >
-        <h4 class="text-center mx-auto pad-t-10"><output></output></h4>
+        <h4 id="setlevel" class="text-center mx-auto pad-t-10"><output></output></h4>
       </div>
     </div>  
 
@@ -81,7 +81,7 @@ var $output = $('output');
       });
 
     $("#save-level").click(function(){
-      var playerLevel = document.getElementById('setLevel').value
+      var playerLevel = $("#attack-selection").val();
       player.level = playerLevel;
       localStorage.setItem('objPlayer', JSON.stringify(player));
       $('#level-saved').fadeIn('slow', function(){
