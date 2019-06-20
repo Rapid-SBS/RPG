@@ -8,7 +8,7 @@
       </label>
 
       <br>
-      <h4 id="lvl-4-selection">{{lvl4Selection}}</h4>
+      <p class="jhide" id="lvl-4-selection">{{lvl4Selection}}</p>
     </div>
   </div><!-- /.row -->
 

@@ -14,7 +14,7 @@
       </label>
 
       <br>
-      <h4 id="lvl-3-selection">{{lvl3Selection}}</h4>
+      <p class="jhide" id="lvl-3-selection">{{lvl3Selection}}</p>
     </div>
   </div><!-- /.row -->
 
