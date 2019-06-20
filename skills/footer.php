@@ -24,10 +24,10 @@
   data: { ultimateSelection: '' } })
 
   var oneselect = new Vue({ el: '#lvl-1-select',
-  data: { lvl1Selection: '' } })
+  data: { lvloneSelection: '' } })
 
   var threeselect = new Vue({ el: '#lvl-3-select',
-  data: { lvl3Selection: '' } })
+  data: { lvlthreeSelection: '' } })
 /*
   new Vue({ el: '#lvl-4-select',
   data: { lvl4Selection: '' } })
