@@ -40,7 +40,7 @@
             max="10"                
             step="1"                  
             value="1"
-            class="custom-range max-wide-380">
+            >
         <h4 class="text-center mx-auto pad-t-10"><output></output></h4>
       </div>
     </div>  

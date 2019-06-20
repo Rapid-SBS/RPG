@@ -36,7 +36,9 @@
 
 
   $(document).ready(function(){
-    console.log(player.level);
+    
+    $("h4").hide();
+
     if (player.level < 10) { 
       $("#rpg-skills-lvl-10 > div > div > label").addClass("disabled unclickable"); 
       $("#rpg-skills-lvl-10").addClass("overlay"); 
