@@ -79,32 +79,32 @@
       }
       if (player.level <= 2) { 
         $("#rpg-skills-lvl-2 > div > div > label").addClass("disabled unclickable"); 
-        $("#rpg-skills-lvl-2 > div > div").off("click");
         $("#rpg-skills-lvl-2").addClass("overlay"); 
       }
       if (player.level <= 1) { 
         $("#rpg-skills-lvl-1 > div > div > label").addClass("disabled unclickable");
-        $("#rpg-skills-lvl-1 > div > div > label").off("click");
         $("#rpg-skills-lvl-1").addClass("overlay"); 
       }
     });
+</script>
+<script>
 
   $(document).ready(function(){ // ----- Save Skills -----
 
     $("#save-name").click(function(){
-      event.preventDefault()
-      console.log("Attack Ability: " + $("#attack-selection").text());
-
       skills.attack = $("#attack-selection").text();
       skills.support = $("#support-selection").text();
       skills.ultimate = $("#ultimate-selection").text();
 
+    if ($("#lvl-1-select").text() == "Vitality") { 
+        skills.hp = 1; 
+      }
+
       localStorage.setItem('objSkills', JSON.stringify(skills));
 
       $('#skills-saved').fadeIn('slow', function(){
-        $('#skills-saved').delay(2000).fadeOut();
-        }
-       )
+        $('#skills-saved').delay(2000).fadeOut(); }
+      )
     });
   });
 
@@ -121,7 +121,7 @@
     <h5 class="pad-10">Skills Saved!</h5>
   </div>
 
-<footer class="footer mt-auto text-center bg-lightgray">
+<footer class="footer mt-auto text-center pad-t-10 bg-lightgray">
   <div class="container pad-20">
     <div class="pad-b-20">
       <button class="btn btn-dark text-white mar-r-10 mar-l-10" onclick="goBack()" role="button">Return</button>
