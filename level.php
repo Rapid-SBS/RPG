@@ -81,7 +81,7 @@ var $output = $('output');
       });
 
     $("#save-level").click(function(){
-      var playerLevel = $("#attack-selection").val();
+      var playerLevel = $("#setlevel").val();
       player.level = playerLevel;
       localStorage.setItem('objPlayer', JSON.stringify(player));
       $('#level-saved').fadeIn('slow', function(){
