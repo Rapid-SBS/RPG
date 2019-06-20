@@ -100,6 +100,8 @@
         skills.hp = 1; 
       }
 
+      console.log(skills);
+
       localStorage.setItem('objSkills', JSON.stringify(skills));
 
       $('#skills-saved').fadeIn('slow', function(){
