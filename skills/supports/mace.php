@@ -1,18 +1,22 @@
   <div class="row justify-content-center">
 
-    <!-- Light Surge -->  
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseLightsurge" role="button" aria-expanded="false" aria-controls="collapseLightsurge">
-      <h6>Light Surge <span class="badge badge-light text-teal">6</span></h6>
-    </a>
+    <div id="support-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Light Surge -->  
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseLightsurge" role="button" aria-expanded="false" aria-controls="collapseLightsurge"><input type="radio" name="picked" value="Light Surge" v-model="supportSelection">
+        <h6>Light Surge</h6>
+      </label>
 
-    <!-- Cleansing Light -->
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseCleansinglight" role="button" aria-expanded="false" aria-controls="collapseCleansinglight">
-      <h6>Cleansing Light <span class="badge badge-light text-teal">6</span></h6>
-    </a>
-
+      <!-- Cleansing Light -->
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseCleansinglight" role="button" aria-expanded="false" aria-controls="collapseCleansinglight">
+        <input type="radio" name="picked" value="Cleansing Light" v-model="supportSelection">
+        <h6>Cleansing Light</h6>
+      </label>
+      <br>
+      <p class="jhide" id="support-selection">{{supportSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="support-mace" class="row mx-auto pad-10">
+  <div id="support-mace" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Light Surge -->
     <div class="collapse mx-auto" id="collapseLightsurge" data-parent="#support-mace">
@@ -38,7 +42,7 @@
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
-    <!--Cleansing Light -->
+    <!-- Cleansing Light -->
     <div class="collapse mx-auto" id="collapseCleansinglight" data-parent="#support-mace">
       <div class="card bg-light">
         <div class="card-header text-center">
