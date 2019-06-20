@@ -105,9 +105,15 @@
       passives.ten = $("#lvl-10-selection").text();
 
 
-    if (passives.one === "Vitality") { 
-        skills.hp = skills.hp + 1; 
-      }
+      if (passives.one === "Vitality") { 
+          skills.hp = skills.hp + 1; 
+        }
+
+      if (passives.three === "DEF I") { 
+          skills.def = skills.def + 1; 
+        } else if (passives.three === "RES I") {
+          skills.res = skills.res + 1; 
+        }
 
       console.log(skills);
       console.log(passives);
