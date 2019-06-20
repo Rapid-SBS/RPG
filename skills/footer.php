@@ -50,7 +50,7 @@
         $("#rpg-skills-lvl-10").addClass("overlay"); 
       }
       if (player.level <= 9) { 
-        $("#rpg-skills-lvl-9 > label").addClass("disabled"); 
+        $("#rpg-skills-lvl-9 > div > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-9").addClass("overlay"); 
       }
       if (player.level <= 8) { 
@@ -58,11 +58,11 @@
         $("#rpg-skills-lvl-8").addClass("overlay"); 
       }
       if (player.level <= 7) { 
-        $("#rpg-skills-lvl-7 > label").addClass("disabled"); 
+        $("#rpg-skills-lvl-7 > div > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-7").addClass("overlay"); 
       }
       if (player.level <= 6) { 
-        $("#rpg-skills-lvl-6 > label").addClass("disabled"); 
+        $("#rpg-skills-lvl-6 > div > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-6").addClass("overlay"); 
       }
       if (player.level <= 5) { 
@@ -70,11 +70,11 @@
         $("#rpg-skills-lvl-5").addClass("overlay"); 
       }
       if (player.level <= 4) { 
-        $("#rpg-skills-lvl-4 > label").addClass("disabled"); 
+        $("#rpg-skills-lvl-4 > div > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-4").addClass("overlay"); 
       }
       if (player.level <= 3) { 
-        $("#rpg-skills-lvl-3 > label").addClass("disabled"); 
+        $("#rpg-skills-lvl-3 > div > div > label").addClass("disabled"); 
         $("#rpg-skills-lvl-3").addClass("overlay"); 
       }
       if (player.level <= 2) { 
@@ -83,7 +83,7 @@
         $("#rpg-skills-lvl-2").addClass("overlay"); 
       }
       if (player.level <= 1) { 
-        $("#rpg-skills-lvl-1 > label").addClass("disabled");
+        $("#rpg-skills-lvl-1 > div > div > label").addClass("disabled");
         $("#rpg-skills-lvl-1 > div > div > label").off("click");
         $("#rpg-skills-lvl-1").addClass("overlay"); 
       }
