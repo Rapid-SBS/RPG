@@ -44,6 +44,12 @@
 
   <div class="row">
     <div class="wide-275 mx-auto text-center">
+       <a class="btn btn-primary text-white mar-10" href="level.php" role="button">Add Experience</a>
+    </div>
+  </div><!-- /.row -->
+
+  <div class="row">
+    <div class="wide-275 mx-auto text-center">
        <a class="btn btn-primary text-white mar-10" href="name.php" role="button">Rename Character</a>
     </div>
   </div><!-- /.row -->

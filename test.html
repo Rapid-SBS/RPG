@@ -12,6 +12,7 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="rangeslider/rangeslider.js"></script>
 
   <title>RPGenerator</title>
 
@@ -19,6 +20,7 @@
   <link rel="stylesheet" type="text/css" href="css/spacing.css">
   <link rel="stylesheet" type="text/css" href="css/colors.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="rangeslider/rangeslider.css">
 
 </head>
 
@@ -30,51 +32,44 @@
 
 <div class="container">
 
-  <div class="row justify-content-center">
-
-    <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
-      <!-- Void Fissure -->  
-      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseVoidfissure" role="button" aria-expanded="false" aria-controls="collapseVoidfissure">
-        <input id="radioinput1" type="radio" name="ability" value="Void Fissure" v-model="attackSelection">
-        <h6>Void Fissure</h6>
-      </label>
-
-      <!-- Light Shatter -->
-      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
-        <input id="radioinput2" type="radio" name="ability" value="Light Shatter" v-model="attackSelection">
-        <h6>Light Shatter</h6>
-      </label>
-      <br>
-      <h4 style="display: none;" id="attack-selection">{{attackSelection}}</h4>
-    </div>
-  </div><!-- /.row -->
-
-  <div class="border-top pad-20" style="width: 100%;">
-    <button id="save-name" type="submit" class="btn btn-primary mar-t-20">Save</button>
-  </div>
-
+<input id="ranger"
+    type="range"
+    min="0"                
+    max="10"                
+    step="1"                  
+    value="1"
+    class="custom-range max-wide-380"
+>
+<h4><output></output></h4>
+<button id="save-value" type="submit" class="btn btn-primary mar-t-20">Update</button>
 </div><!-- /.container -->
 
 <script>
-new Vue({
-  el: '#attack-select',
-  data: {
-    attackSelection: '',
-  }
-})
+var $element = $('input[type="range"]');
+var $output = $('output');
 
-$(document).ready(function(){ // ----- Save Skills -----
-  $("label").off("click")
-  $("#save-name").click(function(){
-    event.preventDefault()
-    console.log("Ability: " + $("#attack-selection").text());
+  $(document).ready(function(){ // ----- Save Name -----
+
+    function updateOutput(el, val) {
+      el.textContent = val;
+    }
+
+    $element
+      .rangeslider({
+        polyfill: false,
+        onInit: function() {
+          updateOutput($output[0], this.value);
+        }
+      })
+      .on('input', function() {
+        updateOutput($output[0], this.value);
+      });
+
+    $("#save-value").click(function(){  
+      var rangeval = document.getElementById('ranger').value;
+      console.log(rangeval);
+      });
   });
-  $('#radioinput1').parent('.btn-blue').addClass("active");
-});
-$('label').click(function() {
-   $(this).addClass("active")
-          .siblings('label').removeClass("active");
-});
 
 </script>
 
