@@ -3,13 +3,13 @@
   var skills = JSON.parse(localStorage.getItem('objSkills'));
   
   var passives = {
-      one: '',
-      three: '',
-      four: '',
-      six: '',
-      seven: '',
-      nine: '',
-      ten: ''
+      one: undefined,
+      three: undefined,
+      four: undefined,
+      six: undefined,
+      seven: undefined,
+      nine: undefined,
+      ten: undefined
     }
 
   skills = {
@@ -103,13 +103,13 @@
       skills.attack = $("#attack-selection").text();
       skills.support = $("#support-selection").text();
       skills.ultimate = $("#ultimate-selection").text();
-      passives.one = $("#lvl-1-select").text();
-      passives.three = $("#lvl-3-select").text();
-      passives.four = $("#lvl-4-select").text();
-      passives.six = $("#lvl-6-select").text();
-      passives.seven = $("#lvl-7-select").text();
-      passives.nine = $("#lvl-9-select").text();
-      passives.ten = $("#lvl-10-select").text();
+      passives.one = $("#lvl-1-selection").text();
+      passives.three = $("#lvl-3-selection").text();
+      passives.four = $("#lvl-4-selection").text();
+      passives.six = $("#lvl-6-selection").text();
+      passives.seven = $("#lvl-7-selection").text();
+      passives.nine = $("#lvl-9-selection").text();
+      passives.ten = $("#lvl-10-selection").text();
 
       console.log(skills);
       console.log(passives);
@@ -122,6 +122,7 @@
       } */
 
       localStorage.setItem('objSkills', JSON.stringify(skills));
+      localStorage.setItem('objPassives', JSON.stringify(passives));
 
       $('#skills-saved').fadeIn('slow', function(){
         $('#skills-saved').delay(2000).fadeOut(); }
