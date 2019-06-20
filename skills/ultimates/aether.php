@@ -13,7 +13,7 @@
         <h6>Abyss Break</h6>
       </label>
       <br>
-      <h4 style="display: none;" id="ultimate-selection">{{ultimateSelection}}</h4>
+      <h4 id="ultimate-selection">{{ultimateSelection}}</h4>
     </div>
   </div><!-- /.row -->
 
