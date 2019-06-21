@@ -1,18 +1,23 @@
   <div class="row justify-content-center">
+    
+    <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Light Burst -->  
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseLightburst" role="button" aria-expanded="false" aria-controls="collapseLightburst">
+        <input type="radio" name="ability" value="Light Burst" v-model="attackSelection">
+        <h6>Light Burst</h6>
+      </label>
 
-    <!-- Light Burst -->
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseLightburst" role="button" aria-expanded="false" aria-controls="collapseLightburst">
-      <h6>Light Burst <span class="badge badge-light text-teal">3</span></h6>
-    </a>
-
-    <!-- Constrict -->  
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseConstrict" role="button" aria-expanded="false" aria-controls="collapseConstrict">
-      <h6>Constrict <span class="badge badge-light text-teal">5</span></h6>
-    </a>
-
+      <!-- Constrict -->
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseConstrict" role="button" aria-expanded="false" aria-controls="collapseConstrict">
+        <input type="radio" name="ability" value="Constrict" v-model="attackSelection">
+        <h6>Constrict</h6>
+      </label>
+      <br>
+      <p class="jhide" id="attack-selection">{{attackSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="attack-tome" class="row mx-auto pad-10">
+  <div id="attack-tome" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Light Burst -->
     <div class="collapse mx-auto" id="collapseLightburst" data-parent="#attack-tome">
