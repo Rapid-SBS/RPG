@@ -1,18 +1,22 @@
   <div class="row justify-content-center">
 
-    <!-- Blackmarket Potion -->
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseBlackmarketpotion" role="button" aria-expanded="false" aria-controls="collapseBlackmarketpotion">
-      <h6>Blackmarket Potion <span class="badge badge-light text-teal">3</span></h6>
-    </a>
+    <div id="support-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Blackmarket Potion -->  
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseBlackmarketpotion" role="button" aria-expanded="false" aria-controls="collapseBlackmarketpotion"><input type="radio" name="picked" value="Blackmarket Potion" v-model="supportSelection">
+        <h6>Blackmarket Potion</h6>
+      </label>
 
-    <!-- Smoke Bomb -->  
-    <a class="btn text-white pad-10 mar-5 bg-green" data-toggle="collapse" href="#collapseSmokebomb" role="button" aria-expanded="false" aria-controls="collapseSmokebomb">
-      <h6>Smoke Bomb <span class="badge badge-light text-teal">4</span></h6>
-    </a>
-
+      <!-- Smoke Bomb -->
+      <label class="btn text-white pad-10 mar-5 btn-green" data-toggle="collapse" href="#collapseSmokebomb" role="button" aria-expanded="false" aria-controls="collapseSmokebomb">
+        <input type="radio" name="picked" value="Smoke Bomb" v-model="supportSelection">
+        <h6>Smoke Bomb</h6>
+      </label>
+      <br>
+      <p class="jhide" id="support-selection">{{supportSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="support-shuriken" class="row mx-auto pad-10">
+  <div id="support-shuriken" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Blackmarket Potion -->
     <div class="collapse mx-auto" id="collapseBlackmarketpotion" data-parent="#support-shuriken">
@@ -21,7 +25,7 @@
           <h6>Support Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Drink a smuggled potion that<br>heals you, but drains your mana.<br>HEAL = 4 HP.<br> Costs 3 Mana.</p>
+          <p class="card-text text-center">Drink a smuggled potion that heals you, but drains your mana.<br>HEAL = 4 HP.<br> Costs 3 Mana.</p>
         </div>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
