@@ -1,0 +1,15 @@
+
+6-21-2019
+V1.0 - Major Version
+- Completed Features:
+  - Class Select
+  - Weapon Select
+  - Skill Tree Preview
+  - Character Naming
+  - Character Sheet
+  - Skill Tree
+  - Player Menu
+- To Do:
+  - Character Level (Add Experience/Set Level with slider)
+  - Conversion to Vue JS
+  - Link to Database
