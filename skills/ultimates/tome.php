@@ -20,7 +20,7 @@
   <div id="ultimate-tome" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Divine Judgement -->
-    <div class="collapse mx-auto" id="collapseSkullbash" data-parent="#ultimate-tome">
+    <div class="collapse mx-auto" id="collapseDivinejudgement" data-parent="#ultimate-tome">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Ultimate Ability</h6>
