@@ -1,18 +1,23 @@
   <div class="row justify-content-center">
 
-    <!-- Pulverize -->  
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapsePulverize" role="button" aria-expanded="false" aria-controls="collapsePulverize">
-      <h6>Pulverize <span class="badge badge-light text-teal">6</span></h6>
-    </a>
+    <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Pulverize -->  
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapsePulverize" role="button" aria-expanded="false" aria-controls="collapsePulverize">
+        <input type="radio" name="ability" value="Pulverize" v-model="attackSelection">
+        <h6>Pulverize</h6>
+      </label>
 
-    <!-- Hammer Uppercut -->
-    <a class="btn text-white pad-10 mar-5 bg-blue" data-toggle="collapse" href="#collapseHammeruppercut" role="button" aria-expanded="false" aria-controls="collapseHammeruppercut">
-      <h6>Hammer Uppercut  <span class="badge badge-light text-teal">7</span></h6>
-    </a>
-
+      <!-- Hammer Uppercut -->
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseHammeruppercut" role="button" aria-expanded="false" aria-controls="collapseHammeruppercut">
+        <input type="radio" name="ability" value="Hammer Uppercut" v-model="attackSelection">
+        <h6>Hammer Uppercut</h6>
+      </label>
+      <br>
+      <p class="jhide" id="attack-selection">{{attackSelection}}</p>
+    </div>
   </div><!-- /.row -->
 
-  <div id="attack-warhammer" class="row mx-auto pad-10">
+  <div id="attack-warhammer" class="row mx-auto pad-10 max-wide-380">
 
     <!-- Pulverize -->
     <div class="collapse mx-auto" id="collapsePulverize" data-parent="#attack-warhammer">
