@@ -48,7 +48,7 @@
 
 </div><!-- /.container -->
 
-<div id="name-saved" class="text-white text-center pad-10 mar-b-20 bg-lightgreen" style="display: none;">
+<div id="name-saved" class="text-white text-center pad-10 bg-lightgreen" style="display: none;">
   <h5 class="pad-10">Name Saved!</h5>
 </div>
 
