@@ -79,26 +79,30 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   });
 
   $(document).ready(function(){ // ----- Display Weapon -----
-    if (weapon.name === "Battle Axe" || weapon.name === "War Hammer") {
-      $("#rpg-weapon").text(", wielding a fearsome " + weapon.name);
+    if (weapon.name === "Battle Axe") {
+      $("#rpg-weapon").text(", charging into battle and shattering enemy defenses with your battle axe");
+    } else if (weapon.name === "War Hammer") {
+      $("#rpg-weapon").text(", charging into battle and batttering enemies with your mighty war hammmer");
     } else if (weapon.name === "Bow") {
-      $("#rpg-weapon").text(", attacking from afar with your " + weapon.name);
+      $("#rpg-weapon").text(", bombarding enemies with arrows with your bow");
     } else if (weapon.name === "Crossbow") {
-      $("#rpg-weapon").text(", piercing enemy defenses with your " + weapon.name);
+      $("#rpg-weapon").text(", piercing enemy defenses with your crossbow");
     } else if (weapon.name === "Longbow") {
-      $("#rpg-weapon").text(", supporting allies with your Nature abilities and attacking with your " + weapon.name);
-    } else if (weapon.name === "Sword & Shield" || weapon.name === "Mace & Shield") {
-      $("#rpg-weapon").text(", defending your allies with your " + weapon.name);
+      $("#rpg-weapon").text(", supporting allies with your nature abilities and attacking with your longbow");
+    } else if (weapon.name === "Sword & Shield") {
+      $("#rpg-weapon").text(", defending your allies with your sword and shield as the ultimate protector");
+    } else if (weapon.name === "Mace & Shield") {
+      $("#rpg-weapon").text(", weilding powerful light abilities and protecting allies with your mace and shield");
     } else if (weapon.name === "Quarterstaff" || weapon.name === "Holy Tome") {
-      $("#rpg-weapon").text(", supporting your allies with your " + weapon.name);
+      $("#rpg-weapon").text(", supporting your allies with your light abilities and " + weapon.name);
     } else if (weapon.name === "Ice Stone" || weapon.name === "Fire Stone" || weapon.name === "Lightning Stone") {
       $("#rpg-weapon").text(", harnessing the power of the elements with your " + weapon.name);
     } else if (weapon.name === "Bo Staff") {
-      $("#rpg-weapon").text(" and a master of the " + weapon.name);
+      $("#rpg-weapon").text(" and a master of the bo staff");
     } else if (weapon.name === "Brawler's Fist") {
-      $("#rpg-weapon").text(", a master of martial arts and chi manipulation" + weapon.name);
+      $("#rpg-weapon").text(", a master of martial arts and chi manipulation" );
     } else if (weapon.name === "Wind Fu") {
-      $("#rpg-weapon").text(", mixing martial arts with the wind element" + weapon.name);
+      $("#rpg-weapon").text(", mixing martial arts with the power of the wind element");
     } else if (weapon.name === "Shuriken") {
       $("#rpg-weapon").text(", the ultimate assassin with your shuriken and shadow clones");
     } else if (weapon.name === "Dual Sai") {
