@@ -134,6 +134,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   <div class="container pad-20">
     <div class="pad-b-20">
       <button class="btn btn-dark text-white mar-r-10 mar-l-10" onclick="goBack()" role="button">Return</button>
+      <a class="btn btn-blue text-white mar-r-10 mar-l-10" href="player-menu.php" role="button">Continue</a>
     </div>
     <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
