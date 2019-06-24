@@ -12,7 +12,7 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-  <script src="rangeslider/rangeslider.js"></script>
+  <script src="js/vue-slider-component.umd.min.js"></script>
 
   <title>RPGenerator</title>
 
@@ -50,8 +50,6 @@
   <h4>New Level: {{ value }}</h4>
   <button @click="setLevel" class="btn btn-primary mar-20">Set Level</button>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/dist/vue-slider-component.umd.min.js"></script>
 
 </div><!-- /.container -->
 
