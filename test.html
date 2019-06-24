@@ -33,54 +33,84 @@
 </div>
 
 <div class="container">
-  <div class="row pad-t-40">
-      <div class="col mx-auto max-wide-380">
-        <input id="rangeval"
-            type="range"
-            min="0"                
-            max="10"                
-            step="1"                  
-            value="1"
-            >
-        <h4 class="text-center mx-auto pad-t-10"><output></output></h4>
-      </div>
-    </div>  
 
-    <div class="row">
-      <div class="wide-275 mx-auto text-center">
-        <button id="save-value" type="submit" class="btn btn-primary mar-20">Set Level</button>
-      </div>
-    </div>
+<div id="lvl" class="text-center mx-auto">
+  <!-- default props -->
+  <vue-slider
+    ref="slider"
+    v-model="value"
+    v-bind="options"
+  ></vue-slider>
+  <h1>{{ value }}</h1>
+  <button @click="setLevel" class="btn btn-primary mar-20">Set Level</button>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/theme/default.css">
+
+<script src="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/dist/vue-slider-component.umd.min.js"></script>
 
 </div><!-- /.container -->
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
-var $element = $('input[type="range"]');
-var $output = $('output');
 
-  $(document).ready(function(){ // ----- Save Name -----
-
-    function updateOutput(el, val) {
-      el.textContent = val;
+const lvl = new Vue( {
+  el: '#lvl',
+  data () {
+    return {
+    	value: 0,
+      options: {
+        dotSize: 25,
+        width: 'auto',
+        height: 10,
+        contained: false,
+        direction: 'ltr',
+	      data: null,
+        min: 0,
+        max: 10,
+        interval: 1,
+        disabled: false,
+        clickable: true,
+        duration: 0.5,
+        adsorb: false,
+        lazy: false,
+        tooltip: 'focus',
+        tooltipPlacement: 'top',
+        tooltipFormatter: void 0,
+        useKeyboard: false,
+        enableCross: true,
+        fixed: false,
+        minRange: void 0,
+        maxRange: void 0,
+        order: true,
+        marks: false,
+        dotOptions: void 0,
+        process: true,
+        dotStyle: void 0,
+        railStyle: void 0,
+        processStyle: void 0,
+        tooltipStyle: void 0,
+        stepStyle: void 0,
+        stepActiveStyle: void 0,
+        labelStyle: void 0,
+        labelActiveStyle: void 0,
+      }
     }
-
-    $element
-      .rangeslider({
-        polyfill: false,
-        onInit: function() {
-          updateOutput($output[0], this.value);
-        }
-      })
-      .on('input', function() {
-        updateOutput($output[0], this.value);
-      });
-
-    $("#save-value").click(function(){  
-      event.preventDefault()
-      var rangeVal = document.getElementById('rangeval').value;
-      });
-  });
-
+  },
+  methods: {
+  },
+  mounted () {
+  },
+  methods: {
+  	setLevel() {
+  		player.level = this.value;
+  		localStorage.setItem('objPlayer', JSON.stringify(player));
+  		console.log(player.level);
+  	}
+  },
+  components: {
+    'vueSlider': window[ 'vue-slider-component' ],
+  }
+})
 </script>
 
 <footer class="footer mt-auto text-center bg-lightgray">
