@@ -12,7 +12,6 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-  <script src="rangeslider/rangeslider.js"></script>
 
   <title>RPGenerator</title>
 
@@ -20,7 +19,9 @@
   <link rel="stylesheet" type="text/css" href="css/spacing.css">
   <link rel="stylesheet" type="text/css" href="css/colors.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="rangeslider/rangeslider.css">
+
+<link rel="stylesheet" type="text/css" href="loading-bar.css"/>
+<script type="text/javascript" src="loading-bar.js"></script>
 
 </head>
 
@@ -32,85 +33,15 @@
   <p class="pad-b-10" style="margin-bottom: 0;">Add Experience points or manually set level.</p>
 </div>
 
-<div class="container">
+<div class="ldBar" data-value="50"><div id="myItem1"></div></div>
 
-<div id="lvl" class="text-center mx-auto">
-  <!-- default props -->
-  <vue-slider
-    ref="slider"
-    v-model="value"
-    v-bind="options"
-  ></vue-slider>
-  <h1>{{ value }}</h1>
-  <button @click="setLevel" class="btn btn-primary mar-20">Set Level</button>
-</div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/theme/default.css">
 
-<script src="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/dist/vue-slider-component.umd.min.js"></script>
 
-</div><!-- /.container -->
 <script>
-var player = JSON.parse(localStorage.getItem('objPlayer'));
-
-const lvl = new Vue( {
-  el: '#lvl',
-  data () {
-    return {
-    	value: 0,
-      options: {
-        dotSize: 25,
-        width: 'auto',
-        height: 10,
-        contained: false,
-        direction: 'ltr',
-	      data: null,
-        min: 0,
-        max: 10,
-        interval: 1,
-        disabled: false,
-        clickable: true,
-        duration: 0.5,
-        adsorb: false,
-        lazy: false,
-        tooltip: 'focus',
-        tooltipPlacement: 'top',
-        tooltipFormatter: void 0,
-        useKeyboard: false,
-        enableCross: true,
-        fixed: false,
-        minRange: void 0,
-        maxRange: void 0,
-        order: true,
-        marks: false,
-        dotOptions: void 0,
-        process: true,
-        dotStyle: void 0,
-        railStyle: void 0,
-        processStyle: void 0,
-        tooltipStyle: void 0,
-        stepStyle: void 0,
-        stepActiveStyle: void 0,
-        labelStyle: void 0,
-        labelActiveStyle: void 0,
-      }
-    }
-  },
-  methods: {
-  },
-  mounted () {
-  },
-  methods: {
-  	setLevel() {
-  		player.level = this.value;
-  		localStorage.setItem('objPlayer', JSON.stringify(player));
-  		console.log(player.level);
-  	}
-  },
-  components: {
-    'vueSlider': window[ 'vue-slider-component' ],
-  }
-})
+  var bar1 = new ldBar("#myItem1");
+  var bar2 = document.getElementById('myItem1').ldBar;
+  bar1.set(60);
 </script>
 
 <footer class="footer mt-auto text-center bg-lightgray">
