@@ -51,8 +51,6 @@
   <button @click="setLevel" class="btn btn-primary mar-20">Set Level</button>
 </div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/theme/default.css">
-
 <script src="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/dist/vue-slider-component.umd.min.js"></script>
 
 </div><!-- /.container -->
