@@ -84,7 +84,7 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
     } else if (weapon.name === "War Hammer") {
       $("#rpg-weapon").text(", charging into battle and batttering enemies with your mighty war hammmer");
     } else if (weapon.name === "Bow") {
-      $("#rpg-weapon").text(", bombarding enemies with arrows with your bow");
+      $("#rpg-weapon").text(", bombarding enemies with arrows from your bow");
     } else if (weapon.name === "Crossbow") {
       $("#rpg-weapon").text(", piercing enemy defenses with your crossbow");
     } else if (weapon.name === "Longbow") {
