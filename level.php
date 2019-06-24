@@ -34,9 +34,9 @@
 
 <div class="container max-wide-380">
 
-  <div class="row pad-t-40">
+  <div class="row text-center mx-auto pad-t-40">
     <div class="col">
-      <h5>Current Level: {{ player.level }} </h5>
+      <h5>Current Level: {{ value }} </h5>
     </div>
   </div><!-- /.row -->
 
