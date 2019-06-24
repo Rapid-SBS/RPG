@@ -34,9 +34,9 @@
 
 <div class="container max-wide-380">
 
-  <div class="row text-center mx-auto pad-t-40">
+  <div class="row text-center mx-auto pad-20">
     <div class="col">
-      <h5 id="player-level"></h5>
+      <h4 id="player-level"></h4>
     </div>
   </div><!-- /.row -->
 
@@ -47,13 +47,18 @@
     v-model="value"
     v-bind="options"
   ></vue-slider>
-  <h1>{{ value }}</h1>
+  <h4>New Level: {{ value }}</h4>
   <button @click="setLevel" class="btn btn-primary mar-20">Set Level</button>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue-slider-component@latest/dist/vue-slider-component.umd.min.js"></script>
 
 </div><!-- /.container -->
+
+<div id="level-saved" class="text-white text-center pad-10 mar-b-20 bg-lightgreen" style="display: none;">
+  <h5 class="pad-10">Level Updated!</h5>
+</div>
+
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
 $(document).ready(function(){
@@ -112,6 +117,10 @@ const lvl = new Vue( {
       player.level = this.value;
       localStorage.setItem('objPlayer', JSON.stringify(player));
       $("#player-level").text("Current Level: " + player.level);
+      $('#level-saved').fadeIn('slow', function(){
+        $('#level-saved').delay(2000).fadeOut();
+        }
+       )
       console.log(player.level);
     }
   },
