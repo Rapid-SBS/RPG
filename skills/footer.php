@@ -1,8 +1,6 @@
  <script>
   var player = JSON.parse(localStorage.getItem('objPlayer'));
   var skills = JSON.parse(localStorage.getItem('objSkills'));
-  
-  player.level = 10;
 
   new Vue({ el: '#attack-select',
   data: { attackSelection: '' } })
