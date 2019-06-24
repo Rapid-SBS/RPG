@@ -1,14 +1,14 @@
 <?php include 'mage-ice.php'; ?>
 
-  <a role="button" onclick="setWeaponIce()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-ice" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
+  <a role="button" onclick="setWeaponIce()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-ice" href="name.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'mage-fire.php'; ?>
 
-  <a role="button" onclick="setWeaponFire()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-fire" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
+  <a role="button" onclick="setWeaponFire()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-fire" href="name.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'mage-lightning.php'; ?>
 
-  <a role="button" onclick="setWeaponLightning()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-lightning" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
+  <a role="button" onclick="setWeaponLightning()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-lightning" href="name.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
 function setWeaponIce() {

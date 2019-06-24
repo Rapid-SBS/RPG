@@ -1,14 +1,14 @@
 <?php include 'runemaster-runestone.php'; ?>
 
-  <a role="button" onclick="setWeaponRunestone()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-runestone" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
+  <a role="button" onclick="setWeaponRunestone()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-runestone" href="name.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'runemaster-runeblade.php'; ?>
 
-  <a role="button" onclick="setWeaponRuneblade()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-runeblade" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
+  <a role="button" onclick="setWeaponRuneblade()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-runeblade" href="name.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <?php include 'runemaster-aether.php'; ?>
 
-  <a role="button" onclick="setWeaponAether()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-aether" href="skill-tree-preview.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
+  <a role="button" onclick="setWeaponAether()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-aether" href="name.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
 function setWeaponRunestone() {
