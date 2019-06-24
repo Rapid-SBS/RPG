@@ -111,6 +111,7 @@ const lvl = new Vue( {
     setLevel() {
       player.level = this.value;
       localStorage.setItem('objPlayer', JSON.stringify(player));
+      $("#player-level").text("Current Level: " + player.level);
       console.log(player.level);
     }
   },
