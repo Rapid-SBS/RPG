@@ -34,8 +34,13 @@
 
 <div class="container max-wide-380">
 
+  <div class="row text-center mx-auto pad-t-40">
+    <div class="col">
+      <h5 id="player-level"></h5>
+    </div>
+  </div><!-- /.row -->
+
 <div id="lvl" class="text-center mx-auto">
-  <h5>Current Level: {{ value }} </h5>
   <!-- default props -->
   <vue-slider
     ref="slider"
@@ -51,6 +56,9 @@
 </div><!-- /.container -->
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
+$(document).ready(function(){
+  $("#player-level").text("Current Level: " + player.level);
+  });
 
 const lvl = new Vue( {
   el: '#lvl',
