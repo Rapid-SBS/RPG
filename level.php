@@ -20,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="css/spacing.css">
   <link rel="stylesheet" type="text/css" href="css/colors.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="rangeslider/rangeslider.css">
+  <link rel="stylesheet" type="text/css" href="css/slider.css">
 
 </head>
 
@@ -32,7 +32,13 @@
   <p class="pad-b-10" style="margin-bottom: 0;">Add Experience points or manually set level.</p>
 </div>
 
-<div class="container">
+<div class="container max-wide-380">
+
+  <div class="row pad-t-40">
+    <div class="col">
+      <h5>Current Level: {{ player.level }} </h5>
+    </div>
+  </div><!-- /.row -->
 
 <div id="lvl" class="text-center mx-auto">
   <!-- default props -->
