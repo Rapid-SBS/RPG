@@ -32,12 +32,14 @@
 <div class="container pad-20 max-wide-380">
   <div id="expBar">
     <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
+    <button class="btn-primary" @click="addExp">Add 20 Exp</button>
   </div>
 </div>
 
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
-console.log(player.level);
+console.log("Level:" + player.level);
+console.log("Exp:" player.exp)
 
   var a = 10;
   var b = 30;

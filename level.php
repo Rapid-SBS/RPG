@@ -13,6 +13,8 @@
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <script src="js/vue-slider-component.umd.min.js"></script>
+  <script src="js/vue-simple-progress.min.js"></script>
+
 
   <title>RPGenerator</title>
 
@@ -36,12 +38,17 @@
 
   <div class="row text-center mx-auto pad-20">
     <div class="col">
-      <h4 id="player-level"></h4>
+      <h5 id="pad-5 player-level"></h5>
+      <h5 id="pad-5 player-exp"></h5>
     </div>
   </div><!-- /.row -->
 
+  <div id="expBar">
+    <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
+    <button class="btn-primary" @click="addExp">Add 20 Exp</button>
+  </div>
+
 <div id="lvl" class="text-center mx-auto">
-  <!-- default props -->
   <vue-slider
     ref="slider"
     v-model="value"
@@ -59,10 +66,19 @@
 
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
-$(document).ready(function(){
-  $("#player-level").text("Current Level: " + player.level);
-  });
+$("#player-level").text("Current Level: " + player.level);
+$("#player-exp").text("Current Exp: " + player.exp);
 
+
+var demo = new Vue({
+  el: '#expBar',
+  data: function() {
+    return {
+      expProgress: a + b
+    }
+  }
+})
+  
 const lvl = new Vue( {
   el: '#lvl',
   data () {
