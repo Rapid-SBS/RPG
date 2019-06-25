@@ -43,10 +43,12 @@
     </div>
   </div><!-- /.row -->
 
-  <div id="expBar">
-    <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
-    <button class="btn-primary" @click="addExp">Add 20 Exp</button>
-  </div>
+  <div class="row text-center mx-auto pad-b-20">
+    <div id="expBar">
+      <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
+      <button class="btn btn-primary" @click="addExp">Add 20 Exp</button>
+    </div>
+  </div><!-- /.row -->  
 
 <div id="lvl" class="text-center mx-auto">
   <vue-slider
