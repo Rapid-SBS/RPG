@@ -22,6 +22,8 @@
   <link rel="stylesheet" type="text/css" href="css/spacing.css">
   <link rel="stylesheet" type="text/css" href="css/colors.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css"/>
+  <script type="text/javascript" src="loading-bar/loading-bar.js"></script>
 </head>
 
 <body>
@@ -29,29 +31,11 @@
   <h5 class="pad-10"> Test </h5>
 </div>
   
-<div class="container pad-20 max-wide-380">
-  <div id="expBar">
-    <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
-    <button class="btn-primary" @click="addExp">Add 20 Exp</button>
-  </div>
-</div>
 
+<div id="exp-bar"></div>
 <script>
-var player = JSON.parse(localStorage.getItem('objPlayer'));
-console.log("Level:" + player.level);
-console.log("Exp:" player.exp)
-
-  var a = 10;
-  var b = 30;
-
-  var demo = new Vue({
-    el: '#expBar',
-    data: function() {
-      return {
-        expProgress: a + b
-      }
-    }
-  })
+  var expBar = new ldBar("#exp-bar");
+  expBar.set(80);
 
 </script>
 

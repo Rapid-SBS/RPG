@@ -13,7 +13,8 @@
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <script src="js/vue-slider-component.umd.min.js"></script>
-  <script src="js/vue-simple-progress.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css"/>
+  <script type="text/javascript" src="loading-bar/loading-bar.js"></script>
 
 
   <title>RPGenerator</title>
@@ -44,7 +45,7 @@
   <div class="row text-center pad-b-20">
     <div id="expBar" class="mx-auto" style="width: 90%;">
       <h6 id="current-exp" style="display: inline;"></h6><h6 id="level-exp" style="display: inline;"></h6>
-      <br>
+      <div id="exp-bar"></div>
       <button id="add-exp" class="btn btn-primary">Add 20 Exp</button>
       <button id="clear-exp" class="btn btn-primary">Clear Exp</button>
     </div>
