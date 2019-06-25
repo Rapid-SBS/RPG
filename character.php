@@ -22,6 +22,8 @@
   <link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css"/>
   <script type="text/javascript" src="loading-bar/loading-bar.js"></script>
 
+  <style> .ldBar-label { display: none; }</style>
+
 </head>
 
 <body>
@@ -178,7 +180,6 @@ $(document).ready(function(){
   
   // --- Initialize Progress Bar
   var expBar = new ldBar("#exp-bar");
-  expBar.set(progressExp);
 
   // --- Display updated values
   expBar.set(progressExp);
