@@ -78,6 +78,11 @@ var demo = new Vue({
     return {
       expProgress: 40
     }
+  },
+  methods: {
+    addExp() {
+
+    }
   }
 })
 
@@ -123,8 +128,6 @@ const lvl = new Vue( {
         labelActiveStyle: void 0,
       }
     }
-  },
-  methods: {
   },
   mounted () {
   },
