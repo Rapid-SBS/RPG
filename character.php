@@ -19,6 +19,8 @@
   <link rel="stylesheet" type="text/css" href="css/spacing.css">
   <link rel="stylesheet" type="text/css" href="css/colors.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css"/>
+  <script type="text/javascript" src="loading-bar/loading-bar.js"></script>
 
 </head>
 
