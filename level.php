@@ -43,7 +43,7 @@
 
   <div class="row text-center pad-b-20">
     <div id="expBar" class="mx-auto" style="width: 90%;">
-      <h5 id="player-exp" style="display: inline;"></h5><h5 style="display: inline;"> / {{ nextLevel }}</h5>
+      <h6 id="player-exp" style="display: inline;"></h6><h6 style="display: inline;"> / {{ nextLevel }}</h6>
       <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
       <button class="btn btn-primary" @click="addExp">Add 20 Exp</button>
       <button class="btn btn-primary" @click="clearExp">Clear Exp</button>
@@ -78,7 +78,7 @@ var demo = new Vue({
   el: '#expBar',
   data: function() {
     return {
-      expProgress: player.exp
+      data: 0
     }
   },
   methods: {
@@ -96,6 +96,9 @@ var demo = new Vue({
   computed: {
     nextLevel: function () {
       return player.level * 20 + 100
+    },
+    expProgress: function () {
+      return player.level / nextLevel
     }
   }
 })
