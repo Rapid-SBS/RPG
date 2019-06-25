@@ -77,7 +77,7 @@ $(document).ready(function(){
 });
 
 
-let nextLevel = (player.level * 20) + 100;
+let nextLevel = player.level * 20 + 100;
 console.log(nextLevel);
 
 var demo = new Vue({
