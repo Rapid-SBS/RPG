@@ -34,7 +34,7 @@
   <p class="pad-b-10" style="margin-bottom: 0;">Add Experience points or manually set level.</p>
 </div>
 
-<div class="container max-wide-380">
+<div class="container">
 
   <div class="row text-center mx-auto pad-20">
     <div class="col">
@@ -106,7 +106,7 @@ $(document).ready(function(){
     localStorage.setItem('objPlayer', JSON.stringify(player));
 
     // --- Update Values ---
-    expBar.set(progressExp);
+    expBar.set(80);
     console.log(progressExp);
     $("#current-exp").text(currentExp);
     $("#level-exp").text(" / " + levelExp);
