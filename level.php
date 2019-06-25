@@ -66,19 +66,21 @@
 
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
-$("#player-level").text("Current Level: " + player.level);
-$("#player-exp").text("Current Exp: " + player.exp);
 
+$(document).ready(function(){ 
+  $("#player-level").text("Current Level: " + player.level);
+  $("#player-exp").text("Current Exp: " + player.exp);
+  });
 
 var demo = new Vue({
   el: '#expBar',
   data: function() {
     return {
-      expProgress: a + b
+      expProgress: 40
     }
   }
 })
-  
+
 const lvl = new Vue( {
   el: '#lvl',
   data () {
