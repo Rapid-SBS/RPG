@@ -83,7 +83,7 @@ var demo = new Vue({
   el: '#expBar',
   data: function() {
     return {
-      playerExp: player.exp,
+      expProgress = currentExp / levelExp
     }
   },
   methods: {
@@ -101,11 +101,6 @@ var demo = new Vue({
       $("#current-exp").text(currentExp);
       $("#level-exp").text(" / " + levelExp);
     }
-  },
-  computed: {
-    expProgress: function () {
-      return currentExp / levelExp
-    },
   }
 })
 
