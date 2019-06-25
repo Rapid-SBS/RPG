@@ -74,11 +74,17 @@ $(document).ready(function(){
   $("#player-exp").text(player.exp);
 });
 
+var currentExp = player.exp;
+var levelExp = player.level * 20 + 100;
+
+console.log(currentExp);
+console.log(levelExp)
+;
 var demo = new Vue({
   el: '#expBar',
   data: function() {
     return {
-      playerLevel = player.level
+      playerExp: player.exp,
     }
   },
   methods: {
@@ -94,12 +100,9 @@ var demo = new Vue({
     }
   },
   computed: {
-    nextLevel: function () {
-      return playerLevel * 20 + 100
-    },
     expProgress: function () {
-      return playerLevel
-    }
+      return currentExp / levelExp
+    },
   }
 })
 
