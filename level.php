@@ -76,10 +76,9 @@ $(document).ready(function(){
 
 var currentExp = player.exp;
 var levelExp = player.level * 20 + 100;
+$("#current-exp").text(currentExp);
+$("#level-exp").text(" / " + levelExp);
 
-console.log(currentExp);
-console.log(levelExp)
-;
 var demo = new Vue({
   el: '#expBar',
   data: function() {
