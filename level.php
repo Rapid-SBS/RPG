@@ -102,13 +102,13 @@ $(document).ready(function(){
     currentExp = currentExp + 20;
     levelExp = player.level * 20 + 100;
     progressExp = (currentExp / levelExp) * 100;
-    
+
     // --- Update Player Data ---
     player.exp = currentExp;
     localStorage.setItem('objPlayer', JSON.stringify(player));
 
     // --- Update Values ---
-    expBar.set(80);
+    expBar.set(progressExp);
     console.log(progressExp);
     $("#current-exp").text(currentExp);
     $("#level-exp").text(" / " + levelExp);
