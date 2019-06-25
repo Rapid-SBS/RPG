@@ -78,7 +78,7 @@ var demo = new Vue({
   el: '#expBar',
   data: function() {
     return {
-      data: 0
+      playerLevel = player.level
     }
   },
   methods: {
@@ -95,10 +95,10 @@ var demo = new Vue({
   },
   computed: {
     nextLevel: function () {
-      return player.level * 20 + 100
+      return playerLevel * 20 + 100
     },
     expProgress: function () {
-      return player.level / nextLevel
+      return playerLevel
     }
   }
 })
