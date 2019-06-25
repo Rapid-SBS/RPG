@@ -42,8 +42,8 @@
     </div>
   </div><!-- /.row -->
 
-  <div class="row text-center pad-b-10">
-    <div class="col" style="width: 90%;">
+  <div class="row text-center">
+    <div class="col" style="width: 100%;">
       <div id="exp-bar" class="mx-auto" 
       data-stroke="#00dd00" 
       data-stroke-width="15" 
