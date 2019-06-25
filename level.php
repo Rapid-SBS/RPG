@@ -44,9 +44,8 @@
   <div class="row text-center pad-b-20">
     <div id="expBar" class="mx-auto" style="width: 90%;">
       <h6 id="current-exp" style="display: inline;"></h6><h6 id="level-exp" style="display: inline;"></h6>
-      <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
-      <button class="btn btn-primary" @click="addExp">Add 20 Exp</button>
-      <button class="btn btn-primary" @click="clearExp">Clear Exp</button>
+      <button id="add-exp" class="btn btn-primary">Add 20 Exp</button>
+      <button id="clear-exp" class="btn btn-primary">Clear Exp</button>
     </div>
   </div><!-- /.row -->  
 
@@ -68,48 +67,31 @@
 
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
-
-$(document).ready(function(){ 
-  $("#player-level").text("Current Level: " + player.level);
-  $("#player-exp").text(player.exp);
-});
-
 var currentExp = player.exp;
 var levelExp = player.level * 20 + 100;
 var progressExp = currentExp / levelExp;
 
-$("#current-exp").text(currentExp);
-$("#level-exp").text(" / " + levelExp);
+$(document).ready(function(){ 
 
-var demo = new Vue({
-  el: '#expBar',
-  data: function() {
-    return {
-      expProgress: progressExp
-    }
-  },
-  methods: {
-    addExp() {
-      currentExp = currentExp + 20;
-      player.exp = currentExp;
-      localStorage.setItem('objPlayer', JSON.stringify(player));
-      $("#current-exp").text(currentExp);
-      $("#level-exp").text(" / " + levelExp);
-    },
-    clearExp() {
-      currentExp = 0;
-      player.exp = currentExp;
-      localStorage.setItem('objPlayer', JSON.stringify(player));
-      $("#current-exp").text(currentExp);
-      $("#level-exp").text(" / " + levelExp);
-    }
-  },
-  watch: {
-    expProgress: function (val){
+  $("#current-exp").text(currentExp);
+  $("#level-exp").text(" / " + levelExp);
 
-    }
+  $("#add-exp").click(function(){
+    currentExp = currentExp + 20;
+    player.exp = currentExp;
+    localStorage.setItem('objPlayer', JSON.stringify(player));
+    $("#current-exp").text(currentExp);
+    $("#level-exp").text(" / " + levelExp);
   }
-})
+  $("#clear-exp").click(function(){
+    currentExp = 0;
+    player.exp = currentExp;
+    localStorage.setItem('objPlayer', JSON.stringify(player));
+    $("#current-exp").text(currentExp);
+    $("#level-exp").text(" / " + levelExp);
+  }
+
+});
 
 const lvl = new Vue( {
   el: '#lvl',
