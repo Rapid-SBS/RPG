@@ -31,7 +31,7 @@
 </div>
 
 <div class="row text-center">
-  <div class="wide-380">
+  <div class="wide-380 mx-auto">
     <div id="exp-bar" class="mx-auto" 
     data-stroke="#00dd00" 
     data-stroke-width="15" 
@@ -182,8 +182,9 @@ $(document).ready(function(){
 
   // --- Display updated values
   expBar.set(progressExp);
-  $("#current-exp").text(currentExp);
+  $("#current-exp").text("Exp: " + currentExp);
   });
+
 </script>
 
 <footer class="footer mt-auto text-center bg-lightgray">
