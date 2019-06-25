@@ -40,12 +40,12 @@
     <div class="col">
       <h5 id="player-level" class="pad-5"></h5>
       <h5 id="player-exp" class="pad-5"></h5>
-      <h5 class="pad-5">{{ gathered }}</h5>
     </div>
   </div><!-- /.row -->
 
   <div class="row text-center pad-b-20">
     <div id="expBar" class="mx-auto" style="width: 90%;">
+      <h5 class="pad-5">{{ gathered }}</h5>
       <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
       <button class="btn btn-primary" @click="addExp">Add 20 Exp</button>
     </div>
