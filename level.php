@@ -82,15 +82,14 @@ $(document).ready(function(){
     localStorage.setItem('objPlayer', JSON.stringify(player));
     $("#current-exp").text(currentExp);
     $("#level-exp").text(" / " + levelExp);
-  }
+  });
   $("#clear-exp").click(function(){
     currentExp = 0;
     player.exp = currentExp;
     localStorage.setItem('objPlayer', JSON.stringify(player));
     $("#current-exp").text(currentExp);
     $("#level-exp").text(" / " + levelExp);
-  }
-
+  });
 });
 
 const lvl = new Vue( {
