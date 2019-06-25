@@ -12,6 +12,9 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="js/vue-simple-progress.min.js"></script>
+
+
 
   <title>RPGenerator</title>
 
@@ -19,30 +22,40 @@
   <link rel="stylesheet" type="text/css" href="css/spacing.css">
   <link rel="stylesheet" type="text/css" href="css/colors.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-
-<link rel="stylesheet" type="text/css" href="loading-bar.css"/>
-<script type="text/javascript" src="loading-bar.js"></script>
-
 </head>
 
 <body>
-
-  
 <div class="text-white text-center bg-primary">
-  <h5 class="pad-10"> Character Level </h5>
-  <p class="pad-b-10" style="margin-bottom: 0;">Add Experience points or manually set level.</p>
+  <h5 class="pad-10"> Test </h5>
 </div>
+  
+<div class="container pad-20 max-wide-380">
+  <div id="expBar">
+    <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
+  </div>
+</body>
 
-<div class="ldBar" data-value="50"><div id="myItem1"></div></div>
+  <script>
+    var demo = new Vue({
+      el: '#expBar',
+      data: function() {
+        return {
+          expProgress: 90,
+        }
+      },
+      mounted: function() {
+        setInterval(() => {
+          if (this.is_paused)
+            return
 
+          this.random_pct = Math.ceil(Math.random() * 100)
+          this.increasing_pct = Math.min(this.increasing_pct + 5, 100)
+          this.decreasing_pct = Math.max(this.decreasing_pct - 5, 0)
+        }, 2000)
+      }
+    })
 
-
-
-<script>
-  var bar1 = new ldBar("#myItem1");
-  var bar2 = document.getElementById('myItem1').ldBar;
-  bar1.set(60);
-</script>
+  </script>
 
 <footer class="footer mt-auto text-center bg-lightgray">
   <div class="container pad-20">
