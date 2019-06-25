@@ -28,7 +28,6 @@
 
 <body>
 
-  
 <div class="text-white text-center bg-primary">
   <h5 class="pad-10"> Character Level </h5>
   <p class="pad-b-10" style="margin-bottom: 0;">Add Experience points or manually set level.</p>
@@ -39,7 +38,6 @@
   <div class="row text-center mx-auto pad-20">
     <div class="col">
       <h5 id="player-level" class="pad-5"></h5>
-      <h5 id="player-exp" class="pad-5"></h5>
     </div>
   </div><!-- /.row -->
 
