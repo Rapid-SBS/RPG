@@ -42,12 +42,12 @@
     </div>
   </div><!-- /.row -->
 
-  <div class="row text-center pad-b-20">
+  <div class="row text-center">
     <div class="mx-auto" style="width: 90%;">
       <h6 id="current-exp" style="display: inline;"></h6><h6 id="level-exp" style="display: inline;"></h6>
     </div>
   </div>
-  
+
   <div class="row text-center">
     <div class="col" style="width: 100%;">
       <div id="exp-bar" class="mx-auto" 
@@ -105,6 +105,10 @@ $(document).ready(function(){
     currentExp = currentExp + 20;
     levelExp = player.level * 20 + 100;
     progressExp = (currentExp / levelExp) * 100;
+
+    if (currentExp >= levelExp) {
+      console.log("Level Up!")
+    }
 
     // --- Update Player object
     player.exp = currentExp;
