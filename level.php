@@ -100,7 +100,9 @@ $(document).ready(function(){
   // --- Add Experience ---
   $("#add-exp").click(function(){
     currentExp = currentExp + 20;
-
+    levelExp = player.level * 20 + 100;
+    progressExp = (currentExp / levelExp) * 100;
+    
     // --- Update Player Data ---
     player.exp = currentExp;
     localStorage.setItem('objPlayer', JSON.stringify(player));
