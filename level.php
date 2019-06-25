@@ -85,7 +85,7 @@ var demo = new Vue({
   el: '#expBar',
   data: function() {
     return {
-      expProgress: 0
+      expProgress: progressExp
     }
   },
   methods: {
