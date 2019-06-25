@@ -43,7 +43,7 @@
 
   <div class="row text-center pad-b-20">
     <div id="expBar" class="mx-auto" style="width: 90%;">
-      <h5 id="player-exp"></h5><h5 class="pad-5"> / {{ nextLevel }}</h5>
+      <h5 id="player-exp" style="display: inline;"></h5><h5 style="display: inline;"> / {{ nextLevel }}</h5>
       <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
       <button class="btn btn-primary" @click="addExp">Add 20 Exp</button>
       <button class="btn btn-primary" @click="clearExp">Clear Exp</button>
@@ -71,7 +71,7 @@ var player = JSON.parse(localStorage.getItem('objPlayer'));
 
 $(document).ready(function(){ 
   $("#player-level").text("Current Level: " + player.level);
-  $("#player-exp").text("Current Exp: " + player.exp);
+  $("#player-exp").text(player.exp);
 });
 
 var demo = new Vue({
@@ -85,12 +85,12 @@ var demo = new Vue({
     addExp() {
       player.exp = player.exp + 20;
       localStorage.setItem('objPlayer', JSON.stringify(player));
-      $("#player-exp").text("Current Exp: " + player.exp);
+      $("#player-exp").text(player.exp);
     },
     clearExp() {
       player.exp = 0;
       localStorage.setItem('objPlayer', JSON.stringify(player));
-      $("#player-exp").text("Current Exp: " + player.exp);
+      $("#player-exp").text(player.exp);
     }
   },
   computed: {
