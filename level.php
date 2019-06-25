@@ -40,6 +40,7 @@
     <div class="col">
       <h5 id="player-level" class="pad-5"></h5>
       <h5 id="player-exp" class="pad-5"></h5>
+      <h5 class="pad-5">{{ gathered }}</h5>
     </div>
   </div><!-- /.row -->
 
@@ -81,7 +82,8 @@ var demo = new Vue({
   el: '#expBar',
   data: function() {
     return {
-      expProgress: a + b
+      expProgress: a + b,
+      other: 25
     }
   },
   methods: {
@@ -89,6 +91,11 @@ var demo = new Vue({
       player.exp = player.exp + 20;
       localStorage.setItem('objPlayer', JSON.stringify(player));
       $("#player-exp").text("Current Exp: " + player.exp);
+    }
+  },
+  computed: {
+    gathered: function () {
+      return this.expProgress + this.other
     }
   }
 })
