@@ -73,6 +73,9 @@ var currentExp = player.exp;
 var levelExp = player.level * 20 + 100;
 var progressExp = currentExp / levelExp;
 
+  var expBar = new ldBar("#exp-bar");
+  expBar.set(80);
+
 $(document).ready(function(){ 
   $("#player-level").text("Current Level: " + player.level);
   $("#current-exp").text(currentExp);
