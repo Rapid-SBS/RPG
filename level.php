@@ -91,6 +91,7 @@ $(document).ready(function(){
   let levelExp = player.level * 20 + 100;
   let progressExp = (currentExp / levelExp) * 100;
   
+  // --- Initialize Progress Bar
   var expBar = new ldBar("#exp-bar");
   expBar.set(progressExp);
 
@@ -106,9 +107,10 @@ $(document).ready(function(){
     levelExp = player.level * 20 + 100;
     progressExp = (currentExp / levelExp) * 100;
 
+    // --- Level-up logic ---
     if (currentExp >= levelExp) {
       let remainder = currentExp - levelExp;
-      player.exp = remainder;
+      currentExp = 0 + remainder;
       if (player.level <= 9) {
         player.level++;
       }
