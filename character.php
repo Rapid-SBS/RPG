@@ -28,8 +28,18 @@
   <h5 class="pad-10"> Character Sheet </h5>
 </div>
 
+<div class="row text-center">
+  <div class="col" style="width: 100%;">
+    <div id="exp-bar" class="mx-auto" 
+    data-stroke="#00dd00" 
+    data-stroke-width="15" 
+    data-stroke-trail-width="15"
+    style="width: 100%; height: 20%; "></div>
+  </div>
+</div>
+
 <div class="row pad-t-20">
-  <h4 class="pad-10 mx-auto text-center" style>Basic Info</h4>
+  <h5 class="pad-10 mx-auto text-center" style>Basic Info</h5>
 </div><!-- /.row -->
 
 <div id="app-player">
@@ -45,6 +55,10 @@
           <td>{{ p.level }}</td>
         </tr>
         <tr>
+          <td>Level</td>
+          <td>{{ p.exp }}</td>
+        </tr>
+        <tr>
           <td>Class</td>
           <td>{{ p.class }}</td>
         </tr>
@@ -57,7 +71,7 @@
   </div>
 
   <div class="row">
-    <h4 class="pad-10 mx-auto text-center" style>Combat Stats</h4>
+    <h5 class="pad-10 mx-auto text-center" style>Combat Stats</h5>
   </div><!-- /.row -->
   <div class="row">
     <table class="wide-275 text-center table table-bordered mx-auto">
@@ -91,7 +105,7 @@
   </div><!-- /.row -->
 
   <div class="row">
-    <h4 class="pad-10 mx-auto text-center" style>Abilities</h4>
+    <h5 class="pad-10 mx-auto text-center" style>Abilities</h5>
   </div><!-- /.row -->
   <div class="row pad-b-20">
     <table class="wide-275 text-center table table-bordered mx-auto">
@@ -151,9 +165,23 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
       el: '#app-player',
       data: { p: pdata }
     })
-
   });
 
+// ===== Experience Bar + Add Exp =====
+$(document).ready(function(){ 
+  // --- Initialize Variables
+  let currentExp = player.exp;
+  let levelExp = player.level * 20 + 100;
+  let progressExp = (currentExp / levelExp) * 100;
+  
+  // --- Initialize Progress Bar
+  var expBar = new ldBar("#exp-bar");
+  expBar.set(progressExp);
+
+  // --- Display updated values
+  expBar.set(progressExp);
+  $("#current-exp").text(currentExp);
+  });
 </script>
 
 <footer class="footer mt-auto text-center bg-lightgray">

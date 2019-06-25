@@ -131,15 +131,6 @@ $(document).ready(function(){
     $("#level-exp").text(" / " + levelExp);
     $("#player-level").text("Current Level: " + player.level);
   });
-
-  //--- Clear Experience
-  $("#clear-exp").click(function(){
-    currentExp = 0;
-    player.exp = currentExp;
-    localStorage.setItem('objPlayer', JSON.stringify(player));
-    $("#current-exp").text(currentExp);
-    $("#level-exp").text(" / " + levelExp);
-  });
 });
 
 // ===== Level Setter =====
