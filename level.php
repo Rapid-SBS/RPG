@@ -84,13 +84,6 @@
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
 
-var currentExp = player.exp;
-var levelExp = player.level * 20 + 100;
-var progressExp = (currentExp / levelExp) * 100;
-
-var expBar = new ldBar("#exp-bar");
-expBar.set(progressExp);
-
 $(document).ready(function(){ 
   let currentExp = player.exp;
   let levelExp = player.level * 20 + 100;
