@@ -44,21 +44,21 @@
   </div><!-- /.row -->
 
   <div class="row text-center mx-auto pad-b-20">
-    <div id="expBar">
+    <div id="expBar" style="width: 90%;">
       <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
       <button class="btn btn-primary" @click="addExp">Add 20 Exp</button>
     </div>
   </div><!-- /.row -->  
 
-<div id="lvl" class="text-center mx-auto">
-  <vue-slider
-    ref="slider"
-    v-model="value"
-    v-bind="options"
-  ></vue-slider>
-  <h4>New Level: {{ value }}</h4>
-  <button @click="setLevel" class="btn btn-primary mar-20">Set Level</button>
-</div>
+  <div id="lvl" class="text-center mx-auto" style="width: 90%;">
+    <vue-slider
+      ref="slider"
+      v-model="value"
+      v-bind="options"
+    ></vue-slider>
+    <h4>New Level: {{ value }}</h4>
+    <button @click="setLevel" class="btn btn-primary mar-20">Set Level</button>
+  </div>
 
 </div><!-- /.container -->
 
