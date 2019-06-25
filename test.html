@@ -33,29 +33,25 @@
   <div id="expBar">
     <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
   </div>
-</body>
+</div>
 
-  <script>
-    var demo = new Vue({
-      el: '#expBar',
-      data: function() {
-        return {
-          expProgress: 90,
-        }
-      },
-      mounted: function() {
-        setInterval(() => {
-          if (this.is_paused)
-            return
+<script>
+var player = JSON.parse(localStorage.getItem('objPlayer'));
+console.log(player.level);
 
-          this.random_pct = Math.ceil(Math.random() * 100)
-          this.increasing_pct = Math.min(this.increasing_pct + 5, 100)
-          this.decreasing_pct = Math.max(this.decreasing_pct - 5, 0)
-        }, 2000)
+  var a = 10;
+  var b = 30;
+
+  var demo = new Vue({
+    el: '#expBar',
+    data: function() {
+      return {
+        expProgress: a + b
       }
-    })
+    }
+  })
 
-  </script>
+</script>
 
 <footer class="footer mt-auto text-center bg-lightgray">
   <div class="container pad-20">
