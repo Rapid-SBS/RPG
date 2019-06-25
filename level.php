@@ -45,7 +45,7 @@
 
   <div class="row text-center pad-b-20">
     <div id="expBar" class="mx-auto" style="width: 90%;">
-      <h5 class="pad-5">{{ nextLevel }}</h5>
+      <h5 class="pad-5">{{expProgress}} / {{ nextLevel }}</h5>
       <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
       <button class="btn btn-primary" @click="addExp">Add 20 Exp</button>
       <button class="btn btn-primary" @click="clearExp">Clear Exp</button>
@@ -76,10 +76,6 @@ $(document).ready(function(){
   $("#player-exp").text("Current Exp: " + player.exp);
 });
 
-
-let nextLevel = player.level * 20 + 100;
-console.log(nextLevel);
-
 var demo = new Vue({
   el: '#expBar',
   data: function() {
@@ -103,7 +99,7 @@ var demo = new Vue({
   },
   computed: {
     nextLevel: function () {
-      return player.level * 20
+      return player.level * 20 + 100
     }
   }
 })
