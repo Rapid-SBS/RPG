@@ -123,6 +123,7 @@ $(document).ready(function(){
     console.log(progressExp);
     $("#current-exp").text(currentExp);
     $("#level-exp").text(" / " + levelExp);
+    $("#player-level").text("Current Level: " + player.level);
   });
 
   //--- Clear Experience
