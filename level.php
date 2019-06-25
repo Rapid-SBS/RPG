@@ -43,8 +43,8 @@
     </div>
   </div><!-- /.row -->
 
-  <div class="row text-center mx-auto pad-b-20">
-    <div id="expBar" style="width: 90%;">
+  <div class="row text-center pad-b-20">
+    <div id="expBar" class="mx-auto" style="width: 90%;">
       <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
       <button class="btn btn-primary" @click="addExp">Add 20 Exp</button>
     </div>
@@ -74,11 +74,14 @@ $(document).ready(function(){
   $("#player-exp").text("Current Exp: " + player.exp);
 });
 
+let a = 20;
+let b = 40;
+
 var demo = new Vue({
   el: '#expBar',
   data: function() {
     return {
-      expProgress: 40
+      expProgress: a + b;
     }
   },
   methods: {
