@@ -38,8 +38,8 @@
 
   <div class="row text-center mx-auto pad-20">
     <div class="col">
-      <h5 id="pad-5 player-level"></h5>
-      <h5 id="pad-5 player-exp"></h5>
+      <h5 id="player-level" class="pad-5"></h5>
+      <h5 id="player-exp" class="pad-5"></h5>
     </div>
   </div><!-- /.row -->
 
@@ -70,7 +70,7 @@ var player = JSON.parse(localStorage.getItem('objPlayer'));
 $(document).ready(function(){ 
   $("#player-level").text("Current Level: " + player.level);
   $("#player-exp").text("Current Exp: " + player.exp);
-  });
+});
 
 var demo = new Vue({
   el: '#expBar',
