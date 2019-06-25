@@ -107,7 +107,11 @@ $(document).ready(function(){
     progressExp = (currentExp / levelExp) * 100;
 
     if (currentExp >= levelExp) {
-      player.level ++;
+      let remainder = currentExp - levelExp;
+      player.exp = remainder;
+      if (player.level <= 9) {
+        player.level++;
+      }
     }
 
     // --- Update Player object
