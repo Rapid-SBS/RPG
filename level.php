@@ -105,8 +105,8 @@ var demo = new Vue({
     }
   },
   watch: {
-    expProgress: function (){
-      
+    expProgress: function (val){
+
     }
   }
 })
