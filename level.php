@@ -45,7 +45,7 @@
 
   <div class="row text-center pad-b-20">
     <div id="expBar" class="mx-auto" style="width: 90%;">
-      <h5 class="pad-5">{{expProgress}} / {{ nextLevel }}</h5>
+      <h5 id="player-exp"></h5><h5 class="pad-5"> / {{ nextLevel }}</h5>
       <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
       <button class="btn btn-primary" @click="addExp">Add 20 Exp</button>
       <button class="btn btn-primary" @click="clearExp">Clear Exp</button>
