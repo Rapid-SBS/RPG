@@ -34,7 +34,8 @@
 
 <div class="row text-center">
   <div class="wide-380 mx-auto">
-    <div id="exp-bar" class="mx-auto" 
+    <span>Exp:</span>
+    <div id="exp-bar" class="mx-auto wide-320" 
     data-stroke="#00dd00" 
     data-stroke-width="15" 
     data-stroke-trail-width="15"
