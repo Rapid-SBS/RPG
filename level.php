@@ -42,6 +42,12 @@
     </div>
   </div><!-- /.row -->
 
+  <div class="row text-center pad-b-20">
+    <div class="mx-auto" style="width: 90%;">
+      <h6 id="current-exp" style="display: inline;"></h6><h6 id="level-exp" style="display: inline;"></h6>
+    </div>
+  </div>
+  
   <div class="row text-center">
     <div class="col" style="width: 100%;">
       <div id="exp-bar" class="mx-auto" 
@@ -49,12 +55,6 @@
       data-stroke-width="15" 
       data-stroke-trail-width="15"
       style="width: 100%; height: 20%; "></div>
-    </div>
-  </div>
-
-  <div class="row text-center pad-b-20">
-    <div class="mx-auto" style="width: 90%;">
-      <h6 id="current-exp" style="display: inline;"></h6><h6 id="level-exp" style="display: inline;"></h6>
     </div>
   </div>
 
@@ -84,7 +84,9 @@
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
 
+// ===== Experience Bar + Add Exp =====
 $(document).ready(function(){ 
+  // --- Initialize Variables
   let currentExp = player.exp;
   let levelExp = player.level * 20 + 100;
   let progressExp = (currentExp / levelExp) * 100;
@@ -125,6 +127,7 @@ $(document).ready(function(){
   });
 });
 
+// ===== Level Setter =====
 const lvl = new Vue( {
   el: '#lvl',
   data () {
