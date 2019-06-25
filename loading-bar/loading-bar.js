@@ -215,7 +215,7 @@ wrap = function(content){
       "img-size": null,
       "bbox": null,
       "set-dim": true,
-      "aspect-ratio": "xMidYMid",
+      "aspect-ratio": "none",
       "transition-in": false,
       "min": 0,
       "max": 100,

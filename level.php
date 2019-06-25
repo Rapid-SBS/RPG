@@ -42,10 +42,19 @@
     </div>
   </div><!-- /.row -->
 
+  <div class="row text-center pad-b-40">
+    <div class="col" style="width: 90%;">
+      <div id="exp-bar" class="mx-auto" 
+      data-stroke="#00dd00" 
+      data-stroke-width="5" 
+      data-stroke-trail-width="5"
+      style="width: 100%; height: 20%; "></div>
+    </div>
+  </div>
+
   <div class="row text-center pad-b-20">
-    <div id="expBar" class="mx-auto" style="width: 90%;">
+    <div class="mx-auto" style="width: 90%;">
       <h6 id="current-exp" style="display: inline;"></h6><h6 id="level-exp" style="display: inline;"></h6>
-      <div id="exp-bar"></div>
       <button id="add-exp" class="btn btn-primary">Add 20 Exp</button>
       <button id="clear-exp" class="btn btn-primary">Clear Exp</button>
     </div>

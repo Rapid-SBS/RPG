@@ -31,11 +31,40 @@
   <h5 class="pad-10"> Test </h5>
 </div>
   
+<div class="container">
+    <div class="row text-center pad-b-20">
+      <div class="col">
+        <h6 id="current-exp" style="display: inline;">Test</h6><h6 id="level-exp" style="display: inline;">Test</h6>
+      </div>
+    </div>
+    <div class="row text-center pad-b-40">
+      <div class="col">
+        <div id="exp-bar" class="mx-auto" 
+        data-stroke="#00dd00" 
+        data-stroke-width="5" 
+        data-stroke-trail-width="5"
+        style="width: 100%; height: 20%; "></div>
+      </div>
+    </div>
+    <div class="row text-center pad-b-20">
+      <div class="col">
+        <button id="add-exp" class="btn btn-primary">Add 20 Exp</button>
+        <button id="clear-exp" class="btn btn-primary">Clear Exp</button>
+      </div>
+    </div><!-- /.row -->  
+</div>
 
-<div id="exp-bar"></div>
 <script>
   var expBar = new ldBar("#exp-bar");
-  expBar.set(80);
+  var a = 40;
+  var b = 80;
+  expBar.set(a);
+
+$(document).ready(function(){ 
+  $("#add-exp").click(function(){
+    expBar.set(b);
+  });
+});
 
 </script>
 
