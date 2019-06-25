@@ -85,13 +85,13 @@ var demo = new Vue({
   },
   methods: {
     addExp() {
-      expProgress = expProgress + 20;
+      player.exp = player.exp + 20;
       localStorage.setItem('objPlayer', JSON.stringify(player));
       $("#player-exp").text("Current Exp: " + player.exp);
       console.log(nextLevel);
     },
     clearExp() {
-      expProgress = 0;
+      player.exp = 0;
       localStorage.setItem('objPlayer', JSON.stringify(player));
       $("#player-exp").text("Current Exp: " + player.exp);
       console.log(nextLevel);
