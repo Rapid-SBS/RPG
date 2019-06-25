@@ -107,7 +107,7 @@ $(document).ready(function(){
     progressExp = (currentExp / levelExp) * 100;
 
     if (currentExp >= levelExp) {
-      console.log("Level Up!")
+      player.level ++;
     }
 
     // --- Update Player object
