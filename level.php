@@ -42,12 +42,12 @@
     </div>
   </div><!-- /.row -->
 
-  <div class="row text-center pad-b-40">
+  <div class="row text-center pad-b-10">
     <div class="col" style="width: 90%;">
       <div id="exp-bar" class="mx-auto" 
       data-stroke="#00dd00" 
-      data-stroke-width="5" 
-      data-stroke-trail-width="5"
+      data-stroke-width="15" 
+      data-stroke-trail-width="15"
       style="width: 100%; height: 20%; "></div>
     </div>
   </div>
@@ -55,6 +55,11 @@
   <div class="row text-center pad-b-20">
     <div class="mx-auto" style="width: 90%;">
       <h6 id="current-exp" style="display: inline;"></h6><h6 id="level-exp" style="display: inline;"></h6>
+    </div>
+  </div>
+
+  <div class="row text-center pad-b-20">
+    <div class="mx-auto">
       <button id="add-exp" class="btn btn-primary">Add 20 Exp</button>
       <button id="clear-exp" class="btn btn-primary">Clear Exp</button>
     </div>
@@ -78,12 +83,13 @@
 
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
+
 var currentExp = player.exp;
 var levelExp = player.level * 20 + 100;
-var progressExp = currentExp / levelExp;
+var progressExp = (currentExp / levelExp) * 100;
 
-  var expBar = new ldBar("#exp-bar");
-  expBar.set(80);
+var expBar = new ldBar("#exp-bar");
+expBar.set(progressExp);
 
 $(document).ready(function(){ 
   $("#player-level").text("Current Level: " + player.level);
