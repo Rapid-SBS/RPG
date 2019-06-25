@@ -92,17 +92,26 @@ var expBar = new ldBar("#exp-bar");
 expBar.set(progressExp);
 
 $(document).ready(function(){ 
+  // --- Display Initial Values ---
   $("#player-level").text("Current Level: " + player.level);
   $("#current-exp").text(currentExp);
   $("#level-exp").text(" / " + levelExp);
 
+  // --- Add Experience ---
   $("#add-exp").click(function(){
     currentExp = currentExp + 20;
+
+    // --- Update Player Data ---
     player.exp = currentExp;
     localStorage.setItem('objPlayer', JSON.stringify(player));
+
+    // --- Update Values ---
+    expBar.set(progressExp);
     $("#current-exp").text(currentExp);
     $("#level-exp").text(" / " + levelExp);
   });
+
+  //--- Clear Experience
   $("#clear-exp").click(function(){
     currentExp = 0;
     player.exp = currentExp;
