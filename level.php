@@ -85,7 +85,7 @@ var demo = new Vue({
   el: '#expBar',
   data: function() {
     return {
-      expProgress: progressExp
+      expProgress: 0
     }
   },
   methods: {
@@ -102,6 +102,11 @@ var demo = new Vue({
       localStorage.setItem('objPlayer', JSON.stringify(player));
       $("#current-exp").text(currentExp);
       $("#level-exp").text(" / " + levelExp);
+    }
+  },
+  watch: {
+    expProgress: function (){
+      
     }
   }
 })
