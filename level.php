@@ -34,7 +34,7 @@
   <p class="pad-b-10" style="margin-bottom: 0;">Add Experience points or manually set level.</p>
 </div>
 
-<div class="container">
+<div class="container max-wide-380">
 
   <div class="row text-center mx-auto pad-20">
     <div class="col">
