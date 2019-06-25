@@ -48,6 +48,7 @@
       <h5 class="pad-5">{{ gathered }}</h5>
       <vue-simple-progress size="large" :val="expProgress" :text="expProgress + '%'"></vue-simple-progress>
       <button class="btn btn-primary" @click="addExp">Add 20 Exp</button>
+      <button class="btn btn-primary" @click="clearExp">Clear Exp</button>
     </div>
   </div><!-- /.row -->  
 
@@ -89,6 +90,11 @@ var demo = new Vue({
   methods: {
     addExp() {
       player.exp = player.exp + 20;
+      localStorage.setItem('objPlayer', JSON.stringify(player));
+      $("#player-exp").text("Current Exp: " + player.exp);
+    },
+    clearExp() {
+      player.exp = 0;
       localStorage.setItem('objPlayer', JSON.stringify(player));
       $("#player-exp").text("Current Exp: " + player.exp);
     }
