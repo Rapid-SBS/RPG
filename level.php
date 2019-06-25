@@ -44,6 +44,7 @@
   <div class="row text-center pad-b-20">
     <div id="expBar" class="mx-auto" style="width: 90%;">
       <h6 id="current-exp" style="display: inline;"></h6><h6 id="level-exp" style="display: inline;"></h6>
+      <br>
       <button id="add-exp" class="btn btn-primary">Add 20 Exp</button>
       <button id="clear-exp" class="btn btn-primary">Clear Exp</button>
     </div>
@@ -72,7 +73,7 @@ var levelExp = player.level * 20 + 100;
 var progressExp = currentExp / levelExp;
 
 $(document).ready(function(){ 
-
+  $("#player-level").text("Current Level: " + player.level);
   $("#current-exp").text(currentExp);
   $("#level-exp").text(" / " + levelExp);
 
