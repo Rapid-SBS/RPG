@@ -92,6 +92,13 @@ var expBar = new ldBar("#exp-bar");
 expBar.set(progressExp);
 
 $(document).ready(function(){ 
+  let currentExp = player.exp;
+  let levelExp = player.level * 20 + 100;
+  let progressExp = (currentExp / levelExp) * 100;
+  
+  var expBar = new ldBar("#exp-bar");
+  expBar.set(progressExp);
+
   // --- Display Initial Values ---
   $("#player-level").text("Current Level: " + player.level);
   $("#current-exp").text(currentExp);
@@ -107,6 +114,7 @@ $(document).ready(function(){
 
     // --- Update Values ---
     expBar.set(progressExp);
+    console.log(progressExp);
     $("#current-exp").text(currentExp);
     $("#level-exp").text(" / " + levelExp);
   });
