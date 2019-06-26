@@ -56,6 +56,10 @@
     </div>
   </div>
 
+  <div id="level-up" class="text-white text-center text-success" style="display: none;">
+    <h5 class="pad-b-10">Level Up!</h5>
+  </div>
+
   <div class="row text-center mx-auto">
     <div class="col">
       <p>Enter a value between 1 and 100.</p>
@@ -67,9 +71,9 @@
   </div>
 
   <form class="form-inline">
-    <div class="form-group pad-b-20">
-        <input type="number" maxlength="3" class="form-control mx-auto" style="width: 60px;" id="inputExp" aria-describedby="playerName" placeholder="Input" required>
-        <button type="submit" id="add-exp" class="btn btn-primary">Add Experience</button>
+    <div class="form-group pad-b-20 mx-auto">
+        <input type="number" maxlength="3" class="form-control mx-auto" style="width: 90px;" id="inputExp" aria-describedby="playerName" placeholder="Enter #" required>
+        <button type="submit" id="add-exp" class="btn btn-primary mar-l-10">Add Experience</button>
     </div><!-- /.form-group -->
   </form>
 
@@ -135,6 +139,9 @@ $(document).ready(function(){
         progressExp = (currentExp / levelExp) * 100;  
         if (player.level <= 9) {
           player.level++;
+          $('#level-up').fadeIn('slow', function(){
+            $('#level-up').delay(1500).fadeOut();
+          })
         }
       }
       if (player.level == 10) {
