@@ -70,11 +70,15 @@
     <h5 class="pad-b-10">Invalid Input!</h5>
   </div>
 
-  <form class="form-inline">
-    <div class="form-group pad-b-20 mx-auto">
+  <form>
+    <div class="form-row pad-b-20 mx-auto">
+      <div class="col">
         <input type="number" maxlength="3" class="form-control mx-auto" style="width: 60px;" id="inputExp" aria-describedby="playerName" placeholder="Enter #" required>
+      </div>
+      <div class="col">
         <button type="submit" id="add-exp" class="btn btn-primary mar-l-10">Add Experience</button>
-    </div><!-- /.form-group -->
+      </div>
+    </div><!-- /.form-row -->
   </form>
 
   <div id="lvl" class="text-center mx-auto wide-220">
