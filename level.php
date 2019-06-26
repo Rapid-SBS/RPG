@@ -38,15 +38,15 @@
   <p class="pad-b-10" style="margin-bottom: 0;">Add Experience points or manually set level.</p>
 </div>
 
-<div class="container max-wide-380">
+<div class="container">
 
-  <div class="row text-center mx-auto pad-20">
+  <div class="row max-wide-380 text-center mx-auto pad-20">
     <div class="col">
       <h5 id="player-level" class="pad-5"></h5>
     </div>
   </div><!-- /.row -->
 
-  <div class="row text-center">
+  <div class="row max-wide-380 text-center">
     <div class="col" style="width: 100%; margin-bottom: -80px; z-index: -1;">
       <div id="exp-bar" class="mx-auto" 
       data-stroke="#00dd00" 
@@ -60,7 +60,7 @@
     <h4 class="pad-b-10">Level Up!</h4>
   </div>
 
-  <div class="row text-center mx-auto">
+  <div class="row text-center max-wide-380 mx-auto">
     <div class="col">
       <p>Enter a value between 1 and 100.</p>
     </div>
@@ -72,7 +72,7 @@
 
   <form class="form-inline">
     <div class="form-group pad-b-20 mx-auto">
-        <input type="number" maxlength="3" class="form-control mx-auto" style="width: 60px;" id="inputExp" aria-describedby="playerName" placeholder="Enter #" required>
+        <input type="number" maxlength="3" class="form-control mx-auto" style="width: 50px;" id="inputExp" aria-describedby="playerName" placeholder="Enter #" required>
         <button type="submit" id="add-exp" class="btn btn-primary mar-l-10">Add Experience</button>
     </div><!-- /.form-group -->
   </form>
