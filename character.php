@@ -32,17 +32,6 @@
   <h5 class="pad-10"> Character Sheet </h5>
 </div>
 
-<div class="row text-center">
-  <div class="wide-380 mx-auto">
-    <span>Exp:</span>
-    <div id="exp-bar" class="mx-auto wide-320" 
-    data-stroke="#00dd00" 
-    data-stroke-width="15" 
-    data-stroke-trail-width="15"
-    style="width: 100%; height: 20%; "></div>
-  </div>
-</div>
-
 <div class="row pad-t-20">
   <h5 class="pad-10 mx-auto text-center" style>Basic Info</h5>
 </div><!-- /.row -->
@@ -58,10 +47,6 @@
         <tr>
           <td>Level</td>
           <td>{{ p.level }}</td>
-        </tr>
-        <tr>
-          <td>Level</td>
-          <td>{{ p.exp }}</td>
         </tr>
         <tr>
           <td>Class</td>
