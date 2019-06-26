@@ -47,7 +47,7 @@
   </div><!-- /.row -->
 
   <div class="row text-center">
-    <div class="col" style="width: 100%; margin-bottom: -70px;">
+    <div class="col" style="width: 100%; margin-bottom: -70px; z-index: -1;">
       <div id="exp-bar" class="mx-auto" 
       data-stroke="#00dd00" 
       data-stroke-width="15" 
