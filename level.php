@@ -56,7 +56,7 @@
     </div>
   </div>
 
-  <div id="level-up" class="text-center text-lightgreen" style="display: none; margin-top: -25px;">
+  <div id="level-up" class="text-center text-lightgreen" style="display: none; margin-top: -15px;">
     <h4 class="pad-b-10">Level Up!</h4>
   </div>
 
@@ -72,7 +72,7 @@
 
   <form class="form-inline">
     <div class="form-group pad-b-20 mx-auto">
-        <input type="number" maxlength="3" class="form-control mx-auto" style="width: 90px;" id="inputExp" aria-describedby="playerName" placeholder="Enter #" required>
+        <input type="number" maxlength="3" class="form-control mx-auto" style="width: 60px;" id="inputExp" aria-describedby="playerName" placeholder="Enter #" required>
         <button type="submit" id="add-exp" class="btn btn-primary mar-l-10">Add Experience</button>
     </div><!-- /.form-group -->
   </form>
