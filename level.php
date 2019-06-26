@@ -63,13 +63,13 @@
     </div>
   </div><!-- /.row -->  
 
-  <div id="lvl" class="text-center mx-auto" style="width: 90%;">
+  <div id="lvl" class="text-center mx-auto wide-220">
     <vue-slider
       ref="slider"
       v-model="value"
       v-bind="options"
     ></vue-slider>
-    <h4>New Level: {{ value }}</h4>
+    <h5>New Level: {{ value }}</h5>
     <button @click="setLevel" class="btn btn-primary mar-20">Set Level</button>
   </div>
 
