@@ -59,7 +59,6 @@
   <div class="row text-center pad-b-20">
     <div class="mx-auto">
       <button id="add-exp" class="btn btn-primary">Add 30 Exp</button>
-      <button id="clear-exp" class="btn btn-primary">Clear Exp</button>
     </div>
   </div><!-- /.row -->  
 
