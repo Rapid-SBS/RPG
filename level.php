@@ -56,16 +56,15 @@
     </div>
   </div>
 
-  <div class="row text-center mx-auto pad-10">
+  <div class="row text-center mx-auto">
     <div class="col">
       <p>Enter a value between 1 and 100.</p>
     </div>
   </div><!-- /.row -->
 
-  <div id="input-invalid" class="text-white text-center pad-10 bg-danger" style="display: none;">
-    <h5 class="pad-10">Invalid Input!</h5>
+  <div id="input-invalid" class="text-white text-center text-danger" style="display: none;">
+    <h5 class="pad-b-10">Invalid Input!</h5>
   </div>
-
 
   <form>
     <div class="form-row pad-b-20">
@@ -126,6 +125,9 @@ $(document).ready(function(){
       currentExp = currentExp + addExp;
       levelExp = player.level * 20 + 100;
       progressExp = (currentExp / levelExp) * 100;
+
+      console.log("Current Exp:" + currentExp);
+      console.log("AddExp:" + addExp);
 
       // --- Level-up logic ---
       if (currentExp >= levelExp && player.level <= 9 ) {
