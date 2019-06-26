@@ -59,8 +59,8 @@
   <form>
     <div class="form-row pad-b-20">
       <div class="mx-auto text-center">
-        <input type="number" maxlength="3" class="form-control pad-10" style="width: 100px;" id="inputExp" aria-describedby="playerName" placeholder="Enter number" required>
-        <button id="add-exp" class="btn btn-primary mar-10">Add Experience</button>
+        <input type="number" maxlength="3" class="form-control mx-auto pad-10" style="width: 100px;" id="inputExp" aria-describedby="playerName" placeholder="Enter number" required>
+        <button type="submit" id="add-exp" class="btn btn-primary mar-10">Add Experience</button>
       </div>
     </div><!-- /.form-row -->
   </form>
@@ -110,7 +110,7 @@ $(document).ready(function(){
     progressExp = (currentExp / levelExp) * 100;
 
     // --- Level-up logic ---
-    if (currentExp >= levelExp && player.level <=9 ) {
+    if (currentExp >= levelExp && player.level <= 9 ) {
       let remainder = currentExp - levelExp;
       currentExp = 0 + remainder;
       if (player.level <= 9) {
