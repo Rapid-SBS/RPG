@@ -47,7 +47,7 @@
   </div><!-- /.row -->
 
   <div class="row text-center">
-    <div class="col" style="width: 100%; margin-bottom: -70px; z-index: -1;">
+    <div class="col" style="width: 100%; margin-bottom: -80px; z-index: -1;">
       <div id="exp-bar" class="mx-auto" 
       data-stroke="#00dd00" 
       data-stroke-width="15" 
@@ -58,9 +58,9 @@
 
   <form>
     <div class="form-row pad-b-20">
-      <div class="mx-auto text-center" style="width: 120px;">
-        <input type="number" maxlength="3" class="form-control pad-10" id="inputExp" aria-describedby="playerName" placeholder="Enter number" required>
-        <button id="add-exp" class="btn btn-primary">Add Experience</button>
+      <div class="mx-auto text-center">
+        <input type="number" maxlength="3" class="form-control pad-10" style="width: 100px;" id="inputExp" aria-describedby="playerName" placeholder="Enter number" required>
+        <button id="add-exp" class="btn btn-primary mar-10">Add Experience</button>
       </div>
     </div><!-- /.form-row -->
   </form>
@@ -102,6 +102,7 @@ $(document).ready(function(){
 
   // --- Add Experience ---
   $("#add-exp").click(function(){
+    event.preventDefault()
     // --- Force variables to reevaluate
     let addExp = document.getElementById('inputExp').value
     currentExp = currentExp + addExp;
