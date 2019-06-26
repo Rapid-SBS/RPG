@@ -56,11 +56,14 @@
     </div>
   </div>
 
-  <div class="row text-center pad-b-20">
-    <div class="mx-auto">
-      <button id="add-exp" class="btn btn-primary">Add 30 Exp</button>
-    </div>
-  </div><!-- /.row -->  
+  <form>
+    <div class="form-row pad-b-20">
+      <div class="mx-auto text-center" style="width: 120px;">
+        <input type="number" maxlength="3" class="form-control pad-10" id="inputExp" aria-describedby="playerName" placeholder="Enter number" required>
+        <button id="add-exp" class="btn btn-primary">Add Experience</button>
+      </div>
+    </div><!-- /.form-row -->
+  </form>
 
   <div id="lvl" class="text-center mx-auto wide-220">
     <vue-slider
@@ -100,7 +103,8 @@ $(document).ready(function(){
   // --- Add Experience ---
   $("#add-exp").click(function(){
     // --- Force variables to reevaluate
-    currentExp = currentExp + 30;
+    let addExp = document.getElementById('inputExp').value
+    currentExp = currentExp + addExp;
     levelExp = player.level * 20 + 100;
     progressExp = (currentExp / levelExp) * 100;
 
