@@ -56,8 +56,8 @@
     </div>
   </div>
 
-  <div id="level-up" class="text-center text-lightgreen" style="display: none; margin-top: -10px;">
-    <h5 class="pad-b-10">Level Up!</h5>
+  <div id="level-up" class="text-center text-lightgreen" style="display: none; margin-top: -15px;">
+    <h4 class="pad-b-10">Level Up!</h4>
   </div>
 
   <div class="row text-center mx-auto">
