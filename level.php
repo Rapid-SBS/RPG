@@ -81,13 +81,12 @@
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
 
+var currentExp = player.exp;
+var levelExp = player.level * 20 + 100;
+var progressExp = (currentExp / levelExp) * 100;
+
 // ===== Experience Bar + Add Exp =====
-$(document).ready(function(){ 
-  // --- Initialize Variables
-  let currentExp = player.exp;
-  let levelExp = player.level * 20 + 100;
-  let progressExp = (currentExp / levelExp) * 100;
-  
+$(document).ready(function(){   
   // --- Initialize Progress Bar
   var expBar = new ldBar("#exp-bar");
   expBar.set(progressExp);
@@ -178,6 +177,7 @@ const lvl = new Vue( {
   methods: {
     setLevel() {
       player.level = this.value;
+      expBar.set(progressExp);
       localStorage.setItem('objPlayer', JSON.stringify(player));
       $("#player-level").text("Current Level: " + player.level);
       $('#level-saved').fadeIn('slow', function(){
