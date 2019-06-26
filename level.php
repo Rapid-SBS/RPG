@@ -178,7 +178,9 @@ const lvl = new Vue( {
   methods: {
     setLevel() {
       player.level = this.value;
-      expBar.set(progressExp);
+      player.exp = 0;
+      currentExp = 0;
+      expBar.set(0);
       localStorage.setItem('objPlayer', JSON.stringify(player));
       $("#player-level").text("Current Level: " + player.level);
       $('#level-saved').fadeIn('slow', function(){
