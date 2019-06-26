@@ -62,8 +62,8 @@
 
 </div><!-- /.container -->
 
-<div style="background-color: #eeeeee;">
-  <div class="row text-center mx-auto">
+<div style="background-color: rgba(0, 196, 255, 0.2);">
+  <div class="row text-center mx-auto pad-t-20">
     <div class="col">
       <p>To manually add Experience points,<br>enter a value between 1 and 100.</p>
     </div>
@@ -86,7 +86,7 @@
 </div>
 
 <div>
-  <div class="row text-center mx-auto">
+  <div class="row text-center mx-auto pad-t-20">
     <div class="col">
       <p>Or, directly set your level<br>using the slider below.</p>
     </div>
