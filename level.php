@@ -116,15 +116,11 @@ $(document).ready(function(){
     event.preventDefault();
     let addExp = document.getElementById('inputExp').value;
 
-
-      
-
-
     // --- Evaluate validity of input ---
     if (isNaN(addExp) || addExp < 1 || addExp > 100) {
       $('#input-invalid').fadeIn('slow', function(){
         $('#input-invalid').delay(3000).fadeOut();
-      }
+      })
     } else {
       // --- Force variables to reevaluate
       currentExp = currentExp + addExp;
