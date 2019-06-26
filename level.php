@@ -94,8 +94,8 @@
 <script>
 var player = JSON.parse(localStorage.getItem('objPlayer'));
 
-var currentExp = player.exp;
-var levelExp = player.level * 20 + 100;
+var currentExp = parseInt(player.exp);
+var levelExp = parseInt(player.level) * 20 + 100;
 var progressExp = (currentExp / levelExp) * 100;
 
 // --- Initialize Progress Bar
@@ -114,6 +114,7 @@ $(document).ready(function(){
   $("#add-exp").click(function(){
     event.preventDefault();
     let addExp = document.getElementById('inputExp').value;
+    addExp = parseInt(addExp);
 
     // --- Evaluate validity of input ---
     if (isNaN(addExp) || addExp < 1 || addExp > 100) {
@@ -122,8 +123,8 @@ $(document).ready(function(){
       })
     } else {
       // --- Force variables to reevaluate
-      currentExp = currentExp + addExp;
-      levelExp = player.level * 20 + 100;
+      currentExp = parseInt(currentExp) + parseInt(addExp);
+      levelExp = parseInt(player.level) * 20 + 100;
       progressExp = (currentExp / levelExp) * 100;
 
       console.log("Current Exp:" + currentExp);
@@ -131,8 +132,8 @@ $(document).ready(function(){
 
       // --- Level-up logic ---
       if (currentExp >= levelExp && player.level <= 9 ) {
-        let remainder = currentExp - levelExp;
-        currentExp = 0 + remainder;
+        let remainder = parseInt(currentExp) - parseInt(levelExp);
+        currentExp = 0 + parseInt(remainder);
         if (player.level <= 9) {
           player.level++;
         }
