@@ -72,10 +72,10 @@
 
   <form>
     <div class="form-row pad-b-20 mx-auto">
-      <div class="col">
-        <input type="number" maxlength="3" class="form-control mx-auto" style="width: 60px;" id="inputExp" aria-describedby="playerName" placeholder="Enter #" required>
+      <div class="d-inline">
+        <input type="number" maxlength="3" class="form-control mx-auto" style="width: 70px;" id="inputExp" aria-describedby="playerName" placeholder="Enter #" required>
       </div>
-      <div class="col">
+      <div class="d-inline">
         <button type="submit" id="add-exp" class="btn btn-primary mar-l-10">Add Experience</button>
       </div>
     </div><!-- /.form-row -->
