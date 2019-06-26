@@ -56,7 +56,7 @@
     </div>
   </div>
 
-  <div id="level-up" class="text-white text-center text-success" style="display: none;">
+  <div id="level-up" class="text-center text-lightgreen" style="display: none; margin-top: -10px;">
     <h5 class="pad-b-10">Level Up!</h5>
   </div>
 
