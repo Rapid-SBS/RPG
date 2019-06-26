@@ -66,13 +66,11 @@
     <h5 class="pad-b-10">Invalid Input!</h5>
   </div>
 
-  <form>
-    <div class="form-row pad-b-20">
-      <div class="mx-auto text-center">
-        <input type="number" maxlength="3" class="form-control mx-auto inline" style="width: 60px;" id="inputExp" aria-describedby="playerName" placeholder="Input" required>
-        <button type="submit" id="add-exp" class="btn btn-primary mar-l-10 inline">Add Experience</button>
-      </div>
-    </div><!-- /.form-row -->
+  <form class="form-inline">
+    <div class="form-group pad-b-20">
+        <input type="number" maxlength="3" class="form-control mx-auto" style="width: 60px;" id="inputExp" aria-describedby="playerName" placeholder="Input" required>
+        <button type="submit" id="add-exp" class="btn btn-primary">Add Experience</button>
+    </div><!-- /.form-group -->
   </form>
 
   <div id="lvl" class="text-center mx-auto wide-220">
