@@ -56,11 +56,22 @@
     </div>
   </div>
 
+  <div class="row text-center mx-auto pad-10">
+    <div class="col">
+      <p>Enter a value between 1 and 100.</p>
+    </div>
+  </div><!-- /.row -->
+
+  <div id="input-invalid" class="text-white text-center pad-10 bg-danger" style="display: none;">
+    <h5 class="pad-10">Invalid Input!</h5>
+  </div>
+
+
   <form>
     <div class="form-row pad-b-20">
       <div class="mx-auto text-center">
-        <input type="number" maxlength="3" class="form-control mx-auto pad-10" style="width: 100px;" id="inputExp" aria-describedby="playerName" placeholder="Enter number" required>
-        <button type="submit" id="add-exp" class="btn btn-primary mar-10">Add Experience</button>
+        <input type="number" maxlength="3" class="form-control mx-auto inline" style="width: 60px;" id="inputExp" aria-describedby="playerName" placeholder="Input" required>
+        <button type="submit" id="add-exp" class="btn btn-primary mar-l-10 inline">Add Experience</button>
       </div>
     </div><!-- /.form-row -->
   </form>
@@ -102,35 +113,43 @@ $(document).ready(function(){
 
   // --- Add Experience ---
   $("#add-exp").click(function(){
-    event.preventDefault()
-    // --- Force variables to reevaluate
-    let addExp = document.getElementById('inputExp').value
-    currentExp = currentExp + addExp;
-    levelExp = player.level * 20 + 100;
-    progressExp = (currentExp / levelExp) * 100;
+    event.preventDefault();
+    let addExp = document.getElementById('inputExp').value;
 
-    // --- Level-up logic ---
-    if (currentExp >= levelExp && player.level <= 9 ) {
-      let remainder = currentExp - levelExp;
-      currentExp = 0 + remainder;
-      if (player.level <= 9) {
-        player.level++;
+    // --- Evaluate validity of input ---
+    if (isNaN(addExp) || addExp < 1 || addExp > 100) {
+      // --- Force variables to reevaluate
+      currentExp = currentExp + addExp;
+      levelExp = player.level * 20 + 100;
+      progressExp = (currentExp / levelExp) * 100;
+
+      // --- Level-up logic ---
+      if (currentExp >= levelExp && player.level <= 9 ) {
+        let remainder = currentExp - levelExp;
+        currentExp = 0 + remainder;
+        if (player.level <= 9) {
+          player.level++;
+        }
       }
-    }
-    if (player.level == 10) {
-      currentExp = 300;
-      levelExp = 300;
-    }
+      if (player.level == 10) {
+        currentExp = 300;
+        levelExp = 300;
+      }
 
-    // --- Update Player object
-    player.exp = currentExp;
-    localStorage.setItem('objPlayer', JSON.stringify(player));
+      // --- Update Player object
+      player.exp = currentExp;
+      localStorage.setItem('objPlayer', JSON.stringify(player));
 
-    // --- Display updated values
-    expBar.set(progressExp);
-    console.log("Exp:" + progressExp + "%");
-    console.log(currentExp + " / " + levelExp);
-    $("#player-level").text("Current Level: " + player.level);
+      // --- Display updated values
+      expBar.set(progressExp);
+      console.log("Exp:" + progressExp + "%");
+      console.log(currentExp + " / " + levelExp);
+      $("#player-level").text("Current Level: " + player.level);
+    } else {
+      $('#input-invalid').fadeIn('slow', function(){
+        $('#input-invalid').delay(3000).fadeOut();
+        })
+    }
   });
 });
 
