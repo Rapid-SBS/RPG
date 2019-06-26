@@ -134,6 +134,7 @@ $(document).ready(function(){
       if (currentExp >= levelExp && player.level <= 9 ) {
         let remainder = parseInt(currentExp) - parseInt(levelExp);
         currentExp = 0 + parseInt(remainder);
+        progressExp = (currentExp / levelExp) * 100;  
         if (player.level <= 9) {
           player.level++;
         }
