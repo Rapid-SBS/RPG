@@ -116,8 +116,16 @@ $(document).ready(function(){
     event.preventDefault();
     let addExp = document.getElementById('inputExp').value;
 
+
+      
+
+
     // --- Evaluate validity of input ---
     if (isNaN(addExp) || addExp < 1 || addExp > 100) {
+      $('#input-invalid').fadeIn('slow', function(){
+        $('#input-invalid').delay(3000).fadeOut();
+      }
+    } else {
       // --- Force variables to reevaluate
       currentExp = currentExp + addExp;
       levelExp = player.level * 20 + 100;
@@ -145,10 +153,6 @@ $(document).ready(function(){
       console.log("Exp:" + progressExp + "%");
       console.log(currentExp + " / " + levelExp);
       $("#player-level").text("Current Level: " + player.level);
-    } else {
-      $('#input-invalid').fadeIn('slow', function(){
-        $('#input-invalid').delay(3000).fadeOut();
-        })
     }
   });
 });
