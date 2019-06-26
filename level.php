@@ -60,9 +60,12 @@
     <h4 class="pad-b-10">Level Up!</h4>
   </div>
 
+</div><!-- /.container -->
+
+<div style="background-color: #eeeeee;">
   <div class="row text-center mx-auto">
     <div class="col">
-      <p>Enter a value between 1 and 100.</p>
+      <p>To manually add Experience points,<br>enter a value between 1 and 100.</p>
     </div>
   </div><!-- /.row -->
 
@@ -80,6 +83,14 @@
       </div>
     </div><!-- /.form-row -->
   </form>
+</div>
+
+<div>
+  <div class="row text-center mx-auto">
+    <div class="col">
+      <p>Or, directly set your level<br>using the slider below.</p>
+    </div>
+  </div><!-- /.row -->
 
   <div id="lvl" class="text-center mx-auto wide-220">
     <vue-slider
@@ -90,7 +101,6 @@
     <h5>New Level: {{ value }}</h5>
     <button @click="setLevel" class="btn btn-primary mar-20">Set Level</button>
   </div>
-
 </div><!-- /.container -->
 
 <div id="level-saved" class="text-white text-center pad-10 bg-lightgreen" style="display: none;">
