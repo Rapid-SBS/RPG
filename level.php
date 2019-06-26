@@ -47,13 +47,7 @@
   </div><!-- /.row -->
 
   <div class="row text-center">
-    <div class="mx-auto">
-      <h6>Experience</h6>
-    </div>
-  </div>
-
-  <div class="row text-center">
-    <div class="col" style="width: 100%;">
+    <div class="col" style="width: 100%; margin-bottom: -70px;">
       <div id="exp-bar" class="mx-auto" 
       data-stroke="#00dd00" 
       data-stroke-width="15" 
@@ -130,8 +124,9 @@ $(document).ready(function(){
 
     // --- Display updated values
     expBar.set(progressExp);
-    console.log(progressExp + "%");
-    console.log(currentExp + " / " + levelExp)
+    console.log("Exp:" + progressExp + "%");
+    console.log(currentExp + " / " + levelExp);
+    $("#player-level").text("Current Level: " + player.level);
   });
 });
 
