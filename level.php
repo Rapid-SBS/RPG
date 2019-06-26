@@ -25,6 +25,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/slider.css">
 
+  <style> .ldBar-label { margin-top: -10px; }</style>
 </head>
 
 <body>
@@ -43,8 +44,8 @@
   </div><!-- /.row -->
 
   <div class="row text-center">
-    <div class="mx-auto" style="width: 90%;">
-      <h6 id="current-exp" style="display: inline;"></h6><h6 id="level-exp" style="display: inline;"></h6>
+    <div class="mx-auto">
+      <h6>Experience</h6>
     </div>
   </div>
 
@@ -54,7 +55,7 @@
       data-stroke="#00dd00" 
       data-stroke-width="15" 
       data-stroke-trail-width="15"
-      style="width: 100%; height: 20%; "></div>
+      style="width: 100%; height: 20%; margin-top: -10px; "></div>
     </div>
   </div>
 
@@ -126,10 +127,8 @@ $(document).ready(function(){
 
     // --- Display updated values
     expBar.set(progressExp);
-    console.log(progressExp);
-    $("#current-exp").text(currentExp);
-    $("#level-exp").text(" / " + levelExp);
-    $("#player-level").text("Current Level: " + player.level);
+    console.log(progressExp + "%");
+    console.log(currentExp + " / " + levelExp)
   });
 });
 
