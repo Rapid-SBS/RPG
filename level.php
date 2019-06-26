@@ -66,7 +66,7 @@
     </div>
   </div><!-- /.row -->
 
-  <div id="input-invalid" class="text-white text-center text-danger" style="display: none;">
+  <div id="input-invalid" class="text-white text-center text-danger" style="display: none; margin-top: -15px;">
     <h5 class="pad-b-10">Invalid Input!</h5>
   </div>
 
