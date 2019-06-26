@@ -25,7 +25,10 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/slider.css">
 
-  <style> .ldBar-label { margin-top: -10px; }</style>
+  <style> 
+    .ldBar-label { margin-top: -10px; }
+    .ldBar-label::before{content:"Experience: ";display:inline}
+  </style>
 </head>
 
 <body>
