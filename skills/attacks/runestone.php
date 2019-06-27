@@ -1,10 +1,10 @@
   <div class="row justify-content-center">
 
     <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
-      <!-- Steam Shot -->  
-      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseSteamshot" role="button" aria-expanded="false" aria-controls="collapseSteamshot">
-        <input type="radio" name="ability" value="Steam Shot" v-model="attackSelection">
-        <h6>Steam Shot</h6>
+      <!-- Runic Circle -->  
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseRuniccircle" role="button" aria-expanded="false" aria-controls="collapseRuniccircle">
+        <input type="radio" name="ability" value="Runic Circle" v-model="attackSelection">
+        <h6>Runic Circle</h6>
       </label>
 
       <!-- Flame Vortex -->
@@ -19,14 +19,14 @@
 
   <div id="attack-runestone" class="row mx-auto pad-10 max-wide-380">
 
-    <!-- Steam Shot -->
-    <div class="collapse mx-auto" id="collapseSteamshot" data-parent="#attack-runestone">
+    <!-- Runic Circle -->
+    <div class="collapse mx-auto" id="collapseRuniccircle" data-parent="#attack-runestone">
       <div class="card bg-light">
         <div class="card-header text-center">
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Combine ice and fire elements to form an extremely high-pressure burst of steam.<br>DMG = 2 x (Player INT).<br> Costs 5 Mana.</p>
+          <p class="card-text text-center">Activate a runic circle beneath an enemy, dealing damage and stunning them for 1 turn.<br>DMG = 2 x (Player INT).<br> Costs 5 Mana.</p>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
