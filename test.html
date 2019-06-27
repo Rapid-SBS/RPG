@@ -54,22 +54,25 @@
 var playerHP = 20;
 var enemyHP = 20;
 
-$("#player-hp").text(playerHP);
-$("#enemy-hp").text(enemyHP);
-
 $(document).ready(function(){   
+	printHP();
 	$("#attack-btn").click(function(){
-
-		// --- Death Check ---
-		if (enemyHP <= 0) {
+		if (enemyHP > 0) { // --- Only decrements if HP > 0
+			enemyHP = parseInt(enemyHP) - 5;
+			printHP();
+		}
+		if (enemyHP <= 0) { // --- If HP <= 0, disable attack button
 			$('#attack-btn').addClass("disabled");
       $('#win').fadeIn('slow');
-		} else {
-			enemyHP = parseInt(enemyHP) - 5; // --- Lower enemy HP
-			$("#enemy-hp").text(enemyHP);			
 		}
 	});
 });
+
+// ========== Functions ==========
+const printHP = () => {
+	$("#player-hp").text(playerHP);
+	$("#enemy-hp").text(enemyHP);
+}
 
 </script>
 

@@ -26,13 +26,8 @@
           <h6>Attack Ability</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Activate a runic circle beneath an enemy, dealing damage and stunning them for 1 turn.<br>DMG = 2 x (Player INT).<br> Costs 5 Mana.</p>
+          <p class="card-text text-center">Activate a runic circle beneath an enemy, dealing damage and stunning them for 1 turn.<br>DMG = 2 x (Player INT).<br> Costs 6 Mana.</p>
         </div>
-        <ul class="list-group list-group-flush text-center">
-          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
-            Enemy RES = <span class="badge bg-white text-blue">0</span>
-          </li>
-        </ul>
       </div><!-- /.card -->
     </div><!-- /.collapse -->
 
