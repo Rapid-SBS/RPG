@@ -139,10 +139,10 @@
       localStorage.setItem('objPassives', JSON.stringify(passives));
 
       $('#skills-saved').fadeIn('slow', function(){
-        $('#skills-saved').delay(4000).fadeOut();
+        $('#skills-saved').delay(3000).fadeOut();
         window.setTimeout(function () {
           window.location.href = "player-menu.php";
-        }, 4000)}
+        }, 3000)}
       )
     });
   });
