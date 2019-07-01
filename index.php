@@ -75,7 +75,7 @@
         <h5>Monk</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">Advocates of peace yet masters of combat, Monks have well-balanced stats and a wide selection of support abilities.</p>
+        <p class="card-text text-center">Advocates of peace yet masters of martial arts, Monks have well-balanced stats and a wide selection of support abilities.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
@@ -109,7 +109,7 @@
         <h5>Cleric</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">With the power to heal, enhance, or resurrect your allies with potent light magic, the Cleric is the ultimate support class.</p>
+        <p class="card-text text-center">With the power to heal, enhance, or revive your allies with potent light abilities, the Cleric is the ultimate support class.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-yellow" style="padding: .35rem 1.25rem;">
@@ -143,7 +143,7 @@
         <h5>Archer</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">Deal damage from a distance with the Archer. Equip a crossbow to pierce defenses or a longbow for increased critical chance.</p>
+        <p class="card-text text-center">Attack from afar with the Archer. Deal high damage, pierce enemy defenses, or use your connection with nature to support your allies.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-green" style="padding: .35rem 1.25rem;">
@@ -177,7 +177,7 @@
         <h5>Mage</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">Knowledge of the natural laws allows you to use incredible elemental abilities. Critical Hits apply debuffs instead of bonus damage.</p>
+        <p class="card-text text-center">Knowledge of the natural laws allows you to use incredible elemental abilities with the power of ice, fire, and lightning at your fingers.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-blue" style="padding: .35rem 1.25rem;">
@@ -211,7 +211,7 @@
         <h5>Rune Master</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">Masters of the arcane, Rune Masters can combine elements via runestones or wield an Aether Stone or deadly Runeblade.</p>
+        <p class="card-text text-center">Masters of the arcane, Rune Masters can combine elements with runestones, control light and darkness, or wield a deadly Runeblade.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">
@@ -245,7 +245,7 @@
         <h5>Rogue</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">As deadly thieves and assassins, Rogues can attack using daggers, sai, or shuriken with high critical attack rate.</p>
+        <p class="card-text text-center">As deadly thieves and assassins, Rogues can deal high damage with daggers, shuriken, or the power of darkness itself.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
@@ -261,7 +261,7 @@
           DEF
         </li>
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-purple">3</span>
+          <span class="badge badge-light text-purple">0</span>
           INT
         </li>
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
