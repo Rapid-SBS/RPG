@@ -211,7 +211,7 @@
         <h5>Rune Master</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">Practitioners of the arcane, Rune Masters combine elements with runestones, balance light and darkness, or wield deadly Runeblades.</p>
+        <p class="card-text text-center">Study of the arcane allows Rune Masters to combine elements with runestones, balance light and darkness, or wield deadly Runeblades.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">
