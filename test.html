@@ -78,31 +78,54 @@ var player = {
 		id: 'basicability',
 		name: 'Basic Ability',
 		attCalc : function() {
-			return player.att + 2;
+			return current.att + 2;
 		}
 	},
 	special: {
 		id: 'specialability',
 		name: 'Special Ability',
 		attCalc : function() {
-			return player.att * 2;
+			return current.att * 2;
 		}
 	},
 	support: {
 		id: 'supportability',
 		name: 'Special Ability',
-		attCalc : function() {
-			return player.att * 2;
+		buff: {
+			duration: 2,
+			ttl: 0,
+			hp: 8,
+			att: 2,
+			def: 0,
+			int: 0,
+			res: 0,
+			mana: 0,
 		}
+
 	}  
 };
 
-var enemy = { hp: 20, att: 15, def: 2 };
-var selectedAttack = undefined;
-var ability = undefined;
+var buff = { att: 0, def: 0, int: 0, res: 0 }
+var selectedAttack;
+var selectedBuff;
+var ability;
+var ttl;
+
+var current = {
+	hp: parseInt(player.hp),
+	att: undefined,
+	def: undefined,
+	int: undefined,
+	res: undefined,
+	mana: 0
+}
+
+var enemy = { hp: 40, att: 7, def: 2 };
 
 $(document).ready(function(){   
+
 	printHP();
+	regenMana();
 
 	// ===== [ Ability Selection ] =====
 
@@ -116,57 +139,64 @@ $(document).ready(function(){
 
       if (ability == "basic") { 
       	selectedAttack = player.basic.attCalc();
-      	console.log("Basic Ability");
       	attackRoutine();
       } else if (ability == "special") { 
       	selectedAttack = player.special.attCalc();
-      	console.log("Special Ability");
       	attackRoutine();
-      } else if (ability == "support") { 
-      	selectedAttack = player.support
+      } else if (ability == "support") {
+      	selectedBuff = player.support.buff;
+      	buffRoutine();
       }	else { console.log("No ability selected.") }
       $('#ability-btn').hide();
     });
 
+	// ===== [ Attack Routine ] =====
+	const attackRoutine = () => {
+		if (enemy.hp > 0 && current.hp > 0) { // --- Only attack if HP > 0
+			playerAttack();
 
-// ===== [ Attack Routine ] =====
-const attackRoutine = () => {
-
-	if (enemy.hp > 0 && player.hp > 0) { // --- Only attack if HP > 0
-		playerAttack();
-		if (enemy.hp > 0 && player.hp > 0) { // --- Checks if enemy is dead before enemy attacks
-			setTimeout(enemyAttack, 2000);
+			if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
+				setTimeout(enemyAttack, 1500);
+				setTimeout(playerDeathCheck, 3000);
+			}
 		}
-	}
 
-	if (player.hp == 0) { // --- If enemy is defeated, display player win
-		playerLose();
-	}
+		if (current.hp == 0) { // --- If enemy is defeated, display player win
+			playerLose();
+		}
 
-	if (enemy.hp <= 0) { // --- If enemy is defeated, display player win
-		enemy.hp = 0;
-		printHP();
-		playerWin();
-	}
-}; // .attackRoutine
+		if (enemy.hp <= 0) { // --- If enemy is defeated, display player win
+			enemy.hp = 0;
+			printHP();
+			playerWin();
+		}
+	}; // .attackRoutine
 
-}); // .document-ready
+	// ===== [ Buff Routine ] =====
+	const buffRoutine = () => {
+		playerHeal();
+		playerBuff();
 
-// ========== Utility Functions ==========
-const printHP = () => {
-	$("#player-hp").text(player.hp);
-	$("#enemy-hp").text(enemy.hp);
+		if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
+				setTimeout(enemyAttack, 1500);
+				setTimeout(playerDeathCheck, 3000);
+			}
+	}; /* .buffRoutine */
+
+}); /* .document-ready */
+
+// ========== Sub-Routines ==========
+const beginPlayerTurn = () => {
+	regenMana();
+
 }
 
-const selectAbility = () => {
-	ability = $('input[name=ability]:checked').val();
-}
+const beginEnemyTurn = () => {
 
-const regenMana = () => {
-	current.mana += player.mana;
 }
 
 const playerAttack = () => {
+	playerStatEval();
 	let damage = parseInt(selectedAttack) - parseInt(enemy.def);
 	enemy.hp -= damage;
 	printHP();
@@ -176,21 +206,73 @@ const playerAttack = () => {
 	$('#radio1,#radio2,#radio3').addClass("disabled unclickable");
 }
 
+const playerHeal = () => {
+	current.hp += parseInt(selectedBuff.hp);
+	if (current.hp > player.hp) {	current.hp = player.hp; }
+	printHP();
+	$('#game-message').addClass('text-green').removeClass('text-blue text-red');
+	$('#game-message').text('You healed ' + selectedBuff.hp + ' health!');
+	$('#radio1,#radio2,#radio3').addClass("disabled unclickable");
+}
+
+const playerBuff = () => {
+	selectedBuff.ttl = selectedBuff.duration;
+	console.log(selectedBuff.ttl);
+	
+	if (ttl > 0) {
+		buff.att += selectedBuff.att;
+		ttl--;
+	} else if (ttl < 0) {
+		ttl = 0;
+		buff.att += 0;
+	} else {
+		buff.att += 0;
+	}
+	current.att = parseInt(player.att) + parseInt(selectedBuff.att);
+	console.log("ttl: " + ttl)
+	console.log("Current Attack: " + current.att);
+}
+
 const enemyAttack = () => {
-		let damage = parseInt(enemy.att) - parseInt(player.def);
-		player.hp -= damage;
-		if (player.hp <= 0) { player.hp = 0; }
+		playerStatEval();
+		let damage = parseInt(enemy.att) - parseInt(current.def);
+		current.hp -= damage;
+		if (current.hp <= 0) { current.hp = 0; }
 		printHP();
 		console.log('The enemy attacked and did ' + damage + ' damage!');
 		$('#game-message').addClass('text-red').removeClass('text-green text-blue');
 		$('#game-message').text('The enemy attacked and did ' + damage + ' damage!');
 		$('#radio1,#radio2,#radio3').removeClass("disabled unclickable");
 		console.log("End enemy attack");
-		if (parseInt(player.hp) == 0) {
-			setTimeout(function(){ 
-			 playerLose(); }, 3000); 
-		}
 }
+
+// ========== Utility Functions ==========
+const selectAbility = () => {	ability = $('input[name=ability]:checked').val(); }
+
+const printHP = () => {
+	$("#player-hp").text(current.hp);
+	$("#enemy-hp").text(enemy.hp);
+}
+
+const playerStatEval = () => {
+	current.att = parseInt(player.att) + parseInt(buff.att);
+	current.def = parseInt(player.def) + parseInt(buff.def);
+	current.int = parseInt(player.int) + parseInt(buff.int);
+	current.res = parseInt(player.res) + parseInt(buff.int);
+	console.log(current);
+}
+const decrementBuffs = () => {
+
+}
+
+const decrementDebuffs = () => {
+
+}
+
+
+const regenMana = () => {	current.mana += player.mana; }
+
+const playerDeathCheck = () => { if (parseInt(current.hp) <= 0) { playerLose(); } }
 
 const playerWin = () => {
 	$('#radio1,#radio2,#radio3').addClass("disabled unclickable");
