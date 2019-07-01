@@ -41,10 +41,23 @@
 			<h3 id="enemy-hp"></h3>
 		</div>
 	</div>
-	<div class="row justify-content-center">
-		<button id="basic-btn" class="btn btn-red mar-r-10">Basic Ability</button>
-		<button id="special-btn" class="btn btn-yellow">Special Ability</button>
-	</div>
+
+  <div class="row justify-content-center">
+    <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
+      <!-- Void Fissure -->  
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseVoidfissure" role="button" aria-expanded="false" aria-controls="collapseVoidfissure">
+        <input type="radio" name="ability" value="Void Fissure" v-model="attackSelection">
+        <h6>Void Fissure</h6>
+      </label>
+
+      <!-- Light Shatter -->
+      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
+        <input type="radio" name="ability" value="Light Shatter" v-model="attackSelection">
+        <h6>Light Shatter</h6>
+      </label>
+    </div>
+  </div><!-- /.row -->
+
 	<div class="row justify-content-center">
 		<button id="attack-btn" class="btn btn-primary mar-20">Attack</button>
 	</div>
@@ -62,6 +75,7 @@ var player = {
 	def: 3, 
 	int: 2,
 	res: 2,
+	mana: 1,
 	basic: {
 		id: 'basicattack',
 		name: 'Basic Attack',
@@ -117,6 +131,10 @@ $(document).ready(function(){
 const printHP = () => {
 	$("#player-hp").text(player.hp);
 	$("#enemy-hp").text(enemy.hp);
+}
+
+const regenMana = () => {
+	current.mana += player.mana;
 }
 
 const playerAttack = () => {
