@@ -57,11 +57,11 @@
         DEF
       </li>
       <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
-        <span class="badge badge-light text-purple">1</span>
+        <span class="badge badge-light text-purple">0</span>
         INT
       </li>
       <li class="list-group-item align-items-center bg-red" style="padding: .35rem 1.25rem;">
-        <span class="badge badge-light text-blue">2</span>
+        <span class="badge badge-light text-blue">1</span>
         RES
       </li>
     </ul>
@@ -79,7 +79,7 @@
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-red">17</span>
+          <span class="badge badge-light text-red">15</span>
           HP
         </li>
         <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
@@ -253,7 +253,7 @@
           HP
         </li>
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-orange">4</span>
+          <span class="badge badge-light text-orange">6</span>
           ATT
         </li>
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">

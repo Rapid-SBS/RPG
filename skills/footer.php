@@ -142,7 +142,7 @@
         $('#skills-saved').delay(3000).fadeOut();
         window.setTimeout(function () {
           window.location.href = "player-menu.php";
-        }, 1000)}
+        }, 1500)}
       )
     });
   });

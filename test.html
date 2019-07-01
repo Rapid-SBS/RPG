@@ -12,9 +12,6 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-  <script src="js/vue-simple-progress.min.js"></script>
-
-
 
   <title>RPGenerator</title>
 
@@ -30,7 +27,11 @@
 <div class="text-white text-center bg-primary">
   <h5 class="pad-10"> Test </h5>
 </div>
-  
+
+<div class="text-white text-center bg-primary">
+  <h5 id="demo" class="pad-10"></h5>
+</div>
+
 <div class="container pad-40">
 	<div class="row justify-content-center">
 		<div id="player" class="mar-20 text-center" style="height: 60px; width: 60px; border: 5px solid blue; padding: 6px;">
@@ -41,51 +42,125 @@
 		</div>
 	</div>
 	<div class="row justify-content-center">
-		<button id="attack-btn" class="btn btn-primary">Attack</button>
+		<button id="basic-btn" class="btn btn-red mar-r-10">Basic Ability</button>
+		<button id="special-btn" class="btn btn-yellow">Special Ability</button>
+	</div>
+	<div class="row justify-content-center">
+		<button id="attack-btn" class="btn btn-primary mar-20">Attack</button>
 	</div>
 
-	 <div id="win" class="text-center text-green pad-t-20" style="display: none;">
-    <h4 class="pad-b-10">Enemy defeated. You win!</h4>
+	<div class="text-center pad-t-20">
+    <h4 id="game-message" class="pad-b-10"></h4>
   </div>
 
 </div>
 
 <script>
-var playerHP = 20;
-var enemyHP = 20;
+var player = { 
+	hp: 20, 
+	att: 6, 
+	def: 3, 
+	int: 2,
+	res: 2,
+	basic: {
+		id: 'basicattack',
+		name: 'Basic Attack',
+		attCalc : function() {
+			return player.att + 2;
+		}
+	},
+	special: {
+		id: 'specialattack',
+		name: 'Special Attack',
+		attCalc : function() {
+			return player.att * 2;
+		}
+	} 
+};
+
+var enemy = { hp: 20, att: 5, def: 2 };
+var selectedAttack = undefined;
+
+console.log("Player HP: " + player.hp);
+console.log("Attack Calc " + player.basic.attCalc());
 
 $(document).ready(function(){   
 	printHP();
+
+	// ===== Attack Selection =====
+	$("#basic-btn").click(function(){
+		selectedAttack = player.basic.attCalc();
+		$("basic-btn").toggleClass("active");
+	});
+	$("#special-btn").click(function(){
+		selectedAttack = player.special.attCalc();
+		console.log(selectedAttack);
+	});
+
+	// ===== Attack Routine =====
 	$("#attack-btn").click(function(){
-		if (enemyHP > 0) { // --- Only decrements if HP > 0
-			enemyHP = parseInt(enemyHP) - 5;
-			printHP();
+		if (enemy.hp > 0) { // --- Only decrements if HP > 0
+			playerAttack();
+			if (enemy.hp > 0) { // --- Checks if enemy is dead before enemy attacks
+				enemyAttack();
+			}
 		}
-		if (enemyHP <= 0) { // --- If HP <= 0, disable attack button
-			$('#attack-btn').addClass("disabled");
-      $('#win').fadeIn('slow');
+		if (enemy.hp <= 0) { // --- If enemy is defeated, display player win
+			enemy.hp = 0;
+			printHP();
+			playerWin();
 		}
 	});
 });
 
 // ========== Functions ==========
 const printHP = () => {
-	$("#player-hp").text(playerHP);
-	$("#enemy-hp").text(enemyHP);
+	$("#player-hp").text(player.hp);
+	$("#enemy-hp").text(enemy.hp);
 }
 
+const playerAttack = () => {
+	let damage = parseInt(selectedAttack) - parseInt(enemy.def);
+	enemy.hp -= damage;
+	printHP();
+	console.log('You attacked and did ' + damage + ' damage!');
+	$('#game-message').addClass('text-blue').removeClass('text-green text-red');
+	$('#game-message').text('You attacked and did ' + damage + ' damage!');
+	$('#attack-btn,#basic-btn,#special-btn').addClass("disabled unclickable");
+}
+
+const enemyAttack = () => {
+	setTimeout(function(){ 
+		let damage = parseInt(enemy.att) - parseInt(player.def);
+		player.hp -= damage;
+		printHP();
+		console.log('The enemy attacked and did ' + damage + ' damage!');
+		$('#game-message').addClass('text-red').removeClass('text-green text-blue');
+		$('#game-message').text('The enemy attacked and did ' + damage + ' damage!');
+		$('#attack-btn,#basic-btn,#special-btn').removeClass("disabled unclickable");
+	}, 1000);
+}
+
+const playerWin = () => {
+	$('#basic-btn').addClass("disabled unclickable");
+	$('#game-message').addClass('text-green').removeClass('text-blue text-red');
+  $('#game-message').text('Enemy defeated. You win!');
+}
 </script>
 
 <footer class="footer mt-auto text-center bg-lightgray">
   <div class="container pad-20">
     <div class="pad-b-20">
-      <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="http://rapid-phyre.net" role="button">Restart</a>
+      <a class="btn btn-dark text-white mar-r-10 mar-l-10" onclick="restart()" role="button">Restart</a>
       <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="player-menu.php" role="button">Continue</a>
     </div>
     <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
 
   <script>
+  	function restart() {
+  		location.reload(true);
+  	}
     function goBack() {
       window.history.back();
     }
