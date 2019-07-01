@@ -211,7 +211,7 @@
         <h5>Rune Master</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">Study of the arcane allows Rune Masters to combine elements with runestones, balance light and darkness, or wield deadly Runeblades.</p>
+        <p class="card-text text-center">Combine elements with runestones, balance light and darkness, or wield deadly runeblades as a Rune Master.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">
@@ -245,11 +245,11 @@
         <h5>Rogue</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">As deadly thieves and assassins, Rogues can deal high damage with daggers, shuriken, or become one with the shadows.</p>
+        <p class="card-text text-center">As deadly thieves and assassins, Rogues can become one with the shadows, dealing high damage with daggers, shuriken, or sai.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-red">14</span>
+          <span class="badge badge-light text-red">15</span>
           HP
         </li>
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
@@ -265,7 +265,7 @@
           INT
         </li>
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-blue">1</span>
+          <span class="badge badge-light text-blue">2</span>
           RES
         </li>
       </ul>
