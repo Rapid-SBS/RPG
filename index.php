@@ -177,7 +177,7 @@
         <h5>Mage</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">Knowledge of the natural laws allows you to use incredible elemental abilities with the power of ice, fire, and lightning at your fingers.</p>
+        <p class="card-text text-center">Knowledge of the natural laws allows you to use incredible elemental abilities with the power of ice, fire, and lightning.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-blue" style="padding: .35rem 1.25rem;">
@@ -211,7 +211,7 @@
         <h5>Rune Master</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">Masters of the arcane, Rune Masters can combine elements with runestones, control light and darkness, or wield a deadly Runeblade.</p>
+        <p class="card-text text-center">Practitioners of the arcane, Rune Masters combine elements with runestones, balance light and darkness, or wield deadly Runeblades.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-purple" style="padding: .35rem 1.25rem;">
@@ -245,7 +245,7 @@
         <h5>Rogue</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">As deadly thieves and assassins, Rogues can deal high damage with daggers, shuriken, or the power of darkness itself.</p>
+        <p class="card-text text-center">As deadly thieves and assassins, Rogues can deal high damage with daggers, shuriken, or become one with the shadows.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
