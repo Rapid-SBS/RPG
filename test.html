@@ -41,23 +41,10 @@
 			<h3 id="enemy-hp"></h3>
 		</div>
 	</div>
-
-  <div class="row justify-content-center">
-    <div id="attack-select" class="btn-group btn-toolbar btn-group-toggle">
-      <!-- Void Fissure -->  
-      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseVoidfissure" role="button" aria-expanded="false" aria-controls="collapseVoidfissure">
-        <input type="radio" name="ability" value="Void Fissure" v-model="attackSelection">
-        <h6>Void Fissure</h6>
-      </label>
-
-      <!-- Light Shatter -->
-      <label class="btn text-white pad-10 mar-5 btn-blue" data-toggle="collapse" href="#collapseLightshatter" role="button" aria-expanded="false" aria-controls="collapseLightshatter">
-        <input type="radio" name="ability" value="Light Shatter" v-model="attackSelection">
-        <h6>Light Shatter</h6>
-      </label>
-    </div>
-  </div><!-- /.row -->
-
+	<div class="row justify-content-center">
+		<button id="basic-btn" class="btn btn-red mar-r-10">Basic Ability</button>
+		<button id="special-btn" class="btn btn-yellow">Special Ability</button>
+	</div>
 	<div class="row justify-content-center">
 		<button id="attack-btn" class="btn btn-primary mar-20">Attack</button>
 	</div>
@@ -104,7 +91,7 @@ $(document).ready(function(){
 	// ===== Attack Selection =====
 	$("#basic-btn").click(function(){
 		selectedAttack = player.basic.attCalc();
-		$("basic-btn").toggleClass("active");
+		$("#basic-btn").addClass("active");
 	});
 	$("#special-btn").click(function(){
 		selectedAttack = player.special.attCalc();
