@@ -79,7 +79,7 @@
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-red">15</span>
+          <span class="badge badge-light text-red">16</span>
           HP
         </li>
         <li class="list-group-item align-items-center bg-orange" style="padding: .35rem 1.25rem;">
@@ -177,11 +177,11 @@
         <h5>Mage</h5>
       </div>
       <div class="card-body pad-10 text-center">
-        <p class="card-text text-center">Use incredible ice, fire, or lightning abilities with the Mage. Critical Hits apply debuffs instead of bonus damage.</p>
+        <p class="card-text text-center">Knowledge of the natural laws allows you to use incredible elemental abilities. Critical Hits apply debuffs instead of bonus damage.</p>
       </div>
       <ul class="list-group text-center">
         <li class="list-group-item align-items-center bg-blue" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-red">14</span>
+          <span class="badge badge-light text-red">16</span>
           HP
         </li>
         <li class="list-group-item align-items-center bg-blue" style="padding: .35rem 1.25rem;">
@@ -197,7 +197,7 @@
           INT
         </li>
         <li class="list-group-item align-items-center bg-blue" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-blue">3</span>
+          <span class="badge badge-light text-blue">4</span>
           RES
         </li>
       </ul>
@@ -257,7 +257,7 @@
           ATT
         </li>
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
-          <span class="badge badge-light text-green">1</span>
+          <span class="badge badge-light text-green">2</span>
           DEF
         </li>
         <li class="list-group-item align-items-center bg-gray" style="padding: .35rem 1.25rem;">
