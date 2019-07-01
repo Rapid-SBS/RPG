@@ -41,12 +41,23 @@
 			<h3 id="enemy-hp"></h3>
 		</div>
 	</div>
+
 	<div class="row justify-content-center">
-		<button id="basic-btn" class="btn btn-red mar-r-10">Basic Ability</button>
-		<button id="special-btn" class="btn btn-yellow">Special Ability</button>
+		<div class="btn-group btn-group-toggle" data-toggle="buttons">
+		  <label id="radio1" class="btn btn-red mar-5">
+		    <input type="radio" name="ability"  value="basic" autocomplete="off"> Basic
+		  </label>
+		  <label id="radio2" class="btn btn-yellow mar-5">
+		    <input type="radio" name="ability" value="special" autocomplete="off"> Special
+		  </label>
+		  <label id="radio3" class="btn btn-green mar-5">
+		    <input type="radio" name="ability" value="support" autocomplete="off"> Support
+		  </label>
+		</div>
 	</div>
+
 	<div class="row justify-content-center">
-		<button id="attack-btn" class="btn btn-primary mar-20">Attack</button>
+		<input type="button" id="ability-btn" class="btn btn-primary mar-20 hidden" Value="Use Ability" />
 	</div>
 
 	<div class="text-center pad-t-20">
@@ -64,60 +75,91 @@ var player = {
 	res: 2,
 	mana: 1,
 	basic: {
-		id: 'basicattack',
-		name: 'Basic Attack',
+		id: 'basicability',
+		name: 'Basic Ability',
 		attCalc : function() {
 			return player.att + 2;
 		}
 	},
 	special: {
-		id: 'specialattack',
-		name: 'Special Attack',
+		id: 'specialability',
+		name: 'Special Ability',
 		attCalc : function() {
 			return player.att * 2;
 		}
-	} 
+	},
+	support: {
+		id: 'supportability',
+		name: 'Special Ability',
+		attCalc : function() {
+			return player.att * 2;
+		}
+	}  
 };
 
-var enemy = { hp: 20, att: 5, def: 2 };
+var enemy = { hp: 20, att: 15, def: 2 };
 var selectedAttack = undefined;
-
-console.log("Player HP: " + player.hp);
-console.log("Attack Calc " + player.basic.attCalc());
+var ability = undefined;
 
 $(document).ready(function(){   
 	printHP();
 
-	// ===== Attack Selection =====
-	$("#basic-btn").click(function(){
-		selectedAttack = player.basic.attCalc();
-		$("#basic-btn").addClass("active");
-	});
-	$("#special-btn").click(function(){
-		selectedAttack = player.special.attCalc();
-		console.log(selectedAttack);
-	});
+	// ===== [ Ability Selection ] =====
 
-	// ===== Attack Routine =====
-	$("#attack-btn").click(function(){
-		if (enemy.hp > 0) { // --- Only decrements if HP > 0
-			playerAttack();
-			if (enemy.hp > 0) { // --- Checks if enemy is dead before enemy attacks
-				enemyAttack();
-			}
-		}
-		if (enemy.hp <= 0) { // --- If enemy is defeated, display player win
-			enemy.hp = 0;
-			printHP();
-			playerWin();
-		}
+	// --- Display Use Ability button after ability is selected
+	$('#radio1,#radio2,#radio3').click(function() {
+		$('#ability-btn').show();
 	});
-});
+	// --- Check value of radio select then copy it to variable
+	$('#ability-btn').click(function() {
+      selectAbility();
 
-// ========== Functions ==========
+      if (ability == "basic") { 
+      	selectedAttack = player.basic.attCalc();
+      	console.log("Basic Ability");
+      	attackRoutine();
+      } else if (ability == "special") { 
+      	selectedAttack = player.special.attCalc();
+      	console.log("Special Ability");
+      	attackRoutine();
+      } else if (ability == "support") { 
+      	selectedAttack = player.support
+      }	else { console.log("No ability selected.") }
+      $('#ability-btn').hide();
+    });
+
+
+// ===== [ Attack Routine ] =====
+const attackRoutine = () => {
+
+	if (enemy.hp > 0 && player.hp > 0) { // --- Only attack if HP > 0
+		playerAttack();
+		if (enemy.hp > 0 && player.hp > 0) { // --- Checks if enemy is dead before enemy attacks
+			setTimeout(enemyAttack, 2000);
+		}
+	}
+
+	if (player.hp == 0) { // --- If enemy is defeated, display player win
+		playerLose();
+	}
+
+	if (enemy.hp <= 0) { // --- If enemy is defeated, display player win
+		enemy.hp = 0;
+		printHP();
+		playerWin();
+	}
+}; // .attackRoutine
+
+}); // .document-ready
+
+// ========== Utility Functions ==========
 const printHP = () => {
 	$("#player-hp").text(player.hp);
 	$("#enemy-hp").text(enemy.hp);
+}
+
+const selectAbility = () => {
+	ability = $('input[name=ability]:checked').val();
 }
 
 const regenMana = () => {
@@ -131,25 +173,35 @@ const playerAttack = () => {
 	console.log('You attacked and did ' + damage + ' damage!');
 	$('#game-message').addClass('text-blue').removeClass('text-green text-red');
 	$('#game-message').text('You attacked and did ' + damage + ' damage!');
-	$('#attack-btn,#basic-btn,#special-btn').addClass("disabled unclickable");
+	$('#radio1,#radio2,#radio3').addClass("disabled unclickable");
 }
 
 const enemyAttack = () => {
-	setTimeout(function(){ 
 		let damage = parseInt(enemy.att) - parseInt(player.def);
 		player.hp -= damage;
+		if (player.hp <= 0) { player.hp = 0; }
 		printHP();
 		console.log('The enemy attacked and did ' + damage + ' damage!');
 		$('#game-message').addClass('text-red').removeClass('text-green text-blue');
 		$('#game-message').text('The enemy attacked and did ' + damage + ' damage!');
-		$('#attack-btn,#basic-btn,#special-btn').removeClass("disabled unclickable");
-	}, 1000);
+		$('#radio1,#radio2,#radio3').removeClass("disabled unclickable");
+		console.log("End enemy attack");
+		if (parseInt(player.hp) == 0) {
+			setTimeout(function(){ 
+			 playerLose(); }, 3000); 
+		}
 }
 
 const playerWin = () => {
-	$('#basic-btn').addClass("disabled unclickable");
+	$('#radio1,#radio2,#radio3').addClass("disabled unclickable");
 	$('#game-message').addClass('text-green').removeClass('text-blue text-red');
   $('#game-message').text('Enemy defeated. You win!');
+}
+
+const playerLose = () => {
+	$('#radio1,#radio2,#radio3').addClass("disabled unclickable");
+	$('#game-message').addClass('text-red').removeClass('text-blue text-green');
+  $('#game-message').text('You have fallen. Game over!');
 }
 </script>
 
