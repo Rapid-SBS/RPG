@@ -124,14 +124,17 @@ var player = {
 			res: 0,
 			mana: 0,
 		}
-	}  
+	},
 };
+
+console.log(player.buffs);
 
 var buff = { att: 0, def: 0, int: 0, res: 0 }
 var selectedAttack;
 var selectedBuff;
 var ability;
 var ttl;
+var turn = 0;
 
 var current = {
 	hp: parseInt(player.hp),
@@ -174,6 +177,7 @@ $('#ability-btn').click(function() {
 
 // ===== [ Attack Routine ] =====
 const attackRoutine = () => {
+turnCounter();
 decrementBuffs();
 if (enemy.hp > 0 && current.hp > 0) { // --- Only attack if HP > 0
 	playerAttack();
@@ -197,6 +201,7 @@ if (enemy.hp <= 0) { // --- If enemy is defeated, display player win
 
 // ===== [ Buff Routine ] =====
 const buffRoutine = () => {
+	turnCounter();
 	var ttl = selectedBuff.duration;
 	playerHeal();
 	playerBuff();
@@ -295,6 +300,10 @@ const decrementDebuffs = () => {
 
 }
 
+const turnCounter = () => {
+	turn++;
+	console.log("Begin Turn: " + turn)
+}
 
 const regenMana = () => {	current.mana += player.mana; }
 
