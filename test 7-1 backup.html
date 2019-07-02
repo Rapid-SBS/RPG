@@ -145,67 +145,69 @@ var current = {
 var enemy = { hp: 40, att: 7, def: 2 };
 
 $(document).ready(function(){   
+
 	printHP();
 	regenMana();
 	playerStatEval();
-}); /* .document-ready */
 
-// ===== [ Ability Selection ] =====
+	// ===== [ Ability Selection ] =====
 
-// --- Display Use Ability button after ability is selected
-$('#radio1,#radio2,#radio3').click(function() {
-$('#ability-btn').show();
-});
-// --- Check value of radio select then copy it to variable
-$('#ability-btn').click(function() {
-  selectAbility();
-  if (ability == "basic") { 
-  	selectedAttack = player.basic.attCalc();
-  	attackRoutine();
-  } else if (ability == "special") { 
-  	selectedAttack = player.special.attCalc();
-  	attackRoutine();
-  } else if (ability == "support") {
-  	selectedBuff = player.support.buff;
-  	buffRoutine();
-  }	else { console.log("No ability selected.") }
-  $('#ability-btn').hide();
-});
+	// --- Display Use Ability button after ability is selected
+	$('#radio1,#radio2,#radio3').click(function() {
+		$('#ability-btn').show();
+	});
+	// --- Check value of radio select then copy it to variable
+	$('#ability-btn').click(function() {
+      selectAbility();
 
-// ===== [ Attack Routine ] =====
-const attackRoutine = () => {
-decrementBuffs();
-if (enemy.hp > 0 && current.hp > 0) { // --- Only attack if HP > 0
-	playerAttack();
+      if (ability == "basic") { 
+      	selectedAttack = player.basic.attCalc();
+      	attackRoutine();
+      } else if (ability == "special") { 
+      	selectedAttack = player.special.attCalc();
+      	attackRoutine();
+      } else if (ability == "support") {
+      	selectedBuff = player.support.buff;
+      	buffRoutine();
+      }	else { console.log("No ability selected.") }
+      $('#ability-btn').hide();
+    });
 
-	if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
-		setTimeout(enemyAttack, 1500);
-		setTimeout(playerDeathCheck, 3000);
-	}
-}
+	// ===== [ Attack Routine ] =====
+	const attackRoutine = () => {
+		if (enemy.hp > 0 && current.hp > 0) { // --- Only attack if HP > 0
+			playerAttack();
 
-if (current.hp == 0) { // --- If enemy is defeated, display player win
-	playerLose();
-}
-
-if (enemy.hp <= 0) { // --- If enemy is defeated, display player win
-	enemy.hp = 0;
-	printHP();
-	playerWin();
-}
-}; // .attackRoutine
-
-// ===== [ Buff Routine ] =====
-const buffRoutine = () => {
-	var ttl = selectedBuff.duration;
-	playerHeal();
-	playerBuff();
-	console.log("ttl: " + ttl)
-	if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
-			setTimeout(enemyAttack, 1500);
-			setTimeout(playerDeathCheck, 3000);
+			if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
+				setTimeout(enemyAttack, 1500);
+				setTimeout(playerDeathCheck, 3000);
+			}
 		}
-}; /* .buffRoutine */
+
+		if (current.hp == 0) { // --- If enemy is defeated, display player win
+			playerLose();
+		}
+
+		if (enemy.hp <= 0) { // --- If enemy is defeated, display player win
+			enemy.hp = 0;
+			printHP();
+			playerWin();
+		}
+	}; // .attackRoutine
+
+	// ===== [ Buff Routine ] =====
+	const buffRoutine = () => {
+		var ttl = selectedBuff.duration;
+		playerHeal();
+		playerBuff();
+		console.log("ttl: " + ttl)
+		if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
+				setTimeout(enemyAttack, 1500);
+				setTimeout(playerDeathCheck, 3000);
+			}
+	}; /* .buffRoutine */
+
+}); /* .document-ready */
 
 // ========== Sub-Routines ==========
 const beginPlayerTurn = () => {
@@ -239,7 +241,8 @@ const playerHeal = () => {
 }
 
 const playerBuff = () => {
-	decrementBuffs();
+	console.log("ttl: " + ttl);
+	ttl = ttl--;
 	if (ttl > 0) {
 		buff.att += selectedBuff.att;
 		ttl--;
@@ -285,10 +288,7 @@ const playerStatEval = () => {
 	console.log(current);
 }
 const decrementBuffs = () => {
-	if(ttl > 0) {
-		ttl = ttl - 1;
-	}
-	console.log("Buff TTL: " + ttl);
+
 }
 
 const decrementDebuffs = () => {
