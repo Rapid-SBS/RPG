@@ -27,8 +27,14 @@
           <h6>Passive Skill</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Permanently increase DEF by 1.<br>
+          <p class="card-text text-center">Permanently increase DEF and HP by 1.<br>
         </div>
+        <ul class="list-group list-group-flush text-center">
+          <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
+            <span class="badge bg-white text-red">+1</span>
+            HP
+          </li>
+        </ul>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">
             <span class="badge bg-white text-green">+1</span>
@@ -45,7 +51,7 @@
           <h6>Passive Skill</h6>
         </div>
         <div class="card-body pad-5">
-          <p class="card-text text-center">Permanently increase RES by 1.<br>
+          <p class="card-text text-center">Permanently increase RES and HP by 1.<br>
         </div>
         <ul class="list-group list-group-flush text-center">
           <li class="list-group-item bg-light align-items-center" style="padding: .35rem 1.25rem;">

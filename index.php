@@ -313,79 +313,37 @@ localStorage.setItem('objSkills', JSON.stringify(skills));
 $(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
-    var rpgclass = new rpgClass("Warrior", 18, 3, 4, 0, 1);
+    var rpgclass = new rpgClass("Warrior", 26, 3, 4, 0, 2);
     localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
 
   $("#rpg-class-monk").click(function(){
-    var rpgclass = {
-      name: "Monk",
-      hp: 17,
-      att: 3,
-      def: 3,
-      int: 3,
-      res: 3,
-    }
+    var rpgclass = new rpgClass("Monk", 23, 3, 3, 3, 3);
     localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
 
   $("#rpg-class-cleric").click(function(){
-    var rpgclass = {
-      name: "Cleric",
-      hp: 15,
-      att: 2,
-      def: 2,
-      int: 3,
-      res: 4,
-    }
+    var rpgclass = new rpgClass("Cleric", 24, 2, 2, 3, 4);
     localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
 
   $("#rpg-class-archer").click(function(){
-    var rpgclass = {
-      name: "Archer",
-      hp: 16,
-      att: 5,
-      def: 1,
-      int: 2,
-      res: 2,
-    }
+    var rpgclass = new rpgClass("Archer", 25, 5, 1, 2, 2);
     localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
 
   $("#rpg-class-mage").click(function(){
-    var rpgclass = {
-      name: "Mage",
-      hp: 14,
-      att: 0,
-      def: 0,
-      int: 6,
-      res: 3,
-    }
+    var rpgclass = new rpgClass("Mage", 26, 0, 0, 6, 3);
     localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
 
   $("#rpg-class-runemaster").click(function(){
-    var rpgclass = {
-      name: "Rune Master",
-      hp: 15,
-      att: 3,
-      def: 2,
-      int: 4,
-      res: 2,
-    }
+    var rpgclass = new rpgClass("Rune Master", 24, 3, 2, 4, 2);
     localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
 
   $("#rpg-class-rogue").click(function(){
-    var rpgclass = {
-      name: "Rogue",
-      hp: 14,
-      att: 6,
-      def: 1,
-      int: 3,
-      res: 1,
-    }
+    var rpgclass = new rpgClass("Rogue", 26, 6, 2, 0, 1);
     localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
 

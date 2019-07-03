@@ -107,9 +107,11 @@
           skills.hp = skills.hp + 2; }
 
       if (passives.three === "DEF I") { 
-          skills.def = skills.def + 1; } 
+          skills.def = skills.def + 1;
+          skills.hp = skills.hp + 1; } 
       else if (passives.three === "RES I") {
-          skills.res = skills.res + 1; }
+          skills.res = skills.res + 1;
+          skills.hp = skills.hp + 1; }
 
       if (passives.four === "Mana I") { 
           skills.mana = skills.mana + 1; }
@@ -120,9 +122,11 @@
           skills.int = skills.int + 1; }
 
       if (passives.seven === "DEF II") { 
-          skills.def = skills.def + 1; } 
+          skills.def = skills.def + 1;
+          skills.hp = skills.hp + 1; } 
       else if (passives.seven === "RES II") {
-          skills.res = skills.res + 1; }
+          skills.res = skills.res + 1;
+          skills.hp = skills.hp + 1; }
 
       if (passives.nine === "Mana II") { 
           skills.mana = skills.mana + 1; }
