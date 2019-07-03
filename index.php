@@ -313,14 +313,7 @@ localStorage.setItem('objSkills', JSON.stringify(skills));
 $(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
-    var rpgclass = {
-      name: "Warrior",
-      hp: 18,
-      att: 3,
-      def: 4,
-      int: 1,
-      res: 2,
-    }
+    var rpgclass = new rpgClass("Warrior", 18, 3, 4, 0, 1);
     localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
 
