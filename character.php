@@ -21,6 +21,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css"/>
   <script type="text/javascript" src="loading-bar/loading-bar.js"></script>
+  <script type="text/javascript" src="js/classes.js"></script>
 
   <style> .ldBar-label { display: none; }</style>
 
