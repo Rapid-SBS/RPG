@@ -115,8 +115,8 @@ var player = {
 		id: 'supportability',
 		name: 'Special Ability',
 		buff: {
+			name: "Att Boost",
 			duration: 2,
-			ttl: 0,
 			hp: 8,
 			att: 2,
 			def: 0,
@@ -170,6 +170,7 @@ $('#ability-btn').click(function() {
   	attackRoutine();
   } else if (ability == "support") {
   	selectedBuff = player.support.buff;
+  	buffInit();
   	buffRoutine();
   }	else { console.log("No ability selected.") }
   $('#ability-btn').hide();
@@ -178,7 +179,7 @@ $('#ability-btn').click(function() {
 // ===== [ Attack Routine ] =====
 const attackRoutine = () => {
 turnCounter();
-decrementBuffs();
+playerBuff();
 if (enemy.hp > 0 && current.hp > 0) { // --- Only attack if HP > 0
 	playerAttack();
 
@@ -197,15 +198,13 @@ if (enemy.hp <= 0) { // --- If enemy is defeated, display player win
 	printHP();
 	playerWin();
 }
-}; // .attackRoutine
+}; /* .attackRoutine */
 
 // ===== [ Buff Routine ] =====
 const buffRoutine = () => {
 	turnCounter();
-	var ttl = selectedBuff.duration;
 	playerHeal();
 	playerBuff();
-	console.log("ttl: " + ttl)
 	if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
 			setTimeout(enemyAttack, 1500);
 			setTimeout(playerDeathCheck, 3000);
@@ -245,16 +244,19 @@ const playerHeal = () => {
 
 const playerBuff = () => {
 	decrementBuffs();
+	console.log("PlayerBuff TTL: " + ttl);
 	if (ttl > 0) {
-		buff.att += selectedBuff.att;
-		ttl--;
-	} else if (ttl < 0) {
-		ttl = 0;
-		buff.att += 0;
+		buff.att = 2;
+		buff.def = 2;
 	} else {
-		buff.att += 0;
+		buff.att = 0;
+		buff.def = 0;
 	}
 	playerStatEval();
+}
+
+const buffInit = () => {
+	ttl = 2;
 }
 
 const enemyAttack = () => {
@@ -290,8 +292,10 @@ const playerStatEval = () => {
 	console.log(current);
 }
 const decrementBuffs = () => {
-	if(ttl > 0) {
+	if (ttl > 0) {
 		ttl = ttl - 1;
+	} else {
+		console.log("TTL Zero")
 	}
 	console.log("Buff TTL: " + ttl);
 }

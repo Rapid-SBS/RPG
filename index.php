@@ -19,6 +19,7 @@
   <link rel="stylesheet" type="text/css" href="css/spacing.css">
   <link rel="stylesheet" type="text/css" href="css/colors.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="js/classes.js"></script>
 
 </head>
 
