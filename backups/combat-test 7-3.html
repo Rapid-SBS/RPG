@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+
+  <title>RPGenerator</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/spacing.css">
+  <link rel="stylesheet" type="text/css" href="css/colors.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css"/>
+  <script type="text/javascript" src="loading-bar/loading-bar.js"></script>
+  <script type="text/javascript" src="js/classes.js"></script>
+</head>
+
+<body>
+<div class="text-white text-center bg-primary">
+  <h5 class="pad-10"> Test </h5>
+</div>
+
+<div class="text-white text-center bg-primary">
+  <h5 id="demo" class="pad-10"></h5>
+</div>
+
+<div class="container pad-40">
+	<div class="row justify-content-center">
+		<div id="player" class="mar-20 text-center" style="height: 60px; width: 60px; border: 5px solid blue; padding: 6px;">
+			<h3 id="player-hp"></h3>
+		</div>
+		<div id="enemy" class="mar-20 text-center" style="height: 60px; width: 60px; border: 5px solid red; padding: 6px;">
+			<h3 id="enemy-hp"></h3>
+		</div>
+	</div>
+
+	<div class="row">
+    <table class="wide-275 text-center table-bordered mx-auto">
+      <tbody>
+        <tr>
+          <td>ATT</td>
+          <td id="p-att"></td>
+        </tr>
+        <tr>
+          <td>DEF</td>
+          <td id="p-def"></td>
+        </tr>
+        <tr>
+          <td>INT</td>
+          <td id="p-int"></td>
+        </tr>
+        <tr>
+          <td>RES</td>
+          <td id="p-res"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- /.row -->
+
+	<div class="row justify-content-center">
+		<div class="btn-group btn-group-toggle" data-toggle="buttons">
+		  <label id="radio1" class="btn btn-red mar-5">
+		    <input type="radio" name="ability"  value="basic" autocomplete="off"> Basic
+		  </label>
+		  <label id="radio2" class="btn btn-yellow mar-5">
+		    <input type="radio" name="ability" value="special" autocomplete="off"> Special
+		  </label>
+		  <label id="radio3" class="btn btn-green mar-5">
+		    <input type="radio" name="ability" value="support" autocomplete="off"> Support
+		  </label>
+		</div>
+	</div>
+
+	<div class="row justify-content-center">
+		<input type="button" id="ability-btn" class="btn btn-primary mar-20 hidden" Value="Use Ability" />
+	</div>
+
+	<div class="text-center pad-t-20">
+    <h4 id="game-message" class="pad-b-10"></h4>
+  </div>
+
+</div>
+
+<script>
+var player = { 
+	hp: 20, 
+	att: 6, 
+	def: 3, 
+	int: 2,
+	res: 2,
+	mana: 1,
+	basic: new Ability("Basic", 1, 3),
+	special: new Ability("Special", 3, 0),
+	support: {
+		id: 'supportability',
+		name: 'Special Ability',
+		buff: {
+			name: "Att Boost",
+			duration: 2,
+			hp: 8,
+			att: 2,
+			def: 0,
+			int: 0,
+			res: 0,
+			mana: 0,
+		}
+	},
+};
+
+console.log(player.buffs);
+
+var buff = { att: 0, def: 0, int: 0, res: 0 }
+var selectedAttack;
+var selectedBuff;
+var ability;
+var ttl;
+var turn = 0;
+
+var current = {
+	hp: parseInt(player.hp),
+	att: parseInt(player.att),
+	def: parseInt(player.def),
+	int: parseInt(player.int),
+	res: parseInt(player.res),
+	mana: 0
+}
+
+var enemy = { hp: 40, att: 7, def: 2 };
+
+$(document).ready(function(){   
+	printHP();
+	regenMana();
+	playerStatEval();
+}); /* .document-ready */
+
+// ===== [ Ability Selection ] =====
+
+// --- Display Use Ability button after ability is selected
+$('#radio1,#radio2,#radio3').click(function() {
+$('#ability-btn').show();
+});
+// --- Check value of radio select then copy it to variable
+$('#ability-btn').click(function() {
+  selectAbility();
+  playerStatEval();
+  if (ability == "basic") { 
+  	selectedAttack = player.basic.attCalc();
+  	attackRoutine();
+  } else if (ability == "special") { 
+  	selectedAttack = player.special.attCalc();
+  	attackRoutine();
+  } else if (ability == "support") {
+  	selectedBuff = player.support.buff;
+  	buffInit();
+  	buffRoutine();
+  }	else { console.log("No ability selected.") }
+  $('#ability-btn').hide();
+});
+
+// ===== [ Attack Routine ] =====
+const attackRoutine = () => {
+turnCounter();
+playerBuff();
+if (enemy.hp > 0 && current.hp > 0) { // --- Only attack if HP > 0
+	playerAttack();
+
+	if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
+		setTimeout(enemyAttack, 1500);
+		setTimeout(playerDeathCheck, 3000);
+	}
+}
+
+if (current.hp == 0) { // --- If enemy is defeated, display player win
+	playerLose();
+}
+
+if (enemy.hp <= 0) { // --- If enemy is defeated, display player win
+	enemy.hp = 0;
+	printHP();
+	playerWin();
+}
+}; /* .attackRoutine */
+
+// ===== [ Buff Routine ] =====
+const buffRoutine = () => {
+	turnCounter();
+	playerHeal();
+	playerBuff();
+	if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
+			setTimeout(enemyAttack, 1500);
+			setTimeout(playerDeathCheck, 3000);
+		}
+}; /* .buffRoutine */
+
+// ========== Sub-Routines ==========
+const beginPlayerTurn = () => {
+	regenMana();
+
+}
+
+const beginEnemyTurn = () => {
+
+}
+
+const playerAttack = () => {
+	playerStatEval();
+	console.log(selectedAttack);
+	let damage = parseInt(selectedAttack) - parseInt(enemy.def);
+	enemy.hp -= damage;
+	printHP();
+	console.log('You attacked and did ' + damage + ' damage!');
+	$('#game-message').addClass('text-blue').removeClass('text-green text-red');
+	$('#game-message').text('You attacked and did ' + damage + ' damage!');
+	$('#radio1,#radio2,#radio3').addClass("disabled unclickable");
+}
+
+const playerHeal = () => {
+	current.hp += parseInt(selectedBuff.hp);
+	if (current.hp > player.hp) {	current.hp = player.hp; }
+	printHP();
+	$('#game-message').addClass('text-green').removeClass('text-blue text-red');
+	$('#game-message').text('You healed ' + selectedBuff.hp + ' health!');
+	$('#radio1,#radio2,#radio3').addClass("disabled unclickable");
+}
+
+const playerBuff = () => {
+	decrementBuffs();
+	console.log("PlayerBuff TTL: " + ttl);
+	if (ttl > 0) {
+		buff.att = 2;
+		buff.def = 2;
+	} else {
+		buff.att = 0;
+		buff.def = 0;
+	}
+	playerStatEval();
+}
+
+const buffInit = () => {
+	ttl = 2;
+}
+
+const enemyAttack = () => {
+		playerStatEval();
+		let damage = parseInt(enemy.att) - parseInt(current.def);
+		current.hp -= damage;
+		if (current.hp <= 0) { current.hp = 0; }
+		printHP();
+		console.log('The enemy attacked and did ' + damage + ' damage!');
+		$('#game-message').addClass('text-red').removeClass('text-green text-blue');
+		$('#game-message').text('The enemy attacked and did ' + damage + ' damage!');
+		$('#radio1,#radio2,#radio3').removeClass("disabled unclickable");
+		console.log("End enemy attack");
+}
+
+// ========== Utility Functions ==========
+const selectAbility = () => { ability = $('input[name=ability]:checked').val(); }
+
+const printHP = () => {
+	$("#player-hp").text(current.hp);
+	$("#enemy-hp").text(enemy.hp);
+}
+
+const playerStatEval = () => {
+	current.att = parseInt(player.att) + parseInt(buff.att);
+	current.def = parseInt(player.def) + parseInt(buff.def);
+	current.int = parseInt(player.int) + parseInt(buff.int);
+	current.res = parseInt(player.res) + parseInt(buff.int);
+	$("#p-att").text(current.att);
+	$("#p-def").text(current.def);
+	$("#p-int").text(current.int);
+	$("#p-res").text(current.res);
+	console.log(current);
+}
+const decrementBuffs = () => {
+	if (ttl > 0) {
+		ttl = ttl - 1;
+	} else {
+		console.log("TTL Zero")
+	}
+	console.log("Buff TTL: " + ttl);
+}
+
+const decrementDebuffs = () => {
+
+}
+
+const turnCounter = () => {
+	turn++;
+	console.log("Begin Turn: " + turn)
+}
+
+const regenMana = () => {	current.mana += player.mana; }
+
+const playerDeathCheck = () => { if (parseInt(current.hp) <= 0) { playerLose(); } }
+
+const playerWin = () => {
+	$('#radio1,#radio2,#radio3').addClass("disabled unclickable");
+	$('#game-message').addClass('text-green').removeClass('text-blue text-red');
+  $('#game-message').text('Enemy defeated. You win!');
+}
+
+const playerLose = () => {
+	$('#radio1,#radio2,#radio3').addClass("disabled unclickable");
+	$('#game-message').addClass('text-red').removeClass('text-blue text-green');
+  $('#game-message').text('You have fallen. Game over!');
+}
+</script>
+
+<footer class="footer mt-auto text-center bg-lightgray">
+  <div class="container pad-20">
+    <div class="pad-b-20">
+      <a class="btn btn-dark text-white mar-r-10 mar-l-10" onclick="restart()" role="button">Restart</a>
+      <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="player-menu.php" role="button">Continue</a>
+    </div>
+    <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
+  </div>
+
+  <script>
+  	function restart() {
+  		location.reload(true);
+  	}
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+</body>
+
+</html>

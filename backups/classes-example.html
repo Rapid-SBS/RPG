@@ -35,21 +35,11 @@ var player = {
 	int: 2,
 	res: 2,
 	mana: 1,
-	basic: new Ability("Basic", 1, 3)
+	basic: new Ability("Basic", 3, 2, 5)
 }
-
-var current = {
-	hp: parseInt(player.hp),
-	att: parseInt(player.att),
-	def: parseInt(player.def),
-	int: parseInt(player.int),
-	res: parseInt(player.res),
-	mana: 0
-}
-
 
 console.log(player);
-console.log(player.basic.attCalc());
+console.log(player.basic.damage());
 
 </script>
 
