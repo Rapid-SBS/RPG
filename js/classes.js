@@ -19,12 +19,13 @@ class Ability {
 }
 
 class Attack extends Ability {
-	constructor(name, type, manacost, target, dmgtype, multiplier, additive) {
+	constructor(name, type, manacost, target, dmgtype, multiplier, additive, pierce) {
 		super(name, type, manacost, target);
 		this.target = target;
 		this.dmgtype = dmgtype;
 	  this.multiplier = multiplier;
 	  this.additive = additive;
+	  this.pierce = pierce;
 	  if (this.dmgtype == "att") {
 		  this.dmg = function() {
 		  	return current.att
@@ -111,12 +112,13 @@ class HealBuff extends Ability {
 }
 
 class AttackBuff extends Ability {
-	constructor(name, type, manacost, target, dmgtype, multiplier, additive, status, duration, hp, att, def, int, res, mana) {
+	constructor(name, type, manacost, target, dmgtype, multiplier, additive, pierce, status, duration, hp, att, def, int, res, mana) {
 		super(name, type, manacost, target);
 		this.target = target;
 		this.dmgtype = dmgtype;
 	  this.multiplier = multiplier;
 	  this.additive = additive;
+	  this.pierce = pierce;
 	 	this.status = status;
 		this.duration = duration;
 		this.hp = hp;
@@ -141,12 +143,13 @@ class AttackBuff extends Ability {
 }
 
 class AttackHeal extends Ability {
-	constructor(name, type, manacost, target, dmgtype, multiplier, additive) {
+	constructor(name, type, manacost, target, dmgtype, multiplier, additive, pierce) {
 		super(name, type, manacost, target);
 		this.target = target;
 		this.dmgtype = dmgtype;
 	  this.multiplier = multiplier;
 	  this.additive = additive;
+	  this.pierce = pierce;
 	  if (this.dmgtype == "att") {
 		  this.dmg = function() {
 		  	return current.att
