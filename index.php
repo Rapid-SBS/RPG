@@ -325,7 +325,7 @@ $(document).ready(function(){
 
   $("#rpg-class-cleric").click(function(){
     var rpgclass = new rpgClass("Cleric", 24, 2, 2, 3, 4);
-    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
+    setRpgClass(rpgClass);
   });
 
   $("#rpg-class-archer").click(function(){
