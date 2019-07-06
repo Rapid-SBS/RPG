@@ -315,6 +315,7 @@ $(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
     var rpgclass = new rpgClass("Warrior", 26, 3, 4, 0, 2);
+    console.log(rpgclass);
     setRpgClass();
   });
 
