@@ -311,10 +311,6 @@ var skills = {
 localStorage.setItem('objPlayer', JSON.stringify(player));
 localStorage.setItem('objSkills', JSON.stringify(skills));
 
-const setRpgClassObj = () => { 
-  localStorage.setItem('objRpgclass', JSON.stringify(rpgclass)); 
-}
-
 $(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
@@ -353,6 +349,11 @@ $(document).ready(function(){
   });
 
 });
+
+const setRpgClassObj = () => { 
+  localStorage.setItem('objRpgclass', JSON.stringify(rpgclass)); 
+}
+
 
 </script>
 
