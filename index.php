@@ -20,6 +20,7 @@
   <link rel="stylesheet" type="text/css" href="css/colors.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script type="text/javascript" src="js/classes.js"></script>
+  <script type="text/javascript" src="js/globals.js"></script>
 
 </head>
 
@@ -314,7 +315,7 @@ $(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
     var rpgclass = new rpgClass("Warrior", 26, 3, 4, 0, 2);
-    
+    setPlayerObj();
   });
 
   $("#rpg-class-monk").click(function(){
