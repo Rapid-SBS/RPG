@@ -142,8 +142,6 @@ var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
   	player.res = skills.res + rpgclass.res;
     player.mana = skills.mana;
 
-  	player.basic = weapon.basic; 
-    player.special = weapon.special;
     player.support = skills.support; 
     player.attack = skills.attack;
     player.ultimate = skills.ultimate;
