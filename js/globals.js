@@ -10,8 +10,8 @@ const setSkillsObj = () => { localStorage.setItem('objSkills', JSON.stringify(sk
 const setRpgClassObj = () => { rpgclass = localStorage.setItem('objRpgclass', JSON.stringify(rpgclass)); }
 const setWeaponObj = () => { localStorage.setItem('objWeapon', JSON.stringify(weapon)); }
 */
-const rpgClassKey = 'rpgClass'
-const weaponKey = 'weapon'
+const rpgClassKey = 'rpgClass';
+const weaponKey = 'weapon';
 
 export function getRpgClass()
 
@@ -25,7 +25,7 @@ export function setRpgClass(rpgClass)
 
 {
 
-localStorage.setItem(rpgClassKey, JSON.stringify(rpgClass))
+localStorage.setItem(rpgClassKey, JSON.stringify(rpgClass));
 
 }
 
@@ -41,6 +41,6 @@ export function setWeapon(weapon)
 
 {
 
-localStorage.setItem(weaponKey, JSON.stringify(weapon))
+localStorage.setItem(weaponKey, JSON.stringify(weapon));
 
 }
