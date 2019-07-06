@@ -20,7 +20,6 @@
   <link rel="stylesheet" type="text/css" href="css/colors.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script type="text/javascript" src="js/classes.js"></script>
-  <script type="text/javascript" src="js/globals.js"></script>
 
 </head>
 
