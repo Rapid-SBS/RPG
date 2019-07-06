@@ -13,8 +13,8 @@
 <script> 
 const setWeaponBow = () => {
   player.weapon = "Bow";
-  player.basic: "Arrow";
-  player.special: "Doubleshot";
+  player.basic = "Arrow";
+  player.special = "Doubleshot";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
