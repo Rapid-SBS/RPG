@@ -20,6 +20,7 @@
   <link rel="stylesheet" type="text/css" href="css/colors.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script type="text/javascript" src="js/classes.js"></script>
+  <script type="text/javascript" src="js/globals.js"></script>
 
 </head>
 
@@ -30,7 +31,7 @@
 <div id="weapon-select" class="y-flex-container pad-b-10">
 
 <script>
-var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
+var rpgclass = setRpgClassObj();
 
 var weapon = {
   name: undefined,
