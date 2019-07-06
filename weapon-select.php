@@ -31,7 +31,7 @@
 <div id="weapon-select" class="y-flex-container pad-b-10">
 
 <script>
-var rpgclass = setRpgClassObj();
+var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
 
 var weapon = {
   name: undefined,
