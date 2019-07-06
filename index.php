@@ -315,12 +315,12 @@ $(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
     var rpgclass = new rpgClass("Warrior", 26, 3, 4, 0, 2);
-    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
+    setRpgClass();
   });
 
   $("#rpg-class-monk").click(function(){
     var rpgclass = new rpgClass("Monk", 23, 3, 3, 3, 3);
-    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
+    setRpgClass(rpgclass);
   });
 
   $("#rpg-class-cleric").click(function(){
