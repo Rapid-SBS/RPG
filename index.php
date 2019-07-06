@@ -314,7 +314,7 @@ $(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
     var rpgclass = new rpgClass("Warrior", 26, 3, 4, 0, 2);
-    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
+    
   });
 
   $("#rpg-class-monk").click(function(){

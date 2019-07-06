@@ -167,3 +167,27 @@ class AttackHeal extends Ability {
 	  };
 	}
 }
+
+class EnemyAttack extends Ability {
+	constructor(name, type, target, nthturn, dmgtype, multiplier, additive, pierce) {
+		super(name, type, target);
+		this.nthturn = nthturn;
+		this.target = target;
+		this.dmgtype = dmgtype;
+	  this.multiplier = multiplier;
+	  this.additive = additive;
+	  this.pierce = pierce;
+	  if (this.dmgtype == "att") {
+		  this.dmg = function() {
+		  	return enemy.att
+		  };
+		} else if (this.dmgtype == "int") {
+			this.dmg = function() {
+				return enemy.int
+			};
+		}
+	  this.attCalc = function() {
+	    return this.dmg() * this.multiplier + this.additive
+	  };
+	}
+}

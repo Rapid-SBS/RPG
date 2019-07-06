@@ -96,6 +96,10 @@
     </table>
   </div><!-- /.row -->
 
+  <div class="row justify-content-center">
+  	<p><b>Attack Type: </b><span id="att-type" class="pad-r-10"></span><b>Multiplier: </b><span id="att-multiplier" class="pad-r-10"></span><b>Additive: </b><span id="att-additive" class="pad-r-10"></span><b>Pierce: </b><span id="att-pierce" class="pad-r-10"></span></p>
+  </div><!-- /.row -->
+
 	<div class="row justify-content-center pad-t-20">
 		<div class="btn-group btn-group-toggle" data-toggle="buttons">
 		  <label id="radio1" class="btn btn-red mar-5">
@@ -135,15 +139,16 @@ BuffDebuff(name, type, manacost, target, status, duration, hp, att, def, int, re
 HealBuff(name, type, manacost, target, multiplier, additive, status, duration, hp, att, def, int, res, mana)
 AttackBuff(name, type, manacost, target, dmgtype, multiplier, additive, pierce, status, duration, hp, att, def, int, res, mana)
 AttackHeal(name, type, manacost, target, dmgtype, multiplier, additive, pierce)
+EnemyAttack(name, type, target, nthturn, dmgtype, multiplier, additive, pierce)
 */
 var player = { 
 	hp: 30, 
 	att: 6, 
 	def: 3, 
-	int: 2,
+	int: 4,
 	res: 2,
 	mana: 1,
-	basic: new Attack("Strike", "Attack", 0, "Enemy", "att", 1, 2, 4),
+	basic: new Attack("Strike", "Attack", 0, "Enemy", "att", 1, 0, 4),
 	special: new HealBuff("Enrage", "HealBuff", 2, "Self", 3, 0, "None", 3, 10, 2, 0, 0, 0, 0),
 	support: new BuffDebuff("Battle Roar", "BuffDebuff", 3, "All", "None", 2, 0, 2, 4, 0, 0, 0, 2, 2, 0, 0),
 	attack: new AttackBuff("Cleave", "AttackBuff", 4, "Mutual", "att", 3, 0, 0, "None", 2, 0, -2, -4, 0, 0, 0),
@@ -168,14 +173,15 @@ var current = {
 	mana: 0
 }
 
-var enemybase = { hp: 40, att: 7, def: 2, int: 2, res:2 };
+var enemybase = { hp: 40, att: 6, def: 2, int: 2, res:4 };
 var enemy = {
 	hp: parseInt(enemybase.hp),
 	att: parseInt(enemybase.att),
 	def: parseInt(enemybase.def),
 	int: parseInt(enemybase.int),
 	res: parseInt(enemybase.res),
-	pierce: 1
+	basic: new EnemyAttack("Default", "Attack", "Player", 0, "att", 1, 6, 0),
+	special: new EnemyAttack("Default", "Attack", "Player", 3, "att", 2, 0, 0),
 };
 
 $(document).ready(function(){   
@@ -203,6 +209,7 @@ $(document).ready(function(){
       selectAbility();
       if (ability == "basic") { 
       	selectedAttack = player.basic;
+      	printAttackDetails();
       	attackRoutine();
       } else if (ability == "special") { 
       	selectedAttack = player.special;
@@ -338,7 +345,12 @@ const beginEnemyTurn = () => {
 const playerAttack = () => {
 	playerStatEval();
 	console.log(selectedAttack);
-	let mitigation = parseInt(enemy.def) - parseInt(selectedAttack.pierce);
+	let mitigation;
+	if (selectedAttack.dmgtype == "att") { // Match defense to attack type
+		mitigation = parseInt(enemy.def) - parseInt(selectedAttack.pierce);
+	} else if (selectedAttack.dmgtype == "int") {
+		mitigation = parseInt(enemy.res) - parseInt(selectedAttack.pierce);
+	}
 	if (mitigation < 0) {	mitigation = 0; } // Prevent negative values
 	let damage = parseInt(selectedAttack.attCalc()) - parseInt(mitigation);
 	enemy.hp -= damage;
@@ -377,11 +389,16 @@ const buffInit = () => {
 
 const enemyAttack = () => {
 		playerStatEval();
-		let mitigation = parseInt(current.def) - parseInt(enemy.pierce);
+		
+		let mitigation;
+		if (selectedAttack.dmgtype == "att") { // Match defense to attack type
+			mitigation = parseInt(current.def) - parseInt(enemy.basic.pierce);
+		} else if (selectedAttack.dmgtype == "int") {
+			mitigation = parseInt(current.res) - parseInt(enemy.basic.pierce);
+		}
 		if (mitigation < 0) {	mitigation = 0; } // Prevent negative values
 		let damage = parseInt(enemy.att) - parseInt(mitigation);
 		current.hp -= damage;
-
 		if (current.hp <= 0) { current.hp = 0; } // Prevent negative Player HP
 		printHP();
 		console.log('The enemy attacked and did ' + damage + ' damage!');
@@ -397,10 +414,16 @@ const selectAbility = () => {
 	console.log('Selected ' + ability + ' ability.');
 }
 
-
 const printHP = () => {
 	$("#player-hp").text(current.hp);
 	$("#enemy-hp").text(enemy.hp);
+}
+
+const printAttackDetails = () => {
+	$('#att-type').text((selectedAttack.dmgtype).toUpperCase());
+	$('#att-multiplier').text(selectedAttack.multiplier);
+	$('#att-additive').text(selectedAttack.additive);
+	$('#att-pierce').text(selectedAttack.pierce);
 }
 
 const playerStatEval = () => {
