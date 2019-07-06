@@ -130,12 +130,10 @@
 var player = JSON.parse(localStorage.getItem('objPlayer'));
 var skills = JSON.parse(localStorage.getItem('objSkills'));
 var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
-var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
   $(document).ready(function(){
 
   	player.class = rpgclass.name;
-  	player.weapon = weapon.name;
 
   	player.hp = skills.hp + rpgclass.hp;
   	player.att = skills.att + rpgclass.att;

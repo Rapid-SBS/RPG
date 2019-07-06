@@ -11,15 +11,11 @@
   <a role="button" onclick="setWeaponLongbow()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-longbow" href="name.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script> 
-
-function setWeaponBow() {
-  weapon = {
-    name: "Bow",
-    basic: "Arrow",
-    special: "Doubleshot",
-  }
-
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponBow = () => {
+  player.weapon = "Bow";
+  player.basic: "Arrow";
+  player.special: "Doubleshot";
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 function setWeaponCrossbow() {

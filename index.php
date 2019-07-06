@@ -315,18 +315,17 @@ $(document).ready(function(){
 
   $("#rpg-class-warrior").click(function(){
     var rpgclass = new rpgClass("Warrior", 26, 3, 4, 0, 2);
-    console.log(rpgclass);
-    setRpgClass();
+    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
 
   $("#rpg-class-monk").click(function(){
     var rpgclass = new rpgClass("Monk", 23, 3, 3, 3, 3);
-    setRpgClass(rpgclass);
+    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
 
   $("#rpg-class-cleric").click(function(){
     var rpgclass = new rpgClass("Cleric", 24, 2, 2, 3, 4);
-    setRpgClass(rpgClass);
+    localStorage.setItem('objRpgclass', JSON.stringify(rpgclass));
   });
 
   $("#rpg-class-archer").click(function(){

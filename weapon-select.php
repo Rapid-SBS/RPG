@@ -32,12 +32,7 @@
 
 <script>
 var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
-
-var weapon = {
-  name: undefined,
-  basic: undefined,
-  special: undefined,
-}
+var player = JSON.parse(localStorage.getItem('objPlayer'));
 
   $(document).ready(function(){
 
