@@ -76,7 +76,7 @@
 
 <script> 
 let backgrounds = [
-  'orange','green','teal','blue','gray','paleblue','purple'
+  'red','orange','yellow','green','blue','purple','gray'
 ];
 let classes = [
     characterClassCreator.createWarrior(),
@@ -92,7 +92,7 @@ var app = new Vue({
   el: '#app',
   data: {
     classes: classes,
-    backgrounds:backgrounds
+    backgrounds: backgrounds
   },
   methods: {
     selectClass: function(rpgClass) {
