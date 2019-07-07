@@ -1,12 +1,52 @@
 class rpgClass {
-	constructor(name, hp, att, def, int, res) {
-		this.name = name;
-		this.hp = hp;
-		this.att = att;
-		this.def = def;
-		this.int = int;
-		this.res = res;
-	}
+    constructor(name, hp, att, def, int, res, description) {
+      this.name = name;
+      this.hp = hp;
+      this.att = att;
+      this.def = def;
+      this.int = int;
+      this.res = res;
+      this.description = description;
+    }
+}
+ 
+class characterClassCreator
+{
+  static createWarrior()
+  {
+      let description = 'Masters of swords, shields, and axes, Warriors can deal physical damage or protect their allies with their high defense.'
+      return new rpgClass("Warrior", 26, 3, 4, 0, 2, description);
+  }
+  static createMonk()
+  {
+      let description = 'Advocates of peace yet masters of martial arts, Monks have well-balanced stats and a wide selection of support abilities.'
+      return new rpgClass("Monk", 23, 3, 3, 3, 3, description);
+  }
+  static createCleric()
+  {
+      let description = 'With the power to heal, enhance, or revive your allies with potent light abilities, the Cleric is the ultimate support class.'
+      return new rpgClass("Cleric", 24, 2, 2, 3, 4, description);
+  }
+  static createArcher()
+  {
+      let description = 'Attack from afar with the Archer. Deal high damage, pierce enemy defenses, or use your connection with nature to support your allies.'
+      return new rpgClass("Archer", 25, 5, 1, 2, 2, description);
+  }
+  static createMage()
+  {
+      let description = 'Knowledge of the natural laws allows you to use incredible elemental abilities with the power of ice, fire, and lightning.'
+      return new rpgClass("Mage", 26, 0, 0, 6, 3, description);
+  }
+  static createRuneMaster()
+  {
+      let description = 'Combine elements with runestones, balance light and darkness, or wield deadly runeblades as a Rune Master.'
+      return new rpgClass("Rune Master", 24, 3, 2, 4, 2, description);
+  }
+  static createRogue()
+  {
+      let description = 'As deadly thieves and assassins, Rogues can become one with the shadows, dealing high damage with daggers, shuriken, or sai.'
+      return new rpgClass("Rogue", 26, 6, 2, 0, 1, description);
+  }
 }
 
 class Ability {
