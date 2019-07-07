@@ -38,8 +38,8 @@ var player = JSON.parse(localStorage.getItem('objPlayer'));
 
 $(document).ready(function(){
 
-  skillPages['Bow'] = 'skills/skills-bow.php';
-  skillPages['Crossbow'] = 'skills/skills-crossbow.php';
+  let skillPages['Bow'] = 'skills/skills-bow.php';
+  var skillPages['Crossbow'] = 'skills/skills-crossbow.php';
 
   /*
   if (player.weapon === "Bow") { $("#skill-select").load("skills/skills-bow.php");
