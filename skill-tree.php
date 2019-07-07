@@ -38,11 +38,34 @@ var player = JSON.parse(localStorage.getItem('objPlayer'));
 
 $(document).ready(function(){
   
-  let weapon = 0;
-  let skillPage = ["skills/skills-bow.php"]
+  let weapon = player.weapon;
+  let skillPage {
+    Bow: "skills/skills-bow.php"
+  }
 
-
-
+/*
+"skills/skills-bow.php";
+"skills/skills-crossbow.php";
+"skills/skills-longbow.php";
+"skills/skills-mace.php";
+"skills/skills-quarterstaff.php";
+"skills/skills-tome.php";
+"skills/skills-ice.php";
+"skills/skills-fire.php";
+"skills/skills-lightning.php";  
+"skills/skills-bostaff.php";
+"skills/skills-brawler.php";
+"skills/skills-windfu.php";
+"skills/skills-dagger.php";
+"skills/skills-sai.php";
+"skills/skills-shuriken.php";
+"skills/skills-sword.php";
+"skills/skills-warhammer.php";
+"skills/skills-battleaxe.php";
+"skills/skills-aether.php";
+"skills/skills-runestone.php";
+"skills/skills-runeblade.php";
+*/
   /*
   if (player.weapon === "Bow") { $("#skill-select").load("skills/skills-bow.php");
   } else if (player.weapon === "Crossbow") { $("#skill-select").load("skills/skills-crossbow.php");
@@ -67,7 +90,7 @@ $(document).ready(function(){
   } else if (player.weapon === "Runeblade") { $("#skill-select").load("skills/skills-runeblade.php");
   } else { $("#skill-select").html("<h2>No Class Selected </h2>"); }
   */
-  $("#skill-select").load(skillPage[0]);
+  $("#skill-select").load(skillPage[player.weapon]);
   $("#skill-tree-footer").load("skills/footer.php");
 });
 
