@@ -38,7 +38,7 @@
  
   <!-- Cards -->
   <a v-for="(rpgClass, index) in classes" @click="selectClass(rpgClass)"  class="character-card card text-decoration-none x-scroll-item mar-l-5 mar-r-5 hover-blue">
-  <div class="text-white  rounded" v-bind:class="'bg-'+backgrounds[index]">
+  <div class="text-white rounded" v-bind:class="'bg-'+backgrounds[index]">
     <div class="card-header text-center">
       <h5>{{rpgClass.name}}</h5>
     </div>
@@ -121,8 +121,6 @@ var skills = {
 
 localStorage.setItem('objPlayer', JSON.stringify(player));
 localStorage.setItem('objSkills', JSON.stringify(skills));
-
-
 
 </script>
 
