@@ -39,7 +39,7 @@ var player = JSON.parse(localStorage.getItem('objPlayer'));
 $(document).ready(function(){
   
   let weapon = player.weapon;
-  let skillPage {
+  let skillPage = {
     Bow: "skills/skills-bow.php"
   }
 
