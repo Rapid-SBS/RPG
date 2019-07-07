@@ -11,33 +11,25 @@
   <a role="button" onclick="setWeaponShuriken()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-shuriken" href="name.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
-function setWeaponDagger() {
-  weapon = {
-    name: "Dagger",
-    basic: "Stab",
-    special: "Poison Blade",
-  }
-
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponDagger = () => {
+  player.weapon = "Dagger";
+  player.basic = "Stab";
+  player.special = "Poison Blade";
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
-function setWeaponSai() {
-  weapon = {
-    name: "Dual Sai",
-    basic: "Riposte",
-    special: "Blade Dance",
-  }
-
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponSai = () => {
+  player.weapon = "Dual Sai",
+  player.basic = "Riposte",
+  player.special = "Blade Dance",
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
-function setWeaponShuriken() {
-  weapon = {
-    name: "Shuriken",
-    basic: "Shuriken Throw",
-    special: "Substitution",
-  }
 
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponShuriken = () => {
+  player.weapon = "Shuriken",
+  player.basic = "Shuriken Throw",
+  player.special = "Substitution",
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 $(document).ready(function(){

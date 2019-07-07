@@ -11,34 +11,25 @@
   <a role="button" onclick="setWeaponTome()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-tome" href="name.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
-
-function setWeaponMace() {
-  weapon = {
-    name: "Mace & Shield",
-    basic: "Bludgeon",
-    special: "Shield Ally",
-  }
-
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponMace = () => {
+  player.weapon = "Mace & Shield";
+  player.basic = "Bludgeon";
+  player.special = "Shield Ally";
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
-function setWeaponQuarterstaff() {
-  weapon = {
-    name: "Quarterstaff",
-    basic: "Downward Strike",
-    special: "Flash Heal",
-  }
-
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponQuarterstaff = () => {
+  player.weapon = "Quarterstaff",
+  player.basic = "Downward Strike",
+  player.special = "Flash Heal",
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
-function setWeaponTome() {
-  weapon = {
-    name: "Holy Tome",
-    basic: "Blessing",
-    special: "Healing Circle",
-  }
 
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponTome = () => {
+  player.weapon = "Holy Tome",
+  player.basic = "Blessing",
+  player.special = "Healing Circle",
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 $(document).ready(function(){

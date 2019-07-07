@@ -56,7 +56,6 @@
 var player = JSON.parse(localStorage.getItem('objPlayer'));
 var skills = JSON.parse(localStorage.getItem('objSkills'));
 var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
-var weapon = JSON.parse(localStorage.getItem('objWeapon'));
 
   $(document).ready(function(){ // ----- Display Class -----
     if (rpgclass.name === "Warrior") {
@@ -79,44 +78,44 @@ var weapon = JSON.parse(localStorage.getItem('objWeapon'));
   });
 
   $(document).ready(function(){ // ----- Display Weapon -----
-    if (weapon.name === "Battle Axe") {
+    if (player.weapon === "Battle Axe") {
       $("#rpg-weapon").text(", charging into battle and shattering enemy defenses with your battle axe");
-    } else if (weapon.name === "War Hammer") {
+    } else if (player.weapon === "War Hammer") {
       $("#rpg-weapon").text(", charging into battle and batttering enemies with your mighty war hammmer");
-    } else if (weapon.name === "Bow") {
+    } else if (player.weapon === "Bow") {
       $("#rpg-weapon").text(", bombarding enemies with arrows from your bow");
-    } else if (weapon.name === "Crossbow") {
+    } else if (player.weapon === "Crossbow") {
       $("#rpg-weapon").text(", piercing enemy defenses with your crossbow");
-    } else if (weapon.name === "Longbow") {
+    } else if (player.weapon === "Longbow") {
       $("#rpg-weapon").text(", supporting allies with your nature abilities and attacking with your longbow");
-    } else if (weapon.name === "Sword & Shield") {
+    } else if (player.weapon === "Sword & Shield") {
       $("#rpg-weapon").text(", defending your allies with your sword and shield as the ultimate protector");
-    } else if (weapon.name === "Mace & Shield") {
+    } else if (player.weapon === "Mace & Shield") {
       $("#rpg-weapon").text(", weilding powerful light abilities and protecting allies with your mace and shield");
-    } else if (weapon.name === "Quarterstaff" || weapon.name === "Holy Tome") {
-      $("#rpg-weapon").text(", supporting your allies with your light abilities and " + weapon.name);
-    } else if (weapon.name === "Ice Stone" || weapon.name === "Fire Stone" || weapon.name === "Lightning Stone") {
-      $("#rpg-weapon").text(", harnessing the power of the elements with your " + weapon.name);
-    } else if (weapon.name === "Bo Staff") {
+    } else if (player.weapon === "Quarterstaff" || player.weapon === "Holy Tome") {
+      $("#rpg-weapon").text(", supporting your allies with your light abilities and " + player.weapon);
+    } else if (player.weapon === "Ice Stone" || player.weapon === "Fire Stone" || player.weapon === "Lightning Stone") {
+      $("#rpg-weapon").text(", harnessing the power of the elements with your " + player.weapon);
+    } else if (player.weapon === "Bo Staff") {
       $("#rpg-weapon").text(" and a master of the bo staff");
-    } else if (weapon.name === "Brawler's Fist") {
+    } else if (player.weapon === "Brawler's Fist") {
       $("#rpg-weapon").text(", a master of martial arts and chi manipulation" );
-    } else if (weapon.name === "Wind Fu") {
+    } else if (player.weapon === "Wind Fu") {
       $("#rpg-weapon").text(", mixing martial arts with the power of the wind element");
-    } else if (weapon.name === "Shuriken") {
+    } else if (player.weapon === "Shuriken") {
       $("#rpg-weapon").text(", the ultimate assassin with your shuriken and shadow clones");
-    } else if (weapon.name === "Dual Sai") {
+    } else if (player.weapon === "Dual Sai") {
       $("#rpg-weapon").text(", ravaging enemies with your dual sai and shadow abilities");
-    } else if (weapon.name === "Dagger") {
+    } else if (player.weapon === "Dagger") {
       $("#rpg-weapon").text(", wreaking havoc with your dagger and alchemical potions");
-    } else if (weapon.name === "Runeblade") {
+    } else if (player.weapon === "Runeblade") {
       $("#rpg-weapon").text(", channeling the elements through your runeblade with the might of a warrior and the powers of a mage");
-    } else if (weapon.name === "Runestone") {
+    } else if (player.weapon === "Runestone") {
       $("#rpg-weapon").text(", wielding and combining multiple elements with your collection of runestones");
-    } else if (weapon.name === "Aether Stone") {
+    } else if (player.weapon === "Aether Stone") {
       $("#rpg-weapon").text(", one of the only known people to wield both light and dark elements");
     } else {
-      $("#rpg-weapon").text("who wields a " + weapon.name);
+      $("#rpg-weapon").text("who wields a " + player.weapon);
     }
   });
 

@@ -11,33 +11,25 @@
   <a role="button" onclick="setWeaponWindfu()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-windfu" href="name.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
-function setWeaponBostaff() {
-  weapon = {
-    name: "Bo Staff",
-    basic: "Cross Strike",
-    special: "Leg Sweep",
-  }
-
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponBostaff = () => {
+  player.weapon = "Bo Staff";
+  player.basic = "Cross Strike";
+  player.special = "Leg Sweep";
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
-function setWeaponFists() {
-  weapon = {
-    name: "Brawler's Fist",
-    basic: "Uppercut",
-    special: "Chi Burst",
-  }
-
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponFists = () => {
+  player.weapon = "Brawler's Fist",
+  player.basic = "Uppercut",
+  player.special = "Chi Burst",
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
-function setWeaponWindfu() {
-  weapon = {
-    name: "Wind Fu",
-    basic: "Reverse Kick",
-    special: "Wind Slicer",
-  }
 
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponWindfu = () => {
+  player.weapon = "Wind Fu",
+  player.basic = "Reverse Kick",
+  player.special = "Wind Slicer",
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 $(document).ready(function(){

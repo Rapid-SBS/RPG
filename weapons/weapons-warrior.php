@@ -11,33 +11,25 @@
 	<a role="button" onclick="setWeaponBattleaxe()" class="btn btn-primary rpg-wpn-select-btn" id="rpg-wpn-btn-battleaxe" href="name.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
-function setWeaponSword() {
-  weapon = {
-    name: "Sword & Shield",
-    basic: "Slash",
-    special: "Shield Ally",
-  }
-
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponSword = () => {
+  player.weapon = "Sword & Shield";
+  player.basic = "Slash";
+  player.special = "Shield Ally";
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
-function setWeaponWarhammer() {
-  weapon = {
-    name: "War Hammer",
-    basic: "Slam",
-    special: "Hammer Swing",
-  }
-
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponWarhammer = () => {
+  player.weapon = "War Hammer",
+  player.basic = "Slam",
+  player.special = "Hammer Swing",
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
-function setWeaponBattleaxe() {
-  weapon = {
-    name: "Battle Axe",
-    basic: "Cleave",
-    special: "Sunder Armor",
-  }
 
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponBattleaxe = () => {
+  player.weapon = "Battle Axe",
+  player.basic = "Cleave",
+  player.special = "Sunder Armor",
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 $(document).ready(function(){

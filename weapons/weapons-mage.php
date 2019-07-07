@@ -11,33 +11,25 @@
   <a role="button" onclick="setWeaponLightning()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-lightning" href="name.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
-function setWeaponIce() {
-  weapon = {
-    name: "Ice Stone",
-    basic: "Ice Blast",
-    special: "Glacial Barrier",
-  }
-
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponIce = () => {
+  player.weapon = "Ice Stone";
+  player.basic = "Ice Blast";
+  player.special = "Glacial Barrier";
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
-function setWeaponFire() {
-  weapon = {
-    name: "Fire Stone",
-    basic: "Fireball",
-    special: "Immolate",
-  }
-
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponFire = () => {
+  player.weapon = "Fire Stone",
+  player.basic = "Fireball",
+  player.special = "Immolate",
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
-function setWeaponLightning() {
-  weapon = {
-    name: "Lightning Stone",
-    basic: "Spark",
-    special: "Discharge",
-  }
 
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponLightning = () => {
+  player.weapon = "Lightning Stone",
+  player.basic = "Spark",
+  player.special = "Discharge",
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 $(document).ready(function(){

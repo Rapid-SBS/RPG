@@ -11,33 +11,25 @@
   <a role="button" onclick="setWeaponAether()" class="btn btn-success rpg-wpn-select-btn" id="rpg-wpn-btn-aether" href="name.php" style="display: none;"><span class="pulsing-text-white">Select</span></a>
 
 <script>
-function setWeaponRunestone() {
-  weapon = {
-    name: "Runestone",
-    basic: "Frostbolt",
-    special: "Arcane Burst",
-  }
-
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponRunestone = () => {
+  player.weapon = "Runestone";
+  player.basic = "Frostbolt";
+  player.special = "Arcane Burst";
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
-function setWeaponRuneblade() {
-  weapon = {
-    name: "Runeblade",
-    basic: "Crescent Strike",
-    special: "Flame Sweep",
-  }
-
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponRuneblade = () => {
+  player.weapon = "Runeblade",
+  player.basic = "Crescent Strike",
+  player.special = "Flame Sweep",
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
-function setWeaponAether() {
-  weapon = {
-    name: "Aether Stone",
-    basic: "Light Flux",
-    special: "Seeking Shadow",
-  }
 
-  localStorage.setItem('objWeapon', JSON.stringify(weapon));
+const setWeaponAether = () => {
+  player.weapon = "Aether Stone",
+  player.basic = "Light Flux",
+  player.special = "Seeking Shadow",
+  localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 $(document).ready(function(){
