@@ -19,16 +19,16 @@ const setWeaponSword = () => {
 }
 
 const setWeaponWarhammer = () => {
-  player.weapon = "War Hammer",
-  player.basic = "Slam",
-  player.special = "Hammer Swing",
+  player.weapon = "War Hammer";
+  player.basic = "Slam";
+  player.special = "Hammer Swing";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponBattleaxe = () => {
-  player.weapon = "Battle Axe",
-  player.basic = "Cleave",
-  player.special = "Sunder Armor",
+  player.weapon = "Battle Axe";
+  player.basic = "Cleave";
+  player.special = "Sunder Armor";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 

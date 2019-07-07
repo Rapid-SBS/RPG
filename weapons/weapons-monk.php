@@ -19,16 +19,16 @@ const setWeaponBostaff = () => {
 }
 
 const setWeaponFists = () => {
-  player.weapon = "Brawler's Fist",
-  player.basic = "Uppercut",
-  player.special = "Chi Burst",
+  player.weapon = "Brawler's Fist";
+  player.basic = "Uppercut";
+  player.special = "Chi Burst";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponWindfu = () => {
-  player.weapon = "Wind Fu",
-  player.basic = "Reverse Kick",
-  player.special = "Wind Slicer",
+  player.weapon = "Wind Fu";
+  player.basic = "Reverse Kick";
+  player.special = "Wind Slicer";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 

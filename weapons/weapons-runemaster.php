@@ -19,16 +19,16 @@ const setWeaponRunestone = () => {
 }
 
 const setWeaponRuneblade = () => {
-  player.weapon = "Runeblade",
-  player.basic = "Crescent Strike",
-  player.special = "Flame Sweep",
+  player.weapon = "Runeblade";
+  player.basic = "Crescent Strike";
+  player.special = "Flame Sweep";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponAether = () => {
-  player.weapon = "Aether Stone",
-  player.basic = "Light Flux",
-  player.special = "Seeking Shadow",
+  player.weapon = "Aether Stone";
+  player.basic = "Light Flux";
+  player.special = "Seeking Shadow";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 

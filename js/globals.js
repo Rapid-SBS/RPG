@@ -9,7 +9,7 @@ const setPlayerObj = () => { localStorage.setItem('objPlayer', JSON.stringify(pl
 const setSkillsObj = () => { localStorage.setItem('objSkills', JSON.stringify(skills)); }
 const setRpgClassObj = () => { rpgclass = localStorage.setItem('objRpgclass', JSON.stringify(rpgclass)); }
 const setWeaponObj = () => { localStorage.setItem('objWeapon', JSON.stringify(weapon)); }
-*/
+
 const rpgClassKey = 'rpgClass';
 const weaponKey = 'weapon';
 
@@ -44,3 +44,4 @@ function setWeapon(weapon)
 localStorage.setItem(weaponKey, JSON.stringify(weapon));
 
 }
+*/

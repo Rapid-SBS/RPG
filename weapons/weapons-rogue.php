@@ -19,16 +19,16 @@ const setWeaponDagger = () => {
 }
 
 const setWeaponSai = () => {
-  player.weapon = "Dual Sai",
-  player.basic = "Riposte",
-  player.special = "Blade Dance",
+  player.weapon = "Dual Sai";
+  player.basic = "Riposte";
+  player.special = "Blade Dance";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponShuriken = () => {
-  player.weapon = "Shuriken",
-  player.basic = "Shuriken Throw",
-  player.special = "Substitution",
+  player.weapon = "Shuriken";
+  player.basic = "Shuriken Throw";
+  player.special = "Substitution";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 

@@ -19,16 +19,16 @@ const setWeaponBow = () => {
 }
 
 const setWeaponBow = () => {
-  player.weapon = "Crossbow",
-  player.basic = "Arrow",
-  player.special = "Metal Arrow",
+  player.weapon = "Crossbow";
+  player.basic = "Arrow";
+  player.special = "Metal Arrow";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponLongbow = () => {
-  player.weapon = "Longbow",
-  player.basic = "Arrow",
-  player.special = "Snipe",
+  player.weapon = "Longbow";
+  player.basic = "Arrow";
+  player.special = "Snipe";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 

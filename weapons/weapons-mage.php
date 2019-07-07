@@ -19,16 +19,16 @@ const setWeaponIce = () => {
 }
 
 const setWeaponFire = () => {
-  player.weapon = "Fire Stone",
-  player.basic = "Fireball",
-  player.special = "Immolate",
+  player.weapon = "Fire Stone";
+  player.basic = "Fireball";
+  player.special = "Immolate";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponLightning = () => {
-  player.weapon = "Lightning Stone",
-  player.basic = "Spark",
-  player.special = "Discharge",
+  player.weapon = "Lightning Stone";
+  player.basic = "Spark";
+  player.special = "Discharge";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 

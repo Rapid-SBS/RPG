@@ -19,16 +19,16 @@ const setWeaponMace = () => {
 }
 
 const setWeaponQuarterstaff = () => {
-  player.weapon = "Quarterstaff",
-  player.basic = "Downward Strike",
-  player.special = "Flash Heal",
+  player.weapon = "Quarterstaff";
+  player.basic = "Downward Strike";
+  player.special = "Flash Heal";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponTome = () => {
-  player.weapon = "Holy Tome",
-  player.basic = "Blessing",
-  player.special = "Healing Circle",
+  player.weapon = "Holy Tome";
+  player.basic = "Blessing";
+  player.special = "Healing Circle";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
