@@ -34,9 +34,14 @@
 </div><!-- /.y-flex-container -->
 
 <script>
-var weapon = JSON.parse(localStorage.getItem('objWeapon'));
+var player = JSON.parse(localStorage.getItem('objPlayer'));
 
 $(document).ready(function(){
+
+  skillPages['Bow'] = 'skills/skills-bow.php';
+  skillPages['Crossbow'] = 'skills/skills-crossbow.php';
+
+  /*
   if (player.weapon === "Bow") { $("#skill-select").load("skills/skills-bow.php");
   } else if (player.weapon === "Crossbow") { $("#skill-select").load("skills/skills-crossbow.php");
   } else if (player.weapon === "Longbow") { $("#skill-select").load("skills/skills-longbow.php");
@@ -59,7 +64,8 @@ $(document).ready(function(){
   } else if (player.weapon === "Runestone") { $("#skill-select").load("skills/skills-runestone.php");
   } else if (player.weapon === "Runeblade") { $("#skill-select").load("skills/skills-runeblade.php");
   } else { $("#skill-select").html("<h2>No Class Selected </h2>"); }
-
+  */
+  $("#skill-select").load(skillPages[player.weapon]);
   $("#skill-tree-footer").load("skills/footer.php");
 });
 
