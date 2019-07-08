@@ -41,6 +41,7 @@ $(document).ready(function(){
   let weapon = player.weapon.id;
   let skillPage = {
     bow: "skills/skills-bow.php",
+  }
     /*
     Crossbow: "skills/skills-bow.php",
     Longbow: "skills/skills-crossbow.php",
