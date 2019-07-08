@@ -26,7 +26,7 @@ const setWeaponRuneblade = () => {
 }
 
 const setWeaponAether = () => {
-  player.weapon = new Weapon("Aether", "aether");
+  player.weapon = new Weapon("Aether Stone", "aether");
   player.basic = "Light Flux";
   player.special = "Seeking Shadow";
   localStorage.setItem('objPlayer', JSON.stringify(player));

@@ -13,7 +13,6 @@
 <script>
 const setWeaponSword = () => {
   player.weapon = new Weapon("Sword & Shield", "sword");
-  player.weapon = "Sword & Shield";
   player.basic = "Slash";
   player.special = "Shield Ally";
   localStorage.setItem('objPlayer', JSON.stringify(player));
