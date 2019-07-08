@@ -92,10 +92,16 @@ var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
       $("#rpg-weapon").text(", defending your allies with your sword and shield as the ultimate protector");
     } else if (player.weapon.name === "Mace & Shield") {
       $("#rpg-weapon").text(", weilding powerful light abilities and protecting allies with your mace and shield");
-    } else if (player.weapon.name === "Quarterstaff" || player.weapon.name === "Holy Tome") {
-      $("#rpg-weapon").text(", supporting your allies with your light abilities and " + player.weapon.name);
-    } else if (player.weapon.name === "Ice Stone" || player.weapon.name === "Fire Stone" || player.weapon.name === "Lightning Stone") {
-      $("#rpg-weapon").text(", harnessing the power of the elements with your " + player.weapon.name);
+    } else if (player.weapon.name === "Quarterstaff") {
+      $("#rpg-weapon").text(", supporting your allies with your light abilities and Quarterstaff");
+    } else if (player.weapon.name === "Holy Tome") {
+      $("#rpg-weapon").text(", supporting your allies with your light abilities and Holy Tome");
+    } else if (player.weapon.name === "Ice Stone") {
+      $("#rpg-weapon").text(", able to attack and defend yourself using your powerful ice abilities");
+    } else if (player.weapon.name === "Fire Stone") {
+      $("#rpg-weapon").text(", channeling your power into devastating attacks with your fire stone");
+    } else if (player.weapon.name === "Lightning Stone") {
+      $("#rpg-weapon").text(", unleashing the power of lightning upon your foes");
     } else if (player.weapon.name === "Bo Staff") {
       $("#rpg-weapon").text(" and a master of the bo staff");
     } else if (player.weapon.name === "Brawler's Fist") {
