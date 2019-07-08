@@ -99,6 +99,10 @@
   <div class="row justify-content-center">
   	<p><b>Attack Type: </b><span id="att-type" class="pad-r-10"></span><b>Multiplier: </b><span id="att-multiplier" class="pad-r-10"></span><b>Additive: </b><span id="att-additive" class="pad-r-10"></span><b>Pierce: </b><span id="att-pierce" class="pad-r-10"></span></p>
   </div><!-- /.row -->
+  
+  <div class="row justify-content-center">
+  	<p><b>Current Mana: <span id="player-mana" class="text-blue"></span></b>
+	</div>
 
 	<div class="row justify-content-center pad-t-20">
 		<div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -150,16 +154,14 @@ var player = {
 	res: 2,
 	mana: 1,
 	basic: new Attack("Strike", "Attack", 0, "Enemy", true, "att", 1, 2, 0, false, false),
-	special: new Heal("Enrage", "Attack", 1, "Enemy", true, 0, 8, {status:false, duration:2, att:0, def:2, int:0, res:0, mana:0}, false),
-	support: new Buff("Battle Roar", "Buff", 2, "Mutual", true, {status:false, duration:2, att:2, def:0, int:0, res:0, mana:0}, {status:false, duration:2, att:0, def:-2, int:0, res:0, mana:0}),
-	attack: new Attack("Cleave", "Attack", 0, "Enemy", true, "att", 2, 0, 4, false, false), 
-	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 6, "Mutual", true, "att", 5, 0, 0, false, false)
+	special: new Heal("Enrage", "Heal", 2, "Enemy", true, 0, 8, {status:false, duration:2, att:0, def:2, int:0, res:0, mana:0}, false),
+	support: new Buff("Battle Roar", "Buff", 3, "Mutual", true, {status:false, duration:2, att:2, def:0, int:0, res:0, mana:0}, {status:false, duration:2, att:0, def:-2, int:0, res:0, mana:0}),
+	attack: new Attack("Cleave", "Attack", 4, "Enemy", true, "att", 2, 0, 4, false, false), 
+	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 5, "Mutual", true, "att", 5, 0, 0, false, false)
 }
 
-console.log(player.buffs);
-
 var buff = { att: 0, def: 0, int: 0, res: 0 }
-var selectedAttack;
+var selectedAbility;
 var selectedBuff;
 var ability;
 var ttl;
@@ -185,18 +187,13 @@ var enemy = {
 	special: new EnemyAttack("Default", "Attack", "Player", true, 3, "att", 2, 0, 0),
 };
 
-$(document).ready(function(){   
+$(document).ready(function(){
+	loadAbilityNames();
+	abilityManaCostCheck();   
 	printHP();
-	regenMana();
 	playerStatEval();
 	enemyStatEval();
 
-	// --- Load Ability Names ---
-	$('#basic-ability-name').text(player.basic.name);
-	$('#special-ability-name').text(player.special.name);
-	$('#support-ability-name').text(player.support.name);
-	$('#attack-ability-name').text(player.attack.name);
-	$('#ultimate-ability-name').text(player.ultimate.name);
 }); /* .document-ready */
 
 // ===== [ Ability Selection ] =====
@@ -205,33 +202,24 @@ $(document).ready(function(){
 	$('#radio1,#radio2,#radio3,#radio4,#radio5').click(function() {
 		$('#ability-btn').show();
 	});
+
 	// --- Check value of radio select then copy it to variable
 	$('#ability-btn').click(function() {
       selectAbility();
-      if (ability == "basic") { 
-      	selectedAttack = player.basic;
-      	console.log("Selected Attack: " + player.basic);
-      	printAttackDetails();
-      	attackRoutine();
-      } else if (ability == "special") { 
-      	selectedAttack = player.special;
-      	// healbuffRoutine();
-      } else if (ability == "support") {
-      	selectedBuff = player.support;
-      	// buffdebuff Routine();
-      }	else if (ability == "attack") {
-      	selectedBuff = player.attack;
-      	// attackbuffRoutine();
-      } else if (ability == "ultimate") {
-      	selectedBuff = player.ultimate;
-      	// attackhealRoutine();
-      } else { console.log("No ability selected.") }
-      $('#ability-btn').hide();
+      $('#ability-btn').hide(); // Hide Use Ability button
+
+    	if (selectedAbility.type == "Attack") { attackRoutine(); }
+    	else if (selectedAbility.type == "Heal") { healRoutine(); }
+    	else if (selectedAbility.type == "Buff") { buffRoutine(); }
+    	else if (selectedAbility.type == "AttackHeal") { attackhealRoutine(); }
     });
 
 // === Attack Routine ===
 const attackRoutine = () => {
-	beginPlayerTurn();
+	printAttackDetails();
+	beginTurn();
+	consumeMana();
+	playerStatEval();
 	if (enemy.hp > 0 && current.hp > 0) { // --- Only attack if HP > 0
 		playerAttack();
 
@@ -254,32 +242,27 @@ const attackRoutine = () => {
 
 // === Heal Routine ===
 const healRoutine = () => {
-	beginPlayerTurn();
+	beginTurn();
+	consumeMana();
+	playerStatEval();
 }; /* .healRoutine */
 
 // === Buff Routine ===
 const buffRoutine = () => {
-	beginPlayerTurn();
+	beginTurn();
+	consumeMana();
+	playerStatEval();
 	if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
 			setTimeout(enemyAttack, 1500);
 			setTimeout(playerDeathCheck, 3000);
 		}
 }; /* .buffRoutine */
 
-// === Heal/Buff Routine ===
-const healbuffRoutine = () => {
-	beginPlayerTurn();
-
-	// --- Heal ---
-
-	// --- Buff ---
-
-}; /* .healbuffRoutine */
-
-
 // === Attack/Heal Routine ===
 const attackhealRoutine = () => {
-	beginPlayerTurn();
+	beginTurn();
+	consumeMana();
+	playerStatEval();
 	if (enemy.hp > 0 && current.hp > 0) { // --- Only attack if HP > 0
 		playerAttack();
 
@@ -301,28 +284,28 @@ const attackhealRoutine = () => {
 }; /* .attackhealRoutine */
 
 // ========== [ Sub-Routines  ] ==========
-const beginPlayerTurn = () => {
+const beginTurn = () => {
 	turnCounter();
-	regenMana();
 	decrementBuffs();
 	decrementDebuffs();
+	printHP();
 }
 
-const beginEnemyTurn = () => {
-
+const endTurn = () => {
+	regenMana();
+	playerButtonUpdate();
 }
 
 const playerAttack = () => {
 	playerStatEval();
-	console.log("Selected Attack: " + selectedAttack);
 	let mitigation;
-	if (selectedAttack.dmgtype == "att") { // Match defense to attack type
-		mitigation = parseInt(enemy.def) - parseInt(selectedAttack.pierce);
-	} else if (selectedAttack.dmgtype == "int") {
-		mitigation = parseInt(enemy.res) - parseInt(selectedAttack.pierce);
+	if (selectedAbility.dmgtype == "att") { // Match defense to attack type
+		mitigation = parseInt(enemy.def) - parseInt(selectedAbility.pierce);
+	} else if (selectedAbility.dmgtype == "int") {
+		mitigation = parseInt(enemy.res) - parseInt(selectedAbility.pierce);
 	}
 	if (mitigation < 0) {	mitigation = 0; } // Prevent negative values
-	let damage = parseInt(selectedAttack.attCalc()) - parseInt(mitigation);
+	let damage = parseInt(selectedAbility.attCalc()) - parseInt(mitigation);
 	enemy.hp -= damage;
 	printHP();
 	console.log('You attacked and did ' + damage + ' damage!');
@@ -361,9 +344,9 @@ const enemyAttack = () => {
 		playerStatEval();
 		
 		let mitigation;
-		if (selectedAttack.dmgtype == "att") { // Match defense to attack type
+		if (selectedAbility.dmgtype == "att") { // Match defense to attack type
 			mitigation = parseInt(current.def) - parseInt(enemy.basic.pierce);
-		} else if (selectedAttack.dmgtype == "int") {
+		} else if (selectedAbility.dmgtype == "int") {
 			mitigation = parseInt(current.res) - parseInt(enemy.basic.pierce);
 		}
 		if (mitigation < 0) {	mitigation = 0; } // Prevent negative values
@@ -371,29 +354,57 @@ const enemyAttack = () => {
 		current.hp -= damage;
 		if (current.hp <= 0) { current.hp = 0; } // Prevent negative Player HP
 		printHP();
+
+		// --- Update Game Message ---
 		console.log('The enemy attacked and did ' + damage + ' damage!');
 		$('#game-message').addClass('text-red').removeClass('text-green text-blue');
 		$('#game-message').text('The enemy attacked and did ' + damage + ' damage!');
-		$('#radio1,#radio2,#radio3,#radio4,#radio5').removeClass("disabled unclickable");
 		console.log("End enemy attack");
+
+		endTurn();
 }
 
 // ========== Utility Functions ==========
+const loadAbilityNames = () => {
+	$('#basic-ability-name').text(player.basic.name);
+	$('#special-ability-name').text(player.special.name);
+	$('#support-ability-name').text(player.support.name);
+	$('#attack-ability-name').text(player.attack.name);
+	$('#ultimate-ability-name').text(player.ultimate.name);
+}
+
+const abilityManaCostCheck = () => {
+	if (current.mana < player.special.manacost) {
+		$('#radio2').addClass("disabled unclickable");
+	}
+	if (current.mana < player.support.manacost) {
+		$('#radio3').addClass("disabled unclickable");
+	}
+	if (current.mana < player.attack.manacost) {
+		$('#radio4').addClass("disabled unclickable");
+	}
+	if (current.mana < player.ultimate.manacost) {
+		$('#radio5').addClass("disabled unclickable");
+	}
+}
+
 const selectAbility = () => {	
-	ability = $('input[name=ability]:checked').val(); 
-	console.log('Selected ' + ability + ' ability.');
+	let ability = $('input[name=ability]:checked').val();
+	selectedAbility = player[ability];
+	console.log('Selected ' + selectedAbility.type + ' ability: ' + selectedAbility.name);
 }
 
 const printHP = () => {
 	$("#player-hp").text(current.hp);
+	$("#player-mana").text(current.mana);
 	$("#enemy-hp").text(enemy.hp);
 }
 
 const printAttackDetails = () => {
-	$('#att-type').text((selectedAttack.dmgtype).toUpperCase());
-	$('#att-multiplier').text(selectedAttack.multiplier);
-	$('#att-additive').text(selectedAttack.additive);
-	$('#att-pierce').text(selectedAttack.pierce);
+	$('#att-type').text((selectedAbility.dmgtype).toUpperCase());
+	$('#att-multiplier').text(selectedAbility.multiplier);
+	$('#att-additive').text(selectedAbility.additive);
+	$('#att-pierce').text(selectedAbility.pierce);
 }
 
 const playerStatEval = () => {
@@ -405,7 +416,7 @@ const playerStatEval = () => {
 	$("#p-def").text(current.def);
 	$("#p-int").text(current.int);
 	$("#p-res").text(current.res);
-	console.log(current);
+	$("#player-mana").text(current.mana);
 }
 
 const enemyStatEval = () => {
@@ -419,16 +430,15 @@ const enemyStatEval = () => {
 	$("#e-def").text(enemy.def);
 	$("#e-int").text(enemy.int);
 	$("#e-res").text(enemy.res);
-	console.log(enemy);
 }
 
+const playerButtonUpdate = () => {
+		// --- Re-enable player ability buttons, then run manaCostCheck ---
+		$('#radio1,#radio2,#radio3,#radio4,#radio5').removeClass("disabled unclickable");
+		abilityManaCostCheck();
+}
 const decrementBuffs = () => {
-	if (ttl > 0) {
-		ttl = ttl - 1;
-	} else {
-		console.log("TTL Zero")
-	}
-	console.log("Buff TTL: " + ttl);
+
 }
 
 const decrementDebuffs = () => {
@@ -440,7 +450,15 @@ const turnCounter = () => {
 	console.log("Begin Turn: " + turn)
 }
 
-const regenMana = () => {	current.mana += player.mana; }
+const regenMana = () => {	
+	current.mana += parseInt(player.mana); 
+	printHP();
+}
+
+const consumeMana = () => { 
+	current.mana -= parseInt(selectedAbility.manacost); 
+	console.log("Current Mana: " + current.mana); 
+}
 
 const playerDeathCheck = () => { if (parseInt(current.hp) <= 0) { playerLose(); } }
 

@@ -21,6 +21,15 @@ h1, h2, h3, h4, h5, h6 {
 	display: none;
 }
 
+.capital {
+	text-transform: capitalize;
+}
+
+/* --- Override Styles --- */
+p {
+	margin-bottom: 0;
+}
+
 /* --- Dark Pulsing Text --- */
 .pulsing-text-dark{
   color:#333;
