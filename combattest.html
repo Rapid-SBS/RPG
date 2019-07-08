@@ -132,14 +132,14 @@
 
 <script>
 /*	--- List of ECMA6 Classes ---
-Attack(name, type, manacost, target, dmgtype, multiplier, additive, pierce)
-Heal(name, type, manacost, target, multiplier, additive)
-Buff(name, type, manacost, target, status, duration, hp, att, def, int, res, mana)
-BuffDebuff(name, type, manacost, target, status, duration, hp, att, def, int, res, foehp, foeatt, foedef, foeint, foeres)
-HealBuff(name, type, manacost, target, multiplier, additive, status, duration, hp, att, def, int, res, mana)
-AttackBuff(name, type, manacost, target, dmgtype, multiplier, additive, pierce, status, duration, hp, att, def, int, res, mana)
-AttackHeal(name, type, manacost, target, dmgtype, multiplier, additive, pierce)
-EnemyAttack(name, type, target, nthturn, dmgtype, multiplier, additive, pierce)
+Attack( name, type, manacost, target, dmgtype, multiplier, additive, pierce, buff{}, debuff{} )
+Heal( name, type, manacost, target, multiplier, additive, buff{}, debuff{})
+Buff( name, type, manacost, target, status, buff{}, debuff)
+AttackHeal( name, type, manacost, target, dmgtype, multiplier, additive, pierce)
+EnemyAttack( name, type, target, nthturn, dmgtype, multiplier, additive, pierce, buff{}, debuff{} )
+
+buff{ status, duration, hp, att, def, int, res, mana }
+debuff{ status, duration, hp, att, def, int, res, mana }
 */
 var player = { 
 	hp: 30, 
