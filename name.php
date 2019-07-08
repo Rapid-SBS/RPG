@@ -103,7 +103,7 @@ var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
     } else if (player.weapon.name === "Lightning Stone") {
       $("#rpg-weapon").text(", unleashing the power of lightning upon your foes");
     } else if (player.weapon.name === "Bo Staff") {
-      $("#rpg-weapon").text(" and a master of the bo staff");
+      $("#rpg-weapon").text(" and a master of the bo staff, skilled in disabling your opponents");
     } else if (player.weapon.name === "Brawler's Fist") {
       $("#rpg-weapon").text(", a master of martial arts and chi manipulation" );
     } else if (player.weapon.name === "Wind Fu") {
@@ -119,7 +119,7 @@ var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
     } else if (player.weapon.name === "Runestone") {
       $("#rpg-weapon").text(", wielding and combining multiple elements with your collection of runestones");
     } else if (player.weapon.name === "Aether Stone") {
-      $("#rpg-weapon").text(", one of the only known people to wield both light and dark elements");
+      $("#rpg-weapon").text(", the only known person to wield both light and dark elements");
     } else {
       $("#rpg-weapon").text("who wields a " + player.weapon.name);
     }
