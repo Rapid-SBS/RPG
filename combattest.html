@@ -138,8 +138,9 @@ Buff( name, type, manacost, target, status, buff{}, debuff)
 AttackHeal( name, type, manacost, target, dmgtype, multiplier, additive, pierce)
 EnemyAttack( name, type, target, nthturn, dmgtype, multiplier, additive, pierce, buff{}, debuff{} )
 
-buff{ status, duration, hp, att, def, int, res, mana }
-debuff{ status, duration, hp, att, def, int, res, mana }
+mhc{ miss, hit, crit }
+buff{ status, duration, att, def, int, res, mana }
+debuff{ status, duration, att, def, int, res, mana }
 */
 var player = { 
 	hp: 30, 
@@ -148,11 +149,11 @@ var player = {
 	int: 4,
 	res: 2,
 	mana: 1,
-	basic: new Attack("Strike", "Attack", 0, "Enemy", "att", 1, 0, 4),
-	special: new HealBuff("Enrage", "HealBuff", 2, "Self", 3, 0, "None", 3, 10, 2, 0, 0, 0, 0),
-	support: new BuffDebuff("Battle Roar", "BuffDebuff", 3, "All", "None", 2, 0, 2, 4, 0, 0, 0, 2, 2, 0, 0),
-	attack: new AttackBuff("Cleave", "AttackBuff", 4, "Mutual", "att", 3, 0, 0, "None", 2, 0, -2, -4, 0, 0, 0),
-	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 6, "Mutual", "att", 5, 0, 0)
+	basic: new Attack("Strike", "Attack", 0, "Enemy", "int", 1, 2, 0, false, false),
+	special: new Heal("Enrage", "Attack", 1, "Enemy", 0, 8, {status:false, duration:2, att:0, def:2, int:0, res:0, mana:0}, false),
+	support: new Buff("Battle Roar", "Buff", 2, "Mutual", {status:false, duration:2, att:2, def:0, int:0, res:0, mana:0}, {status:false, duration:2, att:0, def:-2, int:0, res:0, mana:0}),
+	attack: new Attack("Cleave", "Attack", 0, "Enemy", "att", 2, 0, 4, false, false), 
+	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 6, "Mutual", "att", 5, 0, 0, false, false)
 }
 
 console.log(player.buffs);
@@ -209,6 +210,7 @@ $(document).ready(function(){
       selectAbility();
       if (ability == "basic") { 
       	selectedAttack = player.basic;
+      	console.log("Selected Attack: " + selectedAttack.attCalc);
       	printAttackDetails();
       	attackRoutine();
       } else if (ability == "special") { 
@@ -264,11 +266,6 @@ const buffRoutine = () => {
 		}
 }; /* .buffRoutine */
 
-// === Buff/Debuff Routine ===
-const buffdebuffRoutine = () => {
-	beginPlayerTurn();
-}; /* .buffdebuffRoutine */
-
 // === Heal/Buff Routine ===
 const healbuffRoutine = () => {
 	beginPlayerTurn();
@@ -279,33 +276,6 @@ const healbuffRoutine = () => {
 
 }; /* .healbuffRoutine */
 
-// === Attack/Buff Routine ===
-const attackbuffRoutine = () => {
-
-	// --- Attack ---
-	beginPlayerTurn();
-	if (enemy.hp > 0 && current.hp > 0) { // --- Only attack if HP > 0
-		playerAttack();
-
-		if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
-			setTimeout(enemyAttack, 1500);
-			setTimeout(playerDeathCheck, 3000);
-		}
-	}
-
-	if (current.hp == 0) { // --- If enemy is defeated, display player win
-		playerLose();
-	}
-
-	if (enemy.hp <= 0) { // --- If enemy is defeated, display player win
-		enemy.hp = 0;
-		printHP();
-		playerWin();
-	}
-
-	//--- Buff ---
-
-}; /* .attackbuffRoutine */
 
 // === Attack/Heal Routine ===
 const attackhealRoutine = () => {
@@ -420,7 +390,7 @@ const printHP = () => {
 }
 
 const printAttackDetails = () => {
-	$('#att-type').text((selectedAttack.dmgtype).toUpperCase());
+	$('#att-type').text((selectedAttack.dmgtype).toUpperCase);
 	$('#att-multiplier').text(selectedAttack.multiplier);
 	$('#att-additive').text(selectedAttack.additive);
 	$('#att-pierce').text(selectedAttack.pierce);

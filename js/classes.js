@@ -45,7 +45,7 @@ class Weapon {
 
 /* ---------- [ ABILITIES ] ---------- */
 class Ability {
-	constructor(name, type, manacost, target) {
+	constructor(name, type, manacost, target, mhc) {
 		this.name = name;
 		this.type = type;
 	  this.manacost = manacost;
@@ -54,9 +54,8 @@ class Ability {
 }
 
 class Attack extends Ability {
-	constructor(name, type, manacost, target, dmgtype, multiplier, additive, pierce, buff, debuff) {
-		super(name, type, manacost, target);
-		this.target = target;
+	constructor(name, type, manacost, target, mhc, dmgtype, multiplier, additive, pierce, buff, debuff) {
+		super(name, type, manacost, target, mhc);
 		this.dmgtype = dmgtype;
 	  this.multiplier = multiplier;
 	  this.additive = additive;
@@ -79,9 +78,8 @@ class Attack extends Ability {
 }
 
 class Heal extends Ability {
-	constructor(name, type, manacost, target, multiplier, additive, buff, debuff) {
-		super(name, type, manacost, target);
-		this.target = target;
+	constructor(name, type, manacost, target, mhc, multiplier, additive, buff, debuff) {
+		super(name, type, manacost, target, mhc);
 		this.multiplier = multiplier;
 	  this.additive = additive;
 	  this.heal = function() {
@@ -94,18 +92,16 @@ class Heal extends Ability {
 }
 
 class Buff extends Ability {
-	constructor(name, type, manacost, target, status, buff, debuff) {
-		super(name, type, manacost, target);
-		this.status = status;
+	constructor(name, type, manacost, target, mhc, buff, debuff) {
+		super(name, type, manacost, target, mhc);
 		this.buff = buff;
 		this.debuff = debuff;
 	}
 }
 
 class AttackHeal extends Ability {
-	constructor(name, type, manacost, target, dmgtype, multiplier, additive, pierce) {
-		super(name, type, manacost, target);
-		this.target = target;
+	constructor(name, type, manacost, target, mhc, dmgtype, multiplier, additive, pierce) {
+		super(name, type, manacost, target, mhc);
 		this.dmgtype = dmgtype;
 	  this.multiplier = multiplier;
 	  this.additive = additive;
@@ -129,8 +125,8 @@ class AttackHeal extends Ability {
 }
 
 class EnemyAttack extends Ability {
-	constructor(name, type, target, nthturn, dmgtype, multiplier, additive, pierce) {
-		super(name, type, target);
+	constructor(name, type, target, mhc, nthturn, dmgtype, multiplier, additive, pierce) {
+		super(name, type, target, mhc);
 		this.nthturn = nthturn;
 		this.target = target;
 		this.dmgtype = dmgtype;
