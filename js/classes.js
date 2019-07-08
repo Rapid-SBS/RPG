@@ -35,6 +35,15 @@ class characterClassCreator
     return new rpgClass("Rogue", 26, 6, 2, 0, 1, description); }
 }
 
+class Weapon {
+	constructor(name, id) {
+		this.name = name;
+		this.id = id;
+	}
+}
+
+
+/* ---------- [ ABILITIES ] ---------- */
 class Ability {
 	constructor(name, type, manacost, target) {
 		this.name = name;

@@ -81,7 +81,7 @@ var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
     if (player.weapon === "Battle Axe") {
       $("#rpg-weapon").text(", charging into battle and shattering enemy defenses with your battle axe");
     } else if (player.weapon === "War Hammer") {
-      $("#rpg-weapon").text(", charging into battle and batttering enemies with your mighty war hammmer");
+      $("#rpg-weapon").text(", charging into battle and battering enemies with your mighty war hammmer");
     } else if (player.weapon === "Bow") {
       $("#rpg-weapon").text(", bombarding enemies with arrows from your bow");
     } else if (player.weapon === "Crossbow") {
