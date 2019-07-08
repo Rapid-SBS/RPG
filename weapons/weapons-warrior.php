@@ -12,6 +12,7 @@
 
 <script>
 const setWeaponSword = () => {
+  player.weapon = new Weapon("Sword & Shield", "sword");
   player.weapon = "Sword & Shield";
   player.basic = "Slash";
   player.special = "Shield Ally";
@@ -19,14 +20,14 @@ const setWeaponSword = () => {
 }
 
 const setWeaponWarhammer = () => {
-  player.weapon = "War Hammer";
+  player.weapon = new Weapon("War Hammer", "warhammer");
   player.basic = "Slam";
   player.special = "Hammer Swing";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponBattleaxe = () => {
-  player.weapon = "Battle Axe";
+  player.weapon = new Weapon("Battle Axe", "battleaxe");
   player.basic = "Cleave";
   player.special = "Sunder Armor";
   localStorage.setItem('objPlayer', JSON.stringify(player));

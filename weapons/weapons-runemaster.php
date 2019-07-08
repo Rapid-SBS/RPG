@@ -12,21 +12,21 @@
 
 <script>
 const setWeaponRunestone = () => {
-  player.weapon = "Runestone";
+  player.weapon = new Weapon("Runestone", "runestone");
   player.basic = "Frostbolt";
   player.special = "Arcane Burst";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponRuneblade = () => {
-  player.weapon = "Runeblade";
+  player.weapon = new Weapon("Runeblade", "runeblade");
   player.basic = "Crescent Strike";
   player.special = "Flame Sweep";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponAether = () => {
-  player.weapon = "Aether Stone";
+  player.weapon = new Weapon("Aether", "aether");
   player.basic = "Light Flux";
   player.special = "Seeking Shadow";
   localStorage.setItem('objPlayer', JSON.stringify(player));

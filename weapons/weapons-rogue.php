@@ -12,21 +12,21 @@
 
 <script>
 const setWeaponDagger = () => {
-  player.weapon = "Dagger";
+  player.weapon = new Weapon("Dagger", "dagger");
   player.basic = "Stab";
   player.special = "Poison Blade";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponSai = () => {
-  player.weapon = "Dual Sai";
+  player.weapon = new Weapon("Dual Sai", "sai");
   player.basic = "Riposte";
   player.special = "Blade Dance";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponShuriken = () => {
-  player.weapon = "Shuriken";
+  player.weapon = new Weapon("Shuriken", "shuriken");
   player.basic = "Shuriken Throw";
   player.special = "Substitution";
   localStorage.setItem('objPlayer', JSON.stringify(player));

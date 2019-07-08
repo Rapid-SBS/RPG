@@ -12,21 +12,21 @@
 
 <script>
 const setWeaponBostaff = () => {
-  player.weapon = "Bo Staff";
+  player.weapon = new Weapon("Bo Staff", "bostaff");
   player.basic = "Cross Strike";
   player.special = "Leg Sweep";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponFists = () => {
-  player.weapon = "Brawler's Fist";
+  player.weapon = new Weapon("Brawler's Fist", "brawler");
   player.basic = "Uppercut";
   player.special = "Chi Burst";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponWindfu = () => {
-  player.weapon = "Wind Fu";
+  player.weapon = new Weapon("Wind Fu", "windfu");
   player.basic = "Reverse Kick";
   player.special = "Wind Slicer";
   localStorage.setItem('objPlayer', JSON.stringify(player));

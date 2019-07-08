@@ -12,21 +12,21 @@
 
 <script>
 const setWeaponIce = () => {
-  player.weapon = "Ice Stone";
+  player.weapon = new Weapon("Ice Stone", "ice");
   player.basic = "Ice Blast";
   player.special = "Glacial Barrier";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponFire = () => {
-  player.weapon = "Fire Stone";
+  player.weapon = new Weapon("Fire Stone", "fire");
   player.basic = "Fireball";
   player.special = "Immolate";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponLightning = () => {
-  player.weapon = "Lightning Stone";
+  player.weapon = new Weapon("Lightning Stone", "lightning");
   player.basic = "Spark";
   player.special = "Discharge";
   localStorage.setItem('objPlayer', JSON.stringify(player));

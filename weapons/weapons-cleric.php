@@ -12,21 +12,21 @@
 
 <script>
 const setWeaponMace = () => {
-  player.weapon = "Mace & Shield";
+  player.weapon = new Weapon("Mace & Shield", "mace");
   player.basic = "Bludgeon";
   player.special = "Shield Ally";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponQuarterstaff = () => {
-  player.weapon = "Quarterstaff";
+  player.weapon = new Weapon("Quarterstaff", "quarterstaff");
   player.basic = "Downward Strike";
   player.special = "Flash Heal";
   localStorage.setItem('objPlayer', JSON.stringify(player));
 }
 
 const setWeaponTome = () => {
-  player.weapon = "Holy Tome";
+  player.weapon = new Weapon("Holy Tome", "tome");
   player.basic = "Blessing";
   player.special = "Healing Circle";
   localStorage.setItem('objPlayer', JSON.stringify(player));

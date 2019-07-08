@@ -41,57 +41,31 @@ $(document).ready(function(){
   let weapon = player.weapon.id;
   let skillPage = {
     bow: "skills/skills-bow.php",
-  }
-    /*
-    Crossbow: "skills/skills-bow.php",
-    Longbow: "skills/skills-crossbow.php",
-    Mace & Shield: "skills/skills-longbow.php",
-    "skills/skills-mace.php",
-    "skills/skills-quarterstaff.php",
-    "skills/skills-tome.php",
-    "skills/skills-ice.php",
-    "skills/skills-fire.php",
-    "skills/skills-lightning.php",
-    "skills/skills-bostaff.php",
-    "skills/skills-brawler.php",
-    "skills/skills-windfu.php",
-    "skills/skills-dagger.php",
-    "skills/skills-sai.php",
-    "skills/skills-shuriken.php",
-    "skills/skills-sword.php",
-    "skills/skills-warhammer.php",
-    "skills/skills-battleaxe.php",
-    "skills/skills-aether.php",
-    "skills/skills-runestone.php",
-    "skills/skills-runeblade.php"
+    crossbow: "skills/skills-crossbow.php",
+    longbow: "skills/skills-longbow.php",
+    mace: "skills/skills-mace.php",
+    quarterstaff: "skills/skills-quarterstaff.php",
+    tome: "skills/skills-tome.php",
+    ice: "skills/skills-ice.php",
+    fire: "skills/skills-fire.php",
+    lightning: "skills/skills-lightning.php",
+    bostaff: "skills/skills-bostaff.php",
+    brawler: "skills/skills-brawler.php",
+    windfu: "skills/skills-windfu.php",
+    dagger: "skills/skills-dagger.php",
+    sai: "skills/skills-sai.php",
+    shuriken: "skills/skills-shuriken.php",
+    sword: "skills/skills-sword.php",
+    warhammer: "skills/skills-warhammer.php",
+    battleaxe: "skills/skills-battleaxe.php",
+    aether: "skills/skills-aether.php",
+    runestone: "skills/skills-runestone.php",
+    runeblade: "skills/skills-runeblade.php"
   }
 
-
-  if (player.weapon === "Bow") { $("#skill-select").load("skills/skills-bow.php");
-  } else if (player.weapon === "Crossbow") { $("#skill-select").load("skills/skills-crossbow.php");
-  } else if (player.weapon === "Longbow") { $("#skill-select").load("skills/skills-longbow.php");
-  } else if (player.weapon === "Mace & Shield") { $("#skill-select").load("skills/skills-mace.php");
-  } else if (player.weapon === "Quarterstaff") { $("#skill-select").load("skills/skills-quarterstaff.php");
-  } else if (player.weapon === "Holy Tome") { $("#skill-select").load("skills/skills-tome.php");
-  } else if (player.weapon === "Ice Stone") { $("#skill-select").load("skills/skills-ice.php");
-  } else if (player.weapon === "Fire Stone") { $("#skill-select").load("skills/skills-fire.php");
-  } else if (player.weapon === "Lightning Stone") { $("#skill-select").load("skills/skills-lightning.php");  
-  } else if (player.weapon === "Bo Staff") { $("#skill-select").load("skills/skills-bostaff.php");
-  } else if (player.weapon === "Brawler's Fist") { $("#skill-select").load("skills/skills-brawler.php");
-  } else if (player.weapon === "Wind Fu") { $("#skill-select").load("skills/skills-windfu.php");
-  } else if (player.weapon === "Dagger") { $("#skill-select").load("skills/skills-dagger.php");
-  } else if (player.weapon === "Dual Sai") { $("#skill-select").load("skills/skills-sai.php");
-  } else if (player.weapon === "Shuriken") { $("#skill-select").load("skills/skills-shuriken.php");
-  } else if (player.weapon === "Sword & Shield") { $("#skill-select").load("skills/skills-sword.php");
-  } else if (player.weapon === "War Hammer") { $("#skill-select").load("skills/skills-warhammer.php");
-  } else if (player.weapon === "Battle Axe") { $("#skill-select").load("skills/skills-battleaxe.php");
-  } else if (player.weapon === "Aether Stone") { $("#skill-select").load("skills/skills-aether.php");
-  } else if (player.weapon === "Runestone") { $("#skill-select").load("skills/skills-runestone.php");
-  } else if (player.weapon === "Runeblade") { $("#skill-select").load("skills/skills-runeblade.php");
-  } else { $("#skill-select").html("<h2>No Class Selected </h2>"); }
-*/
   $("#skill-select").load(skillPage[player.weapon.id]);
   $("#skill-tree-footer").load("skills/footer.php");
+  
 });
 
 </script>
