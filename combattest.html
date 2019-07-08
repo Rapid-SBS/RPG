@@ -132,11 +132,11 @@
 
 <script>
 /*	--- List of ECMA6 Classes ---
-Attack( name, type, manacost, target, dmgtype, multiplier, additive, pierce, buff{}, debuff{} )
-Heal( name, type, manacost, target, multiplier, additive, buff{}, debuff{})
-Buff( name, type, manacost, target, status, buff{}, debuff)
-AttackHeal( name, type, manacost, target, dmgtype, multiplier, additive, pierce)
-EnemyAttack( name, type, target, nthturn, dmgtype, multiplier, additive, pierce, buff{}, debuff{} )
+Attack( name, type, manacost, target, mhc, dmgtype, multiplier, additive, pierce, buff{}, debuff{} )
+Heal( name, type, manacost, target, mhc, multiplier, additive, buff{}, debuff{})
+Buff( name, type, manacost, target, mhc, status, buff{}, debuff)
+AttackHeal( name, type, manacost, target, mhc, dmgtype, multiplier, additive, pierce)
+EnemyAttack( name, type, target, mhc, nthturn, dmgtype, multiplier, additive, pierce, buff{}, debuff{} )
 
 mhc{ miss, hit, crit }
 buff{ status, duration, att, def, int, res, mana }
@@ -149,11 +149,11 @@ var player = {
 	int: 4,
 	res: 2,
 	mana: 1,
-	basic: new Attack("Strike", "Attack", 0, "Enemy", "int", 1, 2, 0, false, false),
-	special: new Heal("Enrage", "Attack", 1, "Enemy", 0, 8, {status:false, duration:2, att:0, def:2, int:0, res:0, mana:0}, false),
-	support: new Buff("Battle Roar", "Buff", 2, "Mutual", {status:false, duration:2, att:2, def:0, int:0, res:0, mana:0}, {status:false, duration:2, att:0, def:-2, int:0, res:0, mana:0}),
-	attack: new Attack("Cleave", "Attack", 0, "Enemy", "att", 2, 0, 4, false, false), 
-	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 6, "Mutual", "att", 5, 0, 0, false, false)
+	basic: new Attack("Strike", "Attack", 0, "Enemy", true, "att", 1, 2, 0, false, false),
+	special: new Heal("Enrage", "Attack", 1, "Enemy", true, 0, 8, {status:false, duration:2, att:0, def:2, int:0, res:0, mana:0}, false),
+	support: new Buff("Battle Roar", "Buff", 2, "Mutual", true, {status:false, duration:2, att:2, def:0, int:0, res:0, mana:0}, {status:false, duration:2, att:0, def:-2, int:0, res:0, mana:0}),
+	attack: new Attack("Cleave", "Attack", 0, "Enemy", true, "att", 2, 0, 4, false, false), 
+	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 6, "Mutual", true, "att", 5, 0, 0, false, false)
 }
 
 console.log(player.buffs);
@@ -181,8 +181,8 @@ var enemy = {
 	def: parseInt(enemybase.def),
 	int: parseInt(enemybase.int),
 	res: parseInt(enemybase.res),
-	basic: new EnemyAttack("Default", "Attack", "Player", 0, "att", 1, 6, 0),
-	special: new EnemyAttack("Default", "Attack", "Player", 3, "att", 2, 0, 0),
+	basic: new EnemyAttack("Default", "Attack", "Player", true, 0, "att", 1, 6, 0),
+	special: new EnemyAttack("Default", "Attack", "Player", true, 3, "att", 2, 0, 0),
 };
 
 $(document).ready(function(){   
@@ -210,7 +210,7 @@ $(document).ready(function(){
       selectAbility();
       if (ability == "basic") { 
       	selectedAttack = player.basic;
-      	console.log("Selected Attack: " + selectedAttack.attCalc);
+      	console.log("Selected Attack: " + player.basic);
       	printAttackDetails();
       	attackRoutine();
       } else if (ability == "special") { 
@@ -314,7 +314,7 @@ const beginEnemyTurn = () => {
 
 const playerAttack = () => {
 	playerStatEval();
-	console.log(selectedAttack);
+	console.log("Selected Attack: " + selectedAttack);
 	let mitigation;
 	if (selectedAttack.dmgtype == "att") { // Match defense to attack type
 		mitigation = parseInt(enemy.def) - parseInt(selectedAttack.pierce);
@@ -390,7 +390,7 @@ const printHP = () => {
 }
 
 const printAttackDetails = () => {
-	$('#att-type').text((selectedAttack.dmgtype).toUpperCase);
+	$('#att-type').text((selectedAttack.dmgtype).toUpperCase());
 	$('#att-multiplier').text(selectedAttack.multiplier);
 	$('#att-additive').text(selectedAttack.additive);
 	$('#att-pierce').text(selectedAttack.pierce);

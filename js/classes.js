@@ -50,6 +50,7 @@ class Ability {
 		this.type = type;
 	  this.manacost = manacost;
 	  this.target = target;
+	  this.mhc = mhc;
 	}
 }
 
