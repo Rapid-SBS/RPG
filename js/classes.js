@@ -83,6 +83,8 @@ class Heal extends Ability {
 		super(name, type, manacost, target, mhc);
 		this.multiplier = multiplier;
 	  this.additive = additive;
+	  this.buff = buff;
+	  this.debuff = debuff;
 	  this.heal = function() {
 	  	return current.int
 	  };

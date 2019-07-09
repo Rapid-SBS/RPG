@@ -145,6 +145,8 @@ EnemyAttack( name, type, target, mhc, nthturn, dmgtype, multiplier, additive, pi
 mhc{ miss, hit, crit }
 buff{ status, duration, att, def, int, res, mana }
 debuff{ status, duration, att, def, int, res, mana }
+
+current.buff[duration, name, status, att, def, int, res]
 */
 var player = { 
 	hp: 30, 
@@ -154,7 +156,7 @@ var player = {
 	res: 2,
 	mana: 1,
 	basic: new Attack("Strike", "Attack", 0, "Enemy", true, "att", 1, 2, 0, false, false),
-	special: new Heal("Enrage", "Heal", 2, "Enemy", true, 0, 8, {status:false, duration:2, att:0, def:2, int:0, res:0, mana:0}, false),
+	special: new Heal("Enrage", "Heal", 2, "Enemy", true, 0, 8, {status:"none", duration:2, att:0, def:2, int:0, res:0, mana:0}, false),
 	support: new Buff("Battle Roar", "Buff", 3, "Mutual", true, {status:false, duration:2, att:2, def:0, int:0, res:0, mana:0}, {status:false, duration:2, att:0, def:-2, int:0, res:0, mana:0}),
 	attack: new Attack("Cleave", "Attack", 4, "Enemy", true, "att", 2, 0, 4, false, false), 
 	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 5, "Mutual", true, "att", 5, 0, 0, false, false)
@@ -172,7 +174,9 @@ var current = {
 	def: parseInt(player.def),
 	int: parseInt(player.int),
 	res: parseInt(player.res),
-	mana: 0
+	mana: 0,
+	buffs: [],
+	debuffs:[],
 }
 
 var enemybase = { hp: 40, att: 6, def: 2, int: 2, res:4 };
@@ -192,7 +196,15 @@ $(document).ready(function(){
 	printHP();
 	playerStatEval();
 	enemyStatEval();
+/*
+	current.buffs.push(["Shakira", "Beyonce"]);
+	current.buffs.push(["Something", "Else"]);
+	console.log("Current Buffs:");
+	console.table(current.buffs);
 
+	console.log("Current Debuffs:");
+	console.table(current.debuffs);
+*/
 }); /* .document-ready */
 
 // ===== [ Ability Selection ] =====
@@ -245,6 +257,9 @@ const healRoutine = () => {
 	beginTurn();
 	consumeMana();
 	playerStatEval();
+	constructBuff();
+	console.log("Current Buffs:");
+	console.table(current.buffs);
 
 	if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
 		playerHeal();
@@ -273,6 +288,12 @@ const buffRoutine = () => {
 			setTimeout(enemyAttack, 1500);
 			setTimeout(playerDeathCheck, 3000);
 		}
+	// If selectedAbility.buff != false, add buff to array
+
+	console.log("Current Buffs:");
+	console.table(current.buffs);
+	console.log("Current Debuffs:");
+	console.table(current.debuffs);
 } /* .buffRoutine */
 
 // === Attack/Heal Routine ===
@@ -459,6 +480,18 @@ const playerButtonUpdate = () => {
 		$('#radio1,#radio2,#radio3,#radio4,#radio5').removeClass("disabled unclickable");
 		abilityManaCostCheck();
 }
+
+const constructBuff = () => {
+	let a = selectedAbility.name;
+	let b = selectedAbility.buff.status;
+	let c = selectedAbility.buff.duration;
+	let d = selectedAbility.buff.att;
+	let e = selectedAbility.buff.def;
+	let f = selectedAbility.buff.int;
+	let g = selectedAbility.buff.res;
+	current.buffs.push([a, b, c, d, e, f, g]);
+}
+
 const decrementBuffs = () => {
 
 }
