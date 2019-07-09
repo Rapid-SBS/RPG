@@ -162,9 +162,9 @@ var player = {
 	mana: 1,
 	basic: new Attack("Strike", "Attack", 0, "Enemy", true, "att", 1, 2, 0, false, false),
 	special: new Heal("Enrage", "Heal", 2, "Enemy", true, 0, 8, {status:"none", duration:2, att:0, def:2, int:0, res:0, mana:0}, false),
-	support: new Buff("Battle Roar", "Buff", 2, "Mutual", true, {status:"none", duration:2, att:2, def:0, int:0, res:0, mana:0}, {status:false, duration:2, att:0, def:-2, int:0, res:0, mana:0}),
+	support: new Buff("Battle Roar", "Buff", 2, "Mutual", true, {status:"none", duration:3, att:2, def:0, int:0, res:0, mana:0}, {status:false, duration:2, att:0, def:-2, int:0, res:0, mana:0}),
 	attack: new Attack("Cleave", "Attack", 4, "Enemy", true, "att", 2, 0, 4, false, false), 
-	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 5, "Mutual", true, "att", 5, 0, 0, false, false)
+	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 5, "Mutual", true, "att", 5, 0, 0)
 }
 
 var buff = { att: 0, def: 0, int: 0, res: 0 }
@@ -522,19 +522,18 @@ const constructBuff = () => {
 
 const decrementBuffs = () => {
 	let i;
+	let ttl;
 	let len = current.buffs.length;
 	for (i = 0; i < len; i++) { // Decrement buffs
 		current.buffs[i][2]--;
-		ttl = parseInt(current.buffs[i][2]);
-		console.log("Index: " + i + "TTL: " + ttl);
-		if (ttl < 0) {
+		ttl = current.buffs[i][2];
+		console.log("Index: " + i + "   TTL: " + ttl);
+		if (ttl < 0) { // Remove buff if expired
 			current.buffs.splice(i, 1);
-			console.log("Current Buffs:");
-			console.table(current.buffs);
-		} else {
-			console.log("Current Buffs:");
-			console.table(current.buffs);
-		}
+			len = current.buffs.length; // Recalculate array length
+		} 
+		console.log("Current Buffs:");
+		console.table(current.buffs);
 	}
 }
 
