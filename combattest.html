@@ -155,7 +155,7 @@ TO DO:
 */
 var player = { 
 	hp: 30, 
-	att: 6, 
+	att: 4, 
 	def: 3, 
 	int: 4,
 	res: 2,
@@ -325,13 +325,13 @@ const attackhealRoutine = () => {
 // ========== [ Sub-Routines  ] ==========
 const beginTurn = () => {
 	turnCounter();
-	decrementBuffs();
-	decrementDebuffs();
 	printHP();
 }
 
 const endTurn = () => {
 	regenMana();
+	decrementBuffs();
+	decrementDebuffs();
 	playerButtonUpdate();
 }
 
@@ -501,13 +501,41 @@ const constructBuff = () => {
 	let e = selectedAbility.buff.def;
 	let f = selectedAbility.buff.int;
 	let g = selectedAbility.buff.res;
-	current.buffs.push([a, b, c, d, e, f, g]);
+
+	// Loop through buffs array and remove duplicates
+	let i;
+	let buffname;
+	let len = current.buffs.length;
+	for (i = 0; i < len; i++) {
+		buffname = current.buffs[i][0];
+		if (buffname == a) {
+			console.log("Buff Exists. Buff Name: " + buffname);
+			current.buffs.splice(i, 1);
+		}
+	}
+
+	console.log("Gained Buff: " + buffname);
+	current.buffs.push([a, b, c, d, e, f, g]); // Copy buff data from Player Ability
 	console.log("Current Buffs:");
 	console.table(current.buffs);
 }
 
 const decrementBuffs = () => {
-
+	let i;
+	let len = current.buffs.length;
+	for (i = 0; i < len; i++) { // Decrement buffs
+		current.buffs[i][2]--;
+		ttl = parseInt(current.buffs[i][2]);
+		console.log("Index: " + i + "TTL: " + ttl);
+		if (ttl < 0) {
+			current.buffs.splice(i, 1);
+			console.log("Current Buffs:");
+			console.table(current.buffs);
+		} else {
+			console.log("Current Buffs:");
+			console.table(current.buffs);
+		}
+	}
 }
 
 const decrementDebuffs = () => {
