@@ -147,6 +147,11 @@ buff{ status, duration, att, def, int, res, mana }
 debuff{ status, duration, att, def, int, res, mana }
 
 current.buff[duration, name, status, att, def, int, res]
+
+TO DO:
+- Prevent enemies from doing negative damage due to high player Def
+- When applying/reapplying buffs, delete any existing instance of buff and recreate it
+- Implement buff decrementer
 */
 var player = { 
 	hp: 30, 
