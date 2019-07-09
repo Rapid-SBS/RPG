@@ -162,9 +162,8 @@ var player = {
 
 var buff = { att: 0, def: 0, int: 0, res: 0 }
 var selectedAbility;
-var selectedBuff;
+var enemyAbility;
 var ability;
-var ttl;
 var turn = 0;
 
 var current = {
@@ -183,8 +182,8 @@ var enemy = {
 	def: parseInt(enemybase.def),
 	int: parseInt(enemybase.int),
 	res: parseInt(enemybase.res),
-	basic: new EnemyAttack("Default", "Attack", "Player", true, 0, "att", 1, 6, 0),
-	special: new EnemyAttack("Default", "Attack", "Player", true, 3, "att", 2, 0, 0),
+	basic: new EnemyAttack("Basic", "Attack", "Player", true, 1, "att", 1, 6, 0, false, false) 
+	// special: new EnemyAttack("Default", "Attack", "Player", true, 3, "att", 2, 0, 0),
 };
 
 $(document).ready(function(){
@@ -224,6 +223,7 @@ const attackRoutine = () => {
 		playerAttack();
 
 		if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
+			enemySelectAbility();
 			setTimeout(enemyAttack, 1500);
 			setTimeout(playerDeathCheck, 3000);
 		}
@@ -238,14 +238,31 @@ const attackRoutine = () => {
 		printHP();
 		playerWin();
 	}
-}; /* .attackRoutine */
+} /* .attackRoutine */
 
 // === Heal Routine ===
 const healRoutine = () => {
 	beginTurn();
 	consumeMana();
 	playerStatEval();
-}; /* .healRoutine */
+
+	if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
+		playerHeal();
+		enemySelectAbility();
+		setTimeout(enemyAttack, 1500);
+		setTimeout(playerDeathCheck, 3000);
+	}
+
+	if (current.hp == 0) { // --- If enemy is defeated, display player win
+		playerLose();
+	}
+
+	if (enemy.hp <= 0) { // --- If enemy is defeated, display player win
+		enemy.hp = 0;
+		printHP();
+		playerWin();
+	}
+} /* .healRoutine */
 
 // === Buff Routine ===
 const buffRoutine = () => {
@@ -256,7 +273,7 @@ const buffRoutine = () => {
 			setTimeout(enemyAttack, 1500);
 			setTimeout(playerDeathCheck, 3000);
 		}
-}; /* .buffRoutine */
+} /* .buffRoutine */
 
 // === Attack/Heal Routine ===
 const attackhealRoutine = () => {
@@ -267,6 +284,7 @@ const attackhealRoutine = () => {
 		playerAttack();
 
 		if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
+			enemySelectAbility();
 			setTimeout(enemyAttack, 1500);
 			setTimeout(playerDeathCheck, 3000);
 		}
@@ -281,7 +299,7 @@ const attackhealRoutine = () => {
 		printHP();
 		playerWin();
 	}
-}; /* .attackhealRoutine */
+} /* .attackhealRoutine */
 
 // ========== [ Sub-Routines  ] ==========
 const beginTurn = () => {
@@ -315,11 +333,11 @@ const playerAttack = () => {
 }
 
 const playerHeal = () => {
-	current.hp += parseInt(selectedBuff);
+	current.hp += parseInt(selectedAbility.healCalc());
 	if (current.hp > player.hp) { current.hp = player.hp; }
 	printHP();
 	$('#game-message').addClass('text-green').removeClass('text-blue text-red');
-	$('#game-message').text('You healed ' + selectedBuff + ' health!');
+	$('#game-message').text('You healed ' + selectedAbility.healCalc() + ' health!');
 	$('#radio1,#radio2,#radio3,#radio4,#radio5').addClass("disabled unclickable");
 }
 
@@ -340,13 +358,17 @@ const buffInit = () => {
 	ttl = 2;
 }
 
+const enemySelectAbility = () => {
+	enemyAbility = enemy.basic;
+}
+
 const enemyAttack = () => {
 		playerStatEval();
 		
 		let mitigation;
-		if (selectedAbility.dmgtype == "att") { // Match defense to attack type
+		if (enemyAbility.dmgtype == "att") { // Match defense to attack type
 			mitigation = parseInt(current.def) - parseInt(enemy.basic.pierce);
-		} else if (selectedAbility.dmgtype == "int") {
+		} else if (enemyAbility.dmgtype == "int") {
 			mitigation = parseInt(current.res) - parseInt(enemy.basic.pierce);
 		}
 		if (mitigation < 0) {	mitigation = 0; } // Prevent negative values
