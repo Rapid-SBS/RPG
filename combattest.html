@@ -157,7 +157,7 @@ var player = {
 	mana: 1,
 	basic: new Attack("Strike", "Attack", 0, "Enemy", true, "att", 1, 2, 0, false, false),
 	special: new Heal("Enrage", "Heal", 2, "Enemy", true, 0, 8, {status:"none", duration:2, att:0, def:2, int:0, res:0, mana:0}, false),
-	support: new Buff("Battle Roar", "Buff", 3, "Mutual", true, {status:false, duration:2, att:2, def:0, int:0, res:0, mana:0}, {status:false, duration:2, att:0, def:-2, int:0, res:0, mana:0}),
+	support: new Buff("Battle Roar", "Buff", 2, "Mutual", true, {status:"none", duration:2, att:2, def:0, int:0, res:0, mana:0}, {status:false, duration:2, att:0, def:-2, int:0, res:0, mana:0}),
 	attack: new Attack("Cleave", "Attack", 4, "Enemy", true, "att", 2, 0, 4, false, false), 
 	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 5, "Mutual", true, "att", 5, 0, 0, false, false)
 }
@@ -256,10 +256,8 @@ const attackRoutine = () => {
 const healRoutine = () => {
 	beginTurn();
 	consumeMana();
-	playerStatEval();
 	constructBuff();
-	console.log("Current Buffs:");
-	console.table(current.buffs);
+	playerStatEval();
 
 	if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
 		playerHeal();
@@ -283,6 +281,7 @@ const healRoutine = () => {
 const buffRoutine = () => {
 	beginTurn();
 	consumeMana();
+	constructBuff();
 	playerStatEval();
 	if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
 			setTimeout(enemyAttack, 1500);
@@ -290,10 +289,6 @@ const buffRoutine = () => {
 		}
 	// If selectedAbility.buff != false, add buff to array
 
-	console.log("Current Buffs:");
-	console.table(current.buffs);
-	console.log("Current Debuffs:");
-	console.table(current.debuffs);
 } /* .buffRoutine */
 
 // === Attack/Heal Routine ===
@@ -451,10 +446,22 @@ const printAttackDetails = () => {
 }
 
 const playerStatEval = () => {
-	current.att = parseInt(player.att) + parseInt(buff.att);
-	current.def = parseInt(player.def) + parseInt(buff.def);
-	current.int = parseInt(player.int) + parseInt(buff.int);
-	current.res = parseInt(player.res) + parseInt(buff.int);
+	let i;
+	let len = current.buffs.length;
+	let buffedAtt = 0;
+	let buffedDef = 0;
+	let buffedInt = 0;
+	let buffedRes = 0;
+	for (i = 0; i < len; i++) { // Loop through buffs array 
+		buffedAtt += parseInt(current.buffs[i][3]);
+		buffedDef += parseInt(current.buffs[i][4]);
+		buffedInt += parseInt(current.buffs[i][5]);
+		buffedRes += parseInt(current.buffs[i][6]);
+	}
+	current.att = parseInt(player.att) + parseInt(buffedAtt);
+	current.def = parseInt(player.def) + parseInt(buffedDef);
+	current.int = parseInt(player.int) + parseInt(buffedInt);
+	current.res = parseInt(player.res) + parseInt(buffedRes);
 	$("#p-att").text(current.att);
 	$("#p-def").text(current.def);
 	$("#p-int").text(current.int);
@@ -490,6 +497,8 @@ const constructBuff = () => {
 	let f = selectedAbility.buff.int;
 	let g = selectedAbility.buff.res;
 	current.buffs.push([a, b, c, d, e, f, g]);
+	console.log("Current Buffs:");
+	console.table(current.buffs);
 }
 
 const decrementBuffs = () => {
