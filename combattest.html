@@ -95,10 +95,6 @@
       </tbody>
     </table>
   </div><!-- /.row -->
-
-  <div class="row justify-content-center">
-  	<p><b>Attack Type: </b><span id="att-type" class="pad-r-10"></span><b>Multiplier: </b><span id="att-multiplier" class="pad-r-10"></span><b>Additive: </b><span id="att-additive" class="pad-r-10"></span><b>Pierce: </b><span id="att-pierce" class="pad-r-10"></span></p>
-  </div><!-- /.row -->
   
   <div class="row justify-content-center">
   	<p><b>Current Mana: <span id="player-mana" class="text-blue"></span></b>
@@ -158,12 +154,11 @@ var player = {
 	mana: 1,
 	basic: new Attack("Strike", "Attack", 0, "Enemy", true, "att", 1, 2, 0, false, false),
 	special: new Heal("Enrage", "Heal", 2, "Enemy", true, 0, 8, {status:"none", duration:2, att:0, def:6, int:0, res:0, mana:0}, false),
-	support: new Buff("Battle Roar", "Buff", 2, "Mutual", true, {status:"none", duration:3, att:2, def:0, int:0, res:0, mana:0}, {status:false, duration:2, att:0, def:-2, int:0, res:0, mana:0}),
+	support: new Buff("Battle Roar", "Buff", 2, "Mutual", true, {status:"none", duration:3, att:2, def:0, int:0, res:0, mana:0}, {status:"none", duration:2, att:0, def:-2, int:0, res:0, mana:0}),
 	attack: new Attack("Cleave", "Attack", 4, "Enemy", true, "att", 2, 0, 4, false, false), 
 	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 4, "Mutual", true, "att", 2, 0, 0)
 }
 
-var buff = { att: 0, def: 0, int: 0, res: 0 }
 var selectedAbility;
 var enemyAbility;
 var ability;
@@ -187,6 +182,8 @@ var enemy = {
 	def: parseInt(enemybase.def),
 	int: parseInt(enemybase.int),
 	res: parseInt(enemybase.res),
+	buffs: [],
+	debuffs: [],
 	basic: new EnemyAttack("Basic", "Attack", "Player", true, 1, "att", 1, 6, 0, false, false) 
 	// special: new EnemyAttack("Default", "Attack", "Player", true, 3, "att", 2, 0, 0),
 };
@@ -220,15 +217,17 @@ $(document).ready(function(){
 
 // === Attack Routine ===
 const attackRoutine = () => {
-	printAttackDetails();
 	beginTurn();
 	consumeMana();
+	playerBuffBuilder();
 	playerStatEval();
 	if (enemy.hp > 0 && current.hp > 0) { // --- Only attack if HP > 0
 		playerAttack();
 
 		if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
 			enemySelectAbility();
+			enemyBuffBuilder();
+			enemyStatEval();
 			setTimeout(enemyAttack, 1500);
 			setTimeout(playerDeathCheck, 3000);
 		}
@@ -243,18 +242,20 @@ const attackRoutine = () => {
 		printHP();
 		playerWin();
 	}
-} /* .attackRoutine */
+}
 
 // === Heal Routine ===
 const healRoutine = () => {
 	beginTurn();
 	consumeMana();
-	constructBuff();
+	playerBuffBuilder();
 	playerStatEval();
 
 	if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
 		playerHeal();
 		enemySelectAbility();
+		enemyBuffBuilder();
+		enemyStatEval();
 		setTimeout(enemyAttack, 1500);
 		setTimeout(playerDeathCheck, 3000);
 	}
@@ -268,21 +269,22 @@ const healRoutine = () => {
 		printHP();
 		playerWin();
 	}
-} /* .healRoutine */
+}
 
 // === Buff Routine ===
 const buffRoutine = () => {
 	beginTurn();
 	consumeMana();
-	constructBuff();
+	playerBuffBuilder();
 	playerStatEval();
 	if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
-			setTimeout(enemyAttack, 1500);
-			setTimeout(playerDeathCheck, 3000);
-		}
-	// If selectedAbility.buff != false, add buff to array
-
-} /* .buffRoutine */
+		enemySelectAbility();
+		enemyBuffBuilder();
+		enemyStatEval();
+		setTimeout(enemyAttack, 1500);
+		setTimeout(playerDeathCheck, 3000);
+	}
+}
 
 // === Attack/Heal Routine ===
 const attackhealRoutine = () => {
@@ -294,6 +296,8 @@ const attackhealRoutine = () => {
 
 		if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
 			enemySelectAbility();
+			enemyBuffBuilder();
+			enemyStatEval();
 			setTimeout(enemyAttack, 1500);
 			setTimeout(playerDeathCheck, 3000);
 		}
@@ -308,7 +312,7 @@ const attackhealRoutine = () => {
 		printHP();
 		playerWin();
 	}
-} /* .attackhealRoutine */
+}
 
 // ========== [ Sub-Routines  ] ==========
 const beginTurn = () => {
@@ -318,9 +322,15 @@ const beginTurn = () => {
 
 const endTurn = () => {
 	regenMana();
-	decrementBuffs();
-	decrementDebuffs();
+	tickBuffsDebuffs();
 	playerButtonUpdate();
+}
+
+const tickBuffsDebuffs = () => {
+	decrementPlayerBuffs();
+	decrementPlayerDebuffs();
+	decrementEnemyBuffs();
+	decrementEnemyDebuffs();
 }
 
 const playerAttack = () => {
@@ -375,35 +385,30 @@ const playerAttackHeal = () => {
 	$('#radio1,#radio2,#radio3,#radio4,#radio5').addClass("disabled unclickable");
 }
 
-const enemySelectAbility = () => {
-	enemyAbility = enemy.basic;
-}
-
 const enemyAttack = () => {
-		playerStatEval();
-		
-		let mitigation;
-		if (enemyAbility.dmgtype == "att") { // Match defense to attack type
-			mitigation = parseInt(current.def) - parseInt(enemy.basic.pierce);
-		} else if (enemyAbility.dmgtype == "int") {
-			mitigation = parseInt(current.res) - parseInt(enemy.basic.pierce);
-		}
-		if (mitigation < 0) {	mitigation = 0; } // Prevent negative mitigation
+	playerStatEval();
+	let mitigation;
+	if (enemyAbility.dmgtype == "att") { // Match defense to attack type
+		mitigation = parseInt(current.def) - parseInt(enemy.basic.pierce);
+	} else if (enemyAbility.dmgtype == "int") {
+		mitigation = parseInt(current.res) - parseInt(enemy.basic.pierce);
+	}
+	if (mitigation < 0) {	mitigation = 0; } // Prevent negative mitigation
 
-		let damage = parseInt(enemy.att) - parseInt(mitigation);
-		if (damage < 0) { damage = 0; } // Prevent negative damage
+	let damage = parseInt(enemy.att) - parseInt(mitigation);
+	if (damage < 0) { damage = 0; } // Prevent negative damage
 
-		current.hp -= damage;
-		if (current.hp <= 0) { current.hp = 0; } // Prevent negative Player HP
-		printHP();
+	current.hp -= damage;
+	if (current.hp <= 0) { current.hp = 0; } // Prevent negative Player HP
+	printHP();
 
-		// --- Update Game Message ---
-		console.log('The enemy attacked and did ' + damage + ' damage!');
-		$('#game-message').addClass('text-red').removeClass('text-green text-blue');
-		$('#game-message').text('The enemy attacked and did ' + damage + ' damage!');
-		console.log("End enemy attack");
+	// --- Update Game Message ---
+	console.log('The enemy attacked and did ' + damage + ' damage!');
+	$('#game-message').addClass('text-red').removeClass('text-green text-blue');
+	$('#game-message').text('The enemy attacked and did ' + damage + ' damage!');
+	console.log("End enemy attack");
 
-		endTurn();
+	endTurn();
 }
 
 // ========== Utility Functions ==========
@@ -430,10 +435,24 @@ const abilityManaCostCheck = () => {
 	}
 }
 
+const playerBuffBuilder = () => {
+	if (selectedAbility.buff != false) { constructPlayerBuff(); }
+	if (selectedAbility.debuff != false) { constructEnemyDebuff(); }
+}
+
+const enemyBuffBuilder = () => {
+	if (enemyAbility.buff != false) { constructEnemyBuff(); }
+	if (enemyAbility.debuff != false) { constructPlayerDebuff(); }
+}
+
 const selectAbility = () => {	
 	let ability = $('input[name=ability]:checked').val();
 	selectedAbility = player[ability];
 	console.log('Selected ' + selectedAbility.type + ' ability: ' + selectedAbility.name);
+}
+
+const enemySelectAbility = () => {
+	enemyAbility = enemy.basic;
 }
 
 const printHP = () => {
@@ -442,30 +461,50 @@ const printHP = () => {
 	$("#enemy-hp").text(enemy.hp);
 }
 
-const printAttackDetails = () => {
-	$('#att-type').text((selectedAbility.dmgtype).toUpperCase());
-	$('#att-multiplier').text(selectedAbility.multiplier);
-	$('#att-additive').text(selectedAbility.additive);
-	$('#att-pierce').text(selectedAbility.pierce);
+const turnCounter = () => {
+	turn++;
+	console.log("Begin Turn: " + turn)
+}
+
+const regenMana = () => {	
+	current.mana += parseInt(player.mana); 
+	printHP();
+}
+
+const consumeMana = () => { 
+	current.mana -= parseInt(selectedAbility.manacost); 
+	console.log("Current Mana: " + current.mana); 
 }
 
 const playerStatEval = () => {
 	let i;
-	let len = current.buffs.length;
+	let ii;
+	let blen = current.buffs.length;
+	let dlen = current.debuffs.length;
 	let buffedAtt = 0;
 	let buffedDef = 0;
 	let buffedInt = 0;
 	let buffedRes = 0;
-	for (i = 0; i < len; i++) { // Loop through buffs array 
+	let debuffedAtt = 0;
+	let debuffedDef = 0;
+	let debuffedInt = 0;
+	let debuffedRes = 0;
+	for (i = 0; i < blen; i++) { // Loop through buffs array 
 		buffedAtt += parseInt(current.buffs[i][3]);
 		buffedDef += parseInt(current.buffs[i][4]);
 		buffedInt += parseInt(current.buffs[i][5]);
 		buffedRes += parseInt(current.buffs[i][6]);
 	}
-	current.att = parseInt(player.att) + parseInt(buffedAtt);
-	current.def = parseInt(player.def) + parseInt(buffedDef);
-	current.int = parseInt(player.int) + parseInt(buffedInt);
-	current.res = parseInt(player.res) + parseInt(buffedRes);
+	for (ii = 0; ii < dlen; ii++) { // Loop through buffs array 
+		debuffedAtt += parseInt(current.debuffs[ii][3]);
+		debuffedDef += parseInt(current.debuffs[ii][4]);
+		debuffedInt += parseInt(current.debuffs[ii][5]);
+		debuffedRes += parseInt(current.debuffs[ii][6]);
+	}
+	current.att = parseInt(player.att) + parseInt(buffedAtt) + parseInt(debuffedAtt);
+	current.def = parseInt(player.def) + parseInt(buffedDef) + parseInt(debuffedAtt);
+	current.int = parseInt(player.int) + parseInt(buffedInt) + parseInt(debuffedAtt);
+	current.res = parseInt(player.res) + parseInt(buffedRes) + parseInt(debuffedAtt);
 	$("#p-att").text(current.att);
 	$("#p-def").text(current.def);
 	$("#p-int").text(current.int);
@@ -474,11 +513,34 @@ const playerStatEval = () => {
 }
 
 const enemyStatEval = () => {
-	enemy.hp = parseInt(enemybase.hp);
-	enemy.att = parseInt(enemybase.att);
-	enemy.def = parseInt(enemybase.def);
-	enemy.int = parseInt(enemybase.int);
-	enemy.res = parseInt(enemybase.res);
+	let i;
+	let ii;
+	let blen = enemy.buffs.length;
+	let dlen = enemy.debuffs.length;
+	let buffedAtt = 0;
+	let buffedDef = 0;
+	let buffedInt = 0;
+	let buffedRes = 0;
+	let debuffedAtt = 0;
+	let debuffedDef = 0;
+	let debuffedInt = 0;
+	let debuffedRes = 0;
+	for (i = 0; i < blen; i++) { // Loop through buffs array 
+		buffedAtt += parseInt(enemy.buffs[i][3]);
+		buffedDef += parseInt(enemy.buffs[i][4]);
+		buffedInt += parseInt(enemy.buffs[i][5]);
+		buffedRes += parseInt(enemy.buffs[i][6]);
+	}
+	for (ii = 0; ii < dlen; ii++) { // Loop through buffs array 
+		debuffedAtt += parseInt(enemy.debuffs[ii][3]);
+		debuffedDef += parseInt(enemy.debuffs[ii][4]);
+		debuffedInt += parseInt(enemy.debuffs[ii][5]);
+		debuffedRes += parseInt(enemy.debuffs[ii][6]);
+	}
+	enemy.att = parseInt(enemybase.att) + parseInt(buffedAtt) + parseInt(debuffedAtt);
+	enemy.def = parseInt(enemybase.def) + parseInt(buffedDef) + parseInt(debuffedAtt);
+	enemy.int = parseInt(enemybase.int) + parseInt(buffedInt) + parseInt(debuffedAtt);
+	enemy.res = parseInt(enemybase.res) + parseInt(buffedRes) + parseInt(debuffedAtt);
 	$("#e-hp").text(enemy.hp);
 	$("#e-att").text(enemy.att);
 	$("#e-def").text(enemy.def);
@@ -492,7 +554,7 @@ const playerButtonUpdate = () => {
 		abilityManaCostCheck();
 }
 
-const constructBuff = () => {
+const constructPlayerBuff = () => {
 	let a = selectedAbility.name;
 	let b = selectedAbility.buff.status;
 	let c = selectedAbility.buff.duration;
@@ -512,14 +574,95 @@ const constructBuff = () => {
 			current.buffs.splice(i, 1);
 		}
 	}
-
-	console.log("Gained Buff: " + buffname);
+	console.log("Player gained Buff: " + selectedAbility.name);
 	current.buffs.push([a, b, c, d, e, f, g]); // Copy buff data from Player Ability
-	console.log("Current Buffs:");
+	console.log("Current Player Buffs:");
 	console.table(current.buffs);
+
+	$('#game-message').addClass('text-blue').removeClass('text-green text-red');
+	$('#game-message').text('You gained  ' + selectedAbility.name + ' buff!');
+	$('#radio1,#radio2,#radio3,#radio4,#radio5').addClass("disabled unclickable");
 }
 
-const decrementBuffs = () => {
+const constructPlayerDebuff = () => {
+	let a = enemyAbility.name;
+	let b = enemyAbility.debuff.status;
+	let c = enemyAbility.debuff.duration;
+	let d = enemyAbility.debuff.att;
+	let e = enemyAbility.debuff.def;
+	let f = enemyAbility.debuff.int;
+	let g = enemyAbility.debuff.res;
+
+	// Loop through debuffs array and remove duplicates
+	let i;
+	let debuffname;
+	let len = current.debuffs.length;
+	for (i = 0; i < len; i++) {
+		debuffname = current.debuffs[i][0];
+		if (debuffname == a) {
+			console.log("Debuff Exists. Debuff Name: " + debuffname);
+			current.debuffs.splice(i, 1);
+		}
+	}
+	console.log("Player gained debuff: " + enemyAbility.name);
+	current.debuffs.push([a, b, c, d, e, f, g]); // Copy buff data from Player Ability
+	console.log("Current Player Debuffs:");
+	console.table(current.debuffs);
+}
+
+const constructEnemyBuff = () => {
+	let a = enemyAbility.name;
+	let b = enemyAbility.buff.status;
+	let c = enemyAbility.buff.duration;
+	let d = enemyAbility.buff.att;
+	let e = enemyAbility.buff.def;
+	let f = enemyAbility.buff.int;
+	let g = enemyAbility.buff.res;
+
+	// Loop through buffs array and remove duplicates
+	let i;
+	let buffname;
+	let len = enemy.buffs.length;
+	for (i = 0; i < len; i++) {
+		buffname = enemy.buffs[i][0];
+		if (buffname == a) {
+			console.log("Buff Exists. Buff Name: " + buffname);
+			enemy.buffs.splice(i, 1);
+		}
+	}
+	console.log("Enemy gained Buff: " + buffname);
+	enemy.buffs.push([a, b, c, d, e, f, g]); // Copy buff data from Enemy Ability
+	console.log("Current Enemy Buffs:");
+	console.table(enemy.buffs);
+}
+
+const constructEnemyDebuff = () => {
+	let a = selectedAbility.name;
+	let b = selectedAbility.debuff.status;
+	let c = selectedAbility.debuff.duration;
+	let d = selectedAbility.debuff.att;
+	let e = selectedAbility.debuff.def;
+	let f = selectedAbility.debuff.int;
+	let g = selectedAbility.debuff.res;
+
+	// Loop through debuffs array and remove duplicates
+	let i;
+	let debuffname;
+	let len = enemy.debuffs.length;
+	for (i = 0; i < len; i++) {
+		debuffname = enemy.debuffs[i][0];
+		if (debuffname == a) {
+			console.log("Debuff Exists. Debuff Name: " + debuffname);
+			selected.debuffs.splice(i, 1);
+		}
+	}
+	console.log("Enemy gained Debuff: " + debuffname);
+	enemy.debuffs.push([a, b, c, d, e, f, g]); // Copy buff data from Enemy Ability
+	console.log("Current Enemy Debuffs:");
+	console.table(enemy.debuffs);
+}
+
+const decrementPlayerBuffs = () => {
 	let i;
 	let ttl;
 	let len = current.buffs.length;
@@ -536,23 +679,55 @@ const decrementBuffs = () => {
 	}
 }
 
-const decrementDebuffs = () => {
-
+const decrementPlayerDebuffs = () => {
+	let i;
+	let ttl;
+	let len = current.debuffs.length;
+	for (i = 0; i < len; i++) { // Decrement buffs
+		current.debuffs[i][2]--;
+		ttl = current.debuffs[i][2];
+		console.log("Index: " + i + "   TTL: " + ttl);
+		if (ttl < 0) { // Remove buff if expired
+			current.debuffs.splice(i, 1);
+			len = current.debuffs.length; // Recalculate array length
+		} 
+		console.log("Current Debuffs:");
+		console.table(current.debuffs);
+	}
 }
 
-const turnCounter = () => {
-	turn++;
-	console.log("Begin Turn: " + turn)
+const decrementEnemyBuffs = () => {
+	let i;
+	let ttl;
+	let len = enemy.buffs.length;
+	for (i = 0; i < len; i++) { // Decrement buffs
+		enemy.buffs[i][2]--;
+		ttl = enemy.buffs[i][2];
+		console.log("Index: " + i + "   TTL: " + ttl);
+		if (ttl < 0) { // Remove buff if expired
+			enemy.buffs.splice(i, 1);
+			len = enemy.buffs.length; // Recalculate array length
+		} 
+		console.log("Current Enemy Buffs:");
+		console.table(enemy.buffs);
+	}
 }
 
-const regenMana = () => {	
-	current.mana += parseInt(player.mana); 
-	printHP();
-}
-
-const consumeMana = () => { 
-	current.mana -= parseInt(selectedAbility.manacost); 
-	console.log("Current Mana: " + current.mana); 
+const decrementEnemyDebuffs = () => {
+	let i;
+	let ttl;
+	let len = enemy.debuffs.length;
+	for (i = 0; i < len; i++) { // Decrement buffs
+		enemy.debuffs[i][2]--;
+		ttl = enemy.debuffs[i][2];
+		console.log("Index: " + i + "   TTL: " + ttl);
+		if (ttl < 0) { // Remove buff if expired
+			enemy.debuffs.splice(i, 1);
+			len = enemy.debuffs.length; // Recalculate array length
+		} 
+		console.log("Current Enemy Debuffs:");
+		console.table(enemy.debuffs);
+	}
 }
 
 const playerDeathCheck = () => { if (parseInt(current.hp) <= 0) { playerLose(); } }

@@ -128,7 +128,7 @@ class AttackHeal extends Ability {
 }
 
 class EnemyAttack extends Ability {
-	constructor(name, type, target, mhc, nthturn, dmgtype, multiplier, additive, pierce) {
+	constructor(name, type, target, mhc, nthturn, dmgtype, multiplier, additive, pierce, buff, debuff) {
 		super(name, type, target, mhc);
 		this.nthturn = nthturn;
 		this.target = target;
@@ -136,6 +136,8 @@ class EnemyAttack extends Ability {
 	  this.multiplier = multiplier;
 	  this.additive = additive;
 	  this.pierce = pierce;
+	  this.buff = buff;
+	  this.debuff = debuff;
 	  if (this.dmgtype == "att") {
 		  this.dmg = function() {
 		  	return enemy.att
