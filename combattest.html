@@ -148,10 +148,6 @@ debuff{ status, duration, att, def, int, res, mana }
 
 current.buff[duration, name, status, att, def, int, res]
 
-TO DO:
-- Prevent enemies from doing negative damage due to high player Def
-- When applying/reapplying buffs, delete any existing instance of buff and recreate it
-- Implement buff decrementer
 */
 var player = { 
 	hp: 30, 
@@ -161,10 +157,10 @@ var player = {
 	res: 2,
 	mana: 1,
 	basic: new Attack("Strike", "Attack", 0, "Enemy", true, "att", 1, 2, 0, false, false),
-	special: new Heal("Enrage", "Heal", 2, "Enemy", true, 0, 8, {status:"none", duration:2, att:0, def:2, int:0, res:0, mana:0}, false),
+	special: new Heal("Enrage", "Heal", 2, "Enemy", true, 0, 8, {status:"none", duration:2, att:0, def:6, int:0, res:0, mana:0}, false),
 	support: new Buff("Battle Roar", "Buff", 2, "Mutual", true, {status:"none", duration:3, att:2, def:0, int:0, res:0, mana:0}, {status:false, duration:2, att:0, def:-2, int:0, res:0, mana:0}),
 	attack: new Attack("Cleave", "Attack", 4, "Enemy", true, "att", 2, 0, 4, false, false), 
-	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 5, "Mutual", true, "att", 5, 0, 0)
+	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 4, "Mutual", true, "att", 2, 0, 0)
 }
 
 var buff = { att: 0, def: 0, int: 0, res: 0 }
@@ -184,7 +180,7 @@ var current = {
 	debuffs:[],
 }
 
-var enemybase = { hp: 40, att: 6, def: 2, int: 2, res:4 };
+var enemybase = { hp: 50, att: 6, def: 2, int: 2, res:4 };
 var enemy = {
 	hp: parseInt(enemybase.hp),
 	att: parseInt(enemybase.att),
@@ -201,15 +197,7 @@ $(document).ready(function(){
 	printHP();
 	playerStatEval();
 	enemyStatEval();
-/*
-	current.buffs.push(["Shakira", "Beyonce"]);
-	current.buffs.push(["Something", "Else"]);
-	console.log("Current Buffs:");
-	console.table(current.buffs);
 
-	console.log("Current Debuffs:");
-	console.table(current.debuffs);
-*/
 }); /* .document-ready */
 
 // ===== [ Ability Selection ] =====
@@ -302,7 +290,7 @@ const attackhealRoutine = () => {
 	consumeMana();
 	playerStatEval();
 	if (enemy.hp > 0 && current.hp > 0) { // --- Only attack if HP > 0
-		playerAttack();
+		playerAttackHeal();
 
 		if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
 			enemySelectAbility();
@@ -344,8 +332,11 @@ const playerAttack = () => {
 		mitigation = parseInt(enemy.res) - parseInt(selectedAbility.pierce);
 	}
 	if (mitigation < 0) {	mitigation = 0; } // Prevent negative values
+
 	let damage = parseInt(selectedAbility.attCalc()) - parseInt(mitigation);
+	if (damage < 0) { damage = 0; } // Prevent negative damage
 	enemy.hp -= damage;
+
 	printHP();
 	console.log('You attacked and did ' + damage + ' damage!');
 	$('#game-message').addClass('text-blue').removeClass('text-green text-red');
@@ -362,21 +353,26 @@ const playerHeal = () => {
 	$('#radio1,#radio2,#radio3,#radio4,#radio5').addClass("disabled unclickable");
 }
 
-const playerBuff = () => {
-	decrementBuffs();
-	console.log("PlayerBuff TTL: " + ttl);
-	if (ttl > 0) {
-		buff.att = 2;
-		buff.def = 2;
-	} else {
-		buff.att = 0;
-		buff.def = 0;
-	}
+const playerAttackHeal = () => {
 	playerStatEval();
-}
+	let mitigation;
+	if (selectedAbility.dmgtype == "att") { // Match defense to attack type
+		mitigation = parseInt(enemy.def) - parseInt(selectedAbility.pierce);
+	} else if (selectedAbility.dmgtype == "int") {
+		mitigation = parseInt(enemy.res) - parseInt(selectedAbility.pierce);
+	}
+	if (mitigation < 0) {	mitigation = 0; } // Prevent negative values
 
-const buffInit = () => {
-	ttl = 2;
+	let damage = parseInt(selectedAbility.attCalc()) - parseInt(mitigation);
+	if (damage < 0) { damage = 0; } // Prevent negative damage
+	enemy.hp -= damage;
+	current.hp += damage;
+	
+	printHP();
+	console.log('You did ' + damage + ' damage and gained ' + damage + 'health!');
+	$('#game-message').addClass('text-blue').removeClass('text-green text-red');
+	$('#game-message').text('You did ' + damage + ' damage and gained ' + damage + ' health!');
+	$('#radio1,#radio2,#radio3,#radio4,#radio5').addClass("disabled unclickable");
 }
 
 const enemySelectAbility = () => {
@@ -392,8 +388,11 @@ const enemyAttack = () => {
 		} else if (enemyAbility.dmgtype == "int") {
 			mitigation = parseInt(current.res) - parseInt(enemy.basic.pierce);
 		}
-		if (mitigation < 0) {	mitigation = 0; } // Prevent negative values
+		if (mitigation < 0) {	mitigation = 0; } // Prevent negative mitigation
+
 		let damage = parseInt(enemy.att) - parseInt(mitigation);
+		if (damage < 0) { damage = 0; } // Prevent negative damage
+
 		current.hp -= damage;
 		if (current.hp <= 0) { current.hp = 0; } // Prevent negative Player HP
 		printHP();
