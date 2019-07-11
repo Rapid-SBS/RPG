@@ -22,15 +22,12 @@
     <link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css"/>
   <script type="text/javascript" src="loading-bar/loading-bar.js"></script>
   <script type="text/javascript" src="js/classes.js"></script>
+  <script type="text/javascript" src="js/mhc-roll.js"></script>
 </head>
 
 <body>
 <div class="text-white text-center bg-primary">
   <h5 class="pad-10"> Test </h5>
-</div>
-
-<div class="text-white text-center bg-primary">
-  <h5 id="demo" class="pad-10"></h5>
 </div>
 
 <div class="container pad-40">
@@ -132,13 +129,12 @@
 
 <script>
 /*	--- List of ECMA6 Classes ---
-Attack( name, type, manacost, target, mhc, dmgtype, multiplier, additive, pierce, buff{}, debuff{} )
-Heal( name, type, manacost, target, mhc, multiplier, additive, buff{}, debuff{})
-Buff( name, type, manacost, target, mhc, status, buff{}, debuff)
-AttackHeal( name, type, manacost, target, mhc, dmgtype, multiplier, additive, pierce)
-EnemyAttack( name, type, target, mhc, nthturn, dmgtype, multiplier, additive, pierce, buff{}, debuff{} )
+Attack( name, type, manacost, target, missrate, critrate, dmgtype, multiplier, additive, pierce, buff{}, debuff{} )
+Heal( name, type, manacost, target, missrate, critrate, multiplier, additive, buff{}, debuff{})
+Buff( name, type, manacost, target, buff{}, debuff{})
+AttackHeal( name, type, manacost, target, missrate, critrate, dmgtype, multiplier, additive, pierce)
+EnemyAttack( name, type, target, missrate, critrate, nthturn, dmgtype, multiplier, additive, pierce, buff{}, debuff{} )
 
-mhc{ miss, hit, crit }
 buff{ status, duration, att, def, int, res, mana }
 debuff{ status, duration, att, def, int, res, mana }
 
@@ -152,11 +148,11 @@ var player = {
 	int: 4,
 	res: 2,
 	mana: 1,
-	basic: new Attack("Strike", "Attack", 0, "Enemy", true, "att", 1, 2, 0, false, false),
-	special: new Heal("Enrage", "Heal", 2, "Enemy", true, 0, 8, {status:"none", duration:2, att:0, def:6, int:0, res:0, mana:0}, false),
-	support: new Buff("Battle Roar", "Buff", 2, "Mutual", true, {status:"none", duration:3, att:2, def:0, int:0, res:0, mana:0}, {status:"none", duration:2, att:0, def:-2, int:0, res:0, mana:0}),
+	basic: new Attack("Strike", "Attack", 0, "Enemy", 1, 1, "att", 1, 2, 0, false, false),
+	special: new Heal("Enrage", "Heal", 2, "Enemy", 0, 1, 0, 8, {status:"none", duration:2, att:0, def:6, int:0, res:0, mana:0}, false),
+	support: new Buff("Battle Roar", "Buff", 2, "Mutual", {status:"none", duration:3, att:2, def:0, int:0, res:0, mana:0}, {status:"none", duration:2, att:-2, def:0, int:0, res:0, mana:0}),
 	attack: new Attack("Cleave", "Attack", 4, "Enemy", true, "att", 2, 0, 4, false, false), 
-	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 4, "Mutual", true, "att", 2, 0, 0)
+	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 2, "Mutual", 1, 3, "att", 2, 0, 0)
 }
 
 var selectedAbility;
@@ -184,9 +180,9 @@ var enemy = {
 	res: parseInt(enemybase.res),
 	buffs: [],
 	debuffs: [],
-	basic: new EnemyAttack("Basic", "Attack", "Player", true, 1, "att", 1, 6, 0, false, false) 
+	basic: new EnemyAttack("Basic Attack", "Attack", "Player", 1, 2, 1, "att", 1, 0, 0, false, false)
 	// special: new EnemyAttack("Default", "Attack", "Player", true, 3, "att", 2, 0, 0),
-};
+}
 
 $(document).ready(function(){
 	loadAbilityNames();
@@ -220,14 +216,12 @@ const attackRoutine = () => {
 	beginTurn();
 	consumeMana();
 	playerBuffBuilder();
-	playerStatEval();
 	if (enemy.hp > 0 && current.hp > 0) { // --- Only attack if HP > 0
 		playerAttack();
 
 		if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
 			enemySelectAbility();
 			enemyBuffBuilder();
-			enemyStatEval();
 			setTimeout(enemyAttack, 1500);
 			setTimeout(playerDeathCheck, 3000);
 		}
@@ -249,13 +243,11 @@ const healRoutine = () => {
 	beginTurn();
 	consumeMana();
 	playerBuffBuilder();
-	playerStatEval();
 
 	if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
 		playerHeal();
 		enemySelectAbility();
 		enemyBuffBuilder();
-		enemyStatEval();
 		setTimeout(enemyAttack, 1500);
 		setTimeout(playerDeathCheck, 3000);
 	}
@@ -276,11 +268,9 @@ const buffRoutine = () => {
 	beginTurn();
 	consumeMana();
 	playerBuffBuilder();
-	playerStatEval();
 	if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
 		enemySelectAbility();
 		enemyBuffBuilder();
-		enemyStatEval();
 		setTimeout(enemyAttack, 1500);
 		setTimeout(playerDeathCheck, 3000);
 	}
@@ -290,14 +280,12 @@ const buffRoutine = () => {
 const attackhealRoutine = () => {
 	beginTurn();
 	consumeMana();
-	playerStatEval();
 	if (enemy.hp > 0 && current.hp > 0) { // --- Only attack if HP > 0
 		playerAttackHeal();
 
 		if (enemy.hp > 0 && current.hp > 0) { // --- Checks if enemy is dead before enemy attacks
 			enemySelectAbility();
 			enemyBuffBuilder();
-			enemyStatEval();
 			setTimeout(enemyAttack, 1500);
 			setTimeout(playerDeathCheck, 3000);
 		}
@@ -335,6 +323,7 @@ const tickBuffsDebuffs = () => {
 
 const playerAttack = () => {
 	playerStatEval();
+	enemyStatEval();
 	let mitigation;
 	if (selectedAbility.dmgtype == "att") { // Match defense to attack type
 		mitigation = parseInt(enemy.def) - parseInt(selectedAbility.pierce);
@@ -345,26 +334,59 @@ const playerAttack = () => {
 
 	let damage = parseInt(selectedAbility.attCalc()) - parseInt(mitigation);
 	if (damage < 0) { damage = 0; } // Prevent negative damage
-	enemy.hp -= damage;
+	
+	let mhc = mhcRoll(selectedAbility.missrate, selectedAbility.critrate);
+	if (mhc == "hit") { // Miss/Hit/Crit Roll
+		enemy.hp -= damage;
+		console.log('You attacked and did ' + damage + ' damage!');
+		$('#game-message').addClass('text-blue').removeClass('text-green text-red');
+		$('#game-message').text('You attacked and did ' + damage + ' damage!');
+	} else if (mhc == "crit") {
+		damage = damage * 2;
+		enemy.hp -= damage;
+		console.log('You critically attacked and did ' + damage + ' damage!');
+		$('#game-message').addClass('text-blue').removeClass('text-green text-red');
+		$('#game-message').text('You critically attacked and did ' + damage + ' damage!');
+	} else if (mhc == "miss") {
+		console.log('Your attack missed!');
+		$('#game-message').addClass('text-blue').removeClass('text-green text-red');
+		$('#game-message').text('Your attack missed!');
+	} else { console.log('MHC Roll Error'); }
 
 	printHP();
-	console.log('You attacked and did ' + damage + ' damage!');
-	$('#game-message').addClass('text-blue').removeClass('text-green text-red');
-	$('#game-message').text('You attacked and did ' + damage + ' damage!');
 	$('#radio1,#radio2,#radio3,#radio4,#radio5').addClass("disabled unclickable");
 }
 
 const playerHeal = () => {
-	current.hp += parseInt(selectedAbility.healCalc());
+	let heal = parseInt(selectedAbility.healCalc());
+
 	if (current.hp > player.hp) { current.hp = player.hp; }
 	printHP();
 	$('#game-message').addClass('text-green').removeClass('text-blue text-red');
-	$('#game-message').text('You healed ' + selectedAbility.healCalc() + ' health!');
+	$('#game-message').text('You healed ' + heal + ' health!');
+
+	let mhc = mhcRoll(selectedAbility.missrate, selectedAbility.critrate);
+	if (mhc == "hit") { // Miss/Hit/Crit Roll
+		current.hp += heal;
+		console.log('You healed ' + heal + ' health!');
+		$('#game-message').addClass('text-green').removeClass('text-blue text-red');
+		$('#game-message').text('You healed ' + heal + ' health!');
+	} else if (mhc == "crit") {
+		heal = heal * 2;
+		current.hp += heal;
+		console.log('You critically healed ' + heal + ' health!');
+		$('#game-message').addClass('text-green').removeClass('text-blue text-red');
+		$('#game-message').text('You critically healed ' + heal + ' health!');
+	} else { console.log('MHC Roll Error'); }
+
+	if (current.hp > player.hp) { current.hp = player.hp; }
+	printHP();
 	$('#radio1,#radio2,#radio3,#radio4,#radio5').addClass("disabled unclickable");
 }
 
 const playerAttackHeal = () => {
 	playerStatEval();
+	enemyStatEval();
 	let mitigation;
 	if (selectedAbility.dmgtype == "att") { // Match defense to attack type
 		mitigation = parseInt(enemy.def) - parseInt(selectedAbility.pierce);
@@ -375,37 +397,67 @@ const playerAttackHeal = () => {
 
 	let damage = parseInt(selectedAbility.attCalc()) - parseInt(mitigation);
 	if (damage < 0) { damage = 0; } // Prevent negative damage
-	enemy.hp -= damage;
-	current.hp += damage;
 	
+	let mhc = mhcRoll(selectedAbility.missrate, selectedAbility.critrate);
+	if (mhc == "hit") { // Miss/Hit/Crit Roll
+		enemy.hp -= damage;
+		current.hp += damage;
+		console.log('You did ' + damage + ' damage and gained ' + damage + ' health!');
+		$('#game-message').addClass('text-blue').removeClass('text-green text-red');
+		$('#game-message').text('You did ' + damage + ' damage and gained ' + damage + 'health!');
+	} else if (mhc == "crit") {
+		damage = damage * 2;
+		enemy.hp -= damage;
+		current.hp += damage;
+		console.log('You critically hit and did ' + damage + ' damage and gained ' + damage + ' health!');
+		$('#game-message').addClass('text-blue').removeClass('text-green text-red');
+		$('#game-message').text('You critically hit and did ' + damage + ' damage and gained ' + damage + ' health!');
+	} else if (mhc == "miss") {
+		console.log('Your attack missed!');
+		$('#game-message').addClass('text-blue').removeClass('text-green text-red');
+		$('#game-message').text('Your attack missed!');
+	} else { console.log('MHC Roll Error'); }
+
 	printHP();
-	console.log('You did ' + damage + ' damage and gained ' + damage + 'health!');
-	$('#game-message').addClass('text-blue').removeClass('text-green text-red');
-	$('#game-message').text('You did ' + damage + ' damage and gained ' + damage + ' health!');
 	$('#radio1,#radio2,#radio3,#radio4,#radio5').addClass("disabled unclickable");
 }
 
 const enemyAttack = () => {
 	playerStatEval();
+	enemyStatEval();
 	let mitigation;
 	if (enemyAbility.dmgtype == "att") { // Match defense to attack type
-		mitigation = parseInt(current.def) - parseInt(enemy.basic.pierce);
+		mitigation = parseInt(current.def) - parseInt(enemyAbility.pierce);
 	} else if (enemyAbility.dmgtype == "int") {
-		mitigation = parseInt(current.res) - parseInt(enemy.basic.pierce);
+		mitigation = parseInt(current.res) - parseInt(enemyAbility.pierce);
 	}
 	if (mitigation < 0) {	mitigation = 0; } // Prevent negative mitigation
 
 	let damage = parseInt(enemy.att) - parseInt(mitigation);
 	if (damage < 0) { damage = 0; } // Prevent negative damage
 
-	current.hp -= damage;
+	console.log(enemyAbility.missrate);
+
+	let mhc = mhcRoll(enemyAbility.missrate, enemyAbility.critrate);
+	if (mhc == "hit") { // Miss/Hit/Crit Roll
+		current.hp -= damage;
+		console.log('The enemy attacked and did ' + damage + ' damage!');
+		$('#game-message').addClass('text-red').removeClass('text-green text-blue');
+		$('#game-message').text('The enemy attacked and did ' + damage + ' damage!');
+	} else if (mhc == "crit") {
+		damage = damage * 2;
+		current.hp -= damage;
+		console.log('The enemy attacked critically and did ' + damage + ' damage!');
+		$('#game-message').addClass('text-red').removeClass('text-green text-blue');
+		$('#game-message').text('The enemy attacked critically and did ' + damage + ' damage!');
+	} else if (mhc == "miss") {
+		console.log('The enemy attacked missed!');
+		$('#game-message').addClass('text-red').removeClass('text-green text-blue');
+		$('#game-message').text('The enemy attacked missed!');
+	} else { console.log('MHC Roll Error'); }
+
 	if (current.hp <= 0) { current.hp = 0; } // Prevent negative Player HP
 	printHP();
-
-	// --- Update Game Message ---
-	console.log('The enemy attacked and did ' + damage + ' damage!');
-	$('#game-message').addClass('text-red').removeClass('text-green text-blue');
-	$('#game-message').text('The enemy attacked and did ' + damage + ' damage!');
 	console.log("End enemy attack");
 
 	endTurn();
@@ -478,7 +530,7 @@ const consumeMana = () => {
 
 const playerStatEval = () => {
 	let i;
-	let ii;
+	let j;
 	let blen = current.buffs.length;
 	let dlen = current.debuffs.length;
 	let buffedAtt = 0;
@@ -495,11 +547,11 @@ const playerStatEval = () => {
 		buffedInt += parseInt(current.buffs[i][5]);
 		buffedRes += parseInt(current.buffs[i][6]);
 	}
-	for (ii = 0; ii < dlen; ii++) { // Loop through buffs array 
-		debuffedAtt += parseInt(current.debuffs[ii][3]);
-		debuffedDef += parseInt(current.debuffs[ii][4]);
-		debuffedInt += parseInt(current.debuffs[ii][5]);
-		debuffedRes += parseInt(current.debuffs[ii][6]);
+	for (j = 0; j < dlen; j++) { // Loop through buffs array 
+		debuffedAtt += parseInt(current.debuffs[j][3]);
+		debuffedDef += parseInt(current.debuffs[j][4]);
+		debuffedInt += parseInt(current.debuffs[j][5]);
+		debuffedRes += parseInt(current.debuffs[j][6]);
 	}
 	current.att = parseInt(player.att) + parseInt(buffedAtt) + parseInt(debuffedAtt);
 	current.def = parseInt(player.def) + parseInt(buffedDef) + parseInt(debuffedAtt);
@@ -514,7 +566,7 @@ const playerStatEval = () => {
 
 const enemyStatEval = () => {
 	let i;
-	let ii;
+	let j;
 	let blen = enemy.buffs.length;
 	let dlen = enemy.debuffs.length;
 	let buffedAtt = 0;
@@ -531,16 +583,16 @@ const enemyStatEval = () => {
 		buffedInt += parseInt(enemy.buffs[i][5]);
 		buffedRes += parseInt(enemy.buffs[i][6]);
 	}
-	for (ii = 0; ii < dlen; ii++) { // Loop through buffs array 
-		debuffedAtt += parseInt(enemy.debuffs[ii][3]);
-		debuffedDef += parseInt(enemy.debuffs[ii][4]);
-		debuffedInt += parseInt(enemy.debuffs[ii][5]);
-		debuffedRes += parseInt(enemy.debuffs[ii][6]);
+	for (j = 0; j < dlen; j++) { // Loop through buffs array 
+		debuffedAtt += parseInt(enemy.debuffs[j][3]);
+		debuffedDef += parseInt(enemy.debuffs[j][4]);
+		debuffedInt += parseInt(enemy.debuffs[j][5]);
+		debuffedRes += parseInt(enemy.debuffs[j][6]);
 	}
 	enemy.att = parseInt(enemybase.att) + parseInt(buffedAtt) + parseInt(debuffedAtt);
-	enemy.def = parseInt(enemybase.def) + parseInt(buffedDef) + parseInt(debuffedAtt);
-	enemy.int = parseInt(enemybase.int) + parseInt(buffedInt) + parseInt(debuffedAtt);
-	enemy.res = parseInt(enemybase.res) + parseInt(buffedRes) + parseInt(debuffedAtt);
+	enemy.def = parseInt(enemybase.def) + parseInt(buffedDef) + parseInt(debuffedDef);
+	enemy.int = parseInt(enemybase.int) + parseInt(buffedInt) + parseInt(debuffedInt);
+	enemy.res = parseInt(enemybase.res) + parseInt(buffedRes) + parseInt(debuffedRes);
 	$("#e-hp").text(enemy.hp);
 	$("#e-att").text(enemy.att);
 	$("#e-def").text(enemy.def);
