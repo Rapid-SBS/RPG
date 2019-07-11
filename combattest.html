@@ -180,8 +180,9 @@ var enemy = {
 	res: parseInt(enemybase.res),
 	buffs: [],
 	debuffs: [],
-	basic: new EnemyAttack("Basic Attack", "Attack", "Player", 1, 2, 1, "att", 1, 0, 0, false, false)
-	// special: new EnemyAttack("Default", "Attack", "Player", true, 3, "att", 2, 0, 0),
+	basic: new EnemyAttack("Basic Attack", "Attack", "Player", 1, 1, 1, "att", 1, 0, 0, 0, false, false),
+	special: new EnemyAttack("Special Attack", "Attack", "Player", 1, 1, 3, "att", 1, 0, 2, 0, false, false),
+	support: new EnemyAttack("Heal", "Heal", "Self", 1, 1, 4, "att", 1, 0, 2, 4, false, false)
 }
 
 $(document).ready(function(){
@@ -426,6 +427,14 @@ const enemyAttack = () => {
 	playerStatEval();
 	enemyStatEval();
 	let mitigation;
+
+	// --- Enemy Heal ---
+	let heal = enemyAbility.heal;
+	enemy.hp += heal;
+	if (enemy.hp > enemybase.hp) { enemy.hp = enemybase.hp; }
+	if (heal > 0) { console.log("Enemy healed " + heal + " health!"); }
+	printHP();
+
 	if (enemyAbility.dmgtype == "att") { // Match defense to attack type
 		mitigation = parseInt(current.def) - parseInt(enemyAbility.pierce);
 	} else if (enemyAbility.dmgtype == "int") {
@@ -435,8 +444,6 @@ const enemyAttack = () => {
 
 	let damage = parseInt(enemy.att) - parseInt(mitigation);
 	if (damage < 0) { damage = 0; } // Prevent negative damage
-
-	console.log(enemyAbility.missrate);
 
 	let mhc = mhcRoll(enemyAbility.missrate, enemyAbility.critrate);
 	if (mhc == "hit") { // Miss/Hit/Crit Roll
@@ -504,7 +511,14 @@ const selectAbility = () => {
 }
 
 const enemySelectAbility = () => {
-	enemyAbility = enemy.basic;
+	if (turn % enemy.special.nthturn === 0 && turn != 1) {
+		enemyAbility = enemy.special;
+	} else if (turn % enemy.support.nthturn === 0 && turn != 1) {
+		enemyAbility = enemy.support;
+	} else {
+		enemyAbility = enemy.basic;
+	}
+	console.log("Enemy selected: " + enemyAbility.name + " ability.")
 }
 
 const printHP = () => {

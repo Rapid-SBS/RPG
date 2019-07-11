@@ -128,7 +128,7 @@ class AttackHeal extends Ability {
 }
 
 class EnemyAttack {
-	constructor(name, type, target, missrate, critrate, nthturn, dmgtype, multiplier, additive, pierce, buff, debuff) {
+	constructor(name, type, target, missrate, critrate, nthturn, dmgtype, multiplier, additive, pierce, heal, buff, debuff) {
 		this.name = name;
 		this.type = type;
 		this.target = target;
@@ -139,6 +139,7 @@ class EnemyAttack {
 	  this.multiplier = multiplier;
 	  this.additive = additive;
 	  this.pierce = pierce;
+	  this.heal = heal;
 	  this.buff = buff;
 	  this.debuff = debuff;
 	  if (this.dmgtype == "att") {

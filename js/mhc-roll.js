@@ -1,12 +1,12 @@
 /* ===== Miss/Hit/Crit Roll ===== */
 const mhcRoll = (miss, crit) => {
 	if (miss > 3) {
-		console.log('Error: Miss range cannot be greater than 3');
-		return "Error";
+		miss = 3; // Correct input
+		console.log('Warning: Miss range should not be greater than 3');
 	}
 	if (crit > 3) {
-		console.log('Error: Crit range cannot be greater than 3');
-		return "Error";
+		crit = 3; // Correct input
+		console.log('Warning: Crit range should not be greater than 3');
 	}
 
   let rollResult = Math.floor(Math.random() * (6)) + 1;
