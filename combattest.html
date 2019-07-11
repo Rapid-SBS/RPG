@@ -133,7 +133,7 @@ Attack( name, type, manacost, target, missrate, critrate, dmgtype, multiplier, a
 Heal( name, type, manacost, target, missrate, critrate, multiplier, additive, buff{}, debuff{})
 Buff( name, type, manacost, target, buff{}, debuff{})
 AttackHeal( name, type, manacost, target, missrate, critrate, dmgtype, multiplier, additive, pierce)
-EnemyAttack( name, type, target, missrate, critrate, nthturn, dmgtype, multiplier, additive, pierce, buff{}, debuff{} )
+EnemyAttack( name, type, target, missrate, critrate, nthturn, dmgtype, multiplier, additive, pierce, heal, buff{}, debuff{} )
 
 buff{ status, duration, att, def, int, res, mana }
 debuff{ status, duration, att, def, int, res, mana }
@@ -149,10 +149,10 @@ var player = {
 	res: 2,
 	mana: 1,
 	basic: new Attack("Strike", "Attack", 0, "Enemy", 1, 1, "att", 1, 2, 0, false, false),
-	special: new Heal("Enrage", "Heal", 2, "Enemy", 0, 1, 0, 8, {status:"none", duration:2, att:0, def:6, int:0, res:0, mana:0}, false),
+	special: new Heal("Enrage", "Heal", 2, "Enemy", 0, 1, 0, 8, {status:"none", duration:2, att:0, def:2, int:0, res:0, mana:0}, false),
 	support: new Buff("Battle Roar", "Buff", 2, "Mutual", {status:"none", duration:3, att:2, def:0, int:0, res:0, mana:0}, {status:"none", duration:2, att:-2, def:0, int:0, res:0, mana:0}),
-	attack: new Attack("Cleave", "Attack", 4, "Enemy", true, "att", 2, 0, 4, false, false), 
-	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 2, "Mutual", 1, 3, "att", 2, 0, 0)
+	attack: new Attack("Cleave", "Attack", 4, "Enemy", 1, 1, "att", 2, 0, 4, false, false), 
+	ultimate: new AttackHeal("Titan Slayer", "AttackHeal", 6, "Mutual", 1, 3, "att", 2, 0, 0)
 }
 
 var selectedAbility;
@@ -181,8 +181,9 @@ var enemy = {
 	buffs: [],
 	debuffs: [],
 	basic: new EnemyAttack("Basic Attack", "Attack", "Player", 1, 1, 1, "att", 1, 0, 0, 0, false, false),
-	special: new EnemyAttack("Special Attack", "Attack", "Player", 1, 1, 3, "att", 1, 0, 2, 0, false, false),
-	support: new EnemyAttack("Heal", "Heal", "Self", 1, 1, 4, "att", 1, 0, 2, 4, false, false)
+	special: new EnemyAttack("Special Attack", "Attack", "Player", 1, 2, 3, "att", 1, 0, 2, 0, false, false),
+	support: new EnemyAttack("Support Ability", "Heal", "Self", 1, 1, 4, "att", 1, 0, 0, 4, false, false),
+	ultimate: new EnemyAttack("Ultimate Attack", "Attack", "Player", 1, 1, 7, "att", 2, 0, 10, 0, false, false),
 }
 
 $(document).ready(function(){
@@ -405,7 +406,7 @@ const playerAttackHeal = () => {
 		current.hp += damage;
 		console.log('You did ' + damage + ' damage and gained ' + damage + ' health!');
 		$('#game-message').addClass('text-blue').removeClass('text-green text-red');
-		$('#game-message').text('You did ' + damage + ' damage and gained ' + damage + 'health!');
+		$('#game-message').text('You did ' + damage + ' damage and gained ' + damage + ' health!');
 	} else if (mhc == "crit") {
 		damage = damage * 2;
 		enemy.hp -= damage;
@@ -441,8 +442,10 @@ const enemyAttack = () => {
 		mitigation = parseInt(current.res) - parseInt(enemyAbility.pierce);
 	}
 	if (mitigation < 0) {	mitigation = 0; } // Prevent negative mitigation
+	console.log("Player Mitigation: " + mitigation);
 
-	let damage = parseInt(enemy.att) - parseInt(mitigation);
+	let damage = parseInt(enemyAbility.attCalc()) - parseInt(mitigation);
+	console.log("Enemy Damage: " + damage);
 	if (damage < 0) { damage = 0; } // Prevent negative damage
 
 	let mhc = mhcRoll(enemyAbility.missrate, enemyAbility.critrate);
@@ -511,10 +514,12 @@ const selectAbility = () => {
 }
 
 const enemySelectAbility = () => {
-	if (turn % enemy.special.nthturn === 0 && turn != 1) {
-		enemyAbility = enemy.special;
+	if (turn % enemy.ultimate.nthturn === 0 && turn != 1) {
+		enemyAbility = enemy.ultimate;
 	} else if (turn % enemy.support.nthturn === 0 && turn != 1) {
 		enemyAbility = enemy.support;
+	} else if (turn % enemy.special.nthturn === 0 && turn != 1) {
+		enemyAbility = enemy.special;
 	} else {
 		enemyAbility = enemy.basic;
 	}
@@ -638,6 +643,7 @@ const constructPlayerBuff = () => {
 		if (buffname == a) {
 			console.log("Buff Exists. Buff Name: " + buffname);
 			current.buffs.splice(i, 1);
+			len = current.buffs.length;
 		}
 	}
 	console.log("Player gained Buff: " + selectedAbility.name);
@@ -668,6 +674,7 @@ const constructPlayerDebuff = () => {
 		if (debuffname == a) {
 			console.log("Debuff Exists. Debuff Name: " + debuffname);
 			current.debuffs.splice(i, 1);
+			len = current.buffs.length;
 		}
 	}
 	console.log("Player gained debuff: " + enemyAbility.name);
@@ -735,7 +742,6 @@ const decrementPlayerBuffs = () => {
 	for (i = 0; i < len; i++) { // Decrement buffs
 		current.buffs[i][2]--;
 		ttl = current.buffs[i][2];
-		console.log("Index: " + i + "   TTL: " + ttl);
 		if (ttl < 0) { // Remove buff if expired
 			current.buffs.splice(i, 1);
 			len = current.buffs.length; // Recalculate array length
@@ -752,7 +758,6 @@ const decrementPlayerDebuffs = () => {
 	for (i = 0; i < len; i++) { // Decrement buffs
 		current.debuffs[i][2]--;
 		ttl = current.debuffs[i][2];
-		console.log("Index: " + i + "   TTL: " + ttl);
 		if (ttl < 0) { // Remove buff if expired
 			current.debuffs.splice(i, 1);
 			len = current.debuffs.length; // Recalculate array length
