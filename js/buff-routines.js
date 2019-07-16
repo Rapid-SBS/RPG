@@ -33,9 +33,6 @@ const constructPlayerBuff = () => {
   }
   console.log("Player gained Buff: " + selectedAbility.name);
   current.buffs.push([a, b, c, d, e, f, g]); // Copy buff data from Player Ability
-  console.log("Current Player Buffs:");
-  console.table(current.buffs);
-
   printPlayerBuffs();
 
   $('#game-message').addClass('text-blue').removeClass('text-green text-red');
@@ -65,12 +62,9 @@ const constructPlayerDebuff = () => {
     }
   }
 
-  printPlayerDebuffs();
-
   console.log("Player gained debuff: " + enemyAbility.name);
-  current.debuffs.push([a, b, c, d, e, f, g]); // Copy buff data from Player Ability
-  console.log("Current Player Debuffs:");
-  console.table(current.debuffs);
+  current.debuffs.push([a, b, c, d, e, f, g]); // Copy buff data from Enemy Ability
+  printPlayerDebuffs();
 }
 
 const constructEnemyBuff = () => {
@@ -93,11 +87,8 @@ const constructEnemyBuff = () => {
       enemy.buffs.splice(i, 1);
     }
   }
-  console.log("Enemy gained Buff: " + buffname);
+  console.log("Enemy gained Buff: " + selectedAbility.name);
   enemy.buffs.push([a, b, c, d, e, f, g]); // Copy buff data from Enemy Ability
-  console.log("Current Enemy Buffs:");
-  console.table(enemy.buffs);
-
   printEnemyBuffs();
 }
 
@@ -121,11 +112,8 @@ const constructEnemyDebuff = () => {
       selected.debuffs.splice(i, 1);
     }
   }
-  console.log("Enemy gained Debuff: " + debuffname);
-  enemy.debuffs.push([a, b, c, d, e, f, g]); // Copy buff data from Enemy Ability
-  console.log("Current Enemy Debuffs:");
-  console.table(enemy.debuffs);
-
+  console.log("Enemy gained Debuff: " + selectedAbility.name);
+  enemy.debuffs.push([a, b, c, d, e, f, g]); // Copy buff data from Player Ability
   printEnemyDebuffs();
 }
 
@@ -141,8 +129,6 @@ const decrementPlayerBuffs = () => {
       len = current.buffs.length; // Recalculate array length
       i -= 1;
     } 
-    console.log("Current Buffs:");
-    console.table(current.buffs);
     printPlayerBuffs();
   }
 }
@@ -159,8 +145,7 @@ const decrementPlayerDebuffs = () => {
       len = current.debuffs.length; // Recalculate array length
       i -= 1;
     } 
-    console.log("Current Debuffs:");
-    console.table(current.debuffs);
+    printPlayerDebuffs();
   }
 }
 
@@ -176,8 +161,7 @@ const decrementEnemyBuffs = () => {
       len = enemy.buffs.length; // Recalculate array length
       i -= 1;
     } 
-    console.log("Current Enemy Buffs:");
-    console.table(enemy.buffs);
+    printEnemyBuffs();
   }
 }
 
@@ -193,8 +177,7 @@ const decrementEnemyDebuffs = () => {
       len = enemy.debuffs.length; // Recalculate array length
       i -= 1;
     } 
-    console.log("Current Enemy Debuffs:");
-    console.table(enemy.debuffs);
+    printEnemyDebuffs();
   }
 }
 
