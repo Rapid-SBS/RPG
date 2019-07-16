@@ -60,6 +60,12 @@
     </div>
   </div><!-- /.row -->
 
+  <div class="row">
+    <div class="wide-275 mx-auto text-center">
+       <a class="btn btn-yellow text-white mar-10" href="combattest.html" role="button">Combat (Beta Test)</a>
+    </div>
+  </div><!-- /.row -->
+
   <!-- Modal -->
   <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
