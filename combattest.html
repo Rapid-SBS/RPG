@@ -23,6 +23,7 @@
   <script type="text/javascript" src="loading-bar/loading-bar.js"></script>
   <script type="text/javascript" src="js/classes.js"></script>
   <script type="text/javascript" src="js/mhc-roll.js"></script>
+  <script type="text/javascript" src="js/buff-routines.js"></script>
 </head>
 
 <body>
@@ -31,6 +32,7 @@
 </div>
 
 <div class="container pad-40">
+
 	<div class="row justify-content-center">
 		<div id="player" class="mar-20 text-center" style="height: 60px; width: 60px; border: 5px solid blue; padding: 6px;">
 			<h3 id="player-hp"></h3>
@@ -40,57 +42,76 @@
 		</div>
 	</div>
 
-	<div class="row justify-content-center">
-    <table class="wide-160 mar-5 text-center table-bordered">
-      <tbody>
-      	<thead>
-		  <tr>
-		    <th colspan="2">Player</th>
-		  </tr>
-		</thead>
-        <tr>
-          <td>ATT</td>
-          <td id="p-att"></td>
-        </tr>
-        <tr>
-          <td>DEF</td>
-          <td id="p-def"></td>
-        </tr>
-        <tr>
-          <td>INT</td>
-          <td id="p-int"></td>
-        </tr>
-        <tr>
-          <td>RES</td>
-          <td id="p-res"></td>
-        </tr>
-      </tbody>
-    </table>
-    <table class="wide-160 mar-5 text-center table-bordered">
-      <thead>
-		  <tr>
-		    <th colspan="2">Enemy</th>
-		  </tr>
-		</thead>
-      <tbody>
-        <tr>
-          <td>ATT</td>
-          <td id="e-att"></td>
-        </tr>
-        <tr>
-          <td>DEF</td>
-          <td id="e-def"></td>
-        </tr>
-        <tr>
-          <td>INT</td>
-          <td id="e-int"></td>
-        </tr>
-        <tr>
-          <td>RES</td>
-          <td id="e-res"></td>
-        </tr>
-      </tbody>
-    </table>
+	<div class="row mx-auto justify-content-center">
+		<div class="mar-5">
+	    <table class="wide-160 text-center table-bordered">
+	      <tbody>
+	      	<thead>
+			  <tr>
+			    <th colspan="2">Player</th>
+			  </tr>
+			</thead>
+	        <tr>
+	          <td>ATT</td>
+	          <td id="p-att"></td>
+	        </tr>
+	        <tr>
+	          <td>DEF</td>
+	          <td id="p-def"></td>
+	        </tr>
+	        <tr>
+	          <td>INT</td>
+	          <td id="p-int"></td>
+	        </tr>
+	        <tr>
+	          <td>RES</td>
+	          <td id="p-res"></td>
+	        </tr>
+	      </tbody>
+	    </table>
+	  
+	  <div id="player-buffs" class="max-wide-160">
+	  </div>
+	  <div id="player-debuffs" class="max-wide-160">
+	  </div>
+
+	</div><!-- /.wide-160 -->
+
+	  <div class="mar-5">
+	    <table class="wide-160 text-center table-bordered">
+	      <thead>
+			  <tr>
+			    <th colspan="2">Enemy</th>
+			  </tr>
+			</thead>
+	      <tbody>
+	        <tr>
+	          <td>ATT</td>
+	          <td id="e-att"></td>
+	        </tr>
+	        <tr>
+	          <td>DEF</td>
+	          <td id="e-def"></td>
+	        </tr>
+	        <tr>
+	          <td>INT</td>
+	          <td id="e-int"></td>
+	        </tr>
+	        <tr>
+	          <td>RES</td>
+	          <td id="e-res"></td>
+	        </tr>
+	      </tbody>
+	    </table>
+
+		<div id="enemy-buffs" class="max-wide-160">
+	  </div>
+	  <div id="enemy-debuffs" class="max-wide-160">
+	  </div>
+
+
+	  </div><!-- /.wide-160 -->
+
   </div><!-- /.row -->
   
   <div class="row justify-content-center">
@@ -497,16 +518,6 @@ const abilityManaCostCheck = () => {
 	}
 }
 
-const playerBuffBuilder = () => {
-	if (selectedAbility.buff != false) { constructPlayerBuff(); }
-	if (selectedAbility.debuff != false) { constructEnemyDebuff(); }
-}
-
-const enemyBuffBuilder = () => {
-	if (enemyAbility.buff != false) { constructEnemyBuff(); }
-	if (enemyAbility.debuff != false) { constructPlayerDebuff(); }
-}
-
 const selectAbility = () => {	
 	let ability = $('input[name=ability]:checked').val();
 	selectedAbility = player[ability];
@@ -623,182 +634,6 @@ const playerButtonUpdate = () => {
 		// --- Re-enable player ability buttons, then run manaCostCheck ---
 		$('#radio1,#radio2,#radio3,#radio4,#radio5').removeClass("disabled unclickable");
 		abilityManaCostCheck();
-}
-
-const constructPlayerBuff = () => {
-	let a = selectedAbility.name;
-	let b = selectedAbility.buff.status;
-	let c = selectedAbility.buff.duration;
-	let d = selectedAbility.buff.att;
-	let e = selectedAbility.buff.def;
-	let f = selectedAbility.buff.int;
-	let g = selectedAbility.buff.res;
-
-	// Loop through buffs array and remove duplicates
-	let i;
-	let buffname;
-	let len = current.buffs.length;
-	for (i = 0; i < len; i++) {
-		buffname = current.buffs[i][0];
-		if (buffname == a) {
-			console.log("Buff Exists. Buff Name: " + buffname);
-			current.buffs.splice(i, 1);
-			len = current.buffs.length;
-		}
-	}
-	console.log("Player gained Buff: " + selectedAbility.name);
-	current.buffs.push([a, b, c, d, e, f, g]); // Copy buff data from Player Ability
-	console.log("Current Player Buffs:");
-	console.table(current.buffs);
-
-	$('#game-message').addClass('text-blue').removeClass('text-green text-red');
-	$('#game-message').text('You gained  ' + selectedAbility.name + ' buff!');
-	$('#radio1,#radio2,#radio3,#radio4,#radio5').addClass("disabled unclickable");
-}
-
-const constructPlayerDebuff = () => {
-	let a = enemyAbility.name;
-	let b = enemyAbility.debuff.status;
-	let c = enemyAbility.debuff.duration;
-	let d = enemyAbility.debuff.att;
-	let e = enemyAbility.debuff.def;
-	let f = enemyAbility.debuff.int;
-	let g = enemyAbility.debuff.res;
-
-	// Loop through debuffs array and remove duplicates
-	let i;
-	let debuffname;
-	let len = current.debuffs.length;
-	for (i = 0; i < len; i++) {
-		debuffname = current.debuffs[i][0];
-		if (debuffname == a) {
-			console.log("Debuff Exists. Debuff Name: " + debuffname);
-			current.debuffs.splice(i, 1);
-			len = current.buffs.length;
-		}
-	}
-	console.log("Player gained debuff: " + enemyAbility.name);
-	current.debuffs.push([a, b, c, d, e, f, g]); // Copy buff data from Player Ability
-	console.log("Current Player Debuffs:");
-	console.table(current.debuffs);
-}
-
-const constructEnemyBuff = () => {
-	let a = enemyAbility.name;
-	let b = enemyAbility.buff.status;
-	let c = enemyAbility.buff.duration;
-	let d = enemyAbility.buff.att;
-	let e = enemyAbility.buff.def;
-	let f = enemyAbility.buff.int;
-	let g = enemyAbility.buff.res;
-
-	// Loop through buffs array and remove duplicates
-	let i;
-	let buffname;
-	let len = enemy.buffs.length;
-	for (i = 0; i < len; i++) {
-		buffname = enemy.buffs[i][0];
-		if (buffname == a) {
-			console.log("Buff Exists. Buff Name: " + buffname);
-			enemy.buffs.splice(i, 1);
-		}
-	}
-	console.log("Enemy gained Buff: " + buffname);
-	enemy.buffs.push([a, b, c, d, e, f, g]); // Copy buff data from Enemy Ability
-	console.log("Current Enemy Buffs:");
-	console.table(enemy.buffs);
-}
-
-const constructEnemyDebuff = () => {
-	let a = selectedAbility.name;
-	let b = selectedAbility.debuff.status;
-	let c = selectedAbility.debuff.duration;
-	let d = selectedAbility.debuff.att;
-	let e = selectedAbility.debuff.def;
-	let f = selectedAbility.debuff.int;
-	let g = selectedAbility.debuff.res;
-
-	// Loop through debuffs array and remove duplicates
-	let i;
-	let debuffname;
-	let len = enemy.debuffs.length;
-	for (i = 0; i < len; i++) {
-		debuffname = enemy.debuffs[i][0];
-		if (debuffname == a) {
-			console.log("Debuff Exists. Debuff Name: " + debuffname);
-			selected.debuffs.splice(i, 1);
-		}
-	}
-	console.log("Enemy gained Debuff: " + debuffname);
-	enemy.debuffs.push([a, b, c, d, e, f, g]); // Copy buff data from Enemy Ability
-	console.log("Current Enemy Debuffs:");
-	console.table(enemy.debuffs);
-}
-
-const decrementPlayerBuffs = () => {
-	let i;
-	let ttl;
-	let len = current.buffs.length;
-	for (i = 0; i < len; i++) { // Decrement buffs
-		current.buffs[i][2]--;
-		ttl = current.buffs[i][2];
-		if (ttl < 0) { // Remove buff if expired
-			current.buffs.splice(i, 1);
-			len = current.buffs.length; // Recalculate array length
-		} 
-		console.log("Current Buffs:");
-		console.table(current.buffs);
-	}
-}
-
-const decrementPlayerDebuffs = () => {
-	let i;
-	let ttl;
-	let len = current.debuffs.length;
-	for (i = 0; i < len; i++) { // Decrement buffs
-		current.debuffs[i][2]--;
-		ttl = current.debuffs[i][2];
-		if (ttl < 0) { // Remove buff if expired
-			current.debuffs.splice(i, 1);
-			len = current.debuffs.length; // Recalculate array length
-		} 
-		console.log("Current Debuffs:");
-		console.table(current.debuffs);
-	}
-}
-
-const decrementEnemyBuffs = () => {
-	let i;
-	let ttl;
-	let len = enemy.buffs.length;
-	for (i = 0; i < len; i++) { // Decrement buffs
-		enemy.buffs[i][2]--;
-		ttl = enemy.buffs[i][2];
-		console.log("Index: " + i + "   TTL: " + ttl);
-		if (ttl < 0) { // Remove buff if expired
-			enemy.buffs.splice(i, 1);
-			len = enemy.buffs.length; // Recalculate array length
-		} 
-		console.log("Current Enemy Buffs:");
-		console.table(enemy.buffs);
-	}
-}
-
-const decrementEnemyDebuffs = () => {
-	let i;
-	let ttl;
-	let len = enemy.debuffs.length;
-	for (i = 0; i < len; i++) { // Decrement buffs
-		enemy.debuffs[i][2]--;
-		ttl = enemy.debuffs[i][2];
-		console.log("Index: " + i + "   TTL: " + ttl);
-		if (ttl < 0) { // Remove buff if expired
-			enemy.debuffs.splice(i, 1);
-			len = enemy.debuffs.length; // Recalculate array length
-		} 
-		console.log("Current Enemy Debuffs:");
-		console.table(enemy.debuffs);
-	}
 }
 
 const playerDeathCheck = () => { if (parseInt(current.hp) <= 0) { playerLose(); } }
