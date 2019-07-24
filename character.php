@@ -55,7 +55,7 @@
         </tr>
         <tr>
           <td>Weapon</td>
-          <td>{{ p.weapon }}</td>
+          <td>{{ p.weapon.name }}</td>
         </tr>
       </tbody>
     </table>
