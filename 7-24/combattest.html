@@ -33,6 +33,13 @@
 
 <div class="container pad-40">
 
+	<div class="row justify-content-center pad-20">
+		<div id="player-array">
+	  </div>
+	  <div id="enemy-array">
+	  </div>
+	</div>
+
 	<div class="row justify-content-center">
 		<div id="player" class="mar-20 text-center" style="height: 60px; width: 60px; border: 5px solid blue; padding: 6px;">
 			<h3 id="player-hp"></h3>
@@ -161,8 +168,13 @@ debuff{ status, duration, att, def, int, res, mana }
 
 current.buff[duration, name, status, att, def, int, res]
 
+To Do:
+- Create Players Array and Enemies Array. Players and Enemies are added at battle start and removed upon death.
+- Game Over will be triggered when either array is empty.
+- Create CurrentPlayer and Current Enemy variables that change as they loop through the array, allowing each player and enemy to attack before the turn ends
 */
-var player = { 
+var player = {
+	name: 'Player', 
 	hp: 30, 
 	att: 4, 
 	def: 3, 
@@ -182,6 +194,7 @@ var ability;
 var turn = 0;
 
 var current = {
+	name: player.name,
 	hp: parseInt(player.hp),
 	att: parseInt(player.att),
 	def: parseInt(player.def),
@@ -194,6 +207,7 @@ var current = {
 
 var enemybase = { hp: 50, att: 6, def: 2, int: 2, res:4 };
 var enemy = {
+	name: 'Enemy',
 	hp: parseInt(enemybase.hp),
 	att: parseInt(enemybase.att),
 	def: parseInt(enemybase.def),
@@ -207,12 +221,18 @@ var enemy = {
 	ultimate: new EnemyAttack("Ultimate Attack", "Attack", "Player", 1, 1, 7, "att", 2, 0, 10, 0, false, false),
 }
 
+var playerArray = ["Test", "Greetings"];
+var enemyArray = ["Test", "Greetings"];
+
+
 $(document).ready(function(){
 	loadAbilityNames();
 	abilityManaCostCheck();   
 	printHP();
 	playerStatEval();
 	enemyStatEval();
+	printPlayerArray();
+	printEnemyArray();
 
 }); /* .document-ready */
 
@@ -225,14 +245,14 @@ $(document).ready(function(){
 
 	// --- Check value of radio select then copy it to variable
 	$('#ability-btn').click(function() {
-      selectAbility();
-      $('#ability-btn').hide(); // Hide Use Ability button
+    selectAbility();
+    $('#ability-btn').hide(); // Hide Use Ability button
 
-    	if (selectedAbility.type == "Attack") { attackRoutine(); }
-    	else if (selectedAbility.type == "Heal") { healRoutine(); }
-    	else if (selectedAbility.type == "Buff") { buffRoutine(); }
-    	else if (selectedAbility.type == "AttackHeal") { attackhealRoutine(); }
-    });
+  	if (selectedAbility.type == "Attack") { attackRoutine(); }
+  	else if (selectedAbility.type == "Heal") { healRoutine(); }
+  	else if (selectedAbility.type == "Buff") { buffRoutine(); }
+  	else if (selectedAbility.type == "AttackHeal") { attackhealRoutine(); }
+  });
 
 // === Attack Routine ===
 const attackRoutine = () => {
@@ -636,7 +656,11 @@ const playerButtonUpdate = () => {
 		abilityManaCostCheck();
 }
 
-const playerDeathCheck = () => { if (parseInt(current.hp) <= 0) { playerLose(); } }
+const playerDeathCheck = () => { 
+	if (parseInt(current.hp) <= 0) {
+	 playerLose(); 
+	} 
+}
 
 const playerWin = () => {
 	$('#radio1,#radio2,#radio3,#radio4,#radio5').addClass("disabled unclickable");
@@ -649,6 +673,17 @@ const playerLose = () => {
 	$('#game-message').addClass('text-red').removeClass('text-blue text-green');
   $('#game-message').text('You have fallen. Game over!');
 }
+
+const printPlayerArray = () => {
+	let PlayerArray = '<h5 class="text-green">' + playerArray + '</h5>';
+	$('#player-array').html(PlayerArray);
+}
+
+const printEnemyArray = () => {
+	let EnemyArray = '<h5 class="text-red">' + enemyArray + '</h5>';
+	$('#enemy-array').html(EnemyArray);
+}
+
 </script>
 
 <footer class="footer mt-auto text-center bg-lightgray">

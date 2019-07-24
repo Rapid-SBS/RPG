@@ -19,68 +19,65 @@
   <link rel="stylesheet" type="text/css" href="css/spacing.css">
   <link rel="stylesheet" type="text/css" href="css/colors.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script type="text/javascript" src="js/classes.js"></script>
-  <script type="text/javascript" src="js/globals.js"></script>
+    <link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css"/>
+  <script type="text/javascript" src="loading-bar/loading-bar.js"></script>
+	<script type="text/javascript" src="js/classes.js"></script>
+	<script type="text/javascript" src="js/mhc-roll.js"></script>
 
 </head>
 
 <body>
+  <div class="text-white text-center bg-primary">
+    <h5 class="pad-10"> Test </h5>
+  </div>  
 
-<h3 class="pad-t-20 text-gray text-center pulsing-text-dark"> Select a Weapon... </h3>
+  <div class="text-center pad-t-20">
+    <h4 id="roll-result" class="pad-b-10"></h4>
+  </div>
 
-<div id="weapon-select" class="y-flex-container pad-b-10">
+  <div class="text-center pad-t-20">
+    <h4 id="game-message" class="pad-b-10"></h4>
+  </div>
+
+  <div class="mx-auto wide-380">
+		<p id="demo"></p>
+	</div>
 
 <script>
-var rpgclass = JSON.parse(localStorage.getItem('objRpgclass'));
-var player = JSON.parse(localStorage.getItem('objPlayer'));
+var fruits, text, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
 
-  $(document).ready(function(){
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
 
-    // ----- Loads the selected class -----
-    if (rpgclass.name === "Warrior") {
-
-      $("#weapon-select").load("weapons/weapons-warrior.php");
-      
-    } else if (rpgclass.name === "Archer") {
-
-      $("#weapon-select").load("weapons/weapons-archer.php");
-
-    } else if (rpgclass.name === "Mage") {
-
-      $("#weapon-select").load("weapons/weapons-mage.php");
-      
-    } else if (rpgclass.name === "Cleric") {
-
-      $("#weapon-select").load("weapons/weapons-cleric.php");
-      
-    } else if (rpgclass.name === "Rogue") {
-
-      $("#weapon-select").load("weapons/weapons-rogue.php");
-      
-    } else if (rpgclass.name === "Monk") {
-
-      $("#weapon-select").load("weapons/weapons-monk.php");
-      
-    } else if (rpgclass.name === "Rune Master") {
-
-      $("#weapon-select").load("weapons/weapons-runemaster.php");
-      
-    } else {
-
-      $("#weapon-select").html("<h2>No Class Selected </h2>");
-    }
-  });
+document.getElementById("demo").innerHTML = text;
 </script>
 
-</div><!-- /.y-flex-container -->
+
+</script>
 
 <footer class="footer mt-auto text-center bg-lightgray">
   <div class="container pad-20">
     <div class="pad-b-20">
-      <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="http://rapid-phyre.net" role="button">Restart</a>
+      <a class="btn btn-dark text-white mar-r-10 mar-l-10" onclick="restart()" role="button">Restart</a>
+      <a class="btn btn-dark text-white mar-r-10 mar-l-10" href="player-menu.php" role="button">Continue</a>
     </div>
     <span class="text-muted">&copy;RPGenius 2019. All Rights Reserved.</span>
   </div>
+
+  <script>
+  	function restart() {
+  		location.reload(true);
+  	}
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
 </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

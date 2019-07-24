@@ -127,7 +127,7 @@ const decrementPlayerBuffs = () => {
     if (ttl < 0) { // Remove buff if expired
       current.buffs.splice(i, 1);
       len = current.buffs.length; // Recalculate array length
-      i -= 1;
+      i -= 1; // Decrement array counter to check for other expiring buffs
     } 
     printPlayerBuffs();
   }
@@ -143,7 +143,7 @@ const decrementPlayerDebuffs = () => {
     if (ttl < 0) { // Remove buff if expired
       current.debuffs.splice(i, 1);
       len = current.debuffs.length; // Recalculate array length
-      i -= 1;
+      i -= 1; // Decrement array counter to check for other expiring debuffs
     } 
     printPlayerDebuffs();
   }
@@ -159,7 +159,7 @@ const decrementEnemyBuffs = () => {
     if (ttl < 0) { // Remove buff if expired
       enemy.buffs.splice(i, 1);
       len = enemy.buffs.length; // Recalculate array length
-      i -= 1;
+      i -= 1; // Decrement array counter to check for other expiring buffs
     } 
     printEnemyBuffs();
   }
@@ -175,7 +175,7 @@ const decrementEnemyDebuffs = () => {
     if (ttl < 0) { // Remove buff if expired
       enemy.debuffs.splice(i, 1);
       len = enemy.debuffs.length; // Recalculate array length
-      i -= 1;
+      i -= 1; // Decrement array counter to check for other expiring debuffs
     } 
     printEnemyDebuffs();
   }
@@ -191,7 +191,6 @@ const printPlayerBuffs = () => {
   playerBuffs += "</ul>";
   $('#player-buffs').html(playerBuffs);
 }
-
 
 const printPlayerDebuffs = () => {
   let i;
